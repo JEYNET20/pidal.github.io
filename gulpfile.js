@@ -20,7 +20,7 @@ gulp.task('style', function(){
 
 //  watch
 gulp.task("watch", function() {
-  gulp.watch("app/scss/*.scss", gulp.parallel("style"))
+  gulp.watch("app/scss/**/*.scss", gulp.parallel("style"))
 })
 
 
