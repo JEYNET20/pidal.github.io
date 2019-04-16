@@ -1,0 +1,109 @@
+.icon-anonim{
+	background-image: url('../img/icon/user_icon.png');
+	width: 44px;
+	height: 44px;
+	background-color: #343434;	
+	display: block;
+	border-radius: 50%;
+}
+
+.icon-profile{
+	width: 16px;
+	height: 15px;
+	opacity: 0.6;
+	background-image: url('../img/icon/user.png');
+	background-position: center center;
+	background-size: cover;
+	display: block;
+}
+.icon-star{
+	width: 16px;
+	height: 15px;
+	opacity: 0.6;
+	background-image: url('../img/icon/star.png');
+	background-position: center center;
+	background-size: cover;
+	display: block;
+}
+.icon-exit{
+	width: 15px;
+	height: 16px;
+	opacity: 0.6;
+	background-image: url('../img/icon/exit.png');
+	background-position: center center;
+	background-size: cover;
+	display: block;
+}
+
+.icon-yellow{
+	width: 22px;
+	height: 22px;
+	background-color: #fff166;	
+	border-radius: 50%;
+	display: block;
+	text-shadow: 0 7px 24px rgba(255, 69, 69, 0.4);
+	color: #2c2c2c;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 14px;
+	letter-spacing: 0.12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon-red{
+	width: 22px;
+	height: 22px;
+	background-color: #ff4545;
+	border-radius: 50%;
+	display: block;
+	text-shadow: 0 7px 24px rgba(255, 69, 69, 0.4);
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 14px;
+	letter-spacing: 0.12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon-dark{
+	width: 22px;
+	height: 22px;
+	background-color: #343434;
+	border-radius: 50%;
+	display: block;
+	text-shadow: 0 7px 24px rgba(255, 69, 69, 0.4);
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 14px;
+	letter-spacing: 0.12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.soc-youtube{
+	background-image: url('../img/icon/youtube.png');
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+}
+.soc-inst{
+	background-image: url('../img/icon/instagram.png');
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+}
+.soc-vk{
+	background-image: url('../img/icon/vk.png');
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+}

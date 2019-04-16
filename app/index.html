@@ -6,21 +6,198 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>pedal</title>
 
-  <!-- style -->
+  <!-- стили -->
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <!-- шрифты -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+
 
 </head>
 <body>
 
   <!-- Шапка -->
   <header class="header">
+    <div class="wrapper">
+      <button class="btn-bar"></button>
 
+      <div class="nav-bar-wrapper">
+        <img src="img/icon/main-logo.png" alt="logo" class="logo">
+        <nav class="nav nav--bar d-none animated fadeIn faster">
+          <ul class="main-menu">
+            <li class="main-menu__item"><a href="#">Отзывы</a></li>
+            <li class="main-menu__item"><a href="#">Карта городов</a></li>
+            <li class="main-menu__item"><a href="#">Моб приложения</a></li>
+            <li class="main-menu__item"><a href="#">Платные услуги</a></li>
+            <li class="main-menu__item"><a href="#">Центр помощи</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <nav class="nav nav--main">
+        <ul class="main-menu">
+          <li class="main-menu__item">
+            <a href="#">Легковые</a>
+            <ul class="main-manu__list d-none animated fadeIn faster">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Мото</a>
+            <ul class="main-manu__list d-none animated fadeIn faster">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>            
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Спецтехника</a>
+            <ul class="main-manu__list d-none animated fadeIn faster">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>            
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Запчасти</a>
+            <ul class="main-manu__list d-none animated fadeIn faster">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>            
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Автосервисы</a>
+            <ul class="main-manu__list d-none animated fadeIn faster">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>            
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sign-navigation">
+        <i class="icon-anonim"></i>
+        <button class="sign-navigation__name">Кабинет</button>
+        <nav class="profile-list d-none animated fadeIn faster">
+          <div class="profile-list__title-wrapper">
+            <i class="icon-profile"></i>
+            <h4>Мой профиль</h4>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Объявления</a>
+              <i class="icon-yellow">1</i>
+            </li>
+            <li>
+              <a href="#">Сообщения</a>
+              <i class="icon-red">1</i>
+            </li>
+            <li>
+              <a href="#">Уведомления</a>
+            </li>
+            <li>
+              <a href="#">Настройки</a>
+            </li>
+            <li>
+              <a href="#">История платежей</a>
+            </li>
+          </ul>
+          <div class="profile-list__title-wrapper">
+            <i class="icon-star"></i>
+            <h4>Избранные:</h4>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Объявление</a>
+              <i class="icon-dark">1</i>
+            </li>
+            <li>
+              <a href="#">Поиски</a>
+              <i class="icon-dark">1</i>
+            </li>
+          </ul>
+          <button class="profile-list__exit">
+            <i class="icon-exit"></i>
+            <span>Выход</span>
+          </button>
+        </nav>
+      </div>
+
+    </div>
   </header>
   <!-- // Шапка -->
 
   <main class="wrapper">
     <div class="hr"></div>
     <hr>
+
+    <div class="map-block">
+      <button class="change-count">
+        <i class="icon-place-mark"></i>
+        Весь <span>казакстан</span>
+        <i class="icon-arrw-right"></i>
+      </button>
+      <button class="add-offer">
+        <i class="icon-plus"></i>
+        Добавить объявление
+      </button>
+    </div>
+
     <section class="offers">
       <div class="offers__title">
         <h1 class="def-text"> VIP объявления</h1>
@@ -414,6 +591,53 @@
       </div>
       <ul class="offers-content">
         <li class="offers-content__item">
+          <img src="img/index/cirkl-1.jpg" alt="item">
+          <div>
+            <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+            <span class="offers-content__item-age"> 1995 год</span>
+            <span class="offers-content__item-price">10 000 000 ₸</span>
+            <i class="icon-star"></i>
+          </div>
+        </li>
+        <li class="offers-content__item">
+          <img src="img/index/cirkl-2.jpg" alt="item">
+          <div>
+            <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+            <span class="offers-content__item-age"> 1995 год</span>
+            <span class="offers-content__item-price">10 000 000 ₸</span>
+            <i class="icon-star"></i>
+          </div>
+        </li>
+        <li class="offers-content__item">
+          <img src="img/index/cirkl-3.jpg" alt="item">
+          <div>
+            <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+            <span class="offers-content__item-age"> 1995 год</span>
+            <span class="offers-content__item-price">10 000 000 ₸</span>
+            <i class="icon-star"></i>
+          </div>
+        </li>
+        <li class="offers-content__item">
+          <img src="img/index/cirkl-4.jpg" alt="item">
+          <div>
+            <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+            <span class="offers-content__item-age"> 1995 год</span>
+            <span class="offers-content__item-price">10 000 000 ₸</span>
+            <i class="icon-star"></i>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <div class="hr"></div>
+    <hr>
+
+    <section class="offers">
+      <div class="title-wrapper">
+        <h2 class="h2-title">Автосервисы</h2>
+        <span class="count">13 237</span>
+      </div>
+      <ul class="offers-content">
+        <li class="offers-content__item">
           <img src="img/index/ser-1.jpg" alt="item">
           <div>
             <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
@@ -454,54 +678,7 @@
     <div class="hr"></div>
     <hr>
 
-    <section class="offers">
-      <div class="title-wrapper">
-        <h2 class="h2-title">Автосервисы</h2>
-        <span class="count">13 237</span>
-      </div>
-      <ul class="offers-content">
-        <li class="offers-content__item">
-          <img src="" alt="item">
-          <div>
-            <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
-            <span class="offers-content__item-age"> 1995 год</span>
-            <span class="offers-content__item-price">10 000 000 ₸</span>
-            <i class="icon-star"></i>
-          </div>
-        </li>
-        <li class="offers-content__item">
-          <img src="" alt="item">
-          <div>
-            <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
-            <span class="offers-content__item-age"> 1995 год</span>
-            <span class="offers-content__item-price">10 000 000 ₸</span>
-            <i class="icon-star"></i>
-          </div>
-        </li>
-        <li class="offers-content__item">
-          <img src="" alt="item">
-          <div>
-            <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
-            <span class="offers-content__item-age"> 1995 год</span>
-            <span class="offers-content__item-price">10 000 000 ₸</span>
-            <i class="icon-star"></i>
-          </div>
-        </li>
-        <li class="offers-content__item">
-          <img src="" alt="item">
-          <div>
-            <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
-            <span class="offers-content__item-age"> 1995 год</span>
-            <span class="offers-content__item-price">10 000 000 ₸</span>
-            <i class="icon-star"></i>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <div class="hr"></div>
-    <hr>
-
-    <section class="last-list">
+    <div class="last-list">
       <div class="last-list__item-wrapper">
         <h3 class="h3-title">Запчасти</h3>
         <ul class="last-list__list">
@@ -541,11 +718,11 @@
           <li class="last-list__item"><a href="#">Диагностика</a></li>
         </ul>
       </div>
-    </section>
+    </div>
     <div class="hr"></div>
     <hr>
 
-    <section class="last-list">
+    <div class="last-list">
       <div class="last-list__item-wrapper">
         <ul class="last-list__list">
           <li class="last-list__item"><a href="#">Актау</a></li>
@@ -588,7 +765,7 @@
           <li class="last-list__item"><a href="#">Шымкент</a></li>
         </ul>
       </div>
-    </section>
+    </div>
     <div class="hr"></div>
     <hr>
 
@@ -624,10 +801,22 @@
 
   <!-- Футер -->
   <footer class="footer">
-
+    <div class="content">
+      <div class="soc-block">
+        <ul>
+          <li class="soc-youtube"><a href="#"></a></li>
+          <li class="soc-inst"><a href="#"></a></li>
+          <li class="soc-vk"><a href="#"></a></li>
+        </ul>
+      </div>
+      <p >Педаль.<span>kz</span> 2019</p>
+    </div>
   </footer>
   <!-- // Футер -->
 
-  
+  <!-- скрипты -->
+  <script src="js/anime.js"></script>
+  <script src="js/script.js"></script>
+  <!-- // скрипты -->
 </body>
 </html>

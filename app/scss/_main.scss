@@ -1,0 +1,22 @@
+body, html{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+a, button{
+	font-family: 'Open Sans', sans-serif;
+}
+.d-none{
+	display: none !important;
+}
+.wrapper{
+	background-color: grey;
+	width: 1280px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-left: 40px;
+	padding-right: 40px;
+}
