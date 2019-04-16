@@ -135,12 +135,12 @@
 		  duration: 400
 		});
 
-		// let mapBlockLvl2 = document.querySelector('.map-block__other-city--level-2');
+		// let _mapBlockLvl2 = document.querySelector('.map-block__other-city--level-2');
 		// setTimeout(function(){
-		// 	mapBlockLvl2.classList.add('d-none');
+		// 	_mapBlockLvl2.classList.add('d-none');
 		// },400);
 		// anime({
-		//   targets: mapBlockLvl2,
+		//   targets: _mapBlockLvl2,
 		//   opacity: '0',
 		//   easing: 'easeOutQuad',
 		//   duration: 400
