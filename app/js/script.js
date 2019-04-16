@@ -38,7 +38,7 @@
 
 		navBar.onmouseleave = function(){
 			setTimeout(function(){
-				this.classList.add('d-none');
+				navBar.classList.add('d-none');
 			},800);
 
 			this.classList.remove('fadeIn');
@@ -64,7 +64,7 @@
 		list.onmouseleave = function(){
 			x.style.backgroundColor = '#2c2c2c';
 			setTimeout(function(){
-				this.classList.add('d-none');
+				list.classList.add('d-none');
 			},800);
 
 			this.classList.remove('fadeIn');
