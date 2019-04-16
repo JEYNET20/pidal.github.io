@@ -13,8 +13,6 @@
 		  opacity: '1' ,
 		  easing: 'easeInQuad',
 		  duration: 400
-		  // direction: 'alternate',
-		  // loop: true
 		});
 
 		menu.classList.remove('d-none');
@@ -23,14 +21,12 @@
 			setTimeout(function(){
 				menu.classList.add('d-none');
 				x.addEventListener('click', onMainMenuItemClick);				
-			},800);
+			},400);
 			anime({
 			  targets: menu,
 			  opacity: '0' ,
 			  easing: 'easeOutQuad',
 			  duration: 400
-			  // direction: 'alternate',
-			  // loop: true
 			});			
 		}
 	};
@@ -55,23 +51,19 @@
 		  opacity: '1' ,
 		  easing: 'easeInQuad',
 		  duration: 400
-		  // direction: 'alternate',
-		  // loop: true
 		});
 
 		navBar.onmouseleave = function(){
 			setTimeout(function(){
 				navBar.classList.add('d-none');
 				x.addEventListener('click', onBtnBarClick);
-			},800);
+			},400);
 			x.style.opacity = '1';
 			anime({
 			  targets: navBar,
 			  opacity: '0' ,
 			  easing: 'easeOutQuad',
 			  duration: 400
-			  // direction: 'alternate',
-			  // loop: true
 			});			
 		}
 	};
@@ -98,7 +90,7 @@
 			x.style.backgroundColor = '#2c2c2c';
 			setTimeout(function(){
 				list.classList.add('d-none');
-			},800);
+			},400);
 			anime({
 			  targets: list,
 			  opacity: '0' ,
@@ -110,6 +102,4 @@
 
 	signNavigationBtn.addEventListener('click', onSignNavigationBtnClick);
 	// !! меню навигации
-
-
 })();
