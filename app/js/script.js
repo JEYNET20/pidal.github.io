@@ -27,7 +27,7 @@
 			  opacity: '0' ,
 			  easing: 'easeOutQuad',
 			  duration: 400
-			});			
+			});
 		}
 	};
 
@@ -102,4 +102,82 @@
 
 	signNavigationBtn.addEventListener('click', onSignNavigationBtnClick);
 	// !! меню навигации
+})();
+
+// блок выбора города "главная 1 блок"
+(function(){
+	let changeCountBtn = document.querySelector('.change-count');
+	let exhitBtn = document.querySelectorAll('.map-block__other-city');
+	let mapBlockLvl2 = document.querySelectorAll('.map-block__other-city--level-1 a');
+
+	let onChangeCountBtnClick = function(e){
+		e.preventDefault();
+		console.log(this);
+		let mapBlockLvl1 = document.querySelector('.map-block__other-city--level-1');
+		mapBlockLvl1.classList.remove('d-none');
+		anime({
+		  targets: mapBlockLvl1,
+		  opacity: '1',
+		  easing: 'easeInQuad',
+		  duration: 400
+		});
+	};
+
+	let onExitBtnClick = function(){
+		let mapBlockLvl1 = document.querySelector('.map-block__other-city--level-1');
+		setTimeout(function(){
+			mapBlockLvl1.classList.add('d-none');
+		},400);
+		anime({
+		  targets: mapBlockLvl1,
+		  opacity: '0',
+		  easing: 'easeOutQuad',
+		  duration: 400
+		});
+
+		// let mapBlockLvl2 = document.querySelector('.map-block__other-city--level-2');
+		// setTimeout(function(){
+		// 	mapBlockLvl2.classList.add('d-none');
+		// },400);
+		// anime({
+		//   targets: mapBlockLvl2,
+		//   opacity: '0',
+		//   easing: 'easeOutQuad',
+		//   duration: 400
+		// });		
+	};
+
+	let onMapBlockLvl2 = function(e){
+		e.preventDefault();
+		console.log(this);
+		let mapBlockLvl1 = document.querySelector('.map-block__other-city--level-1');
+		setTimeout(function(){
+			mapBlockLvl1.classList.add('d-none');
+		},400);
+		anime({
+		  targets: mapBlockLvl1,
+		  opacity: '0',
+		  easing: 'easeOutQuad',
+		  duration: 400
+		});
+
+		let mapBlockLvl2 = document.querySelector('.map-block__other-city--level-2');
+		mapBlockLvl2.classList.remove('d-none');
+		anime({
+		  targets: mapBlockLvl2,
+		  opacity: '1',
+		  easing: 'easeInQuad',
+		  duration: 400
+		});
+	};
+
+	changeCountBtn.addEventListener('click', onChangeCountBtnClick);
+
+	for(let i = 0; i < exhitBtn.length; i++){
+	exhitBtn[i].addEventListener('click', onExitBtnClick);
+	}
+
+	for(let i = 0; i < mapBlockLvl2.length; i++){
+		mapBlockLvl2[i].addEventListener('click', onMapBlockLvl2);
+	}
 })();

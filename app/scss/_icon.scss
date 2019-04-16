@@ -16,6 +16,7 @@
 	background-size: cover;
 	display: block;
 }
+
 .icon-star{
 	width: 16px;
 	height: 15px;
@@ -25,6 +26,7 @@
 	background-size: cover;
 	display: block;
 }
+
 .icon-exit{
 	width: 15px;
 	height: 16px;
@@ -33,6 +35,24 @@
 	background-position: center center;
 	background-size: cover;
 	display: block;
+}
+
+.icon-exit-chrest{
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/icon/exit-chrest.png');
+	background-position: center center;
+	background-size: cover;
+	display: block;	
+}
+
+.icon-exit-chrest--red{
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/icon/exit-chrest--red.png');
+	background-position: center center;
+	background-size: cover;
+	display: block;	
 }
 
 .icon-yellow{
@@ -93,6 +113,7 @@
 	height: 36px;
 	cursor: pointer;
 }
+
 .soc-inst{
 	background-image: url('../img/icon/instagram.png');
 	border-radius: 50%;
@@ -100,10 +121,39 @@
 	height: 36px;
 	cursor: pointer;
 }
+
 .soc-vk{
 	background-image: url('../img/icon/vk.png');
 	border-radius: 50%;
 	width: 36px;
 	height: 36px;
 	cursor: pointer;
+}
+
+.icon-place-mark{
+	display: block;
+	width: 19px;
+	height: 23px;
+	opacity: 0.6;
+	background-image: url('../img/icon/place-mark.png');
+	background-position: center center;
+	background-size: cover;
+}
+
+.icon-arrow-right{
+	display: block;
+	width: 7px;
+	height: 12px;
+	background-image: url('../img/icon/arrow-right.png');
+	background-position: center center;
+	background-size: cover;
+}
+
+.icon-plus{
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-image: url('../img/icon/plus.png');
+	background-position: center center;
+	background-size: cover;
 }
