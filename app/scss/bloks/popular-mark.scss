@@ -31,6 +31,9 @@
 		box-shadow: 0 2px 16px rgba(44, 44, 44, 0.2);
 		border: 1px solid #306c78;
 		transition: all 150ms ease;
+		img{
+			opacity: 0.7;
+		}
 	}
 	&__list-wrapper{
 		display: flex;

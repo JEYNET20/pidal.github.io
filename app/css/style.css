@@ -508,7 +508,7 @@ a, button {
   align-items: center;
   background-color: #fff;
   height: 45px;
-  margin-top: 46px;
+  margin-top: 36px;
   margin-bottom: 36px;
   position: relative; }
   .map-block__other-city {
@@ -761,6 +761,8 @@ a, button {
   box-shadow: 0 2px 16px rgba(44, 44, 44, 0.2);
   border: 1px solid #306c78;
   transition: all 150ms ease; }
+  .popular-mark__image-item:hover img {
+    opacity: 0.7; }
 
 .popular-mark__list-wrapper {
   display: flex;
