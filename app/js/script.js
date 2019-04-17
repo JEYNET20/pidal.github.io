@@ -107,12 +107,12 @@
 // блок выбора города "главная 1 блок"
 (function(){
 	let changeCountBtn = document.querySelector('.change-count');
-	let exhitBtn = document.querySelectorAll('.map-block__other-city');
+	let exhitBtn = document.querySelectorAll('.map-block__other-city .icon-exit-chrest');
 	let mapBlockLvl2 = document.querySelectorAll('.map-block__other-city--level-1 a');
+	let prevBtn = document.querySelector('.change-conut--prev');
 
 	let onChangeCountBtnClick = function(e){
 		e.preventDefault();
-		console.log(this);
 		let mapBlockLvl1 = document.querySelector('.map-block__other-city--level-1');
 		mapBlockLvl1.classList.remove('d-none');
 		anime({
@@ -124,32 +124,21 @@
 	};
 
 	let onExitBtnClick = function(){
-		let mapBlockLvl1 = document.querySelector('.map-block__other-city--level-1');
+		let mapBlock = this.parentNode.parentNode.parentNode;
+
 		setTimeout(function(){
-			mapBlockLvl1.classList.add('d-none');
+			mapBlock.classList.add('d-none');
 		},400);
 		anime({
-		  targets: mapBlockLvl1,
+		  targets: mapBlock,
 		  opacity: '0',
 		  easing: 'easeOutQuad',
 		  duration: 400
-		});
-
-		// let _mapBlockLvl2 = document.querySelector('.map-block__other-city--level-2');
-		// setTimeout(function(){
-		// 	_mapBlockLvl2.classList.add('d-none');
-		// },400);
-		// anime({
-		//   targets: _mapBlockLvl2,
-		//   opacity: '0',
-		//   easing: 'easeOutQuad',
-		//   duration: 400
-		// });		
+		});		
 	};
 
 	let onMapBlockLvl2 = function(e){
 		e.preventDefault();
-		console.log(this);
 		let mapBlockLvl1 = document.querySelector('.map-block__other-city--level-1');
 		setTimeout(function(){
 			mapBlockLvl1.classList.add('d-none');
@@ -171,13 +160,96 @@
 		});
 	};
 
+	let onPrevBtnClick = function(e){
+		e.preventDefault();
+		let mapBlock2 = this.parentNode.parentNode.parentNode;
+
+		let mapBlockLvl1 = mapBlock2.previousSibling.previousSibling;
+
+		setTimeout(function(){
+			mapBlock2.classList.add('d-none');
+		},400);
+		anime({
+		  targets: mapBlock2,
+		  opacity: '0',
+		  easing: 'easeOutQuad',
+		  duration: 400
+		});
+
+		mapBlockLvl1.classList.remove('d-none');
+		anime({
+		  targets: mapBlockLvl1,
+		  opacity: '1',
+		  easing: 'easeInQuad',
+		  duration: 400
+		});
+	};
+
 	changeCountBtn.addEventListener('click', onChangeCountBtnClick);
+	prevBtn.addEventListener('click', onPrevBtnClick);
 
-	for(let i = 0; i < exhitBtn.length; i++){
-	exhitBtn[i].addEventListener('click', onExitBtnClick);
+	exhitBtn.forEach(function(value){
+		value.addEventListener('click', onExitBtnClick);
+	});
+
+	mapBlockLvl2.forEach(function(value){
+		value.addEventListener('click', onMapBlockLvl2);
+	});
+})();
+
+// Добавить в избранные / удалить "главная"
+(function(){
+	let btn = document.querySelectorAll('.icon-star--red');
+
+	let onBtnClick = function(e){
+		e.preventDefault();
+		if(this.classList.contains('icon-star--red-full')){
+			this.classList.remove('icon-star--red-full');
+		}else{
+			this.classList.add('icon-star--red-full');
+		}
+
+	};
+
+	btn.forEach(function(value){
+		value.addEventListener('click', onBtnClick);
+	});
+})();
+
+// Добавить удалить марку новые авто
+(function(){
+	let btnNew = document.querySelector('.new-mark a');
+	let newMark = document.querySelectorAll('.new-auto');
+	let otherMark = document.querySelectorAll('.other-mark a');
+
+	btnNew.onclick = function(e){
+		e.preventDefault();
+		let span = this.childNodes[1];
+		span.style.opacity = '1';
+		otherMark.forEach(function(value){
+			value.childNodes[1].style.opacity = '0';
+		});
+
+		newMark.forEach(function(value){
+			value.classList.add('d-none');
+		});
+	};
+
+	let onOtherMarkClick = function(e){
+		e.preventDefault();
+		let span = this.childNodes[1];
+		newMark.forEach(function(value){
+			value.classList.remove('d-none');
+		});
+		otherMark.forEach(function(value){
+			value.childNodes[1].style.opacity = '0';
+		});		
+		span.style.opacity = '1';
+
+		btnNew.childNodes[1].style.opacity = '0';
 	}
 
-	for(let i = 0; i < mapBlockLvl2.length; i++){
-		mapBlockLvl2[i].addEventListener('click', onMapBlockLvl2);
-	}
+	otherMark.forEach(function(value){
+		value.addEventListener('click', onOtherMarkClick);
+	});
 })();

@@ -1,0 +1,51 @@
+.pre-footer-icons{
+	margin-top: 36px;
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		li{
+			// width: 30%;
+			margin-bottom: 60px;
+		}
+		li:nth-child(1){
+			width:222px;
+		}
+		li:nth-child(2){
+			width: 383px;
+		}
+		li:nth-child(3){
+			width:222px;
+		}
+	}
+	i{
+		background-position: center center;
+		background-size: cover;
+		display: block;
+		cursor: pointer;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	span{
+
+	}
+	.icon-1{
+		width: 39px;
+		height: 61px;
+		background-image: url('../img/icon/pre-footer-icon-1.png');
+	}
+	.icon-2{
+		width: 58px;
+		height: 58px;
+		background-image: url('../img/icon/pre-footer-icon-2.png');
+	}
+	.icon-3{
+		width: 58px;
+		height: 54px;
+		background-image: url('../img/icon/pre-footer-icon-3.png');
+	}
+}

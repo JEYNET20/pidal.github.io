@@ -26,6 +26,7 @@ a, button{
 	height: 1px;
 	background-color: #2c2c2c;
 	opacity: 0.2;
+	margin-top: 64px;
 }
 
 .wrapper{
@@ -35,4 +36,87 @@ a, button{
 	box-sizing: border-box;
 	padding-left: 40px;
 	padding-right: 40px;
+}
+
+.def-text{
+	span{
+		font-family: "Open Sans";
+		// font-size: 36px;
+	}
+	margin: 0;
+	color: #2c2c2c;
+	font-family: "Open Sans";
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 14px;
+}
+
+.title-wrapper{
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 35px;
+	display: flex;
+	align-items: center;
+	.h2-title{
+		margin: 0;
+		color: #306c78;
+		font-size: 36px;
+		font-weight: 700;
+		letter-spacing: 0.36px;
+	}
+
+	.count{
+		color: #306c78;
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0.16px;
+		border-radius: 10px;
+		background-color: #cbd7da;
+		box-sizing: border-box;
+		padding: 5px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 6px;
+    margin-left: 12px;		
+	}
+}
+
+.h4-title{
+	opacity: 0.6;
+	color: #2c2c2c;
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.16px;
+}
+
+.h3-title{
+	color: #2c2c2c;
+	font-family: "Open Sans";
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 0.24px;
+}
+
+.new-auto{
+	width: 68px;
+	height: 24px;
+	border-radius: 6px 0;
+	background-color: #d24a43;
+	color: #ffffff;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0.14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 !important;
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	z-index: 2;
 }

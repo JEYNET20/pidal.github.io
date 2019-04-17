@@ -1,0 +1,139 @@
+.offers{
+	&__title{
+		margin-bottom: 30px;
+		margin-top: 30px;
+		display: flex;
+		align-items: center;
+		i{
+			margin-right: 12px;
+		}
+	}
+	&__navigation{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 155px;
+		min-height: 26px;
+		li{
+		}
+		li:hover{
+			span{
+				transition: all 300ms ease;
+				opacity: 1 !important;
+			}
+		}
+		li a{
+			color: #2c2c2c;
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 14px;
+			letter-spacing: 0.16px;
+			text-decoration: none;
+			position: relative;
+			span{
+				// content: '';
+				transition: all 300ms ease;
+				display: block;
+				opacity: 0;
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: #ff4545;
+			}
+		}
+	}
+}
+
+.offers-content{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	&__item{
+		box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+		transition: all 250ms ease;
+		border-radius: 10px;
+		background-color: #ffffff;		
+		width: 282px;
+		height: 340px;
+		cursor: pointer;
+		position: relative;
+		.swiper-container{
+			width: 282px;
+			height: 204px;
+			padding: 0;
+		}
+		.swiper-wrapper{
+			padding: 0;
+		}
+		.swiper-slide{
+			padding: 0;
+		}
+		.swiper-pagination{
+			width: 6px;
+			height: 6px;
+			// box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			// background-color: #ffffff;
+			bottom: 37px !important;
+		}
+		.swiper-pagination-bullet{
+			opacity: 1;
+			background-color: #fff;
+		}
+		.swiper-pagination-bullet-active{
+			background-color: #ff4545;
+		}
+		img{
+			width: 282px;
+			height: 204px;
+		}
+	}
+	&__item:hover{
+		box-shadow: 0 0 10px rgba(44, 44, 44, 0.3);
+		transition: all 250ms ease;
+	}
+	div{
+		box-sizing: border-box;
+		padding-left: 12px;
+		padding-top: 14px;
+		position: relative;
+		i{
+			position: absolute;
+			right: 12px;
+			bottom: 4px;
+		}
+	}
+	&__item-name{
+		display: block;
+		width: 100%;
+		height: 17px;
+		color: #306c78;
+		font-size: 18px;
+		font-weight: 400;
+		margin-bottom: 6px;
+	}
+	&__item-age{
+		display: block;
+		width: 100%;
+		color: #2c2c2c;
+		font-size: 16px;
+		font-weight: 400;
+		margin-bottom: 5px;
+	}
+	&__item-price{
+		display: block;
+		width: 100%;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 24px;
+		font-weight: 400;
+	}
+}

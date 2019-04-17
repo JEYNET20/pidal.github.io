@@ -10,5 +10,20 @@
 // 1 блок для главной "map-block"
 @import 'bloks/map-block.scss';
 
+// блок офер
+@import 'bloks/offers.scss';
+
+// блок "popular-mark"
+@import 'bloks/popular-mark.scss';
+
+// Блок 'last-list'
+@import 'bloks/last-list.scss';
+
+// Блок "pre-footer-icon"
+@import 'bloks/pre-footer-icons.scss';
+
+// слайдер
+@import '_slider.scss';
+
 // Футер
 @import 'bloks/footer.scss';

@@ -35,7 +35,10 @@
 			margin-bottom: 31px;
 		}
 		span{
-			color: #ff4545 !important;
+			// color: #ff4545 !important;
+		}
+		span:hover{
+			// color: #ff4545 !important;
 		}
 		ul{
 			margin: 0;
@@ -71,6 +74,13 @@
 		i:hover{
 			transition: all 150ms ease;
 			cursor: pointer;
+			// background-image: url('../img/icon/exhit-chrest-red.png');
+		}
+		.con-exit-chrest{
+
+		}
+		.icon-exit-chrest:hover{
+			transition: all 50ms ease;
 			background-image: url('../img/icon/exhit-chrest-red.png');
 		}
 	}
@@ -103,7 +113,13 @@
 		line-height: 24px;
 		letter-spacing: 0.16px;
 		height: 100%;
+		transition: all 150ms ease;
 	}
+	span:hover{
+		color: #ff4545;
+		transition: all 150ms ease;
+
+	}	
 	.icon-place-mark{
 		// position: absolute;
 		// left: 0;
