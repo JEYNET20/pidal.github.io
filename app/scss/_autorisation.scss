@@ -1,0 +1,116 @@
+.autorisation{
+	box-sizing: border-box;
+	padding-top: 64px;
+	padding-bottom: 64px;
+	display: flex;
+	justify-content: center;
+	.sign-str{
+		width: 328px;
+		height: 467px;
+		box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+		border-radius: 0 0 6px 6px;
+		background-color: #ffffff;
+	}
+	.sign-str__log-reg-wrapper{
+		border-top: 2px solid #ff4545;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 62px;
+		margin-bottom: 36px;
+	}
+	.sign-str__log-ing{
+		outline: none;
+		border: none;
+		width: 50%;
+		height: 100%;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 18px;
+		font-weight: 600;
+		letter-spacing: 0.18px;
+	}
+	.sign-str__register{
+		outline: none;
+		border: none;
+		width: 50%;
+		height: 100%;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 18px;
+		font-weight: 600;
+		letter-spacing: 0.18px;
+		background-color: #fff;
+	}
+	.soc-wrapper{
+		margin: 0 auto;
+		margin-bottom: 32px;
+	}
+	form{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		padding-left: 24px;
+		padding-right: 24px;
+		input[type="text"]{
+			width: 280px;
+			height: 44px;
+			border-radius: 22px;
+			border: 1px solid #ff4545;
+			opacity: 0.6;
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.14px;
+			box-sizing: border-box;
+			padding-left: 13px;
+			margin-bottom: 22px;
+		}
+		label{
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				left: -20px;
+				top: 0;
+				display: block;
+				width: 12px;
+				height: 12px;
+				border-radius: 2px;
+				border: 1px solid #ff4545;
+				background-color: #ffffff;
+			}
+		}
+		input[type="checkbox"]{
+			display: none;
+		}
+		input[type="checkbox"]:checked + label::after{
+			background-color: #ff4545;
+		}
+		button{
+			background-color: #ff4545;
+		}
+		p{
+			margin: 0;
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 14px;
+			margin-left: 20px;
+			margin-bottom: 32px;
+			// color: #306c78;
+		}
+		a{
+			color: #306c78;
+			font-family: "Open Sans";
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 14px;
+			text-decoration: none;
+		}
+	}
+}
+
