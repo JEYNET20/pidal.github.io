@@ -218,3 +218,14 @@
 	display: inline-block;
 	cursor: pointer;
 }
+
+.arrow-down-circle{
+	width: 20px;
+	height: 20px;
+	background-image: url('../img/icon/arrow-down-circle.png');
+	opacity: 0.6;
+	background-position: center center;
+	background-size: cover;
+	display: block;
+	cursor: pointer;	
+}

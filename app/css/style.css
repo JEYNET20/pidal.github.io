@@ -7,7 +7,8 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 a, button {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer; }
 
 i {
   font-style: normal; }
@@ -302,6 +303,16 @@ i {
   background-position: center center;
   background-size: cover;
   display: inline-block;
+  cursor: pointer; }
+
+.arrow-down-circle {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/icon/arrow-down-circle.png");
+  opacity: 0.6;
+  background-position: center center;
+  background-size: cover;
+  display: block;
   cursor: pointer; }
 
 .header {
@@ -899,6 +910,92 @@ i {
     width: 58px;
     height: 54px;
     background-image: url("../img/icon/pre-footer-icon-3.png"); }
+
+.popup-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0.8;
+  z-index: 11; }
+
+.popup-def {
+  position: fixed;
+  z-index: 12;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 328px;
+  height: 319px;
+  box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-right: 24px; }
+  .popup-def h5 {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 13px; }
+  .popup-def p {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+    margin-top: 0;
+    margin-bottom: 32px; }
+  .popup-def button {
+    border: none;
+    outline: none;
+    width: 280px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #ff4545;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    margin-bottom: 12px; }
+  .popup-def a {
+    display: block;
+    border-radius: 22px;
+    background-color: #2c2c2c;
+    width: 280px;
+    height: 44px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px; }
+  .popup-def i.icon-form-exit {
+    position: absolute;
+    right: -28px;
+    top: -28px;
+    cursor: pointer; }
+  .popup-def i.arrow-down-circle {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%); }
+
+.popup-buf a {
+  background-color: #306c78; }
+
+.popup-buf button {
+  background-color: #2c2c2c; }
 
 .swiper-container {
   width: 100%;
