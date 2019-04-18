@@ -22,6 +22,12 @@
 // Блок "pre-footer-icon"
 @import 'bloks/pre-footer-icons.scss';
 
+// регистрация / авторизация
+@import '_autorisation.scss';
+
+// 404
+@import '_404.scss';
+
 // попап окна
 @import '_popup.scss';
 

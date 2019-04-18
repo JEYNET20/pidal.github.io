@@ -107,6 +107,85 @@ i {
   left: 0;
   z-index: 2; }
 
+.btn {
+  width: 298px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #306c78;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.soc-wrapper {
+  width: 212px;
+  height: 77px;
+  position: relative; }
+  .soc-wrapper ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; }
+  .soc-wrapper .vk {
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-image: url("../img/icon/reg-vk.png");
+    background-position: center center;
+    background-size: cover; }
+  .soc-wrapper .ok {
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-image: url("../img/icon/reg-ok.png");
+    background-position: center center;
+    background-size: cover; }
+  .soc-wrapper .fb {
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-image: url("../img/icon/reg-fb.png");
+    background-position: center center;
+    background-size: cover; }
+  .soc-wrapper .gp {
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-image: url("../img/icon/reg-gp.png");
+    background-position: center center;
+    background-size: cover; }
+  .soc-wrapper span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    line-height: 16px;
+    position: absolute;
+    bottom: 0; }
+
 .icon-anonim {
   background-image: url("../img/icon/user_icon.png");
   width: 44px;
@@ -910,6 +989,147 @@ i {
     width: 58px;
     height: 54px;
     background-image: url("../img/icon/pre-footer-icon-3.png"); }
+
+.autorisation {
+  box-sizing: border-box;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  justify-content: center; }
+  .autorisation .sign-str {
+    width: 328px;
+    height: 467px;
+    box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+    border-radius: 0 0 6px 6px;
+    background-color: #ffffff; }
+  .autorisation .sign-str__log-reg-wrapper {
+    border-top: 2px solid #ff4545;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    margin-bottom: 36px; }
+  .autorisation .sign-str__log-ing {
+    outline: none;
+    border: none;
+    width: 50%;
+    height: 100%;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.18px; }
+  .autorisation .sign-str__register {
+    outline: none;
+    border: none;
+    width: 50%;
+    height: 100%;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.18px;
+    background-color: #fff; }
+  .autorisation .soc-wrapper {
+    margin: 0 auto;
+    margin-bottom: 32px; }
+  .autorisation form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 24px;
+    padding-right: 24px; }
+    .autorisation form input[type="text"] {
+      width: 280px;
+      height: 44px;
+      border-radius: 22px;
+      border: 1px solid #ff4545;
+      opacity: 0.6;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.14px;
+      box-sizing: border-box;
+      padding-left: 13px;
+      margin-bottom: 22px; }
+    .autorisation form label {
+      position: relative; }
+      .autorisation form label::after {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 0;
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+        border: 1px solid #ff4545;
+        background-color: #ffffff; }
+    .autorisation form input[type="checkbox"] {
+      display: none; }
+    .autorisation form input[type="checkbox"]:checked + label::after {
+      background-color: #ff4545; }
+    .autorisation form button {
+      background-color: #ff4545; }
+    .autorisation form p {
+      margin: 0;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      margin-left: 20px;
+      margin-bottom: 32px; }
+    .autorisation form a {
+      color: #306c78;
+      font-family: "Open Sans";
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      text-decoration: none; }
+
+.str-404 .hr {
+  margin-top: 0; }
+
+.str-404 h3 {
+  margin: 0;
+  padding-top: 44px;
+  text-align: center;
+  color: #2c2c2c;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.18px; }
+
+.red-circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 193px;
+  height: 193px;
+  border: 2px solid #ff4545;
+  display: block; }
+
+.container-404 {
+  margin: 0;
+  padding: 0;
+  min-height: 530px;
+  background-image: url("../img/404-bg.png");
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+  .container-404 img {
+    position: absolute;
+    left: 50%;
+    top: 94px;
+    transform: translateX(-50%); }
+  .container-404 a {
+    position: absolute;
+    left: 50%;
+    bottom: 64px;
+    transform: translateX(-50%); }
 
 .popup-bg {
   position: fixed;

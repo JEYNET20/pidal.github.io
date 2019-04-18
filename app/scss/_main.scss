@@ -125,3 +125,91 @@ i{
 	left: 0;
 	z-index: 2;
 }
+
+.btn{
+	width: 298px;
+	height: 44px;
+	border-radius: 22px;
+	background-color: #306c78;
+	color: #ffffff;
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.16px;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.soc-wrapper{
+	width: 212px;
+	height: 77px;
+	position: relative;
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+	.vk{
+		border-radius: 50%;
+		cursor: pointer;
+		display: block;
+		width: 44px;
+		height: 44px;
+		background-image: url('../img/icon/reg-vk.png');
+		background-position: center center;
+		background-size: cover;
+	}
+	.ok{
+		border-radius: 50%;
+		cursor: pointer;
+		display: block;
+		width: 44px;
+		height: 44px;
+		background-image: url('../img/icon/reg-ok.png');
+		background-position: center center;
+		background-size: cover;
+	}
+	.fb{
+		border-radius: 50%;
+		cursor: pointer;
+		display: block;
+		width: 44px;
+		height: 44px;
+		background-image: url('../img/icon/reg-fb.png');
+		background-position: center center;
+		background-size: cover;
+
+	}
+	.gp{
+		border-radius: 50%;
+		cursor: pointer;
+		display: block;
+		width: 44px;
+		height: 44px;
+		background-image: url('../img/icon/reg-gp.png');
+		background-position: center center;
+		background-size: cover;
+	}
+	span{
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0.16px;
+		line-height: 16px;
+		position: absolute;
+		bottom: 0;
+	}
+}
