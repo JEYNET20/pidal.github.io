@@ -9,6 +9,9 @@ body {
 a, button {
   font-family: 'Open Sans', sans-serif; }
 
+i {
+  font-style: normal; }
+
 .d-none {
   display: none !important; }
 
@@ -292,6 +295,15 @@ a, button {
   display: inline-block;
   cursor: pointer; }
 
+.icon-arrow-down--white {
+  width: 12px;
+  height: 7px;
+  background-image: url("../img/icon/down-arrow-white.png");
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  cursor: pointer; }
+
 .header {
   height: 102px;
   background-color: #2c2c2c; }
@@ -405,7 +417,11 @@ a, button {
     cursor: pointer;
     box-sizing: border-box;
     padding-left: 25px;
-    transition: all 300ms ease; }
+    transition: all 300ms ease;
+    display: flex;
+    justify-content: flex-end; }
+    .header .sign-navigation .icon-arrow-down--white {
+      margin-left: 6px; }
     .header .sign-navigation__name {
       margin-left: 5px;
       cursor: pointer;
@@ -418,16 +434,19 @@ a, button {
       font-weight: 400;
       line-height: 14px;
       letter-spacing: 0.16px; }
-  .header .sign-navigation:hover .icon-anonim {
+  .header .sign-navigation:hover > .icon-anonim {
     transition: all 300ms ease;
     background-image: url("../img/icon/user-icon-red.png"); }
+  .header .sign-navigation:hover .icon-arrow-down--white {
+    transition: all 300ms ease;
+    background-image: url("../img/icon/down-arrow-red.png"); }
   .header .sign-navigation:hover .sign-navigation__name {
     transition: all 300ms ease;
     color: #ff4545; }
   .header .profile-list {
     position: absolute;
     z-index: 10;
-    top: 100%;
+    top: 0;
     right: 0;
     width: 282px;
     box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
@@ -437,6 +456,27 @@ a, button {
     justify-content: center;
     flex-wrap: wrap;
     cursor: default; }
+    .header .profile-list-title-wrapper {
+      width: 282px;
+      min-height: 44px;
+      height: 102px;
+      display: flex;
+      align-items: center;
+      transition: all .3s ease;
+      cursor: pointer;
+      position: relative;
+      cursor: pointer;
+      box-sizing: border-box;
+      padding-left: 25px;
+      transition: all .3s ease;
+      background-color: #343434; }
+      .header .profile-list-title-wrapper span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: .16px;
+        color: #fff;
+        text-decoration: none; }
     .header .profile-list__title-wrapper {
       width: 146px;
       margin-top: 26px;
@@ -774,20 +814,20 @@ a, button {
   padding: 0;
   margin: 0; }
 
-.popular-mark__item a {
-  text-decoration: none;
-  color: #306c78;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 14px;
-  letter-spacing: 0.16px; }
-
-.popular-mark__item a:hover {
-  color: #ff4545; }
-
-.popular-mark__item .last {
-  color: #2c2c2c;
-  font-weight: 700; }
+.popular-mark__item {
+  margin-bottom: 6px; }
+  .popular-mark__item a {
+    text-decoration: none;
+    color: #306c78;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0.16px; }
+  .popular-mark__item a:hover {
+    color: #ff4545; }
+  .popular-mark__item .last {
+    color: #2c2c2c;
+    font-weight: 700; }
 
 .popular-mark .count {
   color: #2c2c2c;
