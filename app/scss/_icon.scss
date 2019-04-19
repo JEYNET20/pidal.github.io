@@ -229,3 +229,25 @@
 	display: block;
 	cursor: pointer;	
 }
+
+.password-icon{
+	background-image: url('../img/icon/form_pass_icon.png');
+	width: 16px;
+	height: 12px;
+	background-color: #2c2c2c;
+	opacity: 0.6;
+	background-position: center center;
+	background-size: cover;
+	display: block;
+	cursor: pointer;	
+}
+
+.form-succes-blue{
+	width: 24px;
+	height: 25px;
+	background-image: url('../img/icon/correct-blue.png');
+	background-position: center center;
+	background-size: cover;
+	display: block;
+	cursor: pointer;	
+}

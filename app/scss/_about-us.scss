@@ -1,0 +1,196 @@
+.about-us-str{
+	h1{
+		width: 100%;
+		text-align: center;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 64px;
+		line-height: 64px;
+		font-weight: 300;
+		letter-spacing: 0.64px;
+		margin-top: 51px;
+		margin-bottom: 29px;
+	}
+	.title-text{
+		width: 100%;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 24px;
+		font-weight: 400;
+		letter-spacing: 0.24px;
+		margin: 0;
+	}
+	h2{
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0.24px;
+		margin-top: 27px;
+		margin-bottom: 22px;
+	}
+	.text{
+		display: block;
+		// margin: 0;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0.16px;
+		margin-bottom: 34px;
+	}
+	.pre-footer-icons{
+		background-image: url('../img/about-us-list-bg.png');
+		background-repeat: no-repeat;
+		background-position-x: 80px;
+	}
+	.contacts{
+		margin-bottom: 60px;
+	}
+
+	.about-us__mapa{
+		display: block;
+		width: 997px;
+		margin: 0 auto;
+		height: 479px;
+		background-image: url('../img/about-us-bg.png');
+		background-position: center;
+		margin-top: 29px;
+		margin-bottom: 81px;
+		position: relative;
+	}
+	.about-us__mapa-item{
+		transition: all 300ms ease;
+		width: 72px;
+		height: 72px;
+		border: 2px solid rgba(255, 69, 69, .2);
+		// opacity: 0.2;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		&-wrapper-1{
+			width: 58px;
+			height: 58px;
+			border: 2px solid rgba(255, 69, 69, .4);
+			// opacity: 0.4;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+
+			}
+		}
+	}
+	.about-us__mapa-item:hover{
+		transition: all 300ms ease;
+		cursor: pointer;
+		transform: scale(1.1);
+	}
+	.about-us__mapa-item--1{
+		position: absolute;
+		top: 176px;
+		left: 96px;
+	}
+	.about-us__mapa-item--2{
+		position: absolute;
+		top: 272px;
+		left: 140px;
+	}
+	.about-us__mapa-item--3{
+		position: absolute;
+		top: 362px;
+		left: 100px;
+	}
+	.about-us__mapa-item--4{
+		position: absolute;
+		top: 232px;
+		left: 260px;
+	}
+	.about-us__mapa-item--5{
+		position: absolute;
+		top: 99px;
+		left: 347px;
+	}
+	.about-us__mapa-item--6{
+		position: absolute;
+		top: 332px;
+		left: 390px;
+	}		
+	.about-us__mapa-item--7{
+		position: absolute;
+		top: 92px;
+		left: 470px;
+	}
+	.about-us__mapa-item--8{
+		position: absolute;
+		top: 4px;
+		left: 490px;
+	}
+	.about-us__mapa-item--9{
+		position: absolute;
+		top: 159px;
+		left: 542px;
+	}	
+	.about-us__mapa-item--10{
+		position: absolute;
+		top: 249px;
+		left: 527px;
+	}	
+	.about-us__mapa-item--11{
+		position: absolute;
+		top: 442px;
+		left: 550px;
+	}	
+	.about-us__mapa-item--12{
+		position: absolute;
+		top: 379px;
+		left: 647px;
+	}
+	.about-us__mapa-item--13{
+		position: absolute;
+		top: 99px;
+		left: 647px;
+	}
+	.about-us__mapa-item--14{
+		position: absolute;
+		top: 209px;
+		left: 807px;
+	}
+	.about-us__mapa-item--15{
+		position: absolute;
+		top: 376px;
+		left: 784px;
+	}
+
+	.about-us__mapa-text{
+		position: absolute;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 24px;
+		font-weight: 400;
+		b{
+			color: #ff4545;
+			font-family: "Open Sans";
+			font-size: 36px;
+			font-weight: 600;
+			letter-spacing: 0.36px;
+		}
+	}
+	.about_us__mapa-text--1{
+		top: 52px;
+		left: 28px;	
+	}
+	.about_us__mapa-text--2{
+		top: 418px;
+		left: 205px;	
+	}
+	.about_us__mapa-text--3{
+		top: 290px;
+		left: 683px;	
+	}
+}

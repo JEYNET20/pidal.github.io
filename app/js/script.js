@@ -1,3 +1,23 @@
+// public (всяки мелочи)
+(function(){
+	// form
+	let exitFormBtn = document.querySelectorAll('.icon-form-exit');
+	let form = document.querySelectorAll('.popup-def');
+	const BG = document.querySelector('.popup-bg');
+
+	let onExitFormBtn = function(e){
+		e.preventDefault();
+		if(BG) BG.classList.add('d-none');
+		for(let i = 0; i < form.length; i++)
+			if(form[i]) form[i].classList.add('d-none');
+	};
+
+	exitFormBtn.forEach(function(value){
+		if(value) value.addEventListener('click', onExitFormBtn);
+	});
+	// END_form
+})();
+
 // Меню
 (function(){
 	// меню категорий
@@ -185,15 +205,15 @@
 		});
 	};
 
-	changeCountBtn.addEventListener('click', onChangeCountBtnClick);
-	prevBtn.addEventListener('click', onPrevBtnClick);
+	if(changeCountBtn) changeCountBtn.addEventListener('click', onChangeCountBtnClick);
+	if(prevBtn) prevBtn.addEventListener('click', onPrevBtnClick);
 
 	exhitBtn.forEach(function(value){
-		value.addEventListener('click', onExitBtnClick);
+		if(value) value.addEventListener('click', onExitBtnClick);
 	});
 
 	mapBlockLvl2.forEach(function(value){
-		value.addEventListener('click', onMapBlockLvl2);
+		if(value) value.addEventListener('click', onMapBlockLvl2);
 	});
 })();
 
@@ -222,17 +242,17 @@
 	let newMark = document.querySelectorAll('.new-auto');
 	let otherMark = document.querySelectorAll('.other-mark a');
 
-	btnNew.onclick = function(e){
-		e.preventDefault();
-		let span = this.childNodes[1];
-		span.style.opacity = '1';
-		otherMark.forEach(function(value){
-			value.childNodes[1].style.opacity = '0';
-		});
+	if(btnNew) btnNew.onclick = function(e){
+			e.preventDefault();
+			let span = this.childNodes[1];
+			span.style.opacity = '1';
+			otherMark.forEach(function(value){
+				value.childNodes[1].style.opacity = '0';
+			});
 
-		newMark.forEach(function(value){
-			value.classList.add('d-none');
-		});
+			newMark.forEach(function(value){
+				value.classList.add('d-none');
+			});
 	};
 
 	let onOtherMarkClick = function(e){
@@ -246,10 +266,66 @@
 		});		
 		span.style.opacity = '1';
 
-		btnNew.childNodes[1].style.opacity = '0';
+		if(btnNew) btnNew.childNodes[1].style.opacity = '0';
 	}
 
 	otherMark.forEach(function(value){
-		value.addEventListener('click', onOtherMarkClick);
+		if(value) value.addEventListener('click', onOtherMarkClick);
+	});
+})();
+
+// регистрация / авторизация функционал 
+(function(){
+	let sigInBtn = document.querySelector('.sign-str__log-ing');
+	let registrBtn = document.querySelector('.sign-str__register');
+	let formRegistr = document.querySelector('.form-register');
+	let formLogIn = document.querySelector('.form-log-in');
+	let restPassword = document.querySelector('.popup-rest-password');
+	let restPasswordBtn = document.querySelector('.rest-password');
+	const BG = document.querySelector('.popup-bg');
+	let showPassword = document.querySelectorAll('.password-icon');
+
+	showPassword.forEach(function(value){
+		b = false;
+		if(value) value.onclick = function(e){
+			e.preventDefault();
+			console.log(this);
+			let x = document.querySelectorAll('.password-input');
+			x.forEach(function(value){
+				if(value && !b){
+					value.type = 'text';
+					b = true;
+				}else{
+					value.type = 'password';
+					b = false;
+				}
+			});
+		};
+	})
+
+	let onSigInBtnClick = function(e){
+		e.preventDefault();
+		formRegistr.classList.add('d-none');
+		formLogIn.classList.remove('d-none');
+		console.log(this);
+		this.style.backgroundColor = '#fff';
+		registrBtn.style.backgroundColor = "#dddddd";
+	};
+
+	let onRegistrBtnClick = function(e){
+		e.preventDefault();
+		formLogIn.classList.add('d-none');
+		formRegistr.classList.remove('d-none');
+		console.log(this);
+		this.style.backgroundColor = '#fff';
+		sigInBtn.style.backgroundColor = "#dddddd";
+	};
+
+	if(sigInBtn) sigInBtn.addEventListener('click',onSigInBtnClick);
+	if(registrBtn) registrBtn.addEventListener('click',onRegistrBtnClick);
+	if(restPasswordBtn) restPasswordBtn.addEventListener('click', function(e){
+		e.preventDefault();
+		restPassword.classList.remove('d-none');
+		BG.classList.remove('d-none');
 	});
 })();
