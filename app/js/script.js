@@ -239,32 +239,49 @@
 // Добавить удалить марку новые авто
 (function(){
 	let btnNew = document.querySelector('.new-mark a');
-	let newMark = document.querySelectorAll('.new-auto');
+	let mark = document.querySelectorAll('.new-auto');
+	let markFixed = document.querySelectorAll('.new-auto--fixed');
 	let otherMark = document.querySelectorAll('.other-mark a');
 
 	if(btnNew) btnNew.onclick = function(e){
-			e.preventDefault();
-			let span = this.childNodes[1];
-			span.style.opacity = '1';
-			otherMark.forEach(function(value){
-				value.childNodes[1].style.opacity = '0';
-			});
+		e.preventDefault();
 
-			newMark.forEach(function(value){
+		mark.forEach(function(value){
+			value.classList.remove('d-none');
+		})
+		setTimeout(function(){
+			mark.forEach(function(value){
 				value.classList.add('d-none');
-			});
+			})
+		},1000);
+
+		markFixed.forEach(function(value){
+			value.classList.remove('d-none');
+		})
+		setTimeout(function(){
+			markFixed.forEach(function(value){
+				value.classList.add('d-none');
+			})
+		},1000);
+
+		let span = this.childNodes[1];
+		span.style.opacity = '1';
+		otherMark.forEach(function(value){
+			value.childNodes[1].style.opacity = '0';
+		});
 	};
 
 	let onOtherMarkClick = function(e){
 		e.preventDefault();
 		let span = this.childNodes[1];
-		newMark.forEach(function(value){
-			value.classList.remove('d-none');
-		});
 		otherMark.forEach(function(value){
 			value.childNodes[1].style.opacity = '0';
 		});		
 		span.style.opacity = '1';
+
+		markFixed.forEach(function(value){
+			value.classList.remove('d-none');
+		})
 
 		if(btnNew) btnNew.childNodes[1].style.opacity = '0';
 	}

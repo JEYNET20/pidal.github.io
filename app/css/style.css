@@ -107,6 +107,26 @@ i {
   left: 0;
   z-index: 2; }
 
+.new-auto--fixed {
+  width: 68px;
+  height: 24px;
+  border-radius: 6px 0;
+  background-color: #d24a43;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
 .btn {
   width: 298px;
   height: 44px;
@@ -478,6 +498,34 @@ input[type="password"]:focus {
   display: block;
   cursor: pointer; }
 
+.arrow-down-red-while-wrapper {
+  cursor: pointer;
+  display: block;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  box-shadow: 0 4px 30px rgba(44, 44, 44, 0.3);
+  transition: all 300ms ease;
+  background-color: #ffffff; }
+  .arrow-down-red-while-wrapper::after {
+    content: '';
+    background-image: url("../img/icon/arrow-down-red.png");
+    background-position: center center;
+    background-size: cover;
+    display: block;
+    cursor: pointer;
+    width: 12px;
+    height: 7px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+.arrow-down-red-while-wrapper:hover {
+  transition: all 300ms ease;
+  transform: scale(1.1); }
+
 .header {
   height: 102px;
   background-color: #2c2c2c; }
@@ -716,6 +764,189 @@ input[type="password"]:focus {
         left: 35px;
         top: 50%;
         transform: translateY(-50%); }
+
+.services-str a {
+  text-decoration: none; }
+
+.services-str .red-icon-1,
+.services-str .red-icon-2,
+.services-str .red-icon-3 {
+  display: block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.services-str .red-icon-1 {
+  background-image: url("../img/icon/ser-red-1.png");
+  width: 33px;
+  height: 44px;
+  margin-left: 62px;
+  margin-right: 7px; }
+
+.services-str .red-icon-2 {
+  background-image: url("../img/icon/ser-red-2.png");
+  width: 44px;
+  height: 43px;
+  margin-left: 54px;
+  margin-right: 8px; }
+
+.services-str .red-icon-3 {
+  background-image: url("../img/icon/ser-red-3.png");
+  width: 51px;
+  height: 45px;
+  margin-left: 51px;
+  margin-right: 5px; }
+
+.services-str h1 {
+  color: #2c2c2c;
+  font-family: "Open Sans";
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 68px;
+  letter-spacing: 0.64px;
+  margin-top: 52px;
+  margin-bottom: 31px;
+  text-align: center; }
+
+.services-str h2 {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: 0.64px;
+  margin: 0; }
+
+.services-str p {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.18px; }
+
+.services-str .text-for-h1 {
+  color: #2c2c2c;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  margin-bottom: 55px;
+  text-align: center; }
+  .services-str .text-for-h1 a {
+    color: #306c78;
+    letter-spacing: 0.18px; }
+
+.services-str .block-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .services-str .block-1 .list-border {
+    display: block;
+    width: 336px;
+    height: 1px;
+    background-color: #2c2c2c;
+    opacity: 0.2; }
+  .services-str .block-1 .block-1-content {
+    margin-top: -75px; }
+  .services-str .block-1 .red-wrapper {
+    width: 100%;
+    height: 303px;
+    background-color: #ff4545;
+    box-sizing: border-box;
+    padding-top: 59px; }
+    .services-str .block-1 .red-wrapper h2 {
+      text-align: center;
+      color: #ffffff;
+      font-family: "Open Sans";
+      font-size: 64px;
+      font-weight: 300;
+      line-height: 68px;
+      letter-spacing: 0.64px;
+      margin-top: 0;
+      margin-bottom: 16px; }
+    .services-str .block-1 .red-wrapper p {
+      margin-top: 0;
+      box-sizing: border-box;
+      padding-bottom: 31px;
+      text-align: center; }
+  .services-str .block-1 ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; }
+    .services-str .block-1 ul li {
+      width: 384px;
+      height: 334px;
+      box-shadow: 0 0 3px #2c2c2c;
+      border-radius: 6px;
+      background-color: #ffffff;
+      margin-right: 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      .services-str .block-1 ul li .list-title {
+        margin-top: 30px;
+        height: 56px;
+        text-align: center; }
+        .services-str .block-1 ul li .list-title b {
+          text-align: center;
+          display: block;
+          width: 100%;
+          color: #2c2c2c;
+          font-family: "Open Sans";
+          font-size: 24px;
+          font-weight: 700;
+          letter-spacing: 0.24px; }
+        .services-str .block-1 ul li .list-title span {
+          color: #2c2c2c;
+          font-family: "Open Sans";
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.14px; }
+      .services-str .block-1 ul li .text-and-icon {
+        cursor: pointer;
+        display: flex;
+        width: 100%;
+        height: 40px;
+        align-items: center;
+        transition: all 200ms ease;
+        opacity: 0.6; }
+        .services-str .block-1 ul li .text-and-icon span {
+          margin-left: 7px;
+          color: #2c2c2c;
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.16px; }
+      .services-str .block-1 ul li .text-and-icon:hover {
+        transition: all 200ms ease;
+        opacity: 1; }
+    .services-str .block-1 ul li:last-child {
+      margin-right: 0; }
+  .services-str .block-1 .last-text {
+    color: #2c2c2c;
+    width: 100%;
+    margin-top: 59px;
+    text-align: center;
+    margin-bottom: 53px; }
+  .services-str .block-1 .arrow-down-red-while-wrapper {
+    left: 50%;
+    bottom: -24px;
+    position: absolute; }
+
+.services-str .block-2 {
+  background-color: #ff4545; }
+
+.services-str .block-3 .text-for-h2, .services-str .block-3 h2 {
+  color: #2c2c2c; }
+
+.services-str .block-3 .right-wrapper p {
+  color: #2c2c2c; }
+
+.services-str .block-4 {
+  background-color: #ff4545; }
 
 .map-block {
   display: flex;
