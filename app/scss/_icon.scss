@@ -107,28 +107,55 @@
 	align-items: center;
 }
 
-.soc-youtube{
-	background-image: url('../img/icon/youtube.png');
-	border-radius: 50%;
-	width: 36px;
-	height: 36px;
-	cursor: pointer;
-}
-
+.soc-vk,
+.soc-youtube,
 .soc-inst{
-	background-image: url('../img/icon/instagram.png');
-	border-radius: 50%;
 	width: 36px;
 	height: 36px;
+	border-radius: 50%;
 	cursor: pointer;
+	background-color: #343434;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
 }
 
-.soc-vk{
-	background-image: url('../img/icon/vk.png');
-	border-radius: 50%;
-	width: 36px;
-	height: 36px;
-	cursor: pointer;
+.soc-youtube a{
+	background-image: url('../img/icon/youtube.svg');
+	width: 19px;
+	height: 15px;
+}
+
+.soc-inst a{
+	background-image: url('../img/icon/inst.svg');
+	width: 16px;
+	height: 16px;
+}
+
+.soc-vk a{
+	background-image: url('../img/icon/vk.svg');
+	width: 19px;
+	height: 13px;	
+}
+
+.soc-youtube a,
+.soc-inst a,
+.soc-vk a{
+	display: block;
+	opacity: 0.2 !important;
+	transition: all 250ms ease;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.soc-youtube:hover,
+.soc-inst:hover,
+.soc-vk:hover{
+	a{
+		opacity: 0.6 !important;
+		transition: all 250ms ease;
+	}
 }
 
 .icon-place-mark{
