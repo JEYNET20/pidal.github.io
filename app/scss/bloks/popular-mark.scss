@@ -27,6 +27,11 @@
 		cursor: pointer;
 		transition: all 150ms ease;
 	}
+	&__image-item:nth-child(3){
+		a{
+			height: 67px;
+		}
+	}
 	&__image-item:hover{
 		box-shadow: 0 2px 16px rgba(44, 44, 44, 0.2);
 		border: 1px solid #306c78;
@@ -71,4 +76,10 @@
 		line-height: 14px;
 		letter-spacing: 0.14px;
 	}
+}
+
+.popular-mark__list-wrapper--other{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }

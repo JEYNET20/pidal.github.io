@@ -62,6 +62,11 @@ i{
 	margin-bottom: 35px;
 	display: flex;
 	align-items: center;
+	a{
+		text-decoration: none;
+		color: #306c78;		
+		transition: all 200ms ease;
+	}
 	.h2-title{
 		margin: 0;
 		color: #306c78;
@@ -69,7 +74,6 @@ i{
 		font-weight: 700;
 		letter-spacing: 0.36px;
 	}
-
 	.count{
 		color: #306c78;
 		font-size: 16px;
@@ -85,6 +89,13 @@ i{
 		align-items: center;
 		margin-top: 6px;
     margin-left: 12px;		
+	}
+}
+
+.title-wrapper:hover{
+	a{
+		color: #ff4545;
+		transition: all 200ms ease;
 	}
 }
 

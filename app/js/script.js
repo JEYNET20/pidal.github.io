@@ -248,15 +248,31 @@
 
 		mark.forEach(function(value){
 			value.classList.remove('d-none');
+			anime({
+			  targets: value,
+			  opacity: '1' ,
+			  easing: 'easeInQuad',
+			  duration: 400
+			});
+
 		})
 		setTimeout(function(){
 			mark.forEach(function(value){
-				value.classList.add('d-none');
+				anime({
+				  targets: value,
+				  opacity: '0' ,
+				  easing: 'easeOutQuad',
+				  duration: 400
+				});				
+				setTimeout(function(){
+					value.classList.add('d-none');
+				},400)
 			})
 		},1000);
 
 		markFixed.forEach(function(value){
 			value.classList.remove('d-none');
+	
 		})
 		setTimeout(function(){
 			markFixed.forEach(function(value){
@@ -344,5 +360,54 @@
 		e.preventDefault();
 		restPassword.classList.remove('d-none');
 		BG.classList.remove('d-none');
+	});
+})();
+
+// открыть скрыть дополнительные листы
+(function(){
+
+	let btn = document.querySelector('.list--other');
+	let list = document.querySelector('.popular-mark__list-wrapper--other');
+
+	let onBtnShowClick =  function(e){
+		e.preventDefault();
+		list.classList.remove('d-none');
+		let x = document.querySelector('.popular-mark__item--hidden');
+		x.classList.remove('d-none');
+		anime({
+		  targets: x,
+		  opacity: '1' ,
+		  easing: 'easeInQuad',
+		  duration: 400
+		});
+		this.parentNode.classList.add('d-none');
+		anime({
+		  targets: list,
+		  opacity: '1' ,
+		  easing: 'easeInQuad',
+		  duration: 400
+		});
+	};
+
+	btn.addEventListener('click', onBtnShowClick);
+
+	let lastListBtn = document.querySelectorAll('.last-list .list--other');
+
+	let onLastListBtnClick = function(e){
+		e.preventDefault();
+		this.parentNode.classList.add('d-none');
+		let list = this.parentNode.nextSibling.nextSibling;
+
+		list.classList.remove('d-none');
+		anime({
+		  targets: list,
+		  opacity: '1' ,
+		  easing: 'easeInQuad',
+		  duration: 400
+		});
+	};
+
+	lastListBtn.forEach(function(v){
+		v.addEventListener('click', onLastListBtnClick);
 	});
 })();

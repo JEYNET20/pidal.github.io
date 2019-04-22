@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, html {
   margin: 0;
   padding: 0; }
@@ -50,6 +51,10 @@ i {
   margin-bottom: 35px;
   display: flex;
   align-items: center; }
+  .title-wrapper a {
+    text-decoration: none;
+    color: #306c78;
+    transition: all 200ms ease; }
   .title-wrapper .h2-title {
     margin: 0;
     color: #306c78;
@@ -71,6 +76,10 @@ i {
     align-items: center;
     margin-top: 6px;
     margin-left: 12px; }
+
+.title-wrapper:hover a {
+  color: #ff4545;
+  transition: all 200ms ease; }
 
 .h4-title {
   opacity: 0.6;
@@ -507,7 +516,8 @@ input[type="password"]:focus {
   position: relative;
   box-shadow: 0 4px 30px rgba(44, 44, 44, 0.3);
   transition: all 300ms ease;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  transform: translateX(-50%); }
   .arrow-down-red-while-wrapper::after {
     content: '';
     background-image: url("../img/icon/arrow-down-red.png");
@@ -521,10 +531,6 @@ input[type="password"]:focus {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
-
-.arrow-down-red-while-wrapper:hover {
-  transition: all 300ms ease;
-  transform: scale(1.1); }
 
 .header {
   height: 102px;
@@ -614,7 +620,7 @@ input[type="password"]:focus {
   .header .nav--bar {
     position: absolute;
     width: 282px;
-    left: -45px;
+    left: -49px;
     margin-right: 0;
     top: 60px;
     z-index: 10; }
@@ -738,7 +744,7 @@ input[type="password"]:focus {
           letter-spacing: 0.16px;
           transition: all 100ms ease; }
         .header .profile-list ul li a:hover {
-          color: #306c78;
+          color: #ff4545;
           transition: all 100ms ease; }
     .header .profile-list__exit {
       cursor: pointer;
@@ -797,6 +803,34 @@ input[type="password"]:focus {
   margin-left: 51px;
   margin-right: 5px; }
 
+.services-str .btn-arrow-up {
+  width: 80px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  background-color: unset;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.14px; }
+  .services-str .btn-arrow-up .arrow-up {
+    display: block;
+    background-image: url("../img/icon/white-arrow-up.png");
+    width: 12px;
+    height: 7px;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.services-str .wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
 .services-str h1 {
   color: #2c2c2c;
   font-family: "Open Sans";
@@ -809,13 +843,21 @@ input[type="password"]:focus {
   text-align: center; }
 
 .services-str h2 {
-  color: #ffffff;
   font-family: "Open Sans";
   font-size: 64px;
   font-weight: 700;
   line-height: 68px;
   letter-spacing: 0.64px;
-  margin: 0; }
+  margin: 0;
+  padding-top: 90px;
+  padding-bottom: 47px; }
+
+.services-str .text-for-h2 {
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.18px; }
 
 .services-str p {
   color: #ffffff;
@@ -848,6 +890,17 @@ input[type="password"]:focus {
     height: 1px;
     background-color: #2c2c2c;
     opacity: 0.2; }
+  .services-str .block-1 h2 {
+    width: 100%;
+    height: 65px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 68px;
+    letter-spacing: 0.64px;
+    text-align: center;
+    padding: 0; }
   .services-str .block-1 .block-1-content {
     margin-top: -75px; }
   .services-str .block-1 .red-wrapper {
@@ -926,8 +979,13 @@ input[type="password"]:focus {
     .services-str .block-1 ul li:last-child {
       margin-right: 0; }
   .services-str .block-1 .last-text {
-    color: #2c2c2c;
     width: 100%;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0.24px;
     margin-top: 59px;
     text-align: center;
     margin-bottom: 53px; }
@@ -938,6 +996,24 @@ input[type="password"]:focus {
 
 .services-str .block-2 {
   background-color: #ff4545; }
+  .services-str .block-2 .left-wrapper {
+    width: 364px; }
+  .services-str .block-2 h2 {
+    color: #fff; }
+  .services-str .block-2 .text-for-h2 {
+    margin-bottom: 253px; }
+  .services-str .block-2 .right-wrapper {
+    /* Style for "С помощью" */
+    width: 688px;
+    height: 180px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    /* Text style for "С помощью" */
+    letter-spacing: 0.18px;
+    margin-top: 197px; }
 
 .services-str .block-3 .text-for-h2, .services-str .block-3 h2 {
   color: #2c2c2c; }
@@ -1230,6 +1306,9 @@ input[type="password"]:focus {
   cursor: pointer;
   transition: all 150ms ease; }
 
+.popular-mark__image-item:nth-child(3) a {
+  height: 67px; }
+
 .popular-mark__image-item:hover {
   box-shadow: 0 2px 16px rgba(44, 44, 44, 0.2);
   border: 1px solid #306c78;
@@ -1269,6 +1348,11 @@ input[type="password"]:focus {
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0.14px; }
+
+.popular-mark__list-wrapper--other {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
 
 .last-list {
   display: flex;
@@ -1317,7 +1401,6 @@ input[type="password"]:focus {
     background-position: center center;
     background-size: cover;
     display: block;
-    cursor: pointer;
     margin: 0 auto;
     margin-bottom: 20px; }
   .pre-footer-icons .icon-1 {

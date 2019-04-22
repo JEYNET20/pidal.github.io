@@ -289,7 +289,7 @@
 	box-shadow: 0 4px 30px rgba(44, 44, 44, 0.3);
 	transition: all 300ms ease;
 	background-color: #ffffff;
-	// transform: translateX(-50%);
+	transform: translateX(-50%);
 	&::after{
 		content: '';
 		background-image: url('../img/icon/arrow-down-red.png');
@@ -306,6 +306,6 @@
 	}
 }
 .arrow-down-red-while-wrapper:hover{
-	transition: all 300ms ease;
-	transform: scale(1.1);
+	// transition: all 300ms ease;
+	// transform: scale(1.1);
 }
