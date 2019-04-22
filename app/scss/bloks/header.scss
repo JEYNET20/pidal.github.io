@@ -26,6 +26,7 @@
 
 	.logo{
 		width: 102px;
+		position: relative;
 		min-height: 19px;
 		height: 19px;
 		margin-right: 143px;
@@ -60,6 +61,10 @@
 					letter-spacing: 0.16px;					
 					color: #fff;
 					text-decoration: none;
+					display: flex;
+					width: 100%;
+					height: 100%;
+					align-items: center;
 				}
 			}
 			.main-menu__item:hover{
@@ -132,9 +137,7 @@
 		display: flex;
 		align-items: center;
 		transition: all 300ms ease;
-		cursor: pointer;
 		position: relative;
-		cursor: pointer;
 		box-sizing: border-box;
 		padding-left: 25px;
 		transition: all 300ms ease;
@@ -157,20 +160,6 @@
 			letter-spacing: 0.16px;			
 		}
 
-	}
-	.sign-navigation:hover{
-		> .icon-anonim{
-			transition: all 300ms ease;
-			background-image: url('../img/icon/user-icon-red.png');
-		}
-		.icon-arrow-down--white{
-			transition: all 300ms ease;
-			background-image: url('../img/icon/down-arrow-red.png');
-		}
-		.sign-navigation__name{
-			transition: all 300ms ease;
-			color: #ff4545;
-		}
 	}
 
 	.profile-list{
@@ -288,4 +277,25 @@
 		}
 	}
 
+}
+
+.btn-sign-navigation{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+.btn-sign-navigation:hover{
+	.icon-anonim{
+		background-image: url('../img/icon/user-icon-red.png');	
+		transition: all 300ms ease;
+	}
+ 	.icon-arrow-down--white{
+ 		transition: all 300ms ease;
+ 		background-image: url('../img/icon/down-arrow-red.png');
+ 	}	
+}
+
+.icon-anonim--black{
+	background-image: url('../img/icon/user_icon--black.png');
 }

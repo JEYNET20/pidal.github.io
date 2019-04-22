@@ -48,6 +48,7 @@
 		font-weight: 400;
 		line-height: 27px;
 		letter-spacing: 0.14px;
+		margin-bottom: 47px;
 		.arrow-up{
 			display: block;
 			background-image: url('../img/icon/white-arrow-up.png');
@@ -91,6 +92,7 @@
 		padding-top: 90px;
 		padding-bottom: 47px;
 	}
+
 	.text-for-h2{
 		font-family: "Open Sans";
 		font-size: 18px;
@@ -271,6 +273,10 @@
 			margin-bottom: 253px;
 		}
 		.right-wrapper{
+
+			> p:nth-child(1){
+				margin-top: 24px;
+			}
 			/* Style for "С помощью" */
 			width: 688px;
 			height: 180px;
@@ -282,26 +288,217 @@
 			/* Text style for "С помощью" */
 			letter-spacing: 0.18px;
 			margin-top: 197px;
+			img{
+				position: relative;
+				left: -43px;
+			}
 		}
 	}
 
 	.block-3{
 		.text-for-h2,h2{
+			width: 100%;
 			color: #2c2c2c;
 		}
-		.right-wrapper{
+		.wrapper{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		.left-wrapper{
+			width: 369px;
+			height: 456px;
 			p{
+				margin-top: 0;
 				color: #2c2c2c;
+			}
+			p:first-child{
+				margin-bottom: 38px;
+			}
+			p:nth-child(2){
+				margin-bottom: 142px;
+			}
+			.btn-arrow-up{
+				color: #ff4545;
+				.arrow-up{
+					background-image: url('../img/icon/arrow-up-red.png');
+				}
+			}
+		}
+		.right-wrapper{
+			width: 680px;
+			position: relative;
+			p{
+				margin-top: 0;
+				color: #2c2c2c;
+			}
+			p:nth-child(2){
+				margin-bottom: 52px;
+			}
+			img{
+				position: absolute;
+				top: 236px;
+				right: 153px;
+				z-index: 2;
 			}
 		}
 	}
 
 	.block-4{
+		height: 567px;
 		background-color: $red;
+		position: relative;
+		h2{
+			width: 100%;
+			color: #fff;
+		}
+		.left-wrapper{
+			width: 371px;
+			height: 318px;
+			color: #ffffff;
+			// margin-bottom: 162px;
+			margin-bottom: 0;
+		}
+		.right-wrapper{
+			width: 694px;
+			// margin-top: 194px;
+			position: absolute;
+			top: 194px;
+			right: 292px; 
+			img{
+				width: 100%;
+				height: 400px;
+			}
+		}
 	}
 
 	.block-5{
-
+		.left-wrapper{
+			margin-top: 102px;
+			margin-bottom: 64px;
+			width: 588px;
+			height: 229px;
+			background-color: #ff4545;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			p{
+				text-align: center;
+				width: 357px;
+				height: 55px;
+				color: #ffffff;
+				font-family: "Open Sans";
+				font-size: 24px;
+				font-weight: 400;
+				line-height: 36px;
+				letter-spacing: 0.24px;
+				margin-bottom: 40px;
+				margin-top: 49px;
+			}
+			a{
+				margin-bottom: 36px;
+				width: 248px;
+				height: 44px;
+				border-radius: 6px;
+				background-color: #ffffff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #306c78;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 14px;
+				letter-spacing: 0.16px;
+				position: relative;
+				z-index: 5;
+				&::after{
+					position: absolute;
+					content: '';
+					left: 50%;
+					bottom: 0px;
+					transform: translateX(-50%);
+					width: 206px;
+					height: 14px;
+					background-color: #ffffff;
+					opacity: 0.6;
+					z-index: 2;
+					filter: blur(6px); 
+					transition: opacity 300ms ease;
+				}						
+			}
+			a:hover{
+				transition: opacity 300ms ease;
+				// opacity: 0.8;
+				&::after{
+					transition: opacity 300ms ease;
+					opacity: 0;
+				}
+			}
+		}
+		.right-wrapper{
+			margin-top: 102px;
+			margin-bottom: 64px;
+			width: 588px;
+			height: 229px;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			p{
+				text-align: center;
+				width: 357px;
+				height: 55px;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 24px;
+				font-weight: 400;
+				line-height: 36px;
+				letter-spacing: 0.24px;
+				margin-bottom: 40px;
+				margin-top: 49px;
+			}
+			a{
+				margin-bottom: 36px;
+				width: 248px;
+				height: 44px;
+				border-radius: 6px;
+				background-color: #306c78;				
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 14px;
+				letter-spacing: 0.16px;
+				position: relative;
+				z-index: 5;
+				&::after{
+					position: absolute;
+					content: '';
+					left: 50%;
+					bottom: 0px;
+					transform: translateX(-50%);
+					width: 206px;
+					height: 14px;
+					background-color: #306c78;
+					opacity: 0.6;
+					z-index: 2;
+					filter: blur(6px); 
+					transition: opacity 300ms ease;
+				}						
+			}
+			a:hover{
+				transition: opacity 300ms ease;
+				// opacity: 0.8;
+				&::after{
+					transition: opacity 300ms ease;
+					opacity: 0;
+				}
+			}	
+		}
 	}
 
 }

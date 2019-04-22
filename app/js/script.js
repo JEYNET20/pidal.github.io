@@ -58,6 +58,7 @@
 
 	// меню бургер
 	let btnBar = document.querySelector('.btn-bar');
+	let logo = document.querySelector('.logo');
 	let onBtnBarClick = function(e){
 		let x = this;
 		e.preventDefault();
@@ -65,6 +66,13 @@
 		let navBar = document.querySelector('.nav--bar');
 		navBar.classList.remove('d-none');
 		this.style.opacity = '0';
+
+		anime({
+		  targets: logo,
+		  left: '-29px' ,
+		  easing: 'easeInQuad',
+		  duration: 400
+		});		
 
 		anime({
 		  targets: navBar,
@@ -80,6 +88,12 @@
 			},400);
 			x.style.opacity = '1';
 			anime({
+			  targets: logo,
+			  left: '0' ,
+			  easing: 'easeOutQuad',
+			  duration: 400
+			});				
+			anime({
 			  targets: navBar,
 			  opacity: '0' ,
 			  easing: 'easeOutQuad',
@@ -92,12 +106,14 @@
 	// !! меню бургер
 
 	// меню навигации
-	let signNavigationBtn = document.querySelector('.sign-navigation');
+	let signNavigationBtn = document.querySelector('.btn-sign-navigation');
 	let onSignNavigationBtnClick = function(e){
 		e.preventDefault();
 		let x = this;
-		let list = this.childNodes[5];
-		this.style.backgroundColor = '#343434';
+		// let list = this.childNodes[5];
+		let list = this.nextSibling.nextSibling;
+		console.log(list);
+		// this.style.backgroundColor = '#343434';
 		list.classList.remove('d-none');
 		anime({
 		  targets: list,
@@ -120,7 +136,7 @@
 		}
 	};
 
-	signNavigationBtn.addEventListener('click', onSignNavigationBtnClick);
+	if(signNavigationBtn) signNavigationBtn.addEventListener('click', onSignNavigationBtnClick);
 	// !! меню навигации
 })();
 
@@ -338,8 +354,11 @@
 
 	let onSigInBtnClick = function(e){
 		e.preventDefault();
+
 		formRegistr.classList.add('d-none');
 		formLogIn.classList.remove('d-none');
+
+
 		console.log(this);
 		this.style.backgroundColor = '#fff';
 		registrBtn.style.backgroundColor = "#dddddd";
@@ -347,8 +366,10 @@
 
 	let onRegistrBtnClick = function(e){
 		e.preventDefault();
+
 		formLogIn.classList.add('d-none');
 		formRegistr.classList.remove('d-none');
+
 		console.log(this);
 		this.style.backgroundColor = '#fff';
 		sigInBtn.style.backgroundColor = "#dddddd";
@@ -389,7 +410,7 @@
 		});
 	};
 
-	btn.addEventListener('click', onBtnShowClick);
+	if(btn) btn.addEventListener('click', onBtnShowClick);
 
 	let lastListBtn = document.querySelectorAll('.last-list .list--other');
 
@@ -407,7 +428,7 @@
 		});
 	};
 
-	lastListBtn.forEach(function(v){
+	if(lastListBtn) lastListBtn.forEach(function(v){
 		v.addEventListener('click', onLastListBtnClick);
 	});
 })();

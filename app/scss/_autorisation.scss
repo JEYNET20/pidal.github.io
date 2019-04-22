@@ -12,6 +12,14 @@
 		border-radius: 0 0 6px 6px;
 		background-color: #ffffff;
 	}
+	.btn{
+		position: relative;
+	}
+	.btn-register{
+		&::after{
+			background-color: #ff4545;
+		}
+	}
 	.sign-str__log-reg-wrapper{
 		border-top: 2px solid #ff4545;
 		display: flex;

@@ -120,7 +120,7 @@ i{
 	width: 68px;
 	height: 24px;
 	border-radius: 6px 0;
-	background-color: #d24a43;
+	background-color: #ff4545;
 	color: #ffffff;
 	font-family: "Open Sans";
 	font-size: 14px;
@@ -140,7 +140,7 @@ i{
 	width: 68px;
 	height: 24px;
 	border-radius: 6px 0;
-	background-color: #d24a43;
+	background-color: #ff4545;
 	color: #ffffff;
 	font-family: "Open Sans";
 	font-size: 14px;
@@ -198,7 +198,34 @@ i{
 		background-image: url('../img/icon/reg-vk.png');
 		background-position: center center;
 		background-size: cover;
+		transition: opacity 300ms ease;
+		position: relative;
+		opacity: 1;
+		&::after{
+			position: absolute;
+			content: '';
+			left: 50%;
+			bottom: 3px;
+			transform: translateX(-50%);
+			width: 35px;
+			border-radius: 50%;
+			height: 14px;
+			background-color: #306c78; // синиватый
+			opacity: 0.6;
+			z-index: 2;
+			filter: blur(6px); 
+			transition: opacity 300ms ease;
+		}	
 	}
+	.vk:hover{
+		transition: opacity 300ms ease;		
+		opacity: 0.8;
+		&::after{
+			opacity: 0;
+			transition: opacity 300ms ease;
+		}	
+	}
+
 	.ok{
 		border-radius: 50%;
 		cursor: pointer;
@@ -208,7 +235,34 @@ i{
 		background-image: url('../img/icon/reg-ok.png');
 		background-position: center center;
 		background-size: cover;
+		transition: opacity 300ms ease;
+		position: relative;
+		opacity: 1;
+		&::after{
+			position: absolute;
+			content: '';
+			left: 50%;
+			bottom: 3px;
+			transform: translateX(-50%);
+			width: 35px;
+			border-radius: 50%;
+			height: 14px;
+			background-color: #feecc7; // синиватый
+			opacity: 0.6;
+			z-index: 2;
+			filter: blur(6px); 
+			transition: opacity 300ms ease;
+		}	
 	}
+	.ok:hover{
+		transition: opacity 300ms ease;		
+		opacity: 0.8;
+		&::after{
+			opacity: 0;
+			transition: opacity 300ms ease;
+		}	
+	}
+
 	.fb{
 		border-radius: 50%;
 		cursor: pointer;
@@ -218,8 +272,34 @@ i{
 		background-image: url('../img/icon/reg-fb.png');
 		background-position: center center;
 		background-size: cover;
-
+		transition: opacity 300ms ease;
+		position: relative;
+		opacity: 1;
+		&::after{
+			position: absolute;
+			content: '';
+			left: 50%;
+			bottom: 3px;
+			transform: translateX(-50%);
+			width: 35px;
+			border-radius: 50%;
+			height: 14px;
+			background-color: #395599; // синиватый
+			opacity: 0.6;
+			z-index: 2;
+			filter: blur(6px); 
+			transition: opacity 300ms ease;
+		}	
 	}
+	.fb:hover{
+		transition: opacity 300ms ease;		
+		opacity: 0.8;
+		&::after{
+			opacity: 0;
+			transition: opacity 300ms ease;
+		}	
+	}
+
 	.gp{
 		border-radius: 50%;
 		cursor: pointer;
@@ -229,7 +309,34 @@ i{
 		background-image: url('../img/icon/reg-gp.png');
 		background-position: center center;
 		background-size: cover;
+		transition: opacity 300ms ease;
+		position: relative;
+		opacity: 1;
+		&::after{
+			position: absolute;
+			content: '';
+			left: 50%;
+			bottom: 0px;
+			transform: translateX(-50%);
+			width: 35px;
+			border-radius: 50%;
+			height: 14px;
+			background-color: #bd330c;	
+			opacity: 0.6;
+			z-index: 2;
+			filter: blur(6px); 
+			transition: opacity 300ms ease;
+		}	
 	}
+	.gp:hover{
+		transition: opacity 300ms ease;		
+		opacity: 0.8;
+		&::after{
+			opacity: 0;
+			transition: opacity 300ms ease;
+		}	
+	}
+
 	span{
 		display: block;
 		width: 100%;
@@ -288,4 +395,31 @@ input[type="password"]:focus{
 	border: 1px solid #ff4545;
 	outline: none;
 	transition: all 250ms ease;
+}
+
+// main-btn цвет синиватый
+.btn{
+	transition: opacity 300ms ease;		
+	&::after{
+		position: absolute;
+		content: '';
+		left: 50%;
+		bottom: 0px;
+		transform: translateX(-50%);
+		width: 206px;
+		height: 14px;
+		background-color: #306c78; // синиватый
+		opacity: 0.6;
+		z-index: 2;
+		filter: blur(6px); 
+		transition: opacity 300ms ease;
+	}
+}
+.btn:hover{
+	transition: opacity 300ms ease;
+	opacity: 0.8;
+	&::after{
+		transition: opacity 300ms ease;
+		opacity: 0;
+	}
 }

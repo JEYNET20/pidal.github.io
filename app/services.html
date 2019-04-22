@@ -23,14 +23,16 @@
 
       <div class="nav-bar-wrapper">
 
-        <img src="img/icon/LOGO.svg" alt="logo" class="logo">
+        <a href="index.html">
+          <img src="img/icon/LOGO.svg" alt="logo" class="logo">
+        </a>
         <nav class="nav nav--bar d-none ONULL">
           <ul class="main-menu">
             <li class="main-menu__item"><a href="#">Отзывы</a></li>
-            <li class="main-menu__item"><a href="#">Карта городов</a></li>
+            <li class="main-menu__item"><a href="map-obl.html">Карта городов</a></li>
             <li class="main-menu__item"><a href="#">Моб приложения</a></li>
-            <li class="main-menu__item"><a href="#">Платные услуги</a></li>
-            <li class="main-menu__item"><a href="#">Центр помощи</a></li>
+            <li class="main-menu__item"><a href="services.html">Платные услуги</a></li>
+            <li class="main-menu__item"><a href="help.html">Центр помощи</a></li>
           </ul>
         </nav>
       </div>
@@ -131,12 +133,14 @@
       </nav>
 
       <div class="sign-navigation">
-        <i class="icon-anonim"></i>
-        <i class="icon-arrow-down--white"></i>
+        <div  class="btn-sign-navigation">
+          <i class="icon-anonim"></i>
+          <i class="icon-arrow-down--white"></i>
+        </div>
         <nav class="profile-list d-none ONULL">
           <div class="profile-list-title-wrapper">
-            <i class="icon-anonim"></i>
-            <span class="">Amir1989</span>
+            <i class="icon-anonim icon-anonim--black"></i>
+            <span class="" style="margin-left: 5px;">Amir1989</span>
           </div>
 
           <div class="profile-list__title-wrapper">
@@ -272,7 +276,7 @@
     <section class="block-2">
       <div class="wrapper">
         <div class="left-wrapper">
-          <h2>Поднятие</h2>
+          <h2 class="scroll">Поднятие</h2>
           <p class="text-for-h2">
             По умолчанию ваше объявления  отображаются по дате их размещения. Это означает, что по мере публикации новых объявлений ваше объявление опускается всё ниже и ниже в списке и в результатах поиска.
           </p>
@@ -285,16 +289,16 @@
           <p>
             Вы можете воспользоваться услугой Поднятие самостоятельно либо заказав пакеты "Турбо продажа" или "Быстрая продажа" - в этом случае мы будем поднимать ваше объявление автоматически, и вам не нужно будет беспокоиться о его позиции в списке!
           </p>
-          <img src="" alt="image">
+          <img src="img/services/services-1.png" alt="image">
         </div>
       </div>
     </section>
 
     <section class="block-3">
       <div class="wrapper">
+        <h2>Размещение в ТОП</h2>
         <div class="left-wrapper">
-          <h2>Размещение в ТОП</h2>
-          <p class="text-for-h2">
+          <p>
             ТОП - это размещения в специальном блоке в самой верхней части списка, над обычными объявлениями.
           </p>
           <p>
@@ -309,22 +313,21 @@
           <p>
             Все ТОП-объявления также доступны и в обычном списке объявлений, поэтому вы можете быть уверены, что ваше предложение найдёт своего покупателя.
           </p>
-          <img src="" alt="image">
+          <img src="img/services/services-2.png" alt="image">
         </div>
       </div>
     </section>
 
     <section class="block-4">
       <div class="wrapper">
+        <h2>VIP-объявление</h2>
         <div class="left-wrapper">
-          <h2>VIP-объявление</h2>
           <p class="text-for-h2">
             Если вы хотите разместить объявление на ниболее премиумной позиции и получить наибольшее количество откликов, тогда VIP-объявление - именно та услуга, которая вам нужна. Это самый лучший способ ускорить совершение сделки - ведь ваше объявление будет размещено на главной странице.
           </p>
-          <button class="btn-arrow-up">В начало<span class="arrow-up"></span></button>
         </div>
         <div class="right-wrapper">
-          <img src="" alt="image">
+          <img src="img/services/services-3.png" alt="image" height="290">
         </div>
       </div>
     </section>
@@ -332,16 +335,16 @@
     <section class="block-5">
       <div class="wrapper">
         <div class="left-wrapper">
-          <p>Разместить и рекламировать 
+          <p>Разместить и рекламировать<br>
             новое объявление</p>
-            <a href="#" class="btn">Разместить объявление</a>
+            <a href="#" class="">Разместить объявление</a>
         </div>
         <div class="right-wrapper">
           <p>
             Рекламировать существующее 
             объявление
           </p>
-          <a href="#" class="btn">Разместить объявление</a>
+          <a href="#" class="">Разместить объявление</a>
         </div>
       </div>
     </section>    
@@ -369,6 +372,11 @@
   <!-- // дополнительные стили -->
 
   <!-- скрипты -->
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous">
+  </script>
+  <script src="js/slowScrol.js"></script>
   <script src="js/anime.js"></script>
   <script src="js/script.js"></script>
   <script src="js/swiper.min.js"></script>
