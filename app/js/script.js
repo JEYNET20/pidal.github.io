@@ -432,3 +432,68 @@
 		v.addEventListener('click', onLastListBtnClick);
 	});
 })();
+
+// акардион "центр помощи"
+(function(){
+	// лвл 1
+	let b = false;
+	let acBtn = document.querySelectorAll('.ac-title');
+	let onAcBtnShowClick = function(e){
+		e.preventDefault();	
+		let body = this.nextSibling.nextSibling;
+
+		this.classList.add('ac-title--active');
+		body.classList.add('ac-item--active');
+
+		this.removeEventListener('click', onAcBtnShowClick);
+		this.addEventListener('click', onAcBtnHiddenClick);
+	};
+
+	let onAcBtnHiddenClick = function(e){
+		e.preventDefault();	
+		let body = this.nextSibling.nextSibling;
+
+		this.classList.remove('ac-title--active');
+		body.classList.remove('ac-item--active');
+
+		this.removeEventListener('click', onAcBtnHiddenClick);
+		this.addEventListener('click', onAcBtnShowClick);
+	};
+
+	acBtn.forEach(function(v){
+		v.addEventListener('click', onAcBtnShowClick);
+	});
+	// END лвл 1
+
+
+	// лвл 2
+	let acBtnLvl2 = document.querySelectorAll('.ac-item h3'); 
+
+	let onAcBtnLvl2ShowClick = function(e){
+		e.preventDefault();
+		let body = this.nextSibling.nextSibling;
+		let parent = this.parentNode;
+
+		body.classList.add('ac-item__list--active');
+
+		this.removeEventListener('click', onAcBtnLvl2ShowClick);
+		this.addEventListener('click', onAcBtnLvl2HiddenClick);
+	};
+
+	let onAcBtnLvl2HiddenClick = function(e){
+		e.preventDefault();
+		let body = this.nextSibling.nextSibling;
+		let parent = this.parentNode;
+		body.classList.remove('ac-item__list--active');
+
+		this.removeEventListener('click', onAcBtnLvl2HiddenClick);
+		this.addEventListener('click', onAcBtnLvl2ShowClick);
+	};	
+
+	acBtnLvl2.forEach(function(v){
+		v.addEventListener('click', onAcBtnLvl2ShowClick);
+	});	
+	// END лвл 2
+
+
+})();

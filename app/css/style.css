@@ -650,7 +650,7 @@ input[type="password"]:focus {
 .icon-red-arrow-up {
   width: 16px;
   height: 9px;
-  background-image: url("../img/icon/arrow-up-red.png");
+  background-image: url("../img/icon/icon-for-help/down-black.png");
   background-position: center center;
   background-size: cover;
   display: block;
@@ -2461,6 +2461,45 @@ input[type="password"]:focus {
     .help-str .state ul li:hover i {
       opacity: 1;
       transition: color 250ms ease; }
+
+.help-str .ac-title i {
+  transition: all 200ms ease;
+  transform: translateY(-50%) rotate(0deg); }
+
+.help-str .ac-title--active i {
+  background-image: url("../img/icon/icon-for-help/down-red.png");
+  transition: all 200ms ease;
+  transform: translateY(-50%) rotate(-180deg) !important; }
+
+.help-str .ac-item {
+  max-height: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 0px solid #fff !important;
+  transition: all 250ms ease-out; }
+
+.help-str .ac-item--active {
+  max-height: 180px;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid #fff !important;
+  transition: max-height 400ms ease-in; }
+
+.help-str .ac-item__list {
+  min-height: 0;
+  height: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 250ms ease-out; }
+
+.help-str .ac-item__list--active {
+  min-height: 130px;
+  transition: min-height 250ms ease-in; }
+
+.help-str .ac-title:hover {
+  cursor: pointer; }
+  .help-str .ac-title:hover i {
+    background-image: url("../img/icon/icon-for-help/down-red.png"); }
 
 .swiper-container {
   width: 100%;
