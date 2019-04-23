@@ -213,7 +213,6 @@
 					}
 				}
 				.text-and-icon{
-					cursor: pointer;
 					display: flex;
 					width: 100%;
 					height: 40px;
@@ -229,10 +228,10 @@
 						letter-spacing: 0.16px;
 					}
 				}
-				.text-and-icon:hover{
-					transition: all 200ms ease;
-					opacity: 1;
-				}
+				// .text-and-icon:hover{
+				// 	transition: all 200ms ease;
+				// 	opacity: 1;
+				// }
 
 			}
 			li:last-child{
@@ -258,6 +257,10 @@
 			left: 50%;
 			bottom: -24px;
 			position: absolute;
+			cursor: pointer;
+		}
+		.arrow-down-red-while-wrapper:hover{
+			transform: translateX(-50%) scale(1.1);
 		}
 	}
 
@@ -362,10 +365,12 @@
 		.right-wrapper{
 			width: 694px;
 			// margin-top: 194px;
-			position: absolute;
-			top: 194px;
-			right: 292px; 
+			position: relative;
+			// top: 194px;
+			// right: 292px; 
 			img{
+				position: absolute;
+				left: -35px;
 				width: 100%;
 				height: 400px;
 			}

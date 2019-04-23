@@ -185,7 +185,7 @@
 
 .add-offer:hover{
 	transition: opacity 300ms ease;
-	opacity: 0.8;
+	// opacity: 0.8;
 	&::after{
 		transition: opacity 300ms ease;
 		opacity: 0;

@@ -25,6 +25,10 @@ i{
 	opacity: 0;
 }
 
+.OONE{
+	opacity: 1 !important;
+}
+
 .hr{
 	display: block;
 	width: 100%;
@@ -177,7 +181,7 @@ i{
 
 .soc-wrapper{
 	width: 212px;
-	height: 77px;
+	height: 67px;
 	position: relative;
 	ul{
 		padding: 0;
@@ -209,7 +213,7 @@ i{
 			transform: translateX(-50%);
 			width: 35px;
 			border-radius: 50%;
-			height: 14px;
+			height: 4px;
 			background-color: #306c78; // синиватый
 			opacity: 0.6;
 			z-index: 2;
@@ -246,7 +250,7 @@ i{
 			transform: translateX(-50%);
 			width: 35px;
 			border-radius: 50%;
-			height: 14px;
+			height: 4px;
 			background-color: #feecc7; // синиватый
 			opacity: 0.6;
 			z-index: 2;
@@ -283,7 +287,7 @@ i{
 			transform: translateX(-50%);
 			width: 35px;
 			border-radius: 50%;
-			height: 14px;
+			height: 4px;
 			background-color: #395599; // синиватый
 			opacity: 0.6;
 			z-index: 2;
@@ -320,7 +324,7 @@ i{
 			transform: translateX(-50%);
 			width: 35px;
 			border-radius: 50%;
-			height: 14px;
+			height: 4px;
 			background-color: #bd330c;	
 			opacity: 0.6;
 			z-index: 2;
@@ -416,8 +420,8 @@ input[type="password"]:focus{
 	}
 }
 .btn:hover{
-	transition: opacity 300ms ease;
-	opacity: 0.8;
+	// transition: opacity 300ms ease;
+	// opacity: 0.8;
 	&::after{
 		transition: opacity 300ms ease;
 		opacity: 0;

@@ -495,5 +495,31 @@
 	});	
 	// END лвл 2
 
+	// форма на внутрений странице "help-include"
+	let btn = document.querySelector('.btn-and-form-wrapper .btn');
+	let formBody = document.querySelector('.btn-and-form-wrapper form');
+
+	let onBtnShowFormClick = function(e){
+		e.preventDefault();
+		console.log(this);
+		formBody.classList.add('form--active');
+
+		this.removeEventListener('click', onBtnShowFormClick);
+		this.addEventListener('click', onBtnHiddenFormClick);
+	};
+
+	let onBtnHiddenFormClick = function(e){
+		e.preventDefault();
+		console.log(this);
+		formBody.classList.remove('form--active');
+
+		this.addEventListener('click', onBtnShowFormClick);
+		this.removeEventListener('click', onBtnHiddenFormClick);
+	};
+
+	btn.addEventListener('click', onBtnShowFormClick);
+
+	// END форма на внутрений странице "help-include"
+
 
 })();

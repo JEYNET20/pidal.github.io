@@ -20,6 +20,9 @@ i {
 .ONULL {
   opacity: 0; }
 
+.OONE {
+  opacity: 1 !important; }
+
 .hr {
   display: block;
   width: 100%;
@@ -155,7 +158,7 @@ i {
 
 .soc-wrapper {
   width: 212px;
-  height: 77px;
+  height: 67px;
   position: relative; }
   .soc-wrapper ul {
     padding: 0;
@@ -186,7 +189,7 @@ i {
       transform: translateX(-50%);
       width: 35px;
       border-radius: 50%;
-      height: 14px;
+      height: 4px;
       background-color: #306c78;
       opacity: 0.6;
       z-index: 2;
@@ -218,7 +221,7 @@ i {
       transform: translateX(-50%);
       width: 35px;
       border-radius: 50%;
-      height: 14px;
+      height: 4px;
       background-color: #feecc7;
       opacity: 0.6;
       z-index: 2;
@@ -250,7 +253,7 @@ i {
       transform: translateX(-50%);
       width: 35px;
       border-radius: 50%;
-      height: 14px;
+      height: 4px;
       background-color: #395599;
       opacity: 0.6;
       z-index: 2;
@@ -282,7 +285,7 @@ i {
       transform: translateX(-50%);
       width: 35px;
       border-radius: 50%;
-      height: 14px;
+      height: 4px;
       background-color: #bd330c;
       opacity: 0.6;
       z-index: 2;
@@ -365,12 +368,9 @@ input[type="password"]:focus {
     filter: blur(6px);
     transition: opacity 300ms ease; }
 
-.btn:hover {
+.btn:hover::after {
   transition: opacity 300ms ease;
-  opacity: 0.8; }
-  .btn:hover::after {
-    transition: opacity 300ms ease;
-    opacity: 0; }
+  opacity: 0; }
 
 .icon-anonim {
   background-image: url("../img/icon/user_icon.png");
@@ -1112,7 +1112,6 @@ input[type="password"]:focus {
           font-weight: 400;
           letter-spacing: 0.14px; }
       .services-str .block-1 ul li .text-and-icon {
-        cursor: pointer;
         display: flex;
         width: 100%;
         height: 40px;
@@ -1126,9 +1125,6 @@ input[type="password"]:focus {
           font-size: 16px;
           font-weight: 400;
           letter-spacing: 0.16px; }
-      .services-str .block-1 ul li .text-and-icon:hover {
-        transition: all 200ms ease;
-        opacity: 1; }
     .services-str .block-1 ul li:last-child {
       margin-right: 0; }
   .services-str .block-1 .last-text {
@@ -1145,7 +1141,10 @@ input[type="password"]:focus {
   .services-str .block-1 .arrow-down-red-while-wrapper {
     left: 50%;
     bottom: -24px;
-    position: absolute; }
+    position: absolute;
+    cursor: pointer; }
+  .services-str .block-1 .arrow-down-red-while-wrapper:hover {
+    transform: translateX(-50%) scale(1.1); }
 
 .services-str .block-2 {
   background-color: #ff4545; }
@@ -1225,10 +1224,10 @@ input[type="password"]:focus {
     margin-bottom: 0; }
   .services-str .block-4 .right-wrapper {
     width: 694px;
-    position: absolute;
-    top: 194px;
-    right: 292px; }
+    position: relative; }
     .services-str .block-4 .right-wrapper img {
+      position: absolute;
+      left: -35px;
       width: 100%;
       height: 400px; }
 
@@ -1484,8 +1483,7 @@ input[type="password"]:focus {
     transition: opacity 300ms ease; }
 
 .add-offer:hover {
-  transition: opacity 300ms ease;
-  opacity: 0.8; }
+  transition: opacity 300ms ease; }
   .add-offer:hover::after {
     transition: opacity 300ms ease;
     opacity: 0; }
@@ -1783,7 +1781,7 @@ input[type="password"]:focus {
     background-color: #fff; }
   .autorisation .soc-wrapper {
     margin: 0 auto;
-    margin-bottom: 32px; }
+    margin-bottom: 12px; }
   .autorisation form {
     display: flex;
     justify-content: center;
@@ -2348,7 +2346,9 @@ input[type="password"]:focus {
     box-sizing: border-box;
     padding-left: 26px;
     align-items: center;
-    position: relative; }
+    position: relative;
+    opacity: 0.7;
+    transition: all 250ms ease; }
     .help-str .main .ac-wrapper .ac-title a {
       text-decoration: none;
       color: #2c2c2c; }
@@ -2411,6 +2411,38 @@ input[type="password"]:focus {
           transition: color 250ms ease; }
       .help-str .main .ac-item ul li:last-child {
         margin-bottom: 32px; }
+  .help-str .main .ac-title i {
+    transition: all 200ms ease;
+    transform: translateY(-50%) rotate(0deg); }
+  .help-str .main .ac-title--active i {
+    background-image: url("../img/icon/icon-for-help/down-red.png");
+    transition: all 200ms ease;
+    transform: translateY(-50%) rotate(-180deg) !important; }
+  .help-str .main .ac-item {
+    max-height: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 0px solid #fff !important;
+    transition: all 250ms ease-out; }
+  .help-str .main .ac-item--active {
+    max-height: 180px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #fff !important;
+    transition: max-height 400ms ease-in; }
+  .help-str .main .ac-item__list {
+    min-height: 0;
+    height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 250ms ease-out; }
+  .help-str .main .ac-item__list--active {
+    min-height: 130px;
+    transition: min-height 250ms ease-in; }
+  .help-str .main .ac-title:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: all 200ms ease; }
 
 .help-str .state {
   width: 284px;
@@ -2462,44 +2494,149 @@ input[type="password"]:focus {
       opacity: 1;
       transition: color 250ms ease; }
 
-.help-str .ac-title i {
-  transition: all 200ms ease;
-  transform: translateY(-50%) rotate(0deg); }
+.help-str--include .main .located {
+  font-size: 14px; }
+  .help-str--include .main .located span:first-child {
+    color: #006c79; }
+    .help-str--include .main .located span:first-child a {
+      text-decoration: none;
+      color: #006c79; }
+    .help-str--include .main .located span:first-child a:hover {
+      color: #ff4545; }
+  .help-str--include .main .located span {
+    opacity: 0.6;
+    color: #2c2c2c; }
 
-.help-str .ac-title--active i {
-  background-image: url("../img/icon/icon-for-help/down-red.png");
-  transition: all 200ms ease;
-  transform: translateY(-50%) rotate(-180deg) !important; }
+.help-str--include .main h2 {
+  color: #2c2c2c;
+  font-family: "Open Sans";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.36px;
+  background-color: unset;
+  text-align: left;
+  justify-content: flex-start; }
 
-.help-str .ac-item {
-  max-height: 0px;
+.help-str--include .main .content {
+  width: 100%;
+  min-height: 945px;
+  box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+  border-radius: 6px;
+  background-color: #ffffff;
   box-sizing: border-box;
-  overflow: hidden;
-  border: 0px solid #fff !important;
-  transition: all 250ms ease-out; }
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 23px;
+  padding-right: 23px; }
+  .help-str--include .main .content p {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.16px; }
 
-.help-str .ac-item--active {
-  max-height: 180px;
-  height: auto;
-  overflow: hidden;
-  border: 1px solid #fff !important;
-  transition: max-height 400ms ease-in; }
-
-.help-str .ac-item__list {
-  min-height: 0;
-  height: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-  transition: all 250ms ease-out; }
-
-.help-str .ac-item__list--active {
-  min-height: 130px;
-  transition: min-height 250ms ease-in; }
-
-.help-str .ac-title:hover {
-  cursor: pointer; }
-  .help-str .ac-title:hover i {
-    background-image: url("../img/icon/icon-for-help/down-red.png"); }
+.help-str--include .state {
+  margin-top: 110px;
+  margin-bottom: 24px; }
+  .help-str--include .state .btn-and-form-wrapper {
+    transition: box-shadow 300ms ease;
+    box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2); }
+  .help-str--include .state .btn-and-form-wrapper:hover {
+    transition: box-shadow 300ms ease;
+    box-shadow: 0 4px 30px rgba(44, 44, 44, 0.1); }
+  .help-str--include .state .btn {
+    width: 282px;
+    height: 44px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #ff4545;
+    position: relative;
+    font-weight: 600;
+    transition: all 200ms ease;
+    opacity: 1; }
+    .help-str--include .state .btn::after {
+      background-color: #fff;
+      width: 90%;
+      bottom: 2px;
+      transition: all 200ms ease; }
+    .help-str--include .state .btn i {
+      margin-left: 7px;
+      background-image: url("../img/icon/icon-for-help/down-red.png"); }
+  .help-str--include .state .btn:hover {
+    transition: all 200ms ease; }
+    .help-str--include .state .btn:hover::after {
+      transition: all 200ms ease;
+      opacity: 0; }
+  .help-str--include .state .form {
+    width: 100%;
+    max-height: 0;
+    overflow-y: hidden;
+    border-radius: 6px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 24px;
+    padding-bottom: 23px;
+    transition: all 300ms ease;
+    padding: 0; }
+    .help-str--include .state .form input {
+      width: 258px;
+      height: 44px;
+      border-radius: 6px;
+      border: 1px solid #343434;
+      opacity: 0.6;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.16px;
+      margin: 0;
+      margin-bottom: 24px; }
+    .help-str--include .state .form input:focus {
+      border: 1px solid #ff4545;
+      outline: 0;
+      transition: all 250ms ease; }
+    .help-str--include .state .form button {
+      border: none;
+      outline: none;
+      width: 258px;
+      height: 44px;
+      border-radius: 22px;
+      background-color: #ff4545;
+      color: #ffffff;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px;
+      letter-spacing: 0.16px;
+      position: relative; }
+      .help-str--include .state .form button::after {
+        position: absolute;
+        content: '';
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        width: 206px;
+        height: 14px;
+        background-color: #ff4545;
+        opacity: 0.6;
+        z-index: 2;
+        filter: blur(6px);
+        transition: opacity 300ms ease; }
+    .help-str--include .state .form button:hover {
+      transition: opacity 300ms ease; }
+      .help-str--include .state .form button:hover::after {
+        opacity: 0;
+        transition: opacity 300ms ease; }
+  .help-str--include .state .form--active {
+    max-height: 227px;
+    padding-top: 10px;
+    padding-bottom: 23px;
+    transition: all 300ms ease; }
 
 .swiper-container {
   width: 100%;

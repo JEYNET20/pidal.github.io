@@ -58,6 +58,8 @@
 				padding-left: 26px;
 				align-items: center;
 				position: relative;
+				opacity: 0.7;
+				transition: all 250ms ease;
 				a{
 					text-decoration: none;
 					color: #2c2c2c;
@@ -134,6 +136,58 @@
 				}
 			}
 		}
+		.ac-title{
+			i{
+				transition: all 200ms ease;
+				transform: translateY(-50%) rotate(0deg);
+			}
+		}
+		.ac-title--active{
+			i{
+				background-image: url('../img/icon/icon-for-help/down-red.png');
+				transition: all 200ms ease;
+				transform: translateY(-50%) rotate(-180deg) !important;
+			}
+		}
+
+		.ac-item{
+	    // min-height: 0;
+	    // height: 0;
+			max-height: 0px;
+
+	    box-sizing: border-box;
+	    overflow: hidden;
+	    border: 0px solid #fff !important;
+	    transition: all 250ms ease-out;
+		}
+		.ac-item--active{
+			max-height: 180px;
+			height: auto;
+	    overflow: hidden;
+	    border: 1px solid #fff !important;    
+	    transition: max-height 400ms ease-in;
+		}
+
+		.ac-item__list{
+			min-height: 0;
+	    height: 0;
+	    box-sizing: border-box;
+	    overflow: hidden;
+	    transition: all 250ms ease-out;
+		}
+		.ac-item__list--active{
+			min-height: 130px;
+	    transition: min-height 250ms ease-in;
+
+		}
+		.ac-title:hover{
+			cursor: pointer;
+			opacity: 1;
+			transition: all 200ms ease;
+			i{
+				// background-image: url('../img/icon/icon-for-help/down-red.png');
+			}
+		}			
 	}
 
 	.state{
@@ -195,56 +249,178 @@
 			}
 		}
 	}
-	.ac-title{
-		i{
+}
+
+.help-str--include{
+	.main{
+		.located{
+			font-size: 14px;			
+			span:first-child{
+				a{
+					text-decoration: none;
+					color: #006c79;
+				}
+				a:hover{
+					color: #ff4545;
+				}
+				color: #006c79;
+			}
+			span{
+				opacity: 0.6;
+				color: #2c2c2c;
+			}
+		}
+		h2{
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 36px;
+			font-weight: 400;
+			line-height: 36px;
+			letter-spacing: 0.36px;
+			background-color: unset;
+			text-align: left;
+			justify-content: flex-start;
+		}
+		.content{
+			width: 100%;
+			min-height: 945px;
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			border-radius: 6px;
+			background-color: #ffffff;
+			box-sizing: border-box;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-left: 23px;
+			padding-right: 23px;
+			p{
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 24px;
+				letter-spacing: 0.16px;
+			}
+		}
+	}
+	.state{
+		margin-top: 110px;
+		margin-bottom: 24px;
+		.btn-and-form-wrapper{
+			transition: box-shadow 300ms ease;
+			box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+		}
+		.btn-and-form-wrapper:hover{
+			transition: box-shadow 300ms ease;
+			box-shadow: 0 4px 30px rgba(44, 44, 44, 0.1);
+		}
+		.btn{
+			width: 282px;
+			height: 44px;
+			// box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+			border-radius: 6px;
+			background-color: #ffffff;
+			color: #ff4545;			
+			position: relative;
+			font-weight: 600;
 			transition: all 200ms ease;
-			transform: translateY(-50%) rotate(0deg);
+			opacity: 1;
+			&::after{
+				background-color: #fff;
+				width: 90%;
+				bottom: 2px;
+				transition: all 200ms ease;
+			}
+			i{
+				margin-left: 7px;
+				background-image: url('../img/icon/icon-for-help/down-red.png');
+			}
 		}
-	}
-	.ac-title--active{
-		i{
-			background-image: url('../img/icon/icon-for-help/down-red.png');
+		.btn:hover{
 			transition: all 200ms ease;
-			transform: translateY(-50%) rotate(-180deg) !important;
+			&::after{
+				transition: all 200ms ease;
+				opacity: 0;
+			}
+		}
+		.form{
+			// margin-top: 40px;
+			width: 100%;
+			max-height: 0;
+			overflow-y: hidden;
+			// min-height: 227px;
+			// box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+			border-radius: 6px;
+			background-color: #ffffff;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			box-sizing: border-box;
+			padding-top: 24px;
+			padding-bottom: 23px;
+			transition: all 300ms ease;
+			padding: 0;			
+			input{
+				width: 258px;
+				height: 44px;
+				border-radius: 6px;
+				border: 1px solid #343434;
+				opacity: 0.6;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 400;
+				letter-spacing: 0.16px;
+				margin: 0;
+				margin-bottom: 24px;
+			}
+			input:focus{
+				border: 1px solid #ff4545;
+		    outline: 0;
+		    transition: all 250ms ease;
+			}
+			button{
+				border: none;
+				outline: none;
+				width: 258px;
+				height: 44px;
+				border-radius: 22px;
+				background-color: #ff4545;
+				color: #ffffff;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 16px;
+				letter-spacing: 0.16px;
+				position: relative;	
+				&::after{
+					position: absolute;
+					content: '';
+					left: 50%;
+					bottom: 0px;
+					transform: translateX(-50%);
+					width: 206px;
+					height: 14px;
+					background-color: #ff4545;
+					opacity: 0.6;
+					z-index: 2;
+					filter: blur(6px); 
+					transition: opacity 300ms ease;
+				}
+			}
+			button:hover{
+				// opacity: 0.8;
+				transition: opacity 300ms ease;
+				&::after{
+					opacity: 0;
+					transition: opacity 300ms ease;
+				}
+			}
+		}
+		.form--active{
+			max-height: 227px;
+			padding-top: 10px;
+			padding-bottom: 23px;			
+			transition: all 300ms ease;
 		}
 	}
-
-	.ac-item{
-    // min-height: 0;
-    // height: 0;
-		max-height: 0px;
-
-    box-sizing: border-box;
-    overflow: hidden;
-    border: 0px solid #fff !important;
-    transition: all 250ms ease-out;
-	}
-	.ac-item--active{
-		max-height: 180px;
-		height: auto;
-    overflow: hidden;
-    border: 1px solid #fff !important;    
-    transition: max-height 400ms ease-in;
-	}
-
-	.ac-item__list{
-		min-height: 0;
-    height: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    transition: all 250ms ease-out;
-	}
-	.ac-item__list--active{
-		min-height: 130px;
-    transition: min-height 250ms ease-in;
-
-	}
-
-	
-	.ac-title:hover{
-		cursor: pointer;
-		i{
-			background-image: url('../img/icon/icon-for-help/down-red.png');
-		}
-	}	
 }
