@@ -46,5 +46,14 @@
 // слайдер
 @import '_slider.scss';
 
+// хлебни крошкы
+@import 'bloks/located.scss';
+
+// Профиль пользователя
+@import 'bloks/user-profile.scss';
+
+// Отзывы в профилю
+@import 'bloks/reviews-profile.scss';
+
 // Футер
 @import 'bloks/footer.scss';

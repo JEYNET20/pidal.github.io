@@ -1,0 +1,44 @@
+.located{
+	display: flex;
+	align-items: center;
+	margin-top: 33px;
+	margin-bottom: 33px;
+	position: relative;
+	a{
+		text-decoration: none;
+		color: #006c79;
+		font-family: "Open Sans";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 14px;
+		letter-spacing: 0.14px;
+		margin-right: 11px;
+	}
+	a:hover{
+		color: #ff4545;
+	}
+	.first{
+		margin-right: 35px;
+	}
+	i{
+		margin-right: 11px;
+	}
+	.icon-left-arrow-blue{
+		margin-right: 6px;
+	}
+	span{
+		opacity: 0.6;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 14px;
+		letter-spacing: 0.14px;
+	}
+	.name{
+		position: absolute;
+		right: 0;
+		display: flex;
+		align-items: center;
+	}
+}

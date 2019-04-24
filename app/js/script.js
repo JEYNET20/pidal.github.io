@@ -15,6 +15,7 @@
 	exitFormBtn.forEach(function(value){
 		if(value) value.addEventListener('click', onExitFormBtn);
 	});
+	
 	// END_form
 })();
 
@@ -517,9 +518,61 @@
 		this.removeEventListener('click', onBtnHiddenFormClick);
 	};
 
-	btn.addEventListener('click', onBtnShowFormClick);
+	if(btn) btn.addEventListener('click', onBtnShowFormClick);
 
 	// END форма на внутрений странице "help-include"
+})();
 
+// форма отправки сообщения "Отзывы профиль"
+(function(){
+	let btn = document.querySelector('.user-profile .btn');
+	const BG = document.querySelector('.popup-bg');
+	let body = document.querySelector('.popup-message-form');
+	let exit = document.querySelector('.popup-message-form .icon-exit-chrest');
+
+	exit.onclick = function(){
+		if(!body) return;
+		setTimeout(function(){
+			body.classList.add('d-none');
+		},400);
+		setTimeout(function(){
+			if(BG) BG.classList.add('d-none');	
+		},400);
+		anime({
+		  targets: body,
+		  opacity: '0' ,
+		  easing: 'easeOutQuad',
+		  duration: 400
+		});
+		anime({
+		  targets: BG,
+		  opacity: '0' ,
+		  easing: 'easeOutQuad',
+		  duration: 400
+		});
+	};
+
+	let onBtnShowMessage = function(e){
+		e.preventDefault();
+		console.log(this);
+		if(BG) BG.classList.remove('d-none');
+		if(!body) return;
+		body.classList.remove('d-none');
+		anime({
+		  targets: body,
+		  opacity: '1' ,
+		  easing: 'easeInQuad',
+		  duration: 400
+		});
+		anime({
+		  targets: BG,
+		  opacity: '.6' ,
+		  easing: 'easeInQuad',
+		  duration: 400
+		});
+	};
+
+
+	btn.addEventListener('click', onBtnShowMessage);
 
 })();

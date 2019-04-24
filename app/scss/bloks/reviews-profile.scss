@@ -1,0 +1,496 @@
+$red: #ff4545;
+.resviews-profile{
+	h2{
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 24px;
+		letter-spacing: 0.24px;
+		margin-top: 39px;
+		margin-bottom: 35px;
+	}
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		li{
+			width: 100%;
+			height: 204px;
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			border-radius: 6px;
+			background-color: #ffffff;
+			margin-bottom: 12px;
+			display: flex;
+			// flex-wrap: wrap;
+		}
+		li:last-child{
+			margin-bottom: 64px;
+		}
+	}
+	.left{
+		width: 282px;
+		height: 204px;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.right{
+		width: 918px;
+		box-sizing: border-box;
+		padding-left: 25px;
+		padding-right: 22px;
+		padding-top: 18px;
+		padding-bottom: 32px;
+		position: relative;
+		h3{
+			margin-top: 0;
+	    margin-bottom: 15px;
+			color: #306c78;
+			font-family: "Open Sans";
+			font-size: 18px;
+			font-weight: 600;
+			letter-spacing: 0.16px;
+			a{
+				color: #306c78;
+				text-decoration: none;
+			}
+			a:hover{
+				color: #ff4545;
+			}
+		}
+		.property{
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 16px;
+			font-weight: 400;
+			font-size: 18px;
+			letter-spacing: 0.16px;
+			margin-bottom: 12px;
+			margin-top: 0;
+			.age{
+				margin-bottom: 8px;
+			}
+			.type{
+
+			}
+		}
+		.message{
+			width: 100%;
+			height: 57px;
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.14px;
+			overflow-y: hidden;
+			text-overflow: ellipsis;
+			margin: 0;
+		}
+		.stats{
+			min-width: 111px;
+			position: absolute;
+			left: 228px;
+			top: 24.5px;
+			display: flex;
+			justify-content: space-between;
+			.views{
+				display: flex;
+				align-items: center;
+				width: 50%;
+				margin-right: 21px;
+				span{
+					color: #2c2c2c;
+					font-family: "Open Sans";
+					font-size: 14px;
+					font-weight: 400;
+					letter-spacing: 0.14px;
+					line-height: 14px;
+					a{
+						color: #2c2c2c;
+						text-decoration: none;
+					}
+				}
+				&-icon{
+					margin-right: 6px;
+					display: block;
+					width: 16px;
+					height: 12px;
+					opacity: 0.6;
+					background-image: url('../img/reviews-profile/views-icon.png');
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+			.commends{
+				display: flex;
+				align-items: center;
+				width: 50%;
+				span{
+					color: #2c2c2c;
+					font-family: "Open Sans";
+					font-size: 14px;
+					font-weight: 400;
+					letter-spacing: 0.14px;
+					line-height: 14px;
+					a{
+						color: #2c2c2c;
+						text-decoration: none;
+					}
+				}
+				&-icon{
+					margin-right: 6px;
+					display: block;
+					width: 16px;
+					height: 15px;
+					opacity: 0.6;
+					background-image: url('../img/reviews-profile/commend-icon.png');
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+
+			}
+		}
+		.info{
+			min-width: 123px;
+			min-height: 82px;
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			img{
+				width: 44px;
+				height: 44px;
+			}
+			h5{
+				a{
+					text-decoration: none;
+					color: #306c78;
+				}
+				a:hover{
+					color: #ff4545;
+				}
+				color: #306c78;
+				font-family: "Open Sans";
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 14px;
+				letter-spacing: 0.12px;
+				margin-top: 0;
+				margin-bottom: 8px;
+			}
+			span{
+				opacity: 0.6;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 14px;
+				letter-spacing: 0.12px;
+				margin: 0;
+			}
+			.rating{
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 48px;
+				height: 48px;
+				background-image: url('../img/reviews-profile/rating-bg-black.png');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #ffffff;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 14px;
+				letter-spacing: 0.16px;				
+			}
+		}
+	}
+	.favourit-item{
+		h3{
+			box-sizing: border-box;
+			padding-left: 31px;
+			position: relative;
+		}
+		.right .stats{
+			left: 260px;
+		}
+		.crown{
+			position: absolute;
+			left: 0;
+			display: block;
+			width: 26px;
+			height: 22px;
+			background-image: url('../img/reviews-profile/king.png');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.right .rating{
+			background-image: url('../img/reviews-profile/rating-bg-red.png');
+		}
+	}	
+}
+
+.reviews-profile--my-reviews{
+	.item:last-child{
+		margin-bottom: 66px;
+	}
+	.right{
+		.stats{
+			width: 112px;
+			position: static;
+			margin-bottom: 8px;
+		}
+		.message{
+			height: unset;
+			margin-bottom: 60px;
+		}
+		.item__footer-wrapper-btn{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 245px;
+		}
+		.item__footer{
+			height: 29px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.btn{
+			text-align: left;
+			padding: 0;
+			background-color: unset;
+			width: 142px;
+			height: unset;
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-weight: 400;
+			font-size: 16px;
+			letter-spacing: 0.16px;			
+			&::after{
+				display: none;
+			}
+			i{
+				margin-left: 6px;
+			}
+		}
+		.btn:hover{
+			color: #ff4545;
+		}
+		.info{
+			width: 166px;
+			height: 36px;
+			min-height: unset;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.rating{
+				position: static;
+				width: 36px;
+				height: 36px;
+				font-size: 16px;
+				background-image: url('../img/reviews-profile/rating-bg-red.png');
+			}
+			span{
+				opacity: 0.6;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 18px;
+				font-weight: 400;
+				letter-spacing: 0.18px;
+			}
+		}
+	}
+}
+
+.null-rewievs{
+	box-sizing: border-box;
+	padding-top: 27px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	h3{
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 18px;
+		font-weight: 600;
+		letter-spacing: 0.18px;
+		margin-top: 0;
+		margin-bottom: 19px;
+		width: 100%;
+		text-align: center;
+	}
+	p{
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0.16px;
+		margin-top: 0;
+		margin-bottom: 32px;
+		width: 613px;
+	}
+	&__wrapper-img{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 24px;
+	}
+	img{
+		width: 306px;
+		height: 217px;
+	}
+	button{
+		width: 182px;
+		height: 44px;
+		background-color: #ff4545;		
+		position: relative;
+		&::after{
+			width: 100px;
+			background-color: #ff4545;		
+		}
+	}
+	.pre-footer-icons{
+		width: 100%;
+	}
+	.message-autorisation-wrapper{
+		width: 422px;
+		height: 64px;
+		box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+		border-radius: 6px;
+		background-color: #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 36px;
+		a{
+			color: #306c78;
+			font-family: "Open Sans";
+			font-weight: 600;
+			letter-spacing: 0.16px;
+			text-decoration: none;
+		}
+		span{
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 16px;
+			font-weight: 400;
+		}
+	}
+}
+
+.no-autorisation{
+	box-sizing: border-box;
+	padding-top: 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	.pre-footer-icons{
+		width: 100%;
+	}
+	.message-autorisation-wrapper{
+		width: 422px;
+		height: 64px;
+		box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+		border-radius: 6px;
+		background-color: #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 36px;
+		a{
+			color: #306c78;
+			font-family: "Open Sans";
+			font-weight: 600;
+			letter-spacing: 0.16px;
+			text-decoration: none;
+		}
+		a:hover{
+			color: $red;
+		}
+		span{
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 16px;
+			font-weight: 400;
+		}
+	}
+}
+
+.reviews-profile--my-joined{
+	.right{
+		.stats{
+			position: static;
+			width: 120px;
+			margin-bottom: 7px;
+		}
+		.update-reviews{
+			width: 175px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 15px;
+			span{
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 14px;
+				letter-spacing: 0.14px;
+			}
+			.count-red{
+				border-radius: 50%;
+				display: block;
+				width: 22px;
+				height: 22px;
+				border: 2px solid #d24a43;
+				background-color: #ff4545;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				margin-right: 7px;
+			}
+		}
+		.btn{
+			width: 132px;
+			height: 44px;
+			box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+			background-color: #ffffff;
+			position: absolute;
+			top: 12px;
+			right: 168px;
+			color: #ff4545;
+			font-weight: 600;
+			&::after{
+				background-color: #ffffff;
+				width: 100px;
+			}
+		}
+	}
+}
+
+.null-rewievs--joined{
+	img{
+		width: 346px;
+		height: 306px;
+	}
+	.btn{
+		background-color: #306c78;
+		&::after{
+			background-color: #306c78;
+		}
+	}
+}
+
+.no-autorisation--joined{}
