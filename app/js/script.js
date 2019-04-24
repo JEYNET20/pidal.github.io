@@ -566,7 +566,7 @@
 		});
 		anime({
 		  targets: BG,
-		  opacity: '.6' ,
+		  opacity: '.8' ,
 		  easing: 'easeInQuad',
 		  duration: 400
 		});
