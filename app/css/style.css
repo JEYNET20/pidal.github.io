@@ -3262,9 +3262,8 @@ input[type="password"]:focus {
   .reviews-profile--my-joined .right .update-reviews .count-red {
     border-radius: 50%;
     display: block;
-    width: 22px;
-    height: 22px;
-    border: 2px solid #d24a43;
+    width: 24px;
+    height: 24px;
     background-color: #ff4545;
     display: flex;
     justify-content: center;
