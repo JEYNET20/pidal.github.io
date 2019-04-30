@@ -30,10 +30,10 @@
 		let menu = this.childNodes[3];
 
 		anime({
-		  targets: menu,
-		  opacity: '1' ,
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: menu,
+      opacity: '1' ,
+      easing: 'easeInQuad',
+      duration: 400
 		});
 
 		menu.classList.remove('d-none');
@@ -44,10 +44,10 @@
 				x.addEventListener('click', onMainMenuItemClick);				
 			},400);
 			anime({
-			  targets: menu,
-			  opacity: '0' ,
-			  easing: 'easeOutQuad',
-			  duration: 400
+        targets: menu,
+        opacity: '0' ,
+        easing: 'easeOutQuad',
+        duration: 400
 			});
 		}
 	};
@@ -69,17 +69,17 @@
 		this.style.opacity = '0';
 
 		anime({
-		  targets: logo,
-		  left: '-29px' ,
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: logo,
+      left: '-29px' ,
+      easing: 'easeInQuad',
+      duration: 400
 		});		
 
 		anime({
-		  targets: navBar,
-		  opacity: '1' ,
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: navBar,
+      opacity: '1' ,
+      easing: 'easeInQuad',
+      duration: 400
 		});
 
 		navBar.onmouseleave = function(){
@@ -89,16 +89,16 @@
 			},400);
 			x.style.opacity = '1';
 			anime({
-			  targets: logo,
-			  left: '0' ,
-			  easing: 'easeOutQuad',
-			  duration: 400
+        targets: logo,
+        left: '0' ,
+        easing: 'easeOutQuad',
+        duration: 400
 			});				
 			anime({
-			  targets: navBar,
-			  opacity: '0' ,
-			  easing: 'easeOutQuad',
-			  duration: 400
+        targets: navBar,
+        opacity: '0' ,
+        easing: 'easeOutQuad',
+        duration: 400
 			});			
 		}
 	};
@@ -117,10 +117,10 @@
 		// this.style.backgroundColor = '#343434';
 		list.classList.remove('d-none');
 		anime({
-		  targets: list,
-		  opacity: '1' ,
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: list,
+      opacity: '1' ,
+      easing: 'easeInQuad',
+      duration: 400
 		});
 
 		list.onmouseleave = function(){
@@ -129,10 +129,10 @@
 				list.classList.add('d-none');
 			},400);
 			anime({
-			  targets: list,
-			  opacity: '0' ,
-			  easing: 'easeOutQuad',
-			  duration: 400
+        targets: list,
+        opacity: '0' ,
+        easing: 'easeOutQuad',
+        duration: 400
 			});			
 		}
 	};
@@ -153,10 +153,10 @@
 		let mapBlockLvl1 = document.querySelector('.map-block__other-city--level-1');
 		mapBlockLvl1.classList.remove('d-none');
 		anime({
-		  targets: mapBlockLvl1,
-		  opacity: '1',
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: mapBlockLvl1,
+      opacity: '1',
+      easing: 'easeInQuad',
+      duration: 400
 		});
 	};
 
@@ -167,10 +167,10 @@
 			mapBlock.classList.add('d-none');
 		},400);
 		anime({
-		  targets: mapBlock,
-		  opacity: '0',
-		  easing: 'easeOutQuad',
-		  duration: 400
+      targets: mapBlock,
+      opacity: '0',
+      easing: 'easeOutQuad',
+      duration: 400
 		});		
 	};
 
@@ -181,19 +181,19 @@
 			mapBlockLvl1.classList.add('d-none');
 		},400);
 		anime({
-		  targets: mapBlockLvl1,
-		  opacity: '0',
-		  easing: 'easeOutQuad',
-		  duration: 400
+      targets: mapBlockLvl1,
+      opacity: '0',
+      easing: 'easeOutQuad',
+      duration: 400
 		});
 
 		let mapBlockLvl2 = document.querySelector('.map-block__other-city--level-2');
 		mapBlockLvl2.classList.remove('d-none');
 		anime({
-		  targets: mapBlockLvl2,
-		  opacity: '1',
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: mapBlockLvl2,
+      opacity: '1',
+      easing: 'easeInQuad',
+      duration: 400
 		});
 	};
 
@@ -207,18 +207,18 @@
 			mapBlock2.classList.add('d-none');
 		},400);
 		anime({
-		  targets: mapBlock2,
-		  opacity: '0',
-		  easing: 'easeOutQuad',
-		  duration: 400
+      targets: mapBlock2,
+      opacity: '0',
+      easing: 'easeOutQuad',
+      duration: 400
 		});
 
 		mapBlockLvl1.classList.remove('d-none');
 		anime({
-		  targets: mapBlockLvl1,
-		  opacity: '1',
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: mapBlockLvl1,
+      opacity: '1',
+      easing: 'easeInQuad',
+      duration: 400
 		});
 	};
 
@@ -266,20 +266,20 @@
 		mark.forEach(function(value){
 			value.classList.remove('d-none');
 			anime({
-			  targets: value,
-			  opacity: '1' ,
-			  easing: 'easeInQuad',
-			  duration: 400
+        targets: value,
+        opacity: '1' ,
+        easing: 'easeInQuad',
+        duration: 400
 			});
 
-		})
+    })
 		setTimeout(function(){
 			mark.forEach(function(value){
 				anime({
-				  targets: value,
-				  opacity: '0' ,
-				  easing: 'easeOutQuad',
-				  duration: 400
+          targets: value,
+          opacity: '0' ,
+          easing: 'easeOutQuad',
+          duration: 400
 				});				
 				setTimeout(function(){
 					value.classList.add('d-none');
@@ -397,17 +397,17 @@
 		let x = document.querySelector('.popular-mark__item--hidden');
 		x.classList.remove('d-none');
 		anime({
-		  targets: x,
-		  opacity: '1' ,
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: x,
+      opacity: '1' ,
+      easing: 'easeInQuad',
+      duration: 400
 		});
 		this.parentNode.classList.add('d-none');
 		anime({
-		  targets: list,
-		  opacity: '1' ,
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: list,
+      opacity: '1' ,
+      easing: 'easeInQuad',
+      duration: 400
 		});
 	};
 
@@ -422,10 +422,10 @@
 
 		list.classList.remove('d-none');
 		anime({
-		  targets: list,
-		  opacity: '1' ,
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: list,
+      opacity: '1' ,
+      easing: 'easeInQuad',
+      duration: 400
 		});
 	};
 
@@ -539,16 +539,16 @@
 			if(BG) BG.classList.add('d-none');	
 		},400);
 		anime({
-		  targets: body,
-		  opacity: '0' ,
-		  easing: 'easeOutQuad',
-		  duration: 400
+      targets: body,
+      opacity: '0' ,
+      easing: 'easeOutQuad',
+      duration: 400
 		});
 		anime({
-		  targets: BG,
-		  opacity: '0' ,
-		  easing: 'easeOutQuad',
-		  duration: 400
+      targets: BG,
+      opacity: '0' ,
+      easing: 'easeOutQuad',
+      duration: 400
 		});
 	};
 
@@ -559,16 +559,16 @@
 		if(!body) return;
 		body.classList.remove('d-none');
 		anime({
-		  targets: body,
-		  opacity: '1' ,
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: body,
+      opacity: '1' ,
+      easing: 'easeInQuad',
+      duration: 400
 		});
 		anime({
-		  targets: BG,
-		  opacity: '.8' ,
-		  easing: 'easeInQuad',
-		  duration: 400
+      targets: BG,
+      opacity: '.8' ,
+      easing: 'easeInQuad',
+      duration: 400
 		});
 	};
 
