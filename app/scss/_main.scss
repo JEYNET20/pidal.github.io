@@ -419,11 +419,10 @@ input[type="password"]:focus{
 		transition: opacity 300ms ease;
 	}
 }
+
 .btn:hover{
-	// transition: opacity 300ms ease;
-	// opacity: 0.8;
-	&::after{
-		transition: opacity 300ms ease;
-		opacity: 0;
-	}
+  &::after{
+    transition: opacity 300ms ease;
+    opacity: 0;
+  }
 }
