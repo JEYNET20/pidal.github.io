@@ -73,7 +73,7 @@
       left: '-29px' ,
       easing: 'easeInQuad',
       duration: 400
-		});		
+		});
 
 		anime({
       targets: navBar,
