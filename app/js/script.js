@@ -530,7 +530,7 @@
 	let body = document.querySelector('.popup-message-form');
 	let exit = document.querySelector('.popup-message-form .icon-exit-chrest');
 
-	exit.onclick = function(){
+	if(exit) exit.onclick = function(){
 		if(!body) return;
 		setTimeout(function(){
 			body.classList.add('d-none');
@@ -573,6 +573,130 @@
 	};
 
 
-	btn.addEventListener('click', onBtnShowMessage);
+	if(btn) btn.addEventListener('click', onBtnShowMessage);
+
+})();
+
+
+// Отзывы форма оставления отзывов
+(function(){
+	const btnTitle = document.querySelectorAll('.form-section .title');
+
+	let onBtnTitleShowClick = function(e){
+		e.preventDefault();
+		const body = this.nextSibling.nextSibling;
+
+		this.classList.add('title--active');
+		body.classList.add('body--active');
+
+		this.removeEventListener('click', onBtnTitleShowClick);
+		this.addEventListener('click', onBtnTitleHiddenClick);
+	};
+
+	let onBtnTitleHiddenClick = function(e){
+		e.preventDefault();
+		const body = this.nextSibling.nextSibling;
+		this.classList.remove('title--active');
+		body.classList.remove('body--active');
+
+		this.removeEventListener('click', onBtnTitleHiddenClick);
+		this.addEventListener('click', onBtnTitleShowClick);
+	};
+
+	btnTitle.forEach(function(value){
+		if(value){
+			if(value.classList.contains('title--active')){
+				value.addEventListener('click', onBtnTitleHiddenClick);
+			}
+			value.addEventListener('click', onBtnTitleShowClick);
+		}
+	});
+
+	// ----------------------- //
+
+	const allTtems = document.querySelectorAll('.form-section .item label');
+	const inputAgeForm = document.querySelectorAll('.form-section-input-form');
+	let onAllTitlesClick = function(e){
+		let mThis = this.parentNode;
+		let item = mThis.childNodes[3];
+		let title = mThis.parentNode.parentNode.parentNode.parentNode.childNodes[3].childNodes[3];
+		let body = mThis.parentNode.parentNode.parentNode.parentNode.childNodes[3].childNodes[5];
+		title.textContent = item.textContent;
+
+		let nextBody = mThis.parentNode.parentNode.parentNode.parentNode.nextSibling.nextSibling;
+		
+		if(nextBody){
+			let nextBodyTitle = nextBody.childNodes[3];
+			let nextBodyBody = nextBody.childNodes[5];
+			nextBody.classList.remove('d-none');
+			nextBodyTitle.classList.add('title--active');
+			nextBodyBody.classList.add('body--active');
+		}
+		
+		let thisBody = mThis.parentNode.parentNode.parentNode;
+		let thisTitle = thisBody.previousElementSibling;
+		thisTitle.classList.remove('title--active');
+		thisBody.classList.remove('body--active');
+
+		thisTitle.addEventListener('click', onBtnTitleShowClick);
+	};
+
+	let onInputAgeFormClick = function(e){
+		let nextBody = this.parentNode.parentNode.parentNode.parentNode.nextSibling.nextSibling;
+		if(nextBody){
+			let nextBodyTitle = nextBody.childNodes[3];
+			let nextBodyBody = nextBody.childNodes[5];
+			nextBody.classList.remove('d-none');
+			nextBodyTitle.classList.add('title--active');
+			nextBodyBody.classList.add('body--active');
+		}
+
+		thisTitle.addEventListener('click', onBtnTitleShowClick);		
+	}
+
+	allTtems.forEach(function(value){
+		if(value) value.addEventListener('click', onAllTitlesClick);
+	});
+	inputAgeForm.forEach(function(value){
+		if(value) value.addEventListener('change', onInputAgeFormClick);
+	});
+	// ----------------------- //
+
+	const btnEasyAuto = document.querySelector('.navigation-btn-wrapper .easy-auto');
+	const btnMoto = document.querySelector('.navigation-btn-wrapper .moto');
+	const btnHeavyAuto = document.querySelector('.navigation-btn-wrapper .heavy-auto');
+
+	const bodyEasyAuto = document.querySelector('.reviews-form-str .easy-auto-wrapper');
+	const bodyMoto = document.querySelector('.reviews-form-str .moto-wrapper');
+	const bodyHeavyAuto = document.querySelector('.reviews-form-str .heavy-auto-wrapper');
+
+	const btnCategory = document.querySelectorAll('.navigation-btn-wrapper .category');
+
+	let onBtnCategoryClick = function(e){
+		btnCategory.forEach( function(value){
+			if(value.classList.contains('category--active')){
+				value.classList.remove('category--active');
+			}
+		});
+		this.classList.add('category--active');
+
+		if(btnEasyAuto.classList.contains('category--active')){
+			bodyEasyAuto.classList.remove('d-none');
+			bodyMoto.classList.add('d-none');
+			bodyHeavyAuto.classList.add('d-none');
+		}else if(btnMoto.classList.contains('category--active')){
+			bodyEasyAuto.classList.add('d-none');
+			bodyMoto.classList.remove('d-none');
+			bodyHeavyAuto.classList.add('d-none');
+		}else{
+			bodyEasyAuto.classList.add('d-none');
+			bodyMoto.classList.add('d-none');
+			bodyHeavyAuto.classList.remove('d-none');			
+		}
+	};
+
+	btnCategory.forEach(function(value){
+		if(value) value.addEventListener('click', onBtnCategoryClick);
+	});
 
 })();
