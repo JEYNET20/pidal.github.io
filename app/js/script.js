@@ -360,7 +360,6 @@
 		formLogIn.classList.remove('d-none');
 
 
-		console.log(this);
 		this.style.backgroundColor = '#fff';
 		registrBtn.style.backgroundColor = "#dddddd";
 	};
@@ -371,7 +370,6 @@
 		formLogIn.classList.add('d-none');
 		formRegistr.classList.remove('d-none');
 
-		console.log(this);
 		this.style.backgroundColor = '#fff';
 		sigInBtn.style.backgroundColor = "#dddddd";
 	};
@@ -502,7 +500,7 @@
 
 	let onBtnShowFormClick = function(e){
 		e.preventDefault();
-		console.log(this);
+
 		formBody.classList.add('form--active');
 
 		this.removeEventListener('click', onBtnShowFormClick);
@@ -511,7 +509,7 @@
 
 	let onBtnHiddenFormClick = function(e){
 		e.preventDefault();
-		console.log(this);
+
 		formBody.classList.remove('form--active');
 
 		this.addEventListener('click', onBtnShowFormClick);
@@ -554,7 +552,7 @@
 
 	let onBtnShowMessage = function(e){
 		e.preventDefault();
-		console.log(this);
+
 		if(BG) BG.classList.remove('d-none');
 		if(!body) return;
 		body.classList.remove('d-none');
@@ -629,8 +627,8 @@
 			let nextBodyTitle = nextBody.childNodes[3];
 			let nextBodyBody = nextBody.childNodes[5];
 			nextBody.classList.remove('d-none');
-			nextBodyTitle.classList.add('title--active');
-			nextBodyBody.classList.add('body--active');
+			if(nextBodyTitle) nextBodyTitle.classList.add('title--active');
+			if(nextBodyBody) nextBodyBody.classList.add('body--active');
 		}
 		
 		let thisBody = mThis.parentNode.parentNode.parentNode;
@@ -639,6 +637,12 @@
 		thisBody.classList.remove('body--active');
 
 		thisTitle.addEventListener('click', onBtnTitleShowClick);
+
+		// if(true);
+		const BODY = thisBody.parentNode;
+		if(BODY.classList.contains('form-section--property-on')){
+			document.querySelector('.form-property').classList.remove('d-none');
+		}
 	};
 
 	let onInputAgeFormClick = function(e){
@@ -647,12 +651,16 @@
 			let nextBodyTitle = nextBody.childNodes[3];
 			let nextBodyBody = nextBody.childNodes[5];
 			nextBody.classList.remove('d-none');
-			nextBodyTitle.classList.add('title--active');
-			nextBodyBody.classList.add('body--active');
+			if(nextBodyTitle) nextBodyTitle.classList.add('title--active');
+			if(nextBodyBody) nextBodyBody.classList.add('body--active');
 		}
+		let title = this.parentNode.parentNode.parentNode.parentNode.childNodes[3].childNodes[3];
 
-		thisTitle.addEventListener('click', onBtnTitleShowClick);		
-	}
+		let myValue = this.value;
+		title.textContent = myValue;
+
+		// thisTitle.addEventListener('click', onBtnTitleShowClick);		
+	};
 
 	allTtems.forEach(function(value){
 		if(value) value.addEventListener('click', onAllTitlesClick);
@@ -660,6 +668,7 @@
 	inputAgeForm.forEach(function(value){
 		if(value) value.addEventListener('change', onInputAgeFormClick);
 	});
+
 	// ----------------------- //
 
 	const btnEasyAuto = document.querySelector('.navigation-btn-wrapper .easy-auto');
@@ -691,12 +700,78 @@
 		}else{
 			bodyEasyAuto.classList.add('d-none');
 			bodyMoto.classList.add('d-none');
-			bodyHeavyAuto.classList.remove('d-none');			
+			bodyHeavyAuto.classList.remove('d-none');
 		}
+
+		document.querySelector('.form-property').classList.add('d-none');		
 	};
 
 	btnCategory.forEach(function(value){
 		if(value) value.addEventListener('click', onBtnCategoryClick);
 	});
+
+	// ----------------------- //
+
+	const textAtributeBtn = document.querySelector('.add-atribute .text');
+	const textAtributeExitBtn = document.querySelector('.text-input-wrapper .exit');
+	const textInput = document.querySelector('.strange-form  .text-input-wrapper');
+
+	textAtributeBtn.onclick = function(e){
+		textInput.classList.remove('d-none');
+	};
+	textAtributeExitBtn.onclick = function(e){
+		textInput.classList.add('d-none');
+	};
+
+	const titleAtributeBtn = document.querySelector('.add-atribute .title');
+	const titleAtributeExitBtn = document.querySelector('.title-input-wrapper .exit');
+	const titleInput = document.querySelector('.strange-form .title-input-wrapper');
+
+	titleAtributeBtn.onclick = function(e){
+		titleInput.classList.remove('d-none');
+	};
+	titleAtributeExitBtn.onclick = function(e){
+		titleInput.classList.add('d-none');
+	};
+
+	const fileAtributeBtn = document.querySelector('.add-atribute .img input');
+	const fileInput = document.querySelector('.strange-form .file-input-wrapper')
+
+	fileAtributeBtn.onchange = function(e){
+		fileInput.classList.remove('d-none');
+	}
+
+	const videoAtributeBtn = document.querySelector('.add-atribute .video');
+	const videoInput = document.querySelector('.strange-form .video-input-wrapper');
+
+	videoAtributeBtn.onclick = function(e){
+		videoInput.classList.remove('d-none');
+	};
+
+	const videoAtributeExitBtn = document.querySelector('.add-atribute .video-wrapper .exit');
+	
+	const videoInputAddBtn = document.querySelector('.video-input-wrapper .add');
+	const videoWrapper = document.querySelector('.video-input-wrapper .video-wrapper')
+	const videoInputWrapper = document.querySelector('.video-input-wrapper .input-wrapper');
+
+	videoInputAddBtn.onclick = function(e){
+		videoWrapper.classList.remove('d-none');
+		videoInputWrapper.classList.add('d-none');
+	};
+
+	// проверка колово символов в инпуте
+
+	const formInputTitle = document.querySelector('.form-property .title-input');
+	const formTextInput = document.querySelector('.form-property .text-input');
+	
+	let onInputTitleChange = function(e){
+		// console.log(this.value.length);
+		let curentItem = this.nextSibling.nextSibling.childNodes[3];
+		curentItem.textContent = 9999;
+		curentItem.textContent -= this.value.length;
+	};
+
+	formInputTitle.addEventListener('keydown', onInputTitleChange);
+	formTextInput.addEventListener('keydown', onInputTitleChange);
 
 })();
