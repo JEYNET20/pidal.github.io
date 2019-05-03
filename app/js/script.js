@@ -773,5 +773,4 @@
 
 	formInputTitle.addEventListener('keydown', onInputTitleChange);
 	formTextInput.addEventListener('keydown', onInputTitleChange);
-
 })();
