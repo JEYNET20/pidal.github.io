@@ -748,7 +748,7 @@
 		videoInput.classList.remove('d-none');
 	};
 
-	const videoAtributeExitBtn = document.querySelector('.add-atribute .video-wrapper .exit');
+	const videoAtributeExitBtn = document.querySelector('.video-wrapper .exit');
 	
 	const videoInputAddBtn = document.querySelector('.video-input-wrapper .add');
 	const videoWrapper = document.querySelector('.video-input-wrapper .video-wrapper')
@@ -759,6 +759,10 @@
 		videoInputWrapper.classList.add('d-none');
 	};
 
+	videoAtributeExitBtn.onclick = function(){
+		videoWrapper.classList.add('d-none');
+	};
+
 	// проверка колово символов в инпуте
 
 	const formInputTitle = document.querySelector('.form-property .title-input');
@@ -766,11 +770,110 @@
 	
 	let onInputTitleChange = function(e){
 		// console.log(this.value.length);
-		let curentItem = this.nextSibling.nextSibling.childNodes[3];
-		curentItem.textContent = 9999;
-		curentItem.textContent -= this.value.length;
+		if(this.classList.contains('title-input')){
+			let curentItem = this.nextSibling.nextSibling.childNodes[3];
+			curentItem.textContent = 9999;
+			curentItem.textContent -= this.value.length;
+		}else{
+			return false;
+		}
+	};
+
+	let onInputFormChange = function(e){
+		if(this.classList.contains('text-input')){
+			let curentItem = this.nextSibling.nextSibling.nextSibling.nextSibling.childNodes[3];
+			curentItem.textContent = 9999;
+			curentItem.textContent -= this.value.length;
+		}
 	};
 
 	formInputTitle.addEventListener('keydown', onInputTitleChange);
-	formTextInput.addEventListener('keydown', onInputTitleChange);
+	formTextInput.addEventListener('keydown', onInputFormChange);
+})();
+
+
+// Отзывы форма "form-selected"
+(function(){
+
+	const mainBtn = document.querySelectorAll('.castom-select-wrapper');
+
+	function onMainBtnShowClick(e){
+		e.preventDefault();
+		
+		const arrow = this.querySelector('.more');
+		arrow.classList.add('more--active');
+
+		const list = this.querySelector('.list');
+		list.classList.remove('d-none');
+
+		this.removeEventListener('click', onMainBtnShowClick);
+		this.addEventListener('click', onMainBtnHiddenClick);
+	};
+
+	function onMainBtnHiddenClick(e){
+		e.preventDefault();
+		
+		const arrow = this.querySelector('.more');
+		arrow.classList.remove('more--active');
+
+		const list = this.querySelector('.list');
+		list.classList.add('d-none');
+
+		this.removeEventListener('click', onMainBtnHiddenClick);
+		this.addEventListener('click', onMainBtnShowClick);
+	};
+
+	mainBtn.forEach(function(element){
+		element.addEventListener('click', onMainBtnShowClick);
+	});
+
+	const itemBtn = document.querySelectorAll('.castom-select-wrapper .list__item');
+
+	function onItemBtnClick(e){
+		e.preventDefault();
+		
+		let text = this.textContent;
+		let input = this.parentNode.parentNode.childNodes[3];
+		input.textContent = text;	
+	};
+
+	itemBtn.forEach(function(element){
+		element.addEventListener('click', onItemBtnClick);
+	});
+})();
+
+// Отзывы форма "form-sliders"
+(function(){
+	const input = document.querySelectorAll('input[type=range]');
+	let b = false;
+
+	function onInputMouseDown(e){ b = true };
+
+	function onInputMouseOver(e){ b = false };
+
+	function onInputMouseMove(e){
+		if(!b) return false;
+
+		let place = this.parentNode.parentNode.lastElementChild.childNodes[0];
+		
+		if(e.offsetX >= 0 && e.offsetX <= 40){
+			place.textContent = '1';
+		}else if(e.offsetX >= 40 && e.offsetX <= 80){
+			place.textContent = '2';
+		}else if(e.offsetX >= 80 && e.offsetX <= 120){
+			place.textContent = '3';
+		}else if(e.offsetX >= 120 && e.offsetX <= 160){
+			place.textContent = '4';
+		}else if(e.offsetX >= 160 && e.offsetX <= 200){
+			place.textContent = '5';
+		}
+	
+	};
+
+	input.forEach(function(element){
+		element.addEventListener('mousedown', onInputMouseDown);
+		element.addEventListener('mouseover', onInputMouseOver);
+		element.addEventListener('mousemove', onInputMouseMove);
+	});
+
 })();

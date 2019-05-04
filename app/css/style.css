@@ -721,6 +721,38 @@ input[type="password"]:focus {
   background-position: center center;
   background-size: cover; }
 
+.plus-black {
+  width: 16px;
+  height: 16px;
+  display: block;
+  background-image: url("../img/icon/plus-black.png");
+  background-position: center center;
+  background-size: cover; }
+
+.minus-red {
+  width: 16px;
+  height: 16px;
+  display: block;
+  background-image: url("../img/icon/minus-red.png");
+  background-position: center center;
+  background-size: cover; }
+
+.icon-worning-red {
+  width: 12px;
+  height: 12px;
+  display: block;
+  background-image: url("../img/icon/worning-red.png");
+  background-position: center center;
+  background-size: cover; }
+
+.icon-chat-white {
+  width: 16px;
+  height: 16px;
+  display: block;
+  background-image: url("../img/icon/chat-white.png");
+  background-position: center center;
+  background-size: cover; }
+
 .header {
   height: 102px;
   background-color: #2c2c2c; }
@@ -3339,155 +3371,404 @@ input[type="password"]:focus {
     margin: 0; }
   .reviews-form-str .left {
     width: 894px; }
-    .reviews-form-str .left h1 {
+  .reviews-form-str h1 {
+    color: #2c2c2c;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+    margin-bottom: 44px;
+    margin-top: 0; }
+  .reviews-form-str .navigation-btn-wrapper {
+    margin-bottom: 44px; }
+    .reviews-form-str .navigation-btn-wrapper .category {
       color: #2c2c2c;
-      font-size: 36px;
-      font-weight: 400;
-      letter-spacing: 0.36px;
-      margin-bottom: 44px;
-      margin-top: 0; }
-    .reviews-form-str .left .navigation-btn-wrapper {
-      margin-bottom: 44px; }
-      .reviews-form-str .left .navigation-btn-wrapper .category {
-        color: #2c2c2c;
-        font-family: "Open Sans";
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: 0.16px;
-        background-color: unset;
-        border: none;
-        outline: none;
-        margin-right: 25px;
-        position: relative;
-        padding: 0; }
-        .reviews-form-str .left .navigation-btn-wrapper .category span {
-          transition: all .3s ease;
-          display: block;
-          opacity: 0;
-          position: absolute;
-          bottom: -9px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background-color: #ff4545;
-          border-radius: 12px; }
-      .reviews-form-str .left .navigation-btn-wrapper .category:hover span {
-        opacity: 1;
-        transition: opacity 300ms ease; }
-      .reviews-form-str .left .navigation-btn-wrapper .category--active span {
-        opacity: 1;
-        transition: opacity 300ms ease; }
-    .reviews-form-str .left .form-section .hr {
-      margin-bottom: 21px; }
-    .reviews-form-str .left .form-section .hr:last-child {
-      margin-top: 21px; }
-    .reviews-form-str .left .form-section .title {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.16px;
       background-color: unset;
       border: none;
       outline: none;
-      position: relative; }
-      .reviews-form-str .left .form-section .title .text {
-        color: #2c2c2c;
-        font-family: "Open Sans";
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: 0.16px; }
-      .reviews-form-str .left .form-section .title .item {
-        opacity: 0.6;
+      margin-right: 25px;
+      position: relative;
+      padding: 0; }
+      .reviews-form-str .navigation-btn-wrapper .category span {
+        transition: all .3s ease;
+        display: block;
+        opacity: 0;
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ff4545;
+        border-radius: 12px; }
+    .reviews-form-str .navigation-btn-wrapper .category:hover span {
+      opacity: 1;
+      transition: opacity 300ms ease; }
+    .reviews-form-str .navigation-btn-wrapper .category--active span {
+      opacity: 1;
+      transition: opacity 300ms ease; }
+  .reviews-form-str .form-section .hr {
+    margin-bottom: 21px; }
+  .reviews-form-str .form-section .hr:last-child {
+    margin-top: 21px; }
+  .reviews-form-str .form-section .title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: unset;
+    border: none;
+    outline: none;
+    position: relative; }
+    .reviews-form-str .form-section .title .text {
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.16px; }
+    .reviews-form-str .form-section .title .item {
+      opacity: 0.6;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.16px;
+      position: absolute;
+      right: 36px; }
+    .reviews-form-str .form-section .title i {
+      transition: all 200ms ease; }
+  .reviews-form-str .form-section .title--active i {
+    transition: all 200ms ease;
+    transform: rotate(180deg); }
+  .reviews-form-str .form-section .body {
+    width: 100%;
+    overflow-y: hidden;
+    transition: all 200ms ease-out;
+    max-height: 0px;
+    padding-top: 0px;
+    box-sizing: border-box; }
+    .reviews-form-str .form-section .body form {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+    .reviews-form-str .form-section .body .item {
+      width: 183px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between; }
+      .reviews-form-str .form-section .body .item label {
         color: #2c2c2c;
         font-family: "Open Sans";
         font-size: 16px;
         font-weight: 400;
-        text-transform: uppercase;
         letter-spacing: 0.16px;
-        position: absolute;
-        right: 36px; }
-      .reviews-form-str .left .form-section .title i {
-        transition: all 200ms ease; }
-    .reviews-form-str .left .form-section .title--active i {
-      transition: all 200ms ease;
-      transform: rotate(180deg); }
-    .reviews-form-str .left .form-section .body {
-      width: 100%;
-      overflow-y: hidden;
-      transition: all 200ms ease-out;
-      max-height: 0px;
-      padding-top: 0px;
-      box-sizing: border-box; }
-      .reviews-form-str .left .form-section .body form {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap; }
-      .reviews-form-str .left .form-section .body .item {
-        width: 183px;
-        margin-top: 0;
-        margin-bottom: 15px;
-        display: flex;
-        justify-content: space-between; }
-        .reviews-form-str .left .form-section .body .item label {
-          color: #2c2c2c;
-          font-family: "Open Sans";
-          font-size: 16px;
-          font-weight: 400;
-          letter-spacing: 0.16px;
-          position: relative;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 22px;
+        cursor: pointer; }
+        .reviews-form-str .form-section .body .item label::after {
+          content: '';
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 16px;
+          height: 16px;
           box-sizing: border-box;
-          padding-left: 22px;
-          cursor: pointer; }
-          .reviews-form-str .left .form-section .body .item label::after {
-            content: '';
-            border-radius: 50%;
-            position: absolute;
-            display: block;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 16px;
-            height: 16px;
-            box-sizing: border-box;
-            border: 1px solid #2c2c2c;
-            background-color: #fff;
-            opacity: 0.6;
-            transition: all 200ms ease; }
-        .reviews-form-str .left .form-section .body .item input {
-          display: none; }
-        .reviews-form-str .left .form-section .body .item input:checked + label {
-          color: #ff4545;
+          border: 1px solid #2c2c2c;
+          background-color: #fff;
+          opacity: 0.6;
           transition: all 200ms ease; }
-          .reviews-form-str .left .form-section .body .item input:checked + label::after {
-            transition: all 200ms ease;
-            box-shadow: 0 0 2px #ff4545;
-            border: 4px solid #ff4545;
-            background-color: #fff;
-            opacity: 1; }
-      .reviews-form-str .left .form-section .body .col {
-        margin-right: 127px; }
-      .reviews-form-str .left .form-section .body .col--last {
-        margin-right: 0; }
-      .reviews-form-str .left .form-section .body .col--wide {
-        width: 45%;
-        margin-right: 20px; }
-        .reviews-form-str .left .form-section .body .col--wide .item {
-          width: 100%; }
-    .reviews-form-str .left .form-section .body--active {
-      transition: all 200ms ease-in;
-      max-height: 580px;
-      height: auto;
-      padding-top: 29px; }
-    .reviews-form-str .left .form-property h2 {
+      .reviews-form-str .form-section .body .item input {
+        display: none; }
+      .reviews-form-str .form-section .body .item input:checked + label {
+        color: #ff4545;
+        transition: all 200ms ease; }
+        .reviews-form-str .form-section .body .item input:checked + label::after {
+          transition: all 200ms ease;
+          box-shadow: 0 0 2px #ff4545;
+          border: 4px solid #ff4545;
+          background-color: #fff;
+          opacity: 1; }
+    .reviews-form-str .form-section .body .col {
+      margin-right: 127px; }
+    .reviews-form-str .form-section .body .col--last {
+      margin-right: 0; }
+    .reviews-form-str .form-section .body .col--wide {
+      width: 45%;
+      margin-right: 20px; }
+      .reviews-form-str .form-section .body .col--wide .item {
+        width: 100%; }
+  .reviews-form-str .form-section .body--active {
+    transition: all 200ms ease-in;
+    max-height: 580px;
+    height: auto;
+    padding-top: 29px; }
+  .reviews-form-str .form-property h2 {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.24px;
+    margin-top: 19px;
+    margin-bottom: 23px; }
+  .reviews-form-str .form-property .block {
+    margin-bottom: 48px; }
+  .reviews-form-str .form-sliders {
+    width: 100%;
+    height: 170px;
+    margin-bottom: 48px;
+    box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding-top: 19px;
+    padding-bottom: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .reviews-form-str .form-sliders h2 {
+      width: 100%;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 24px;
+      font-weight: 400;
+      /* Text style for "О, цените" */
+      letter-spacing: 0.24px;
+      margin: 0;
+      margin-bottom: 17px; }
+    .reviews-form-str .form-sliders .form-slider__wrapper {
+      width: 390px;
+      margin-bottom: 21px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .reviews-form-str .form-sliders .form-slider__wrapper span {
+        color: #2c2c2c;
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.16px;
+        line-height: 32px;
+        width: 115px; }
+      .reviews-form-str .form-sliders .form-slider__wrapper .range-wrapper__number {
+        width: 36px;
+        height: 36px;
+        border: 2px solid #ff4545;
+        display: block;
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.16px; }
+        .reviews-form-str .form-sliders .form-slider__wrapper .range-wrapper__number span {
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          border: 2px solid #ff4545;
+          background-color: #ff4545;
+          border-radius: 50%; }
+    .reviews-form-str .form-sliders .last {
+      margin-bottom: 0; }
+  .reviews-form-str .form-selected {
+    width: 100%;
+    margin-bottom: 48px;
+    box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding-top: 19px;
+    padding-bottom: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-wrap: wrap; }
+    .reviews-form-str .form-selected h2 {
       color: #2c2c2c;
       font-family: "Open Sans";
       font-size: 24px;
       font-weight: 400;
       letter-spacing: 0.24px;
-      margin-top: 19px;
-      margin-bottom: 23px; }
-    .reviews-form-str .left .form-property .block {
-      margin-bottom: 48px; }
+      margin-top: 0;
+      margin-bottom: 18px; }
+    .reviews-form-str .form-selected .form-selected__left {
+      margin-right: 64px; }
+    .reviews-form-str .form-selected .castom-select-wrapper {
+      width: 330px;
+      height: 44px;
+      box-shadow: 0 0 3px #2c2c2c;
+      border-radius: 6px;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      cursor: pointer;
+      position: relative; }
+      .reviews-form-str .form-selected .castom-select-wrapper .icon {
+        margin-left: 16px;
+        margin-right: 28px; }
+      .reviews-form-str .form-selected .castom-select-wrapper span {
+        margin-right: 108px; }
+      .reviews-form-str .form-selected .castom-select-wrapper .more {
+        margin-right: 12px;
+        transition: all 200ms ease;
+        position: absolute;
+        right: 5px; }
+      .reviews-form-str .form-selected .castom-select-wrapper .more--active {
+        transition: all 200ms ease;
+        transform: rotate(180deg); }
+    .reviews-form-str .form-selected .last {
+      margin-bottom: 0; }
+    .reviews-form-str .form-selected .list {
+      width: 100%;
+      height: 250px;
+      overflow-y: scroll;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: #fff;
+      box-shadow: 0 0 3px #2c2c2c;
+      border-radius: 6px;
+      z-index: 5;
+      display: flex;
+      flex-wrap: wrap; }
+      .reviews-form-str .form-selected .list__item {
+        width: 100%;
+        font-size: 16px;
+        display: block;
+        padding: 10px; }
+  .reviews-form-str .form-user-date {
+    width: 894px;
+    height: 135px;
+    box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+    border-radius: 6px;
+    background-color: #ffffff;
+    margin-bottom: 48px;
+    box-sizing: border-box;
+    padding-top: 19px;
+    padding-bottom: 18px;
+    padding-left: 24px;
+    padding-right: 24px; }
+    .reviews-form-str .form-user-date .input-wrapper {
+      display: flex;
+      align-items: center; }
+    .reviews-form-str .form-user-date h2 {
+      margin: 0;
+      margin-bottom: 19px;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 24px;
+      letter-spacing: 0.24px; }
+      .reviews-form-str .form-user-date h2 span {
+        font-size: 12px;
+        letter-spacing: 0.12px; }
+    .reviews-form-str .form-user-date i {
+      margin-right: 12px; }
+    .reviews-form-str .form-user-date input {
+      margin: 0;
+      width: 790px;
+      height: 45px;
+      border-radius: 6px;
+      border: 1px solid rgba(52, 52, 52, 0.3); }
+    .reviews-form-str .form-user-date input:focus {
+      border: 1px solid #ff4545;
+      outline: 0;
+      transition: all 250ms ease; }
+  .reviews-form-str .form-send {
+    margin-top: 36px;
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 44px; }
+    .reviews-form-str .form-send__left {
+      width: 471px;
+      height: 100%;
+      box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      align-items: center;
+      padding-left: 12px;
+      border-radius: 5px; }
+    .reviews-form-str .form-send .icon-worning-red {
+      margin-right: 6px; }
+    .reviews-form-str .form-send .worning-text {
+      color: #ff4545;
+      font-family: "Open Sans";
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 14px;
+      margin-right: 12px; }
+    .reviews-form-str .form-send ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex; }
+    .reviews-form-str .form-send li {
+      display: flex;
+      align-items: center;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.12px;
+      line-height: 12px;
+      margin-right: 11px; }
+      .reviews-form-str .form-send li i {
+        margin-right: 6px; }
+    .reviews-form-str .form-send__right button {
+      width: 243px;
+      height: 44px;
+      border-radius: 22px;
+      background-color: #ff4545;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.16px;
+      display: flex;
+      align-items: center;
+      position: relative; }
+      .reviews-form-str .form-send__right button::after {
+        position: absolute;
+        content: '';
+        left: 50%;
+        bottom: -1px;
+        transform: translateX(-50%);
+        width: 206px;
+        height: 10px;
+        background-color: #ff4545;
+        opacity: 0.6;
+        z-index: 2;
+        filter: blur(6px);
+        transition: opacity 300ms ease; }
+      .reviews-form-str .form-send__right button i {
+        margin-left: 24px;
+        margin-right: 7px; }
+    .reviews-form-str .form-send__right button:hover::after {
+      transition: opacity 300ms ease;
+      opacity: 0; }
   .reviews-form-str .right {
     margin-top: 10px;
     width: 284px;
@@ -3756,6 +4037,136 @@ input[type="password"]:focus {
       .strange-form .video-input-wrapper .video-wrapper iframe {
         width: 100%;
         height: 450px; }
+
+.test-wrapper {
+  width: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative; }
+  .test-wrapper::after {
+    content: '';
+    width: 95%;
+    height: 95%;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    border-radius: 50%;
+    z-index: 6; }
+
+.test {
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border: 1px solid red;
+  position: relative;
+  z-index: 5; }
+
+.test-1 {
+  border-radius: 20px 0 0 0; }
+
+.test-2 {
+  border-radius: 0 20px 0 0; }
+
+.test-3 {
+  border-radius: 0 0 0 20px; }
+
+.test-4 {
+  border-radius: 0 0 20px 0; }
+
+.range-wrapper {
+  position: relative;
+  /* Тоже самое для Firefox */
+  /* Тоже самое для IE */ }
+  .range-wrapper input[type=range] {
+    -webkit-appearance: none;
+    /* Скрывает слайдер, чтобы можно было создать свой */
+    width: 204px;
+    /* Указание параметра ширины требуется для Firefox. */ }
+  .range-wrapper input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; }
+  .range-wrapper input[type=range]:focus {
+    outline: none;
+    /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */ }
+  .range-wrapper input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+    border-color: transparent;
+    color: transparent; }
+  .range-wrapper input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 1px 10px rgba(44, 44, 44, 0.9);
+    background-color: #ffffff;
+    cursor: pointer; }
+  .range-wrapper input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer; }
+  .range-wrapper input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer; }
+  .range-wrapper input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    width: 204px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2c2c2c;
+    opacity: 0.2; }
+  .range-wrapper input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd; }
+  .range-wrapper input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101; }
+  .range-wrapper input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent; }
+  .range-wrapper input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
+  .range-wrapper input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9; }
+  .range-wrapper input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; }
+  .range-wrapper input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd; }
 
 .footer {
   min-height: 157px;
