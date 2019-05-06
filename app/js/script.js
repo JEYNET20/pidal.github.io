@@ -834,7 +834,7 @@
 		
 		let text = this.textContent;
 		let input = this.parentNode.parentNode.childNodes[3];
-		input.textContent = text;	
+		input.textContent = text;
 	};
 
 	itemBtn.forEach(function(element){
@@ -852,20 +852,54 @@
 	function onInputMouseOver(e){ b = false };
 
 	function onInputMouseMove(e){
+		
 		if(!b) return false;
 
-		let place = this.parentNode.parentNode.lastElementChild.childNodes[0];
-		
+		let place = this.parentNode.parentNode.lastElementChild.childNodes[1];
+		let itemWrapper = this.parentNode.parentNode.lastElementChild.childNodes[3];
+
+		let itemTopLeft = itemWrapper.childNodes[1];
+		let itemTopRight = itemWrapper.childNodes[3];
+		let itemBottomLeft = itemWrapper.childNodes[5];
+		let itemBottomRight = itemWrapper.childNodes[7];
+
+
 		if(e.offsetX >= 0 && e.offsetX <= 40){
 			place.textContent = '1';
+			itemTopLeft.classList.add('number-count--active');
+			itemTopLeft.classList.remove('number-count--hidden');
+			itemTopRight.classList.add('number-count--hidden');
+			itemBottomLeft.classList.add('number-count--hidden');
+			itemBottomRight.classList.add('number-count--hidden');
 		}else if(e.offsetX >= 40 && e.offsetX <= 80){
 			place.textContent = '2';
+			itemTopLeft.classList.add('number-count--active');
+			itemTopLeft.classList.remove('number-count--hidden');
+			itemTopRight.classList.add('number-count--active');
+			itemTopRight.classList.remove('number-count--hidden');
+			itemBottomLeft.classList.add('number-count--hidden');
+			itemBottomRight.classList.add('number-count--hidden');
 		}else if(e.offsetX >= 80 && e.offsetX <= 120){
 			place.textContent = '3';
+			itemTopLeft.classList.add('number-count--active');
+			itemTopLeft.classList.remove('number-count--hidden');
+			itemTopRight.classList.add('number-count--active');
+			itemTopRight.classList.remove('number-count--hidden');
+			itemBottomLeft.classList.add('number-count--hidden');
+			itemBottomRight.classList.remove('number-count--hidden');
+			itemBottomRight.classList.add('number-count--active');
 		}else if(e.offsetX >= 120 && e.offsetX <= 160){
-			place.textContent = '4';
+			place.textContent = '4';		
 		}else if(e.offsetX >= 160 && e.offsetX <= 200){
 			place.textContent = '5';
+			itemTopLeft.classList.add('number-count--active');
+			itemTopLeft.classList.remove('number-count--hidden');
+			itemTopRight.classList.add('number-count--active');
+			itemTopRight.classList.remove('number-count--hidden');
+			itemBottomLeft.classList.remove('number-count--hidden');
+			itemBottomLeft.classList.add('number-count--active');			
+			itemBottomRight.classList.remove('number-count--hidden');
+			itemBottomRight.classList.add('number-count--active');			
 		}
 	
 	};

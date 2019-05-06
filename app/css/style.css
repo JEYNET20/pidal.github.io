@@ -3562,7 +3562,6 @@ input[type="password"]:focus {
       .reviews-form-str .form-sliders .form-slider__wrapper .range-wrapper__number {
         width: 36px;
         height: 36px;
-        border: 2px solid #ff4545;
         display: block;
         box-sizing: border-box;
         border-radius: 50%;
@@ -3572,8 +3571,13 @@ input[type="password"]:focus {
         font-family: "Open Sans";
         font-size: 16px;
         font-weight: 400;
-        letter-spacing: 0.16px; }
+        letter-spacing: 0.16px;
+        position: relative; }
         .reviews-form-str .form-sliders .form-slider__wrapper .range-wrapper__number span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
           color: #fff;
           display: flex;
           justify-content: center;
@@ -3582,7 +3586,8 @@ input[type="password"]:focus {
           height: 24px;
           border: 2px solid #ff4545;
           background-color: #ff4545;
-          border-radius: 50%; }
+          border-radius: 50%;
+          z-index: 7; }
     .reviews-form-str .form-sliders .last {
       margin-bottom: 0; }
   .reviews-form-str .form-selected {
@@ -4038,7 +4043,7 @@ input[type="password"]:focus {
         width: 100%;
         height: 450px; }
 
-.test-wrapper {
+.number-count-wrapper {
   width: 36px;
   height: 36px;
   box-sizing: border-box;
@@ -4047,10 +4052,10 @@ input[type="password"]:focus {
   align-items: center;
   flex-wrap: wrap;
   position: relative; }
-  .test-wrapper::after {
+  .number-count-wrapper::after {
     content: '';
-    width: 95%;
-    height: 95%;
+    width: 94%;
+    height: 94%;
     background: #fff;
     position: absolute;
     left: 50%;
@@ -4060,7 +4065,7 @@ input[type="password"]:focus {
     border-radius: 50%;
     z-index: 6; }
 
-.test {
+.number-count {
   box-sizing: border-box;
   width: 18px;
   height: 18px;
@@ -4068,17 +4073,25 @@ input[type="password"]:focus {
   position: relative;
   z-index: 5; }
 
-.test-1 {
+.number-count-1 {
   border-radius: 20px 0 0 0; }
 
-.test-2 {
+.number-count-2 {
   border-radius: 0 20px 0 0; }
 
-.test-3 {
+.number-count-3 {
   border-radius: 0 0 0 20px; }
 
-.test-4 {
+.number-count-4 {
   border-radius: 0 0 20px 0; }
+
+.number-count--active {
+  opacity: 1;
+  transition: all 150ms ease; }
+
+.number-count--hidden {
+  opacity: 0;
+  transition: all 150ms ease; }
 
 .range-wrapper {
   position: relative;
