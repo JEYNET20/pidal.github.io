@@ -1,6 +1,6 @@
 .right-block-user-information{
 	width: 282px;
-	height: 529px;
+	min-height: 549px;
 	box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
 	border-radius: 6px;
 	background-color: #ffffff;
@@ -12,6 +12,7 @@
 	padding-top: 19px;
 	padding-bottom: 24px;
 	position: relative;
+	margin-bottom: 12px;
 	.title{
 		background-color: #343434;
 		width: 100%;
@@ -113,7 +114,9 @@
 			margin-bottom: 15px;
 			box-sizing: border-box;
 			padding-left: 12px;
-
+			span{
+				margin-bottom: 14px;
+			}
 			button{
 				color: #d24a43;
 				font-size: 16px;
@@ -142,5 +145,48 @@
 			// padding-bottom: 20px;
 		}
 	}
+	
+	.busines-maps{
+		margin-bottom: 20px;
+		padding-left: 18px;
+		.show-maps{
+			cursor: pointer;
+		}
+		.show-maps:hover{
+			color: #d24a43;
+		}
+	}
 
+}
+
+.right-block-user-busines-information{
+	width: 282px;
+	min-height: 140px;
+	box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+	border-radius: 6px;
+	background-color: #ffffff;
+	position: sticky;
+	top: 24px;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	p{
+		width: 224px;
+		height: 96px;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 14px;
+		font-weight: 400;
+		// line-height: 21px;
+		// color: #006c79;
+		letter-spacing: 0.14px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		span{
+			color: #006c79;
+			cursor: pointer;
+		}
+	}
 }

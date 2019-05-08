@@ -928,3 +928,23 @@
 	if(btn) btn.addEventListener('click', onShowBtnClick);
 
 })();
+
+// карточка товара функционал картинок
+(function(){
+	const itemBtn = document.querySelectorAll('.gallery-wrapper__item-wrapper');
+	const galleryBody = document.querySelector('.gallery-wrapper .main-img');
+	
+	function onItemBtnClick(e){
+		e.preventDefault();
+		let elem = this.lastElementChild;
+		// console.log(elem.src);
+		galleryBody.src = elem.src;
+		// console.log(elem);
+
+	};
+
+	if(itemBtn) itemBtn.forEach(function(elm){
+		elm.addEventListener('click', onItemBtnClick);
+	});
+
+})();
