@@ -19,7 +19,7 @@
 		color: #ffffff;
 		font-family: "Open Sans";
 		font-size: 36px;
-		font-weight: 600;
+		font-weight: 400;
 		margin: 0;
 		position: absolute;
 		top: 0;
@@ -30,6 +30,117 @@
 		padding-top: 19px;
 		border-top-right-radius: 6px;
 		border-top-left-radius: 6px;
+	}
+
+	.information{
+		box-sizing: border-box;
+		padding-top: 120px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.wrapper-photo{
+		display: flex;
+		width: 102px;
+		height: 102px;		
+		border-radius: 50%;
+		border: 10px solid #fff;
+	  margin-top: -69px;
+    position: relative;
+	}
+
+	.hr{
+		margin: 0;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.status-and-name{
+		text-align: center;
+		span{
+			margin-bottom: 7px;
+			font-family: "Open Sans";
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 0.18px;
+			color: #2c2c2c;
+			line-height: 18px;
+		}
+		.wrapper-name{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			height: 18px;
+			margin-left: -15px;
+			i{
+				margin-right: 6px;
+			}
+		}
+		.name{
+			color: #006c79;
+			font-family: "Open Sans";
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 0.18px;
+		}
+		.old{
+			margin-bottom: 20px;
+		}
+	}
+
+	.end{
+		box-sizing: border-box;
+		h3{
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 21px;
+			letter-spacing: 0.14px;
+			margin-top: 0;
+			margin-bottom: 19px;
+			padding-left: 18px;
+		}
+		.telephone{
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 24px;
+			letter-spacing: 0.24px;
+			margin-bottom: 15px;
+			box-sizing: border-box;
+			padding-left: 12px;
+
+			button{
+				color: #d24a43;
+				font-size: 16px;
+				letter-spacing: 0.16px;
+				background-color: unset;
+				border: none;
+				padding: 0;
+			}
+		}
+		.btn{
+			width: 258px;
+			height: 44px;
+			border-radius: 22px;
+			background-color: #d24a43;
+			margin-bottom: 12px;
+			position: relative;
+			&::after{
+				background-color: #d24a43;
+			}
+		}
+		.blue{
+			background-color: #306c78;
+			&::after{
+				background-color: #306c78;
+			}
+			// padding-bottom: 20px;
+		}
 	}
 
 }

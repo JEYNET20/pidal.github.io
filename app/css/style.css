@@ -753,6 +753,13 @@ input[type="password"]:focus {
   background-position: center center;
   background-size: cover; }
 
+.icon-green-circle {
+  width: 8px;
+  height: 8px;
+  background-color: #52ac62;
+  display: block;
+  border-radius: 50%; }
+
 .header {
   height: 102px;
   background-color: #2c2c2c; }
@@ -4214,6 +4221,106 @@ input[type="password"]:focus {
     height: 529px; }
   .card__wrapper .last-block {
     width: 100%; }
+  .card__wrapper .first h2 {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+    margin-bottom: 14px;
+    margin-top: 0; }
+  .card__wrapper .first .param-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px; }
+    .card__wrapper .first .param-wrapper span {
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.16px; }
+    .card__wrapper .first .param-wrapper i {
+      margin-right: 6px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      opacity: 0.6;
+      background-color: red; }
+    .card__wrapper .first .param-wrapper .param {
+      display: flex;
+      align-items: center;
+      margin-right: 10px; }
+    .card__wrapper .first .param-wrapper .param:last-child {
+      margin-right: 0; }
+    .card__wrapper .first .param-wrapper .param-3 {
+      margin-right: 87px; }
+  .card__wrapper .first .gallery-wrapper .main-img {
+    width: 894px;
+    height: 560px;
+    margin-bottom: 24px; }
+  .card__wrapper .first .gallery-wrapper__gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 12px; }
+    .card__wrapper .first .gallery-wrapper__gallery img {
+      width: 102px;
+      height: 64px;
+      margin-bottom: 12px;
+      transition: all 150ms ease;
+      border: 2px solid rgba(210, 74, 67, 0);
+      box-sizing: border-box;
+      cursor: pointer; }
+    .card__wrapper .first .gallery-wrapper__gallery img:last-child {
+      margin-right: 0; }
+    .card__wrapper .first .gallery-wrapper__gallery img:hover {
+      box-shadow: 0 0 8px #d24a43;
+      border: 2px solid rgba(210, 74, 67, 0.6);
+      transition: all 150ms ease;
+      border-radius: 6px; }
+  .card__wrapper .first .property-wrapper {
+    width: 100%;
+    box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+    border-radius: 6px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px; }
+    .card__wrapper .first .property-wrapper ul {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 23px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .card__wrapper .first .property-wrapper ul li {
+        color: #2c2c2c;
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.16px; }
+    .card__wrapper .first .property-wrapper .title {
+      width: 100%;
+      opacity: 0.6;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0.16px;
+      display: flex;
+      align-items: center; }
+      .card__wrapper .first .property-wrapper .title i {
+        margin-right: 6px; }
 
 .right-block-user-information {
   width: 282px;
@@ -4236,7 +4343,7 @@ input[type="password"]:focus {
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0;
     position: absolute;
     top: 0;
@@ -4247,6 +4354,93 @@ input[type="password"]:focus {
     padding-top: 19px;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px; }
+  .right-block-user-information .information {
+    box-sizing: border-box;
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+  .right-block-user-information .wrapper-photo {
+    display: flex;
+    width: 102px;
+    height: 102px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    margin-top: -69px;
+    position: relative; }
+  .right-block-user-information .hr {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  .right-block-user-information .status-and-name {
+    text-align: center; }
+    .right-block-user-information .status-and-name span {
+      margin-bottom: 7px;
+      font-family: "Open Sans";
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0.18px;
+      color: #2c2c2c;
+      line-height: 18px; }
+    .right-block-user-information .status-and-name .wrapper-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 18px;
+      margin-left: -15px; }
+      .right-block-user-information .status-and-name .wrapper-name i {
+        margin-right: 6px; }
+    .right-block-user-information .status-and-name .name {
+      color: #006c79;
+      font-family: "Open Sans";
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0.18px; }
+    .right-block-user-information .status-and-name .old {
+      margin-bottom: 20px; }
+  .right-block-user-information .end {
+    box-sizing: border-box; }
+    .right-block-user-information .end h3 {
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.14px;
+      margin-top: 0;
+      margin-bottom: 19px;
+      padding-left: 18px; }
+    .right-block-user-information .end .telephone {
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.24px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      padding-left: 12px; }
+      .right-block-user-information .end .telephone button {
+        color: #d24a43;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+        background-color: unset;
+        border: none;
+        padding: 0; }
+    .right-block-user-information .end .btn {
+      width: 258px;
+      height: 44px;
+      border-radius: 22px;
+      background-color: #d24a43;
+      margin-bottom: 12px;
+      position: relative; }
+      .right-block-user-information .end .btn::after {
+        background-color: #d24a43; }
+    .right-block-user-information .end .blue {
+      background-color: #306c78; }
+      .right-block-user-information .end .blue::after {
+        background-color: #306c78; }
 
 .footer {
   min-height: 157px;

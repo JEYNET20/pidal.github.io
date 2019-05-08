@@ -716,10 +716,10 @@
 	const textAtributeExitBtn = document.querySelector('.text-input-wrapper .exit');
 	const textInput = document.querySelector('.strange-form  .text-input-wrapper');
 
-	textAtributeBtn.onclick = function(e){
+	if(textAtributeBtn) textAtributeBtn.onclick = function(e){
 		textInput.classList.remove('d-none');
 	};
-	textAtributeExitBtn.onclick = function(e){
+	if(textAtributeExitBtn)  textAtributeExitBtn.onclick = function(e){
 		textInput.classList.add('d-none');
 	};
 
@@ -727,24 +727,24 @@
 	const titleAtributeExitBtn = document.querySelector('.title-input-wrapper .exit');
 	const titleInput = document.querySelector('.strange-form .title-input-wrapper');
 
-	titleAtributeBtn.onclick = function(e){
+	if(titleAtributeBtn) titleAtributeBtn.onclick = function(e){
 		titleInput.classList.remove('d-none');
 	};
-	titleAtributeExitBtn.onclick = function(e){
+	if(titleAtributeExitBtn) titleAtributeExitBtn.onclick = function(e){
 		titleInput.classList.add('d-none');
 	};
 
 	const fileAtributeBtn = document.querySelector('.add-atribute .img input');
 	const fileInput = document.querySelector('.strange-form .file-input-wrapper')
 
-	fileAtributeBtn.onchange = function(e){
+	if(fileAtributeBtn) fileAtributeBtn.onchange = function(e){
 		fileInput.classList.remove('d-none');
 	}
 
 	const videoAtributeBtn = document.querySelector('.add-atribute .video');
 	const videoInput = document.querySelector('.strange-form .video-input-wrapper');
 
-	videoAtributeBtn.onclick = function(e){
+	if(videoAtributeBtn) videoAtributeBtn.onclick = function(e){
 		videoInput.classList.remove('d-none');
 	};
 
@@ -754,12 +754,12 @@
 	const videoWrapper = document.querySelector('.video-input-wrapper .video-wrapper')
 	const videoInputWrapper = document.querySelector('.video-input-wrapper .input-wrapper');
 
-	videoInputAddBtn.onclick = function(e){
+	if(videoInputAddBtn) videoInputAddBtn.onclick = function(e){
 		videoWrapper.classList.remove('d-none');
 		videoInputWrapper.classList.add('d-none');
 	};
 
-	videoAtributeExitBtn.onclick = function(){
+	if(videoAtributeExitBtn) videoAtributeExitBtn.onclick = function(){
 		videoWrapper.classList.add('d-none');
 	};
 
@@ -787,8 +787,8 @@
 		}
 	};
 
-	formInputTitle.addEventListener('keydown', onInputTitleChange);
-	formTextInput.addEventListener('keydown', onInputFormChange);
+	if(formInputTitle) formInputTitle.addEventListener('keydown', onInputTitleChange);
+	if(formTextInput) formTextInput.addEventListener('keydown', onInputFormChange);
 })();
 
 
@@ -909,5 +909,22 @@
 		element.addEventListener('mouseover', onInputMouseOver);
 		element.addEventListener('mousemove', onInputMouseMove);
 	});
+
+})();
+
+// показать скрыть телефон
+(function(){
+	const btn = document.querySelector('.right-block-user-information .telephone button');
+
+	function onShowBtnClick(){
+
+		let body = this.previousElementSibling.childNodes[1];
+		let text = this.previousElementSibling.childNodes[3];
+		console.log(text);
+		body.textContent = text.textContent;
+
+	};
+
+	if(btn) btn.addEventListener('click', onShowBtnClick);
 
 })();

@@ -18,4 +18,132 @@
 		width: 100%;
 	}
 
+	.first{
+		h2{
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 36px;
+			font-weight: 400;
+			letter-spacing: 0.36px;
+			margin-bottom: 14px;
+			margin-top: 0;
+		}
+
+		.param-wrapper{
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+			span{
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 24px;
+				letter-spacing: 0.16px;
+			}
+			i{
+				margin-right: 6px;
+				display: block;
+				width: 16px;
+				height: 16px;
+				opacity: 0.6;
+				background-color: red;
+			}
+			.param{
+				display: flex;
+				align-items: center;
+				margin-right: 10px;
+			}
+			.param:last-child{
+				margin-right: 0;
+			}
+			.param-3{
+				margin-right: 87px;
+			}
+		}
+
+		.gallery-wrapper{
+			.main-img{
+				width: 894px;
+				height: 560px;
+				margin-bottom: 24px;
+			}
+
+			&__gallery{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin-bottom: 12px;
+				img{
+					width: 102px;
+					height: 64px;
+					margin-bottom: 12px;
+					transition: all 150ms ease;
+					border: 2px solid rgba(210, 74, 67, 0.0);
+					box-sizing: border-box;
+					cursor: pointer;
+				}
+				img:last-child{
+					margin-right: 0;
+				}
+				img:hover{
+					box-shadow: 0 0 8px #d24a43;
+					border: 2px solid rgba(210, 74, 67, 0.6);
+					transition: all 150ms ease;
+					border-radius: 6px;
+				}
+			}
+		}
+
+		.property-wrapper{
+			width: 100%;
+			// height: 220px;
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			border-radius: 6px;
+			background-color: #ffffff;
+			display: flex;
+			flex-wrap: wrap;
+			box-sizing: border-box;
+			padding-left: 12px;
+			padding-right: 12px;
+			padding-top: 20px;
+			ul{
+				width: 100%;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				margin-bottom: 23px;
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				li{
+					color: #2c2c2c;
+					font-family: "Open Sans";
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 24px;
+					letter-spacing: 0.16px;
+				}
+			}
+			.title{
+				width: 100%;
+				opacity: 0.6;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 27px;
+				letter-spacing: 0.16px;
+				display: flex;
+				align-items: center;
+				i{
+					margin-right: 6px;
+				}
+			}
+		}
+
+	}
+
 }
