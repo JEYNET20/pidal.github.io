@@ -834,7 +834,34 @@
 		
 		let text = this.textContent;
 		let input = this.parentNode.parentNode.childNodes[3];
+
 		input.textContent = text;
+
+		let icon = this.childNodes[1];
+		let iconBody = this.parentNode.parentNode.childNodes[1];
+
+
+		if(!icon) return false;
+		if(!iconBody) return false;
+
+		if(iconBody.classList.contains('found-icon-auto')){
+			iconBody.classList.remove('found-icon-auto');
+		} else if(iconBody.classList.contains('found-icon-fourth-cube')){
+			iconBody.classList.remove('found-icon-fourth-cube');
+		} else if(iconBody.classList.contains('found-icon-moto')){
+			iconBody.classList.remove('found-icon-moto');
+		} else if(iconBody.classList.contains('found-icon-heavy-auto')){
+			iconBody.classList.remove('found-icon-heavy-auto');
+		} else if(iconBody.classList.contains('found-icon-settings')){
+			iconBody.classList.remove('found-icon-settings');
+		} else if(iconBody.classList.contains('found-icon-service')){
+			iconBody.classList.remove('found-icon-service');
+		}
+
+		iconBody.classList.add(icon.classList.value);
+
+		// console.log(icon.classList.value);
+	
 	};
 
 	itemBtn.forEach(function(element){
@@ -946,5 +973,18 @@
 	if(itemBtn) itemBtn.forEach(function(elm){
 		elm.addEventListener('click', onItemBtnClick);
 	});
+
+})();
+
+// found фильтр сбросить
+(function(){
+
+	const resetFilter = document.querySelector('.found-filter__body .reset');
+
+	function onResetFilterClick(e){
+		console.log(this);
+	};
+
+	resetFilter.addEventListener('click', onResetFilterClick);
 
 })();

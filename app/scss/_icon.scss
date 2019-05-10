@@ -491,3 +491,69 @@
 	background-position: center center;
 	background-size: cover;	
 }
+
+// иконки для стр поиск
+
+.found-icon-auto{
+	width: 16px;
+	height: 14px;
+	display: block;
+	background-image: url('../img/icon/icon-for-found/car.png');
+	background-position: center center;
+	background-size: cover;	
+}
+
+.found-icon-fourth-cube{
+	width: 15px;
+	height: 15px;
+	display: block;
+	background-image: url('../img/icon/icon-for-found/fourth-cube.png');
+	background-position: center center;
+	background-size: cover;	
+}
+
+.found-icon-moto{
+	width: 18px;
+	height: 13px;
+	display: block;
+	background-image: url('../img/icon/icon-for-found/moto.png');
+	background-position: center center;
+	background-size: cover;	
+}
+
+.found-icon-heavy-auto{
+	width: 15px;
+	height: 16px;	
+	display: block;
+	background-image: url('../img/icon/icon-for-found/camaz.png');
+	background-position: center center;
+	background-size: cover;	
+}
+
+.found-icon-settings{
+	width: 16px;
+	height: 16px;
+	display: block;
+	background-image: url('../img/icon/icon-for-found/settings.png');
+	background-position: center center;
+	background-size: cover;	
+}
+
+.found-icon-service{
+	width: 18px;
+	height: 17px;
+	display: block;
+	background-image: url('../img/icon/icon-for-found/service.png');
+	background-position: center center;
+	background-size: cover;
+}
+// end
+
+.icon-red-fire-border{
+	width: 18px;
+	height: 24px;
+	display: block;
+	background-image: url('../img/icon/fire-red-border.png');
+	background-position: center center;
+	background-size: cover;
+}

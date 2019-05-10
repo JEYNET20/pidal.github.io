@@ -70,5 +70,11 @@
 // правык блок с пользователем
 @import 'bloks/right-block-user-information.scss';
 
+// страницы поиска
+@import  '_main-found.scss';
+
+// пагинация на стр поиск
+@import 'bloks/pagination.scss';
+
 // Футер
 @import 'bloks/footer.scss';
