@@ -236,6 +236,16 @@
 	cursor: pointer;
 }
 
+.icon-close{
+	width: 12px;
+	height: 12px;
+	background-image: url('../img/icon/close.png');
+	background-position: center center;
+	background-size: cover;
+	display: inline-block;
+	cursor: pointer;
+}
+
 .icon-arrow-down--white{
 	width: 12px;
 	height: 7px;
@@ -554,6 +564,44 @@
 	height: 24px;
 	display: block;
 	background-image: url('../img/icon/fire-red-border.png');
+	background-position: center center;
+	background-size: cover;
+}
+
+
+
+.icon-auto-category{
+	width: 54px;
+	height: 46px;
+	display: block;
+	background-image: url('../img/icon/icon-for-found/icon-auto-category.png');
+	background-position: center center;
+	background-size: cover;
+}
+
+.icon-moto-category{
+	width: 67px;
+	height: 43px;
+	display: block;
+	background-image: url('../img/icon/icon-for-found/icon-moto-category.png');
+	background-position: center center;
+	background-size: cover;
+}
+
+.icon-heavy-auto-category{
+	width: 50px;
+	height: 53px;
+	display: block;
+	background-image: url('../img/icon/icon-for-found/icon-heavy-auto-category.png');
+	background-position: center center;
+	background-size: cover;
+}
+
+.icon-settings-category{
+	width: 60px;
+	height: 60px;	
+	display: block;
+	background-image: url('../img/icon/icon-for-found/icon-settigns-category.png');
 	background-position: center center;
 	background-size: cover;
 }

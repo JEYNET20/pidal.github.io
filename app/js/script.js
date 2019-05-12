@@ -835,6 +835,10 @@
 		let text = this.textContent;
 		let input = this.parentNode.parentNode.childNodes[3];
 
+		if(this.lastElementChild != null){
+			text = text.replace(/[\d]/g, '');
+		}
+
 		input.textContent = text;
 
 		let icon = this.childNodes[1];
@@ -976,15 +980,127 @@
 
 })();
 
-// found фильтр сбросить
+
+// found  add to favor
 (function(){
+	const btn = document.querySelectorAll('.found  .add-to-favotite');
 
-	const resetFilter = document.querySelector('.found-filter__body .reset');
+	function onBtnAddClick(e){
+		
+		let text = this.childNodes[1];
+		let star = this.childNodes[3];
 
-	function onResetFilterClick(e){
-		console.log(this);
+		text.textContent = 'Удалить из избранных';
+		star.classList.remove('icon-star--red');
+		star.classList.add('icon-star--red-full');
+
+		this.removeEventListener('click', onBtnAddClick);
+		this.addEventListener('click', onBtnRemoveClick);
+	}
+
+	function onBtnRemoveClick(e){
+		let text = this.childNodes[1];
+		let star = this.childNodes[3];
+
+		text.textContent = 'Добавить в избранное';
+		star.classList.remove('icon-star--red-full');
+		star.classList.add('icon-star--red');
+
+		this.removeEventListener('click', onBtnRemoveClick);
+		this.addEventListener('click', onBtnAddClick);
+
+	}
+
+	btn.forEach(function(value){
+		value.addEventListener('click', onBtnAddClick);
+	})
+
+})();
+
+// found изменения типа просмотра список / галерея
+(function(){
+	const list = document.querySelector('.chance-views__list');
+	const gallery = document.querySelector('.chance-views__gallery');
+
+	const listBody = document.querySelector('.found .list-wrapper');
+	const galleryBody = document.querySelector('.found .gallery-wrapper');
+
+	function onListClick(e){
+		this.classList.add('active');
+		gallery.classList.remove('active');
+
+		galleryBody.classList.add('d-none');
+		listBody.classList.remove('d-none');
+
 	};
 
-	resetFilter.addEventListener('click', onResetFilterClick);
+	function onGalleryClick(e){
+		this.classList.add('active');
+		list.classList.remove('active');
+
+		listBody.classList.add('d-none');
+		galleryBody.classList.remove('d-none');
+	};
+
+	list.addEventListener('click', onListClick);
+	gallery.addEventListener('click', onGalleryClick);
+
+})();
+
+// found показать скрыть дополнительные фильтры
+(function(){
+	const rollUp = document.querySelector('.found .roll-up');
+	const dopFilters = document.querySelector('.found .block-3');
+
+	function onRollUpShowClick(e){
+		console.log(this);
+		this.childNodes[1].textContent = 'Свернуть';
+		this.childNodes[3].classList.add('icon-active');
+
+		dopFilters.classList.remove('d-none');
+
+		anime({
+      targets: dopFilters,
+      opacity: '1' ,
+      easing: 'easeInQuad',
+      duration: 400
+		});
+
+		this.removeEventListener('click', onRollUpShowClick);
+		this.addEventListener('click', onRollUpHiddenClick);
+	};
+
+	function onRollUpHiddenClick(e){
+		this.childNodes[1].textContent = 'Дополнительные фильтры';
+		this.childNodes[3].classList.remove('icon-active');
+
+
+		anime({
+      targets: dopFilters,
+      opacity: '0' ,
+      easing: 'easeOutQuad',
+      duration: 400
+		});
+		setTimeout(function(){
+			dopFilters.classList.add('d-none');	
+		}, 400);
+
+		this.addEventListener('click', onRollUpShowClick);
+		this.removeEventListener('click', onRollUpHiddenClick);
+	}
+
+	rollUp.addEventListener('click', onRollUpShowClick);
+
+})();
+
+// found очистка фильтров костыль с перезагрузкою
+(function(){
+	const reset = document.querySelector('.found .reset');
+
+	function onResetClick(e){
+		location.reload();
+	};
+
+	reset.addEventListener('click', onResetClick);
 
 })();

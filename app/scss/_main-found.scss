@@ -98,7 +98,7 @@
 		}
 
 		.block-2{
-			margin-bottom: 57px;
+			margin-bottom: 37px;
 		}
 		.block-2  .section{
 			width: 284px;
@@ -279,6 +279,183 @@
 		}
 	}
 
+	.gallery-wrapper{
+		.offers-content{
+			margin-bottom: 34px;
+		}
+		&__offers{
+			.offers-content__item{
+				position: relative;
+			}
+			.icon-wrapper{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				padding: 0;
+				background-color: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				left: 50%;
+				top: -25px;
+				transform: translateX(-50%);
+				i{
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			.title{
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 28px;
+				.start{
+					width: 320px;
+					display: flex;
+					align-items: center;
+					i{ margin-right: 12px; }
+					> span{ 
+						margin-right: 12px;
+						color: #2c2c2c;
+						font-family: "Open Sans";
+						font-size: 24px;
+						line-height: 24px;
+						font-weight: 400;
+
+					}
+					.count{
+						margin: 0;
+						height: 24px;
+						font-size: 16px;
+						background-color: #ff4545;
+						color: #fff;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+				.end{
+					button{
+						color: #306c78;
+						font-family: "Open Sans";
+						font-size: 16px;
+						font-weight: 400;
+						line-height: 16px;
+						letter-spacing: 0.16px;
+						background-color: unset;
+						border: none;
+						i{
+							transform: rotate(180deg);
+						}
+					}
+					button:hover{
+						color: #ff4545;
+					}
+				}
+			}
+		}
+		.gallery-wrapper-end{
+			.title-wrapper{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 40px;
+				.start{
+					width: 400px;
+					display: flex;
+					justify-content: space-between;
+					p:nth-child(2){
+						width: 187px;
+						height: 24px;
+						border-radius: 6px;
+						background-color: #ffdada;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+				}
+			}
+			.offers-content__item-name{
+				height: unset;
+				margin-bottom: 14px;
+			}
+			.offers__icon-wrapper{
+				display: block;
+				width: 282px;
+				height: 204px;
+				position: relative;
+				padding: 0;
+				border-bottom: 1px solid rgba(44, 44, 44, .2);
+				i{
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+
+	.sort-by{
+		.form-selected{
+			border: none;
+			box-shadow: none;
+			background-color: unset;
+			padding: 0;
+			margin-bottom: 43px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.start{
+				width: 620px;
+				display: flex;
+			}
+			.end{
+
+			}
+		}
+		.castom-select-wrapper{
+			width: 282px;
+			margin-right: 24px;
+			box-sizing: border-box;
+			padding-left: 12px;
+			margin-bottom: 0;
+		}
+		.chance-views{
+			button{
+				background-color: unset;
+				border: none;
+				// width: 62px;
+				// height: 16px;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 400;
+				letter-spacing: 0.16px;
+				margin: 0;
+				margin-right: 12px;
+				padding: 0;
+				width: 80px;
+				height: 24px;
+				cursor: pointer;
+			}
+			button:last-child{
+				margin-right: 0;
+			}
+			button:focus{
+				outline: none;
+			}
+
+			.active{
+				border-radius: 15px;
+				// border: 2px solid rgba(255, 69, 69, .2);
+				background-color: rgba(255, 69, 69, .2);
+			}
+		}
+	}
+
 }
 
 .save-result-founds{
@@ -310,3 +487,49 @@
 		text-align: center;
 	}
 }
+
+.open-close-other-filters{
+	.roll-up{
+		width: 250px;
+		text-align: left;
+	}
+	.reset{
+		width: 110px;
+		text-align: left;
+	}
+	button{
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: 0.16px;
+		background-color: unset;
+		border: none;
+		position: relative;		
+		span{
+			margin-right: 5px;
+		}
+		.icon-active{
+			transform: translateY(-50%)  rotate(180deg);
+		}
+		i{
+	    width: 12px;
+	    height: 12px;
+	    background-position: center center;
+	    background-size: contain;
+	    display: inline-block;
+	    cursor: pointer;
+	    background-repeat: no-repeat;
+			transition: all 100ms ease;
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%) rotate(0deg);
+		}
+	}
+	button:focus{
+		outline: none;
+	}
+}
+
