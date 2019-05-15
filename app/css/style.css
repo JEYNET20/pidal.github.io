@@ -407,6 +407,14 @@ input[type="password"]:focus {
   background-size: cover;
   display: block; }
 
+.icon-user-black {
+  width: 38px;
+  height: 34px;
+  background-image: url("../img/icon/user-no-fon-color-black.png");
+  background-position: center center;
+  background-size: cover;
+  display: block; }
+
 .icon-star {
   width: 16px;
   height: 15px;
@@ -5266,44 +5274,420 @@ input[type="password"]:focus {
     width: 100%;
     text-align: center; }
 
-.open-close-other-filters .roll-up {
-  width: 250px;
-  text-align: left; }
+.open-close-other-filters {
+  display: flex; }
+  .open-close-other-filters .found-filter__btn {
+    width: 274px;
+    background-color: #ff4545;
+    position: relative;
+    color: #fff;
+    margin-left: 568px; }
+  .open-close-other-filters .roll-up {
+    width: 250px;
+    text-align: left; }
+  .open-close-other-filters .reset {
+    width: 110px;
+    text-align: left; }
+  .open-close-other-filters button {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.16px;
+    background-color: unset;
+    border: none;
+    position: relative; }
+    .open-close-other-filters button span {
+      margin-right: 5px; }
+    .open-close-other-filters button .icon-active {
+      transform: translateY(-50%) rotate(180deg); }
+    .open-close-other-filters button i {
+      width: 12px;
+      height: 12px;
+      background-position: center center;
+      background-size: contain;
+      display: inline-block;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      transition: all 100ms ease;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg); }
+  .open-close-other-filters button:focus {
+    outline: none; }
 
-.open-close-other-filters .reset {
-  width: 110px;
-  text-align: left; }
+.last-block-busines .resviews-profile .add-to-favotite span {
+  cursor: pointer; }
 
-.open-close-other-filters button {
+.found .user-info {
+  margin-top: 28px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .found .user-info .title {
+    display: flex;
+    flex-wrap: wrap; }
+    .found .user-info .title i {
+      margin-right: 16px; }
+    .found .user-info .title h2 {
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: 0.36px;
+      margin: 0;
+      margin-bottom: 12px; }
+    .found .user-info .title a {
+      opacity: 0.6;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.14px;
+      text-decoration: none; }
+  .found .user-info .end {
+    display: flex;
+    height: 22px;
+    align-items: center; }
+    .found .user-info .end span {
+      opacity: 0.6;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.16px;
+      margin-right: 16px; }
+    .found .user-info .end .soc-wrapper {
+      width: 106px;
+      height: 22px; }
+    .found .user-info .end li {
+      width: 22px;
+      height: 22px; }
+
+.found .no-found {
+  margin-top: 30px;
+  margin-bottom: 64px; }
+  .found .no-found .title {
+    margin-bottom: 44px; }
+    .found .no-found .title h2 {
+      margin: 0;
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #2c2c2c;
+      line-height: 36px;
+      font-size: 24px;
+      font-weight: 600; }
+    .found .no-found .title span {
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 400; }
+
+.found .sort-by-type__body .line {
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.found-header .right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 23px;
+  cursor: pointer; }
+  .found-header .right span {
+    opacity: 0.6;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    margin-right: 12px; }
+
+.found-header .wrapper {
+  display: flex;
+  justify-content: space-between; }
+
+.found-users .offers .title-wrapper .left {
+  width: 570px; }
+
+.found-users .offers .title-wrapper .left a {
+  margin-right: 0;
   color: #2c2c2c;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 400;
-  line-height: 16px;
   letter-spacing: 0.16px;
+  margin-right: 22px;
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 6px;
   background-color: unset;
-  border: none;
-  position: relative; }
-  .open-close-other-filters button span {
-    margin-right: 5px; }
-  .open-close-other-filters button .icon-active {
-    transform: translateY(-50%) rotate(180deg); }
-  .open-close-other-filters button i {
-    width: 12px;
-    height: 12px;
-    background-position: center center;
-    background-size: contain;
-    display: inline-block;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    transition: all 100ms ease;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%) rotate(0deg); }
+  margin-right: 0; }
 
-.open-close-other-filters button:focus {
-  outline: none; }
+.found-users .offers .title-wrapper .left a:hover {
+  background-color: #ffdada; }
+
+.found-users .found-filter__body .checkbox-body {
+  width: auto; }
+  .found-users .found-filter__body .checkbox-body input {
+    display: none; }
+
+.found-users .found-filter__body .checkbox-wrapper {
+  display: block;
+  box-sizing: border-box;
+  padding-left: 22px;
+  margin-right: 23px; }
+
+.found-users-standart .sort-by {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 44px;
+  margin-bottom: 30px; }
+
+.found-users-standart .found-filter__nav-wrapper {
+  height: auto;
+  margin-bottom: 36px; }
+  .found-users-standart .found-filter__nav-wrapper .form-selected {
+    box-shadow: unset;
+    padding: unset;
+    align-items: center;
+    position: relative; }
+    .found-users-standart .found-filter__nav-wrapper .form-selected .right {
+      position: absolute;
+      right: 0px; }
+  .found-users-standart .found-filter__nav-wrapper .castom-select-wrapper {
+    margin-bottom: 0;
+    width: 282px; }
+
+.found-users-businesses .user-information {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgba(44, 44, 44, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 36px; }
+  .found-users-businesses .user-information h2 {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+    margin: 0; }
+  .found-users-businesses .user-information .left {
+    margin-top: 13px;
+    width: 450px;
+    box-sizing: border-box;
+    padding-left: 25px; }
+  .found-users-businesses .user-information .right {
+    width: 697px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 25px; }
+    .found-users-businesses .user-information .right a:hover {
+      color: #ff4545; }
+  .found-users-businesses .user-information ul {
+    width: 450px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px; }
+  .found-users-businesses .user-information li {
+    width: 50%;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    margin-bottom: 20px; }
+  .found-users-businesses .user-information .img-wrappper {
+    width: 156px;
+    height: 102px;
+    border-radius: 6px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .found-users-businesses .user-information .img-wrappper img {
+      width: 111px;
+      height: 102px; }
+  .found-users-businesses .user-information .map a {
+    display: block;
+    margin-top: 15px;
+    color: #006c79;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+    text-decoration: none; }
+  .found-users-businesses .user-information .site {
+    display: flex;
+    align-items: center; }
+    .found-users-businesses .user-information .site a {
+      color: #006c79;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.16px;
+      text-decoration: none; }
+    .found-users-businesses .user-information .site i {
+      display: block;
+      margin-right: 13px;
+      width: 23px;
+      height: 23px;
+      background-image: url("../img/icon/icon-for-found/users/site.png"); }
+  .found-users-businesses .user-information .place {
+    display: flex;
+    align-items: center; }
+    .found-users-businesses .user-information .place i {
+      display: block;
+      margin-right: 12px;
+      width: 19px;
+      height: 23px;
+      background-image: url("../img/icon/icon-for-found/users/mark.png"); }
+  .found-users-businesses .user-information .phone {
+    display: flex;
+    align-items: center; }
+    .found-users-businesses .user-information .phone i {
+      display: block;
+      margin-right: 13px;
+      width: 23px;
+      height: 23px;
+      background-image: url("../img/icon/icon-for-found/users/phone.png"); }
+  .found-users-businesses .user-information .title {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    position: relative; }
+    .found-users-businesses .user-information .title ul {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: unset; }
+    .found-users-businesses .user-information .title li {
+      width: unset;
+      margin-bottom: 0;
+      margin-right: 12px;
+      border-radius: 15px;
+      box-sizing: border-box;
+      padding-left: 12px;
+      padding-right: 12px;
+      background-color: unset; }
+    .found-users-businesses .user-information .title .open-filter {
+      margin-right: 0;
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0;
+      background-color: unset; }
+      .found-users-businesses .user-information .title .open-filter i {
+        transition: all 200ms ease;
+        transform: rotate(0deg); }
+    .found-users-businesses .user-information .title .open-filter:hover {
+      background-color: unset; }
+    .found-users-businesses .user-information .title .open-filter--active i {
+      transition: all 200ms ease;
+      transform: rotate(180deg); }
+    .found-users-businesses .user-information .title a {
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.16px;
+      text-decoration: none; }
+    .found-users-businesses .user-information .title .menu-btn--active {
+      background-color: rgba(255, 69, 69, 0.2); }
+
+.found-users-businesses .sort-by {
+  text-align: right;
+  margin-bottom: 33px; }
+
+.found-users-businesses .block-3 {
+  align-items: center; }
+  .found-users-businesses .block-3 .castom-select-wrapper {
+    margin-bottom: 0; }
+
+.found-users-businesses .body-filter {
+  height: 0px; }
+
+.found-users-businesses .body-text {
+  box-sizing: border-box;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 0; }
+  .found-users-businesses .body-text p {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.16px; }
+
+.found-users-businesses-pro .result-found {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.found-users-businesses-pro .last-block-busines {
+  width: 894px; }
+
+.found-users-businesses-pro .last-block-busines .resviews-profile .right {
+  width: 612px;
+  padding-right: 0;
+  padding-bottom: 0; }
+
+.found-users-businesses-pro .users {
+  width: 282px;
+  height: 500px;
+  position: relative; }
+  .found-users-businesses-pro .users .first-text {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px; }
+  .found-users-businesses-pro .users .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .found-users-businesses-pro .users .icon-wrapper i {
+      width: 24px;
+      height: 23px; }
+  .found-users-businesses-pro .users__body {
+    width: 100%;
+    box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+    background-color: #ffffff;
+    border-radius: 10px; }
 
 .pagination {
   width: 321px;

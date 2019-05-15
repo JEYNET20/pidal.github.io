@@ -60,6 +60,7 @@
 	// меню бургер
 	let btnBar = document.querySelector('.btn-bar');
 	let logo = document.querySelector('.logo');
+	if(!btnBar) return false;
 	let onBtnBarClick = function(e){
 		let x = this;
 		e.preventDefault();
@@ -1042,8 +1043,8 @@
 		galleryBody.classList.remove('d-none');
 	};
 
-	list.addEventListener('click', onListClick);
-	gallery.addEventListener('click', onGalleryClick);
+	if(list) list.addEventListener('click', onListClick);
+	if(gallery) gallery.addEventListener('click', onGalleryClick);
 
 })();
 
@@ -1052,6 +1053,8 @@
 	const rollUp = document.querySelector('.found .roll-up');
 	const dopFilters = document.querySelector('.found .block-3');
 
+	
+	if(!rollUp) return false;
 	function onRollUpShowClick(e){
 		console.log(this);
 		this.childNodes[1].textContent = 'Свернуть';
@@ -1065,6 +1068,10 @@
       easing: 'easeInQuad',
       duration: 400
 		});
+
+		let x = document.querySelector('.open-close-other-filters .found-filter__btn');
+
+		x.classList.add('d-none');
 
 		this.removeEventListener('click', onRollUpShowClick);
 		this.addEventListener('click', onRollUpHiddenClick);
@@ -1081,9 +1088,14 @@
       easing: 'easeOutQuad',
       duration: 400
 		});
-		setTimeout(function(){
+		
+		// setTimeout(function(){
 			dopFilters.classList.add('d-none');	
-		}, 400);
+		// }, 400);
+
+		let x = document.querySelector('.open-close-other-filters .found-filter__btn');
+
+		x.classList.remove('d-none');
 
 		this.addEventListener('click', onRollUpShowClick);
 		this.removeEventListener('click', onRollUpHiddenClick);
@@ -1097,10 +1109,191 @@
 (function(){
 	const reset = document.querySelector('.found .reset');
 
+	if(!reset) return false;
 	function onResetClick(e){
 		location.reload();
 	};
 
 	reset.addEventListener('click', onResetClick);
+
+})();
+
+
+// found user поиск по типу
+(function(){
+
+	const typeBtn = document.querySelectorAll('.sort-by-type .list__item'),
+				typeItem = document.querySelectorAll('.found-type-item');
+
+	if(!typeBtn) return false;
+
+	function onTypeBtnClick(e){
+
+		if(this.classList.contains('list__item--mark')){
+
+			typeItem.forEach( function(element) {
+				element.classList.add('d-none');
+				if(element.classList.contains('found-type-item--marka')){
+					element.classList.remove('d-none');
+				}
+			});
+
+		} else if(this.classList.contains('list__item--model')){
+
+			typeItem.forEach( function(element) {
+				element.classList.add('d-none');
+				if(element.classList.contains('found-type-item--model')){
+					element.classList.remove('d-none');
+				}
+			});
+
+		} else if(this.classList.contains('list__item--general')){
+
+			typeItem.forEach( function(element) {
+				element.classList.add('d-none');
+				if(element.classList.contains('found-type-item--general')){
+					element.classList.remove('d-none');
+				}
+			});
+
+		} else if(this.classList.contains('list__item--age')){
+
+			typeItem.forEach( function(element) {
+				element.classList.add('d-none');
+				if(element.classList.contains('found-type-item--age')){
+					element.classList.remove('d-none');
+				}
+			});
+
+		} else if(this.classList.contains('list__item--probeg')){
+
+			typeItem.forEach( function(element) {
+				element.classList.add('d-none');
+				if(element.classList.contains('found-type-igem--probeg')){
+					element.classList.remove('d-none');
+				}
+			});
+
+		} else if(this.classList.contains('list__item--obem')){
+
+			typeItem.forEach( function(element) {
+				element.classList.add('d-none');
+				if(element.classList.contains('found-type-item--obem')){
+					element.classList.remove('d-none');
+				}
+			});
+
+		} else if(this.classList.contains('list__item--price')){
+
+			typeItem.forEach( function(element) {
+				element.classList.add('d-none');
+				if(element.classList.contains('found-type-item--price')){
+					element.classList.remove('d-none');
+				}
+			});
+
+		}
+
+	};
+
+	typeBtn.forEach(function(elm){
+		elm.addEventListener('click',  onTypeBtnClick);
+	})
+
+})();
+
+// found user businesses переключатель текста и фильтра / включить филтр
+(function(){
+
+	const openFilter = document.querySelector('.open-filter'),
+				bodyFilter = document.querySelector('.body-filter');
+
+	if(!openFilter || !bodyFilter) return false;
+	function onOpenFilterShowClick(e){
+		e.preventDefault();
+		console.log(this);
+
+		bodyFilter.classList.remove('d-none');
+		this.classList.add('open-filter--active');
+
+		anime({
+      targets: bodyFilter,
+      opacity: '1' ,
+      height: '225px',
+      easing: 'easeInQuad',
+      duration: 400
+		});
+
+		this.removeEventListener('click', onOpenFilterShowClick);
+		this.addEventListener('click', onOpenFilterHiddenClick);
+	};
+
+	function onOpenFilterHiddenClick(e){
+		e.preventDefault();
+
+		setTimeout(function(){
+			bodyFilter.classList.add('d-none');
+		}, 400);
+
+		this.classList.remove('open-filter--active');
+
+		anime({
+      targets: bodyFilter,
+      opacity: '0' ,
+      height: '0px',
+      easing: 'easeOutQuad',
+      duration: 400
+		});
+
+		this.addEventListener('click', onOpenFilterShowClick);
+		this.removeEventListener('click', onOpenFilterHiddenClick);
+	}
+
+	openFilter.addEventListener('click', onOpenFilterShowClick);
+	// -------------------------------------------------------------------- //
+	
+	const btnAboutUs = document.querySelector('.menu-btn--about-us'),
+				bodyText = document.querySelector('.body-text'),
+				everyOfers = document.querySelector('.menu-btn--everything-offers');
+
+	function onBtnAboutUs(e) {
+		e.preventDefault();
+
+		bodyText.classList.remove('d-none');
+		everyOfers.classList.remove('menu-btn--active');
+
+		this.classList.add('menu-btn--active');
+
+		anime({
+      targets: bodyText,
+      opacity: '1' ,
+      height: '256px',
+      easing: 'easeInQuad',
+      duration: 300
+		});
+
+	};
+
+	function onBtnEveryOfersClick(e) {
+		e.preventDefault();
+		btnAboutUs.classList.remove('menu-btn--active');
+		this.classList.add('menu-btn--active');
+
+		setTimeout(function(){
+			bodyText.classList.add('d-none');
+		},400);
+
+		anime({
+      targets: bodyText,
+      opacity: '0' ,
+      height: '0px',
+      easing: 'easeOutQuad',
+      duration: 300
+		});
+
+	} 
+
+	btnAboutUs.addEventListener('click', onBtnAboutUs);
+	everyOfers.addEventListener('click', onBtnEveryOfersClick);
 
 })();
