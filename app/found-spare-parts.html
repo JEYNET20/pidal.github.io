@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PEDALKZ - "Поиск запчастей"</title>
+
+  <!-- стили -->
+  <link rel="stylesheet" href="css/style.min.css">
+<!--   <link rel="stylesheet" href="css/animate.css"> -->
+
+  <!-- шрифты -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+
+
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="wrapper">
+      <button class="btn-bar"></button>
+
+      <div class="nav-bar-wrapper">
+
+        <a href="index.html">
+          <img src="img/icon/LOGO.svg" alt="logo" class="logo">
+        </a>
+        <nav class="nav nav--bar d-none ONULL">
+          <ul class="main-menu">
+            <li class="main-menu__item"><a href="#">Отзывы</a></li>
+            <li class="main-menu__item"><a href="map-obl.html">Карта городов</a></li>
+            <li class="main-menu__item"><a href="#">Моб приложения</a></li>
+            <li class="main-menu__item"><a href="services.html">Платные услуги</a></li>
+            <li class="main-menu__item"><a href="help.html">Центр помощи</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <nav class="nav nav--main">
+        <ul class="main-menu">
+          <li class="main-menu__item">
+            <a href="#">Легковые</a>
+            <ul class="main-manu__list d-none ONULL">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Мото</a>
+            <ul class="main-manu__list d-none ONULL">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>            
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Спецтехника</a>
+            <ul class="main-manu__list d-none ONULL">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>            
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Запчасти</a>
+            <ul class="main-manu__list d-none ONULL">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>            
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Автосервисы</a>
+            <ul class="main-manu__list d-none ONULL">
+              <li class="main-menu__list-item"><a href="#">Легкие коммерческие</a></li>
+              <li class="main-menu__list-item"><a href="#">Грузовики</a></li>
+              <li class="main-menu__list-item"><a href="#">Седельные тягачи</a></li>
+              <li class="main-menu__list-item"><a href="#">Автобусы</a></li>
+              <li class="main-menu__list-item"><a href="#">Прицепы и съёмные кузова</a></li>
+              <li class="main-menu__list-item"><a href="#">Сельскохозяйственная</a></li>
+              <li class="main-menu__list-item"><a href="#">Строительная</a></li>
+              <li class="main-menu__list-item"><a href="#">Автопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Автокраны</a></li>
+              <li class="main-menu__list-item"><a href="#">Экскаваторы</a></li>
+              <li class="main-menu__list-item"><a href="#">Бульдозеры</a></li>
+              <li class="main-menu__list-item"><a href="#">Самопогрузчики</a></li>
+              <li class="main-menu__list-item"><a href="#">Коммунальная</a></li>
+            </ul>            
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sign-navigation">
+        <div  class="btn-sign-navigation">
+          <i class="icon-anonim"></i>
+          <i class="icon-arrow-down--white"></i>
+        </div>
+        <nav class="profile-list d-none ONULL">
+          <div class="profile-list-title-wrapper">
+            <i class="icon-anonim icon-anonim--black"></i>
+            <span class="" style="margin-left: 5px;">Amir1989</span>
+          </div>
+
+          <div class="profile-list__title-wrapper">
+            <i class="icon-profile"></i>
+            <h4>Мой профиль</h4>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Объявления</a>
+              <i class="icon-yellow">1</i>
+            </li>
+            <li>
+              <a href="#">Сообщения</a>
+              <i class="icon-red">1</i>
+            </li>
+            <li>
+              <a href="#">Уведомления</a>
+            </li>
+            <li>
+              <a href="#">Настройки</a>
+            </li>
+            <li>
+              <a href="#">История платежей</a>
+            </li>
+          </ul>
+          <div class="profile-list__title-wrapper">
+            <i class="icon-star"></i>
+            <h4>Избранные:</h4>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Объявление</a>
+              <i class="icon-dark">1</i>
+            </li>
+            <li>
+              <a href="#">Поиски</a>
+              <i class="icon-dark">1</i>
+            </li>
+          </ul>
+          <button class="profile-list__exit">
+            <i class="icon-exit"></i>
+            <span>Выход</span>
+          </button>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+  <!-- // Шапка -->
+
+  <main class="wrapper found found-spare-parts">
+
+    <div class="map-block">
+      <button class="change-count">
+        <i class="icon-place-mark"></i>
+        <span>Весь казакстан</span>
+        <i class="icon-arrow-right"></i>
+      </button>
+      <button class="add-offer">
+        <i class="icon-plus"></i>
+        <span>Добавить объявление</span>
+      </button>
+    </div>
+    <div class="map-block__other-city map-block__other-city--level-1 d-none ONULL">
+      <div class="wrapper">
+        <div class="map-block__top">
+          <button class="change-count">
+            <span>Весь казакстан</span>
+          </button>
+          <i class="icon-exit-chrest"></i>
+        </div>
+        <ul>
+          <li>
+            <a href="#">Акмолинская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Актюбинская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Алматинская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Атырауская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Восточно-Казахстанская область </a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Жамбылская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Западно-Казахстанская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Карагандинская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Костанайская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Кзылординская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Мангистауская область </a>
+            <i class="icon-arrow-right"></i>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Павлодарская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#"> Северо-Казахстанская область</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Южно-Казахстанская область </a>
+            <i class="icon-arrow-right"></i>
+          </li>
+        </ul>                
+      </div>
+    </div>
+    <div class="map-block__other-city map-block__other-city--level-2 d-none ONULL">
+      <div class="wrapper">
+        <div class="map-block__top">
+          <button class="change-count change-conut--prev" style="width: auto;">
+            <i class="icon-arrow-left"></i>
+            <span>&nbsp Назад к списку областей</span>
+          </button>
+          <i class="icon-exit-chrest"></i>
+        </div>
+        <ul>
+          <li>
+            <a href="#">Актау</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Актобе</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Усть-Каменогорск </a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Усть-Каменогорск</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Талдыкорган</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+          <li>
+            <a href="#">Усть-Каменогорск</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Усть-Каменогорск</a>
+            <i class="icon-arrow-right"></i>
+          </li>
+        </ul>                
+      </div>
+    </div>
+    <div class="hr" style="margin-top: 0;"></div>    
+
+    <p class="located">
+      <!-- <i class="icon-left-arrow-blue"></i> -->
+      <a href="index.html">Главная</a>
+      <i>/</i>
+      <a href="#"><span>Продажа запчастей</span></a>
+    </p>
+
+    <section class="offers found-filter">
+      
+      <div class="found-filter__nav-wrapper">
+        <h2>Запчасти</h2>
+        <ul class="offers__navigation">
+          <li class="other-mark">
+            <a href="#">Все <span style="opacity: 1;"></span></a>
+          </li>
+          <li class="other-mark">
+            <a href="#">Б/У <span></span></a>
+          </li>
+          <li class="new-mark">
+            <a href="#">Новые <span></span></a>
+          </li>
+        </ul>
+        <div class="right">
+          <span>Сохранить результат поиска</span>
+          <i class="icon-star--red"></i>
+        </div>
+      </div>
+
+      <section class="found-filter__body">
+
+        <form action="/">
+          <div class="block block-1 form-selected">
+
+            <div class="castom-select-wrapper">
+              <i class="icon found-icon-settings"></i>
+              <span>Запчасти</span>
+              <i class="more icon-arrow-down"></i>
+              <div class="list d-none">
+                <span class="list__item">
+                  <i class="found-icon-fourth-cube"></i>
+                  Все рубрики
+                </span>
+                <span class="list__item">
+                  <i class="found-icon-auto"></i>
+                  Легковые
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  <i class="found-icon-moto"></i>
+                  Мото
+                  <b class="count">13 237</b>                  
+                </span>
+                <span class="list__item">
+                  <i class="found-icon-heavy-auto"></i>
+                  Спецтехника
+                  <b class="count">132</b>                  
+                </span>
+                <span class="list__item">
+                  <i class="found-icon-settings"></i>
+                  Запчасти
+                  <b class="count">13 237</b>                  
+                </span>
+                <span class="list__item">
+                  <i class="found-icon-service"></i>
+                  Автосервесы
+                  <b class="count">83</b>                  
+                </span>
+              </div>
+            </div>
+
+            <div class="castom-select-wrapper">
+              <i class="d-none fixed"></i>
+              <span>Марка</span>
+              <i class="more icon-arrow-down"></i>
+              <div class="list d-none">
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>
+                <span class="list__item">
+                  Toyota
+                  <b class="count">83 237</b>
+                </span>                
+              </div>
+            </div>
+
+            <div class="filter-search">
+              <i class="icon-search"></i>
+              <input type="text" placeholder="Введите ключевой запрос">
+            </div>
+          </div>
+
+          <div class="block block-3 block-2 form-selected">
+
+            <div class="section">
+              <h4>Цена</h4>
+              <div class="castom-select-wrapper">
+                <i class="d-none fixed"></i>
+                <span>От</span>
+                <i class="more icon-arrow-down"></i>
+                <div class="list d-none">
+                  <span class="list__item">1</span>
+                  <span class="list__item">2</span>
+                  <span class="list__item">3</span>
+                  <span class="list__item">4</span>
+                  <span class="list__item">5</span>
+                  <span class="list__item">6</span>
+                </div>
+              </div>
+
+              <div class="line"></div>
+              
+              <div class="castom-select-wrapper">
+                <i class="d-none fixed"></i>
+                <span>До</span>
+                <i class="more icon-arrow-down"></i>
+                <div class="list d-none">
+                  <span class="list__item">1</span>
+                  <span class="list__item">2</span>
+                  <span class="list__item">3</span>
+                  <span class="list__item">4</span>
+                  <span class="list__item">5</span>
+                  <span class="list__item">6</span>
+                </div>
+              </div>
+            </div>  
+
+            <div class="checkbox-body">
+              <p class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox-1">
+                <label for="checkbox-1">Частные объявления</label>
+              </p>
+              <p class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox-2">
+                <label for="checkbox-2">В наличии</label>
+              </p>
+            </div>
+
+            <button class="btn found-filter__btn">Показать&nbsp;
+              <span class="">6 768</span>
+               &nbsp;результатов
+             </button>
+          </div>
+
+        </form>
+      </section>
+    </section>
+
+    <section class="sort-by">
+      <div class="form-selected">
+        <div class="start">
+          <div class="castom-select-wrapper">
+            <!-- i -->
+            <span>Сортировать по</span>
+            <i class="more icon-arrow-down"></i>
+            <div class="list d-none">
+              <span class="list__item">1</span>
+              <span class="list__item">2</span>
+              <span class="list__item">3</span>
+              <span class="list__item">4</span>
+              <span class="list__item">5</span>
+              <span class="list__item">6</span>
+              <span class="list__item">7</span>
+              <span class="list__item">8</span>
+            </div>
+          </div>
+          <div class="castom-select-wrapper">
+            <!-- i -->
+            <span>Все виды продавцов</span>
+            <i class="more icon-arrow-down"></i>
+            <div class="list d-none">
+              <span class="list__item">1</span>
+              <span class="list__item">2</span>
+              <span class="list__item">3</span>
+              <span class="list__item">4</span>
+              <span class="list__item">5</span>
+              <span class="list__item">6</span>
+              <span class="list__item">7</span>
+              <span class="list__item">8</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="end chance-views">
+          <button class="chance-views__list active">Список</button>
+          <button class="chance-views__gallery">Галерея</button>
+        </div>
+      </div>
+    </section>
+
+    <secttion class="list-wrapper">
+      <section class="top-offers last-block-busines">
+        <section class="resviews-profile">
+          <div class="title-wrapper">
+            <h2>
+              <i class="icon-red-fire-border"></i>
+              Топ объявления
+              <span class="cound">1 237</span>
+           </h2>
+            <button>Все топ объявления
+              <i class="icon-left-arrow-blue"></i>
+            </button>
+          </div>
+          <ul>
+      
+            <li class="item">
+              <div class="left">
+                <img src="img/reviews-profile/image-reviews.png" alt="item">
+              </div>
+              <div class="right">
+                <h3>
+                  <i class="icon-red-fire"></i>
+                  <a href="#">Лада 4x4 2121 Нива</a>
+                </h3>
+                <p class="property">
+                  <span class="age">1995 год</span><br>
+                  <span class="type"> Седан,Черный,3л, КПП механика</span>
+                </p>
+      
+                <p class="price">10 000 000 ₸ </p>
+      
+                <div class="add-to-favotite">
+                  <span>Добавить в избранное</span>
+                  <i class="icon-star--red"></i>
+                </div>
+      
+                <div class="other-param">
+                  <span>
+                    <i class="icon-place-mark"></i>
+                    Астана
+                  </span>
+                  <span>
+                    <i class="icon-reverse"></i>
+                    <span class="time">Вчера 12:16</span>
+                  </span>
+                </div>
+      
+              </div>
+            </li>
+      
+            <li class="item">
+              <div class="left">
+                <img src="img/reviews-profile/image-reviews.png" alt="item">
+              </div>
+              <div class="right">
+                <h3>
+                  <i class="icon-red-fire"></i>
+                  <a href="#">Лада 4x4 2121 Нива</a>
+                </h3>
+                <p class="property">
+                  <span class="age">1995 год</span><br>
+                  <span class="type"> Седан,Черный,3л, КПП механика</span>
+                </p>
+      
+                <p class="price">10 000 000 ₸ </p>
+      
+                <div class="add-to-favotite">
+                  <span>Добавить в избранное</span>
+                  <i class="icon-star--red"></i>
+                </div>
+      
+                <div class="other-param">
+                  <span>
+                    <i class="icon-place-mark"></i>
+                    Астана
+                  </span>
+                  <span>
+                    <i class="icon-reverse"></i>
+                    <span class="time">Вчера 12:16</span>
+                  </span>
+                </div>
+      
+              </div>
+            </li>
+      
+            <li class="item">
+              <div class="left">
+                <img src="img/reviews-profile/image-reviews.png" alt="item">
+              </div>
+              <div class="right">
+                <h3>
+                  <i class="icon-red-fire"></i>
+                  <a href="#">Лада 4x4 2121 Нива</a>
+                </h3>
+                <p class="property">
+                  <span class="age">1995 год</span><br>
+                  <span class="type"> Седан,Черный,3л, КПП механика</span>
+                </p>
+      
+                <p class="price">10 000 000 ₸ </p>
+      
+                <div class="add-to-favotite">
+                  <span>Добавить в избранное</span>
+                  <i class="icon-star--red"></i>
+                </div>
+      
+                <div class="other-param">
+                  <span>
+                    <i class="icon-place-mark"></i>
+                    Астана
+                  </span>
+                  <span>
+                    <i class="icon-reverse"></i>
+                    <span class="time">Вчера 12:16</span>
+                  </span>
+                </div>
+      
+              </div>
+            </li>
+      
+            <li class="item">
+              <div class="left">
+                <img src="img/reviews-profile/image-reviews.png" alt="item">
+              </div>
+              <div class="right">
+                <h3>
+                  <i class="icon-red-fire"></i>
+                  <a href="#">Лада 4x4 2121 Нива</a>
+                </h3>
+                <p class="property">
+                  <span class="age">1995 год</span><br>
+                  <span class="type"> Седан,Черный,3л, КПП механика</span>
+                </p>
+      
+                <p class="price">10 000 000 ₸ </p>
+      
+                <div class="add-to-favotite">
+                  <span>Добавить в избранное</span>
+                  <i class="icon-star--red"></i>
+                </div>
+      
+                <div class="other-param">
+                  <span>
+                    <i class="icon-place-mark"></i>
+                    Астана
+                  </span>
+                  <span>
+                    <i class="icon-reverse"></i>
+                    <span class="time">Вчера 12:16</span>
+                  </span>
+                </div>
+      
+              </div>
+            </li>
+      
+          </ul>
+        </section>
+      </section>
+      
+      <section class="offers last-block-busines">
+        <section class="resviews-profile">
+          <div class="title-wrapper">
+            <h2>
+              <i class="icon-rupor"></i>
+               Все объявления
+              <span class="count">1 237</span>
+           </h2>
+          </div>
+          <ul>
+      
+            <li class="item">
+              <div class="left">
+                <img src="img/reviews-profile/image-reviews.png" alt="item">
+              </div>
+              <div class="right">
+                <h3>
+                  <i class="icon-red-fire"></i>
+                  <a href="#">Лада 4x4 2121 Нива</a>
+                </h3>
+                <p class="property">
+                  <span class="age">1995 год</span><br>
+                  <span class="type"> Седан,Черный,3л, КПП механика</span>
+                </p>
+      
+                <p class="price">10 000 000 ₸ </p>
+      
+                <div class="add-to-favotite">
+                  <span>Добавить в избранное</span>
+                  <i class="icon-star--red"></i>
+                </div>
+      
+                <div class="other-param">
+                  <span>
+                    <i class="icon-place-mark"></i>
+                    Астана
+                  </span>
+                  <span>
+                    <i class="icon-reverse"></i>
+                    <span class="time">Вчера 12:16</span>
+                  </span>
+                </div>
+      
+              </div>
+            </li>
+      
+            <li class="item">
+              <div class="left">
+                <img src="img/reviews-profile/image-reviews.png" alt="item">
+              </div>
+              <div class="right">
+                <h3>
+                  <i class="icon-red-fire"></i>
+                  <a href="#">Лада 4x4 2121 Нива</a>
+                </h3>
+                <p class="property">
+                  <span class="age">1995 год</span><br>
+                  <span class="type"> Седан,Черный,3л, КПП механика</span>
+                </p>
+      
+                <p class="price">10 000 000 ₸ </p>
+      
+                <div class="add-to-favotite">
+                  <span>Добавить в избранное</span>
+                  <i class="icon-star--red"></i>
+                </div>
+      
+                <div class="other-param">
+                  <span>
+                    <i class="icon-place-mark"></i>
+                    Астана
+                  </span>
+                  <span>
+                    <i class="icon-reverse"></i>
+                    <span class="time">Вчера 12:16</span>
+                  </span>
+                </div>
+      
+              </div>
+            </li>
+      
+            <li class="item">
+              <div class="left">
+                <img src="img/reviews-profile/image-reviews.png" alt="item">
+              </div>
+              <div class="right">
+                <h3>
+                  <i class="icon-red-fire"></i>
+                  <a href="#">Лада 4x4 2121 Нива</a>
+                </h3>
+                <p class="property">
+                  <span class="age">1995 год</span><br>
+                  <span class="type"> Седан,Черный,3л, КПП механика</span>
+                </p>
+      
+                <p class="price">10 000 000 ₸ </p>
+      
+                <div class="add-to-favotite">
+                  <span>Добавить в избранное</span>
+                  <i class="icon-star--red"></i>
+                </div>
+      
+                <div class="other-param">
+                  <span>
+                    <i class="icon-place-mark"></i>
+                    Астана
+                  </span>
+                  <span>
+                    <i class="icon-reverse"></i>
+                    <span class="time">Вчера 12:16</span>
+                  </span>
+                </div>
+      
+              </div>
+            </li>
+      
+            <li class="item">
+              <div class="left">
+                <img src="img/reviews-profile/image-reviews.png" alt="item">
+              </div>
+              <div class="right">
+                <h3>
+                  <i class="icon-red-fire"></i>
+                  <a href="#">Лада 4x4 2121 Нива</a>
+                </h3>
+                <p class="property">
+                  <span class="age">1995 год</span><br>
+                  <span class="type"> Седан,Черный,3л, КПП механика</span>
+                </p>
+      
+                <p class="price">10 000 000 ₸ </p>
+      
+                <div class="add-to-favotite">
+                  <span>Добавить в избранное</span>
+                  <i class="icon-star--red"></i>
+                </div>
+      
+                <div class="other-param">
+                  <span>
+                    <i class="icon-place-mark"></i>
+                    Астана
+                  </span>
+                  <span>
+                    <i class="icon-reverse"></i>
+                    <span class="time">Вчера 12:16</span>
+                  </span>
+                </div>
+      
+              </div>
+            </li>
+      
+          </ul>
+        </section>
+      </section>
+
+      <div class="pagination">
+        <button class="button-prev">
+          <i class="icon-left-arrow-blue"></i>
+        </button>
+        <ul>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">12</a></li>
+        </ul>
+        <button class="button-next">
+          <i class="icon-left-arrow-blue"></i>        
+        </button>
+      </div>
+
+      <div class="save-result-founds">
+        <div class="save-result-founds__wrapper"><i class="icon-star--red"></i></div>
+        <span>Сохранить результат поиска</span>
+      </div>
+
+      <section class="offers">
+        <div class="title-wrapper">
+          <p class="left">Показать все <span>избранные объявления</span></p>
+          <p class="right"><span>Объявления </span>Результаты поиска</p>
+        </div>
+        <ul class="offers-content">
+          <li class="offers-content__item">
+          <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+          <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-2.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+          <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-3.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+          <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-4.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <div class="hr"></div>
+    </secttion>
+
+    <section class="gallery-wrapper d-none">
+
+      <section class="offers gallery-wrapper__offers">
+        <div class="title">
+          <p class="start">
+            <i class="icon-red-fire-border"></i>
+            <span>Топ объявления</span>
+            <span class="count">1 237</span>
+          </p>
+          <p class="end">
+            <button>Все топ объявления
+                <i class="icon-left-arrow-blue"></i>
+            </button>            
+          </p>
+
+        </div>
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>        
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <div class="icon-wrapper">
+              <i class="icon icon-red-fire"></i>
+            </div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>        
+      </section>
+
+      <section class="offers gallery-wrapper__offers">
+        <div class="title">
+          <p class="start">
+            <i class="icon-rupor"></i>
+            <span> Все объявления</span>
+            <span class="count" style="background: #2c2c2c;">1 237</span>
+          </p>    
+
+        </div>
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>        
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>
+        <ul class="offers-content">
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+          <li class="offers-content__item">
+            <div class="new-auto d-none ONULL">новый</div>
+            <img src="img/index/bus-1.jpg" alt="item">
+            <div>
+              <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+              <span class="offers-content__item-age"> 1995 год</span>
+              <span class="offers-content__item-price">10 000 000 ₸</span>
+              <i class="icon-star icon-star--red"></i>
+            </div>
+          </li>
+        </ul>        
+      </section>      
+
+      <div class="pagination">
+        <button class="button-prev">
+          <i class="icon-left-arrow-blue"></i>
+        </button>
+        <ul>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">12</a></li>
+        </ul>
+        <button class="button-next">
+          <i class="icon-left-arrow-blue"></i>        
+        </button>
+      </div>
+
+      <div class="save-result-founds">
+        <div class="save-result-founds__wrapper"><i class="icon-star--red"></i></div>
+        <span>Сохранить результат поиска</span>
+      </div>
+
+      <section class="gallery-wrapper-end">
+        <div class="title-wrapper">
+          <div class="start">
+            <p>Недавно просмотренные</p>
+            <p>Результаты поиска &nbsp;<span>3</span></p>
+          </div>
+          <div class="gallery-wrapper-end__end">
+            Показать все <a href="#"> избранные результаты поиска</a> 
+          </div>
+        </div>
+
+        <section class="offers gallery-wrapper__offers">
+          <ul class="offers-content">
+            <li class="offers-content__item">
+              <div class="new-auto d-none ONULL">новый</div>
+              <div class="offers__icon-wrapper">
+                <i class="icon-auto-category"></i>
+              </div>
+              <div>
+                <span class="offers-content__item-name"> Легковые </span>
+                <span class="offers-content__item-age">  BMW</span>
+                <span class="offers-content__item-price">BMW M2 Купе</span>
+                <i class="icon-star icon-star--red"></i>
+              </div>
+            </li>
+            <li class="offers-content__item">
+              <div class="new-auto d-none ONULL">новый</div>
+              <div class="offers__icon-wrapper">
+                <i class="icon-moto-category"></i>
+              </div>
+              <div>
+                <span class="offers-content__item-name"> Мото </span>
+                <span class="offers-content__item-age">  Мотоциклы</span>
+                <span class="offers-content__item-price">BMW</span>
+                <i class="icon-star icon-star--red"></i>
+              </div>
+            </li>
+            <li class="offers-content__item">
+              <div class="new-auto d-none ONULL">новый</div>
+              <div class="offers__icon-wrapper">
+                <i class="icon-heavy-auto-category"></i>
+              </div>
+              <div>
+                <span class="offers-content__item-name"> Спецтехника </span>
+                <span class="offers-content__item-age">  Сельскохозяйственная</span>
+                <span class="offers-content__item-price">John Deere</span>
+                <i class="icon-star icon-star--red"></i>
+              </div>
+            </li>
+            <li class="offers-content__item">
+              <div class="new-auto d-none ONULL">новый</div>
+              <div class="offers__icon-wrapper">
+                <i class="icon-settings-category"></i>
+              </div>
+              <div>
+                <span class="offers-content__item-name">Запчасти</span>
+                <span class="offers-content__item-age"> Шины и диски</span>
+                <span class="offers-content__item-price">BMW </span>
+                <i class="icon-star icon-star--red"></i>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="content">
+      <div class="soc-block">
+        <ul>
+          <li class="soc-youtube"><a href="#"></a></li>
+          <li class="soc-inst"><a href="#"></a></li>
+          <li class="soc-vk"><a href="#"></a></li>
+        </ul>
+      </div>
+      <p >Педаль.<span>kz</span> 2019</p>
+    </div>
+  </footer>
+  <!-- // Футер -->
+
+  <!-- дополнительные стили -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <!-- // дополнительные стили -->
+
+  <!-- скрипты -->
+  <script src="js/anime.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>  
+  <!-- // скрипты -->
+</body>
+</html>

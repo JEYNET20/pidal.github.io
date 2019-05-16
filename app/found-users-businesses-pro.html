@@ -18,8 +18,9 @@
 <body>
 
   <!-- Шапка -->
-  <header class="header found-header">
+  <header class="header found-header found-header--businesses-pro">
     <div class="wrapper">
+      <button class="btn-bar"  style="overflow: hidden; width: 0; height: 0; margin: 0;"></button>
 
       <div class="nav-bar-wrapper">
         <a href="index.html">
@@ -27,9 +28,65 @@
         </a>
       </div>
 
-      <div class="right">
-        <span>Сохранить результат поиска</span>
-        <i class="icon-star--red"></i>
+      <button class="btn">
+        <i class="icon-plus"></i>
+        Добавить объявление
+      </button>
+
+
+      <div class="sign-navigation">
+        <div  class="btn-sign-navigation">
+          <i class="icon-anonim"></i>
+          <i class="icon-arrow-down--white"></i>
+        </div>
+        <nav class="profile-list d-none ONULL">
+          <div class="profile-list-title-wrapper">
+            <i class="icon-anonim icon-anonim--black"></i>
+            <span class="" style="margin-left: 5px;">Amir1989</span>
+          </div>
+
+          <div class="profile-list__title-wrapper">
+            <i class="icon-profile"></i>
+            <h4>Мой профиль</h4>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Объявления</a>
+              <i class="icon-yellow">1</i>
+            </li>
+            <li>
+              <a href="#">Сообщения</a>
+              <i class="icon-red">1</i>
+            </li>
+            <li>
+              <a href="#">Уведомления</a>
+            </li>
+            <li>
+              <a href="#">Настройки</a>
+            </li>
+            <li>
+              <a href="#">История платежей</a>
+            </li>
+          </ul>
+          <div class="profile-list__title-wrapper">
+            <i class="icon-star"></i>
+            <h4>Избранные:</h4>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Объявление</a>
+              <i class="icon-dark">1</i>
+            </li>
+            <li>
+              <a href="#">Поиски</a>
+              <i class="icon-dark">1</i>
+            </li>
+          </ul>
+          <button class="profile-list__exit">
+            <i class="icon-exit"></i>
+            <span>Выход</span>
+          </button>
+        </nav>
       </div>
 
     </div>
@@ -46,6 +103,10 @@
       <a href="#"><span>Все рубрики</span></a>
     </p>
 
+    <div class="baner">
+      <span>Банннер</span>
+    </div>
+
     <div class="result-found">
       <section class="users">
         <span class="first-text">Сохранить результаты поиска</span>
@@ -53,26 +114,33 @@
           <i class="icon-star--red"></i>
         </div>
         <div class="users__body">
-          <img src="img/avatar.png" alt="avatar">
-          <h4>Autoshop</h4>
-          <ul>
-            <li class="place">
-              <span>Астана</span>
-              <span>Пушкинская 5</span>
-              <a href="#">показать на карте</a>
-            </li>
-            <li class="telephone">
-              <span>749597556983</span>
-              <span>749597556983</span>
-            </li>
-            <li class="site">
-              <a href="#">autoshop.ru</a>
-            </li>
-          </ul>
-
-          <div class="text">
-            Огромный рок-магазин. Действуют скидки, акции, распродажи. Рокерам нравится! Огромный выбор. 
-            Узнать больше... большебольшезЦепроизводителя. Бренды: AC/DC, Metallica, Nokturnal Mortum, Iron Maiden, Slipknot, Rammstein, Led Zeppelin, Nirvana, Motorhead.
+          <div class="img-wrapper">
+            <img src="img/avatar.png" alt="avatar">
+          </div>
+          <div class="content">
+            <h4>Autoshop</h4>
+            <ul>
+              <li class="place">
+                <i class="icon-place-mark"></i>
+                <span>Астана</span>
+                <span>Пушкинская 5</span>
+                <a href="#">показать на карте</a>
+              </li>
+              <li class="telephone">
+                <i class="icon-phone"></i>
+                <span>749597556983</span>
+                <span>749597556983</span>
+              </li>
+              <li class="site">
+                <i class="icon-site"></i>
+                <a href="#">autoshop.ru</a>
+              </li>
+            </ul>
+            
+            <div class="text">
+              Огромный рок-магазин. Действуют скидки, акции, распродажи. Рокерам нравится! Огромный выбор.<br>
+              <a href="#">Узнать больше...</a> большебольшезЦепроизводителя. Бренды: AC/DC, Metallica, Nokturnal Mortum, Iron Maiden, Slipknot, Rammstein, Led Zeppelin, Nirvana, Motorhead.
+            </div>
           </div>
         </div>
       </section>

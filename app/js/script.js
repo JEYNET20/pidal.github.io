@@ -1118,7 +1118,6 @@
 
 })();
 
-
 // found user поиск по типу
 (function(){
 
@@ -1295,5 +1294,40 @@
 
 	btnAboutUs.addEventListener('click', onBtnAboutUs);
 	everyOfers.addEventListener('click', onBtnEveryOfersClick);
+
+})();
+
+// осталось ввести букв счетчик
+(function(){
+	const input = document.querySelectorAll('.title-input');
+
+	function onTitleInputChage(e){
+		
+		let body = this.nextElementSibling.childNodes[3];
+
+		let str = this.value.length;
+
+		// let bodyText = body.textContent;
+		body.textContent = 10000;
+		body.textContent -= str;
+
+		// if(str)
+
+		// if(e.which == 8){
+		// 	if(body.textContent == 10000) return false;
+		// 	body.textContent++;
+		// } else {
+		// 	if(body.textContent == 0) return false;
+		// 	body.textContent--;
+		// }
+
+
+		// console.log(this.value.length);
+
+	};
+
+	input.forEach(function(value){
+		value.addEventListener('change', onTitleInputChage);
+	});
 
 })();
