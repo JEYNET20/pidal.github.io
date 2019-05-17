@@ -963,6 +963,22 @@ input[type="password"]:focus {
   background-position: center center;
   background-size: cover; }
 
+.more-photo-icon {
+  display: block;
+  width: 84px;
+  height: 71px;
+  background-image: url("../img/my-slider/slider-more-item-icon.png");
+  background-position: center center;
+  background-size: cover; }
+
+.btn-arrow-left-blue {
+  display: block;
+  width: 16px;
+  height: 8px;
+  background-image: url("../img/icon/btn-arrow-left-blue.png");
+  background-position: center center;
+  background-size: cover; }
+
 .header {
   height: 102px;
   background-color: #2c2c2c; }
@@ -2313,25 +2329,26 @@ input[type="password"]:focus {
   transition: all 300ms ease;
   width: 72px;
   height: 72px;
-  border: 2px solid rgba(255, 69, 69, 0.2);
+  border: 2px solid rgba(255, 69, 69, 0);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; }
-  .about-us-str .about-us__mapa-item-wrapper-1 {
-    width: 58px;
-    height: 58px;
-    border: 2px solid rgba(255, 69, 69, 0.4);
+  position: relative;
+  transform: scale(1);
+  cursor: pointer; }
+  .about-us-str .about-us__mapa-item .about-us__border {
+    display: block;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-
-.about-us-str .about-us__mapa-item:hover {
-  transition: all 300ms ease;
-  cursor: pointer;
-  transform: scale(1.1); }
+    border: 1px solid rgba(255, 69, 69, 0);
+    position: absolute;
+    transform: scale(1); }
+  .about-us-str .about-us__mapa-item .about-us__border--1 {
+    height: 44px;
+    width: 44px; }
+  .about-us-str .about-us__mapa-item .about-us__border--2 {
+    height: 54px;
+    width: 54px; }
 
 .about-us-str .about-us__mapa-item--1 {
   position: absolute;
@@ -2432,6 +2449,29 @@ input[type="password"]:focus {
 .about-us-str .about_us__mapa-text--3 {
   top: 290px;
   left: 683px; }
+
+.pulsation-block {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 500px;
+  width: 44px;
+  height: 43px;
+  background-color: grey;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .pulsation-block .pulsation__item {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 69, 69, 0.4); }
+  .pulsation-block .pulsation__item--1 {
+    width: 52px;
+    height: 52px; }
+  .pulsation-block .pulsation__item--2 {
+    width: 34px;
+    height: 33px; }
 
 .str-404 .hr {
   margin-top: 0; }
@@ -6266,6 +6306,153 @@ input[type="password"]:focus {
     margin-bottom: 24px; }
   .publication-str .block-3 .items input:last-child {
     margin-bottom: 0; }
+
+.previews-last-block {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 30px 0px rgba(44, 44, 44, 0.2);
+  width: 100%;
+  height: 178px;
+  z-index: 10; }
+  .previews-last-block .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 439px;
+    align-items: center;
+    margin: 0 0 0 auto; }
+  .previews-last-block p {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 34px; }
+  .previews-last-block a {
+    color: #306c78;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center; }
+    .previews-last-block a i {
+      margin-right: 7px; }
+  .previews-last-block .btn {
+    width: 167px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #d24a43;
+    position: relative; }
+    .previews-last-block .btn::after {
+      background-color: #d24a43;
+      width: 100px; }
+
+.my-slider .slider-conteiner {
+  width: 100%;
+  height: 204px;
+  overflow: hidden;
+  position: relative;
+  box-sizing: content-box;
+  padding: 0; }
+
+.my-slider .slider-wrapper {
+  width: 1410px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: content-box;
+  padding: 0; }
+
+.my-slider .slider-item {
+  width: 282px;
+  height: 204px;
+  background-color: grey;
+  position: relative;
+  box-sizing: content-box;
+  padding: 0; }
+  .my-slider .slider-item img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; }
+
+.my-slider .slider-pagination {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  padding: 0; }
+
+.my-slider .slider-pagination__item {
+  width: 56px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  position: static; }
+
+.my-slider .slider-pagination__item span {
+  width: 90%;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 3px;
+  border-radius: 15px; }
+  .my-slider .slider-pagination__item span a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 9; }
+
+.my-slider .slider-pagination__item--active span {
+  background-color: #ff4545; }
+
+.my-slider .slider-item-2 {
+  background-color: green; }
+
+.my-slider .slider-item-3 {
+  background-color: orange; }
+
+.my-slider .slider-item-4 {
+  background-color: red; }
+
+.my-slider .slider-item-5 {
+  background-color: black; }
+  .my-slider .slider-item-5__more-photo-wrapper {
+    box-sizing: content-box;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0 0;
+    background-color: rgba(44, 44, 44, 0.8);
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px; }
+    .my-slider .slider-item-5__more-photo-wrapper p {
+      margin: 0;
+      margin-top: 145px; }
+  .my-slider .slider-item-5 b {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
 
 .footer {
   min-height: 157px;
