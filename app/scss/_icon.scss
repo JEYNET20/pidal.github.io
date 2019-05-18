@@ -674,3 +674,34 @@
 
 
 // btn-arrow-left-blue.png
+
+
+
+.icon-okey{
+	display: block;
+	width: 24px;
+	height: 24px;
+	 background-image: url('../img/icon/icon-okey.png');
+	background-position: center center;
+	background-size: cover;	
+}
+
+.icon-white-arrow{
+	display: block;
+	width: 12px;
+	height: 7px;
+		 background-image: url('../img/icon/white-arrow-up.png');
+	background-position: center center;
+	background-size: cover;	
+}
+
+
+.icon-red-arrow{
+	background-image: url('../img/icon/arrow-down-red.png');
+	background-position: center center;
+	background-size: cover;
+	display: block;
+	cursor: pointer;	
+	width: 12px;
+	height: 7px;
+}

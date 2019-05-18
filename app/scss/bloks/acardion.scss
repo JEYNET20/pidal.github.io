@@ -1,0 +1,78 @@
+.acardion{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	// justify-content: center;
+	// align-items: center;
+	.title{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		height: 57px;
+		border-bottom: 1px solid  rgba(44, 44, 44, .2);
+		border-top: 1px solid  rgba(44, 44, 44, .2);
+		margin: 0;
+		cursor: pointer;
+		.start{
+			width: 400px;
+			display: flex;
+			align-items: center;
+			.icon-okey{ margin-left: 5px; }
+			.icon{ height: 24px; }
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 0.16px;
+		}
+
+		.end{
+			width: 200px;
+			opacity: 0.6;
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0.16px;
+			position: relative;
+			.icon-arrow-down{
+				// margin-left: 37px;
+		    position: absolute;
+		    right: 5px;
+		    top: 50%;
+		    transform: translateY(-50%);
+			}
+		}
+	}
+	.body{
+		margin-top: 15px;
+		margin-bottom: 28px;
+		overflow: hidden;
+		max-height: 0px;
+		margin: 0;
+		transition: all 300ms ease;
+		.checkbox-body{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			.checkbox-wrapper{
+				cursor: pointer;
+				width: 25%;
+				input{
+					cursor: pointer;
+				}
+				label{
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.body--active{
+		margin-top: 15px;
+		margin-bottom: 28px;
+		max-height: 108px;
+		transition: all 300ms ease;
+	}
+}

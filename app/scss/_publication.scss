@@ -226,6 +226,9 @@
 	}
 
 	.block-3{
+		h2{
+			margin-bottom: 32px;
+		}
 		.items{
 			width: 282px;
 			display: flex;
@@ -300,5 +303,187 @@
 			width: 100px;
 		}
 	}
+}
 
+.others-parameters{
+	.counter-completed{
+		position: absolute;
+		right: 0;
+		width: 65px;
+		height: 65px;
+		border-radius: 50%;
+		background-color: #fff;
+		border: 1px solid rgba(44, 44, 41, .2);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 18px;
+		font-weight: 600;
+		letter-spacing: 0.18px;
+		margin: 0;
+	}
+
+	.chexbox--active{
+
+	}
+
+	.main-parameters{
+		position: relative;
+		&__block{
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 59px;
+			h2{
+				width: 100%;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 24px;
+				font-weight: 400;
+				letter-spacing: 0.24px;
+				margin-bottom: 42px;
+				margin-top: 0;
+			}
+			.left{
+				width: 400px;
+				margin-right: 228px;
+				.castom-select-wrapper span{
+					margin-right: 0;
+				}
+			}
+			.right{
+				width: 400px;
+				.castom-select-wrapper span{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	.other-parameters{
+		position: relative;
+		.title{
+			color: #2c2c2c;
+			font-family: "Open Sans";
+			font-size: 24px;
+			font-weight: 400;
+			letter-spacing: 0.24px;
+			display: flex;
+			align-items: center;
+			height: unset;
+			margin-bottom: 43px;
+			h2{
+				margin: 0;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 24px;
+				font-weight: 400;
+				letter-spacing: 0.24px;
+				margin-right: 11px;
+			}
+			button{
+				border: none;
+				width: 144px;
+				height: 24px;
+				border-radius: 6px;
+				background-color: #d24a43;
+				color: #ffffff;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 24px;
+				letter-spacing: 0.16px;
+				display: flex;
+				align-items: center;
+				position: relative;
+				i{
+					margin-left: 5px;
+					margin-top: 9px;
+					margin-bottom: 8px;
+					transition: all 150ms ease;
+					transform: rotate(180deg);
+				}
+				.icon--active{
+					transition: all 150ms ease;
+					transform: rotate(0deg);
+				}
+			}
+			button:active{
+				outline: none;
+			}
+		}
+		.title:hover{
+			.start{
+				color: #d24a43;
+			}
+			.end{
+				i{
+					background-image: url('../img/icon/arrow-down-red.png');
+				}
+			}
+		}
+		.acardion .title{
+			margin-bottom: 0;
+			height: 59px;
+			border-bottom: unset;
+		}
+		.icon-arrow-down{
+			transition: all 150ms ease;	
+		}
+		.icon-arrow-down--active{
+			transition: all 150ms ease;
+			transform: rotate(180deg) !important;
+		}
+		.acardion .checkbox-wrapper label::before{
+			top: 0;
+			transform: unset;
+		}
+		.acardion .body{
+			width: 100%;
+		}
+		.acardion--comfort .category{
+			margin-left: 1px;
+			margin-bottom: 10px;
+		}
+		.acardion--comfort .category{
+			width: 282px;
+			margin-right: 27px;
+		}
+		.acardion--comfort .body--active{
+			max-height: 370px;
+			overflow: visible;
+		}
+		.acardion--security .body--active{
+			max-height: 370px;
+			overflow: visible;
+		}
+		.acardion--reviews .body--active{
+			max-height: 370px;
+			overflow: visible;
+		}
+		.acardion--salon .body--active{
+			max-height: 370px;
+			overflow: visible;
+		}		
+		.acardion--reviews .category{
+			margin-left: 1px;
+			margin-bottom: 10px;
+		}
+		.acardion--reviews .category{
+			width: 282px;
+			margin-right: 27px;
+		}
+		.acardion--exterior .checkbox-body{
+			justify-content: unset;
+		}
+		.acardion--protection .checkbox-body{
+			justify-content: unset;
+		}
+		.acardion--salon{
+			border-bottom: 1px solid  rgba(44, 44, 44, .2);
+			margin-bottom: 58px;
+		}
+		// .acardion .title:nth-child()
+	}
 }
