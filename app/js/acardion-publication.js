@@ -117,28 +117,83 @@
 	btn.addEventListener('click', onBtnOpenClick);
 })();
 
-// коунтер ( проценты для заполненого блока )
+// коунтер ( проценты для блока Основные параметры авто inputs )
 (function(){
 
-	// Для другиг параметров
-	// Нихрена не получылось доробы обезательно
-	const body = document.querySelector('.other-parameters .counter-completed span');
+	const basicParamCounter = 
+		document.querySelector('.main-parameters__block .counter-completed span'),
+				items = document.querySelectorAll('.main-parameters__block .items');
+
+	function onItemsAddClick() {
+		let x = this.querySelectorAll('.list__item');
+
+		x.forEach(function(v) {
+			v.addEventListener('click', plus);
+		})
+
+		this.removeEventListener('click', onItemsAddClick);
+	};
+
+	function plus() {
+		basicParamCounter.textContent = +basicParamCounter.textContent + 8;
+		
+		let x = this.parentNode;
+		let y = x.querySelectorAll('.list__item');
+
+		y.forEach(function(v){
+			v.removeEventListener('click', plus);
+		})
+	};
+
+	items.forEach(function(v) {
+		v.addEventListener('click', onItemsAddClick);
+	})
+
+})();
+
+// коунтер ( проценты для блока Основные параметры авто chexbox )
+(function(){
+	const amount = document.querySelector('.main-parameters .acardion .title .end span'),
+				basicParamCounter = document.querySelector('.main-parameters__block .counter-completed span'),
+				btn = document.querySelectorAll('.main-parameters .checkbox-wrapper');
+
+	let b = false;
 	
-	const item = document.querySelectorAll('.acardion input');
+	function onBtnClick() {
 
-	function test(){
-		body.textContent = +body.textContent + 10;
+		if(+amount.textContent >= 1 && !b) {
+			basicParamCounter.textContent = +basicParamCounter.textContent + 12;
+			b = true;
+		} else if (+amount.textContent == 0 && b){
+			basicParamCounter.textContent = +basicParamCounter.textContent - 12;
+			b = false;
+		}
 
-		this.removeEventListener('click', test);
-		this.addEventListener('click', test2);
 	};
 
-	function test2(){
-
-	};
-
-	item.forEach(function(v){
-		v.addEventListener('change', test);
+	btn.forEach(function(v) {
+		v.addEventListener('click', onBtnClick);
 	});
+})();
 
+// коунтер ( проценты для блока Дополнительные параметры chexbox )
+(function(){
+	const amounts = document.querySelectorAll('.other-parameters .option-counter'),
+				basicParamCounter = document.querySelector('.other-parameters .counter-completed span'),
+				btn = document.querySelectorAll('.other-parameters .checkbox-wrapper');
+
+	let b = false;
+
+	// console.log(amounts);
+
+	function onBtnClick() {
+		let x = 0;
+		for(let i = 0; i < amounts.length; i++){
+			// x = amounts.reduce
+		}
+	};
+
+	btn.forEach(function(v) {
+		v.addEventListener('click', onBtnClick);
+	});
 })();
