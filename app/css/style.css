@@ -6335,6 +6335,25 @@ input[type="password"]:focus {
   .publication-str .block-3 .items input:last-child {
     margin-bottom: 0; }
 
+.publication-str .info-date__other {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 48px; }
+  .publication-str .info-date__other h2 {
+    width: 100%; }
+  .publication-str .info-date__other .category {
+    width: 50%; }
+    .publication-str .info-date__other .category p {
+      width: 100%; }
+  .publication-str .info-date__other .checkbox-body {
+    height: 75px;
+    display: flex;
+    flex-wrap: wrap; }
+    .publication-str .info-date__other .checkbox-body p {
+      margin-top: 0;
+      height: 16px;
+      width: 100%; }
+
 .previews-last-block {
   position: fixed;
   bottom: 0;

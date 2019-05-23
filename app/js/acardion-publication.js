@@ -178,22 +178,28 @@
 
 // коунтер ( проценты для блока Дополнительные параметры chexbox )
 (function(){
-	const amounts = document.querySelectorAll('.other-parameters .option-counter'),
-				basicParamCounter = document.querySelector('.other-parameters .counter-completed span'),
-				btn = document.querySelectorAll('.other-parameters .checkbox-wrapper');
+	const otherParamCounters = document.querySelectorAll('.other-parameters .option-counter'),
+				otherParamItems = document.querySelectorAll('.other-parameters .checkbox-wrapper'),
+				otherParamBody = document.querySelector('.other-parameters .counter-completed span');
 
-	let b = false;
+	function test(){
+		let count = 0;
 
-	// console.log(amounts);
-
-	function onBtnClick() {
-		let x = 0;
-		for(let i = 0; i < amounts.length; i++){
-			// x = amounts.reduce
+		for(let i = 0; i < otherParamCounters.length; i++){
+			if(otherParamCounters[i].textContent >= 1){
+				count += 14;
+			} else if(otherParamCounters[i].textContent <= 1 && otherParamCounters[i].textContent != '0'){
+				count -= 14;
+			}
 		}
+
+		if(count >= 0 && count <= 85) otherParamBody.textContent = count;
+		else if(count >= 85) otherParamBody.textContent = 100;
 	};
 
-	btn.forEach(function(v) {
-		v.addEventListener('click', onBtnClick);
+
+	otherParamItems.forEach(function(v){
+		v.addEventListener('click', test);
 	});
+
 })();
