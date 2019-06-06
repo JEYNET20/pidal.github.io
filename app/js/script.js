@@ -1331,3 +1331,31 @@
 	});
 
 })();
+
+
+
+// кабинет баланс менюшка переключатель
+(function(){
+
+	const withdrawalFundsBtn = document.querySelector('.cabinet .withdrawal'),
+				withdrawalFunds = document.querySelector('.cabinet .withdrawal-funds'),
+				balansHistory = document.querySelector('.cabinet .balance-history'),
+				balansHistoryBtn = document.querySelector('.cabinet .balance-history-btn');
+
+
+	balansHistoryBtn.onclick = function(e){
+		e.preventDefault();
+		balansHistory.classList.remove('d-none');
+		withdrawalFunds.classList.add('d-none');
+	}
+
+	withdrawalFundsBtn.onclick = function(e){
+		e.preventDefault();
+		console.log(this);
+		balansHistory.classList.add('d-none');
+		withdrawalFunds.classList.remove('d-none');		
+	}
+
+
+
+})();
