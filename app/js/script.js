@@ -1336,26 +1336,36 @@
 
 // кабинет баланс менюшка переключатель
 (function(){
-
-	const withdrawalFundsBtn = document.querySelector('.cabinet .withdrawal'),
-				withdrawalFunds = document.querySelector('.cabinet .withdrawal-funds'),
-				balansHistory = document.querySelector('.cabinet .balance-history'),
-				balansHistoryBtn = document.querySelector('.cabinet .balance-history-btn');
-
-
-	balansHistoryBtn.onclick = function(e){
-		e.preventDefault();
-		balansHistory.classList.remove('d-none');
-		withdrawalFunds.classList.add('d-none');
-	}
-
-	withdrawalFundsBtn.onclick = function(e){
-		e.preventDefault();
-		console.log(this);
-		balansHistory.classList.add('d-none');
-		withdrawalFunds.classList.remove('d-none');		
-	}
+	const balansBtn = document.querySelector('.balance-history-btn'),
+				witdhwalBtn = document.querySelector('.form-selected .withdrawal'),
+				balansBody = document.querySelector('.cabinet .balance-history'),
+				witdhwalBody = document.querySelector('.cabinet .withdrawal-funds');
 
 
+	function test(e) {
+		let balansParent = this.parentNode;
+		balansParent.classList.add('active');
+
+		let witdhwalParent = witdhwalBtn.parentNode;
+		witdhwalParent.classList.remove('active');
+
+		balansBody.classList.remove('d-none');
+		witdhwalBody.classList.add('d-none');
+
+	};
+
+	function test2(e){
+		let witdhwalParent = this.parentNode;
+		witdhwalParent.classList.add('active');
+
+		let balansParent = balansBtn.parentNode;
+		balansParent.classList.remove('active');
+
+		balansBody.classList.add('d-none');
+		witdhwalBody.classList.remove('d-none');
+	};
+
+	balansBtn.addEventListener('click', test);
+	witdhwalBtn.addEventListener('click', test2);
 
 })();

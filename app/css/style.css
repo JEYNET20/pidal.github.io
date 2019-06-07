@@ -6854,8 +6854,7 @@ input[type="password"]:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(44, 44, 44, 0.2); }
+  padding-bottom: 20px; }
   .cabinet .menu ul {
     display: flex;
     list-style: none;
@@ -6897,53 +6896,55 @@ input[type="password"]:focus {
 .cabinet .balance-history {
   padding: 0;
   box-shadow: unset;
-  margin-bottom: 0; }
-  .cabinet .balance-history .body {
-    width: 900px;
-    margin-top: 22px;
-    margin-bottom: 64px; }
-    .cabinet .balance-history .body .title {
-      margin-bottom: 37px; }
-      .cabinet .balance-history .body .title li {
-        opacity: 0.6;
-        color: #2c2c2c;
-        font-family: "Open Sans";
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 0.14px; }
-    .cabinet .balance-history .body .item {
+  margin-bottom: 0;
+  border-top: 1px solid rgba(44, 44, 44, 0.2); }
+
+.cabinet .cabinet-balans-table {
+  width: 900px;
+  margin-top: 22px;
+  margin-bottom: 64px; }
+  .cabinet .cabinet-balans-table .title {
+    margin-bottom: 37px; }
+    .cabinet .cabinet-balans-table .title li {
+      opacity: 0.6;
       color: #2c2c2c;
       font-family: "Open Sans";
       font-size: 14px;
       font-weight: 400;
-      line-height: 14px;
-      letter-spacing: 0.14px;
-      padding-bottom: 16px;
-      padding-top: 16px;
-      border-bottom: 1px solid rgba(44, 44, 44, 0.2); }
-    .cabinet .balance-history .body ul {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      letter-spacing: 0.14px; }
+  .cabinet .cabinet-balans-table .item {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.14px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-bottom: 1px solid rgba(44, 44, 44, 0.2); }
+  .cabinet .cabinet-balans-table ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between; }
+    .cabinet .cabinet-balans-table ul li:nth-child(1) {
+      width: 59px; }
+    .cabinet .cabinet-balans-table ul li:nth-child(2) {
+      width: 116px; }
+    .cabinet .cabinet-balans-table ul li:nth-child(3) {
+      width: 120px; }
+    .cabinet .cabinet-balans-table ul li:nth-child(4) {
+      width: 110px;
       display: flex;
-      justify-content: space-between; }
-      .cabinet .balance-history .body ul li:nth-child(1) {
-        width: 59px; }
-      .cabinet .balance-history .body ul li:nth-child(2) {
-        width: 116px; }
-      .cabinet .balance-history .body ul li:nth-child(3) {
-        width: 120px; }
-      .cabinet .balance-history .body ul li:nth-child(4) {
-        width: 110px;
-        display: flex;
-        align-items: center; }
-        .cabinet .balance-history .body ul li:nth-child(4) i {
-          margin-right: 6px; }
-      .cabinet .balance-history .body ul li:nth-child(5) {
-        width: 54px; }
-      .cabinet .balance-history .body ul li:nth-child(6) {
-        width: 220px; }
+      align-items: center; }
+      .cabinet .cabinet-balans-table ul li:nth-child(4) i {
+        margin-right: 6px; }
+    .cabinet .cabinet-balans-table ul li:nth-child(5) {
+      width: 54px; }
+    .cabinet .cabinet-balans-table ul li:nth-child(6) {
+      width: 220px; }
 
 .cabinet .history-clean {
   display: flex;
@@ -6963,6 +6964,103 @@ input[type="password"]:focus {
     margin-bottom: 64px; }
   .cabinet .history-clean .pre-footer-icons {
     width: 100%; }
+
+.cabinet .withdrawal-funds {
+  width: 100%; }
+  .cabinet .withdrawal-funds .first-text {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.12px;
+    margin-bottom: 21px;
+    margin-top: 0; }
+  .cabinet .withdrawal-funds .hr {
+    margin-top: 0;
+    margin-bottom: 25px; }
+  .cabinet .withdrawal-funds .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 32px; }
+    .cabinet .withdrawal-funds .navigation .red-icon {
+      position: relative;
+      box-sizing: border-box;
+      padding-left: 8px;
+      font-weight: 600; }
+      .cabinet .withdrawal-funds .navigation .red-icon::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        content: '*';
+        width: 8px;
+        height: 8px;
+        color: #ff4545;
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.16px; }
+    .cabinet .withdrawal-funds .navigation .form-selected {
+      width: 282px;
+      margin-right: 24px; }
+      .cabinet .withdrawal-funds .navigation .form-selected .castom-select-wrapper {
+        margin-bottom: 0;
+        box-sizing: border-box;
+        padding-left: 12px;
+        font-size: 16px; }
+        .cabinet .withdrawal-funds .navigation .form-selected .castom-select-wrapper span {
+          margin-right: 0; }
+      .cabinet .withdrawal-funds .navigation .form-selected p {
+        margin-top: 0;
+        margin-bottom: 8px; }
+    .cabinet .withdrawal-funds .navigation .last-text {
+      margin-top: 10px;
+      margin-bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px; }
+      .cabinet .withdrawal-funds .navigation .last-text i {
+        margin-right: 6px; }
+    .cabinet .withdrawal-funds .navigation .input-wrapper {
+      width: 282px;
+      margin-right: 24px; }
+      .cabinet .withdrawal-funds .navigation .input-wrapper input {
+        margin-bottom: 0;
+        border-radius: 6px;
+        border: 1px solid #343434; }
+      .cabinet .withdrawal-funds .navigation .input-wrapper p {
+        margin-top: 0;
+        margin-bottom: 8px; }
+    .cabinet .withdrawal-funds .navigation .btn-wrapper {
+      width: 282px;
+      flex-wrap: wrap;
+      align-self: flex-end; }
+    .cabinet .withdrawal-funds .navigation .btn {
+      width: 282px;
+      position: relative;
+      background-color: #ff4545; }
+      .cabinet .withdrawal-funds .navigation .btn::after {
+        width: 90%;
+        background-color: #ff4545; }
+  .cabinet .withdrawal-funds__body {
+    width: 588px; }
+    .cabinet .withdrawal-funds__body h3 {
+      color: #2c2c2c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0.16px;
+      margin-bottom: 20px; }
+    .cabinet .withdrawal-funds__body .cabinet-balans-table {
+      width: 100%; }
 
 .footer {
   min-height: 157px;
