@@ -26,6 +26,12 @@ i {
 .color-blue {
   color: #006c79; }
 
+.color-green {
+  color: #52ac62; }
+
+.color-red {
+  color: #ff4545; }
+
 .baner {
   width: 100%;
   height: 200px;
@@ -6769,7 +6775,9 @@ input[type="password"]:focus {
   color: #2c2c2c;
   font-family: "Open Sans";
   font-size: 24px;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: 110px; }
   .cabinet .your-account span {
     margin-top: 7px;
     display: flex;
@@ -6791,14 +6799,18 @@ input[type="password"]:focus {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(44, 44, 44, 0.2);
-  margin-bottom: 17px; }
+  margin-bottom: 17px;
+  box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px; }
   .cabinet .cabinet-navigation li {
     height: 100%;
     box-sizing: border-box;
     padding-left: 21px;
     padding-right: 24px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(44, 44, 44, 0.3); }
     .cabinet .cabinet-navigation li a {
       color: #2c2c2c;
       font-family: "Open Sans";
@@ -6807,7 +6819,7 @@ input[type="password"]:focus {
       letter-spacing: 0.16px;
       text-decoration: none; }
   .cabinet .cabinet-navigation .active {
-    background-color: grey; }
+    box-shadow: unset; }
   .cabinet .cabinet-navigation li:nth-child(1) {
     border-radius: 6px 0 0; }
   .cabinet .cabinet-navigation li:last-child {
@@ -7060,7 +7072,101 @@ input[type="password"]:focus {
       letter-spacing: 0.16px;
       margin-bottom: 20px; }
     .cabinet .withdrawal-funds__body .cabinet-balans-table {
-      width: 100%; }
+      width: 100%;
+      margin-top: 0; }
+      .cabinet .withdrawal-funds__body .cabinet-balans-table .title {
+        padding-bottom: 20px;
+        margin-bottom: 0;
+        border-bottom: 1px solid rgba(44, 44, 44, 0.2); }
+      .cabinet .withdrawal-funds__body .cabinet-balans-table ul li:nth-child(1) {
+        width: 20px; }
+      .cabinet .withdrawal-funds__body .cabinet-balans-table ul li:nth-child(2) {
+        width: 120px; }
+      .cabinet .withdrawal-funds__body .cabinet-balans-table ul li:nth-child(3) {
+        width: 120px; }
+      .cabinet .withdrawal-funds__body .cabinet-balans-table ul li:nth-child(4) {
+        width: 50px; }
+      .cabinet .withdrawal-funds__body .cabinet-balans-table ul li:nth-child(5) {
+        width: 100px; }
+
+.str-settings .content__menu {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .str-settings .content__menu .item {
+    width: 100%; }
+    .str-settings .content__menu .item .title {
+      cursor: pointer;
+      height: 64px;
+      box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      padding-left: 26px;
+      padding-right: 12px;
+      margin-bottom: 12px; }
+      .str-settings .content__menu .item .title p {
+        color: #2c2c2c;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.18px;
+        margin: 0; }
+      .str-settings .content__menu .item .title i {
+        width: 16px;
+        height: 9px;
+        transition: all 300ms ease; }
+    .str-settings .content__menu .item .title:hover i {
+      background-image: url("../img/icon/arro-down-red.png"); }
+    .str-settings .content__menu .item .title--active i {
+      transform: rotate(180deg);
+      background-image: url("../img/icon/arro-down-red.png");
+      transition: all 300ms ease; }
+
+.str-settings .content .btn--save {
+  width: 136px;
+  background-color: #67c5ee;
+  position: relative; }
+  .str-settings .content .btn--save::after {
+    width: 90%;
+    background-color: #67c5ee; }
+
+.str-settings .content .body {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  max-height: 0;
+  margin-bottom: 0px;
+  transition: all 300ms ease;
+  box-sizing: border-box;
+  padding-left: 24px; }
+  .str-settings .content .body .text-for-input {
+    display: flex;
+    align-items: center;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.12px;
+    margin-bottom: 9px; }
+    .str-settings .content .body .text-for-input i {
+      margin-right: 7px; }
+  .str-settings .content .body input {
+    width: 282px;
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid rgba(52, 52, 52, 0.3); }
+
+.str-settings .content .body--active {
+  max-height: 250px;
+  margin-bottom: 36px;
+  transition: all 300ms ease; }
 
 .footer {
   min-height: 157px;

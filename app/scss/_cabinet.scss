@@ -56,6 +56,8 @@
 		font-family: "Open Sans";
 		font-size: 24px;
 		font-weight: 400;
+    margin-left: auto;
+    margin-right: 110px;		
 		span{
 			margin-top: 7px;
 			display: flex;
@@ -80,7 +82,10 @@
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid rgba(44, 44, 44, .2);
-		margin-bottom: 17px;	
+		margin-bottom: 17px;
+    box-shadow: 0 0 5px rgba(44,44,44,.3);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 		li{
 			height: 100%;
 			box-sizing: border-box;
@@ -88,6 +93,7 @@
 			padding-right: 24px;
 			display: flex;
 			align-items: center;
+			box-shadow: 0px 0px 10px rgba(44,44,44,.3);
 			a{
 				color: #2c2c2c;
 				font-family: "Open Sans";
@@ -99,7 +105,8 @@
 		}
 
 		.active{
-			background-color: grey;
+			// background-color: grey;
+			box-shadow: unset;
 		}
 
 		li:nth-child(1){
@@ -414,11 +421,124 @@
 			}
 			.cabinet-balans-table{
 				width: 100%;
+				margin-top: 0;
+				.title{
+					padding-bottom: 20px;
+					margin-bottom: 0;
+					border-bottom: 1px solid rgba(44,44,44,.2);
+				}
+				ul{
+					li:nth-child(1){ width: 20px; }
+					li:nth-child(2){ width: 120px; }
+					li:nth-child(3){ width: 120px; }
+					li:nth-child(4){ width: 50px; }
+					li:nth-child(5){ width: 100px; }
+				}
 			}
 		}
-
 	}
 
 }
+	
+.str-settings{
+	.content{
+		&__menu{
+			width: 100%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			.item{
+				width: 100%;
 
-//     border-bottom: 1px solid rgba(44,44,44,.2);
+				.title{
+					cursor: pointer;
+					height: 64px;
+					box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+					border: 1px solid #ffffff;
+					background-color: #ffffff;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;		
+					box-sizing: border-box;
+					padding-left: 26px;
+					padding-right: 12px;
+					margin-bottom: 12px;			
+					p{
+						color: #2c2c2c;
+						font-family: "Open Sans";
+						font-size: 18px;
+						font-weight: 400;
+						line-height: 18px;
+						letter-spacing: 0.18px;
+						margin: 0;
+					}
+					i{
+						width: 16px;
+						height: 9px;
+						transition: all 300ms ease;
+					}
+				}
+
+				.title:hover{
+					i{
+						background-image: url('../img/icon/arro-down-red.png');
+					}
+				}
+
+				.title--active{
+					i{
+						transform: rotate(180deg);
+						background-image: url('../img/icon/arro-down-red.png');
+						transition: all 300ms ease;
+					}
+				}
+			}
+		}
+
+		.btn--save{
+			width: 136px;
+			background-color: #67c5ee;
+			position: relative;
+			&::after{
+				width: 90%;
+				background-color: #67c5ee;
+			}
+		}
+
+		.body{
+			width: 100%;
+			height: 150px;
+			// background-color: red;
+			overflow: hidden;
+			max-height: 0;
+			margin-bottom: 0px;
+			transition: all 300ms ease;
+			box-sizing: border-box;
+			padding-left: 24px;
+			.text-for-input{
+				display: flex;
+				align-items: center;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 14px;
+				letter-spacing: 0.12px;
+				i{ margin-right: 7px; }
+				margin-bottom: 9px;
+			}
+			input{
+				width: 282px;
+				height: 44px;
+				border-radius: 6px;
+				border: 1px solid rgba(52, 52, 52, .3);
+			}
+		}
+		
+		.body--active{
+			max-height: 250px;
+			margin-bottom: 36px;
+			transition: all 300ms ease;
+		}
+	}
+}

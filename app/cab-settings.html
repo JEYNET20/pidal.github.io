@@ -192,13 +192,13 @@
   </header>
   <!-- // Шапка -->
 
-  <main class="cabinet">
+  <main class="cabinet str-settings">
     <div class="wrapper">
       <div class="first">
         <p>
-          <b>Настройки бизнес-страницы</b>
-          <span>Здесь вы найдете информацию <br>
-          про купленные пакеты</span>
+          <b>Настройки</b>
+          <span>Здесь вы можете менять <br>
+          настройки учётной записи</span>
         </p>
         <div class="your-account">
           1000 ₸
@@ -213,307 +213,58 @@
           </button>
         </div>
       </div>
-
       <ul class="cabinet-navigation">
         <li><a href="#">Объявления</a></li>
         <li><a href="#">Сообщения</a></li>
         <li><a href="#">Уведомления</a></li>
-        <li><a href="cab-settings.html">Настройки</a></li>
-        <li class="active"><a href="cab-balans.html">История платежей</a></li>
+        <li class="active"><a href="cab-settings.html">Настройки</a></li>
+        <li><a href="cab-balans.html">История платежей</a></li>
         <li><a href="#">Настройки бизнес-страницы</a></li>
       </ul>
 
-      <div class="form-selected">
-        <div class="menu">
-          <ul>
-            <li class="active"><button class="balance-history-btn">История изменения баланса</button></li>
-            <li><button class="withdrawal">Вывод средств</button></li>
-          </ul>
-          
-          <div class="checkbox-body">
-            <p class="checkbox-wrapper">
-              <input type="checkbox" id="checkbox-1">
-              <label for="checkbox-1">Приход</label>
-            </p>
-            <p class="checkbox-wrapper">
-              <input type="checkbox" id="checkbox-2">
-              <label for="checkbox-2">Расход</label>
-            </p>
-          </div>
-          
-          <div class="castom-select-wrapper">
-            <i class="d-none"></i>
-            <span>Архив (2019)</span>
-            <i class="more icon-arrow-down"></i>
-            <div class="list d-none">
-              <span class="list__item">1</span>
-              <span class="list__item">2</span>
-              <span class="list__item">3</span>
-              <span class="list__item">4</span>
-              <span class="list__item">5</span>
-              <span class="list__item">6</span>
+      <div class="content">
+        <ul class="content__menu">
+          <li class="item">
+            <div class="title">
+              <p>Изменить контактные данные</p>
+              <i class="icon-arrow-down"></i>
             </div>
-          </div>
-        </div>
+            <div class="body"></div>
+          </li>
+
+
+
+
+
+
+          <li class="item change-number">
+            <div class="title">
+              <p>Изменить номер телефона</p>
+              <i class="icon-arrow-down"></i>
+            </div>
+            <div class="body">
+              <span class="text-for-input"><i class="icon-warrning-black"></i>Новый номер телефона</span>
+              <input type="text">
+              <button class="btn btn--save">Сохранить</button>
+            </div>
+          </li>
+
+          <!-- // изменения пароля здесь остановился -->
+          <li class="item change-passvord">
+            <div class="title">
+              <p>Поменять пароль</p>
+              <i class="icon-arrow-down"></i>
+            </div>
+            <div class="body">
+              <span class="text-for-input"><i class="icon-warrning-black"></i>Новый номер телефона</span>
+              <input type="text">
+              <button class="btn btn--save">Сохранить</button>
+            </div>
+          </li>
+
+        </ul>
       </div>
 
-      <div class="balance-history form-selected">
-
-        <div class="cabinet-balans-table">
-          <ul class="title">
-            <li>№</li>
-            <li>Дата</li>
-            <li>Номер операции</li>
-            <li>Приход/Расход</li>
-            <li>Остаток</li>
-            <li>Комментарий</li>
-          </ul>
-          <ul class="item">
-            <li>16</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>15</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>14</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>13</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-down-red"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>12</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>11</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>10</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>9</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>8</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-down-red"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>7</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>6</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>5</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>4</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>3</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-down-red"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>2</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>
-          <ul class="item">
-            <li>1</li>
-            <li>2019-05-12 19:14</li>
-            <li>3849583495834</li>
-            <li><i class="icon-arrow-up-green"></i>150 ₸ </li>
-            <li>130 ₸ </li>
-            <li>Пополнение личного счета</li>
-          </ul>          
-        </div>
-      </div>
-
-      <div class="withdrawal-funds d-none">
-        <p class="first-text">Срок вывода до 5 дней</p>
-        <div class="hr"></div>
-
-        <div class="navigation">
-          <div class="form-selected">
-            <p class="red-icon">Платежная система </p>
-            <div class="castom-select-wrapper">
-              <i class="d-none"></i>
-              <span>Выберете вариант вывода</span>
-              <i class="more icon-arrow-down"></i>
-              <div class="list d-none">
-                <span class="list__item">1</span>
-                <span class="list__item">2</span>
-                <span class="list__item">3</span>
-                <span class="list__item">4</span>
-                <span class="list__item">5</span>
-                <span class="list__item">6</span>
-              </div>
-            </div>          
-          </div>
-          <div class="input-wrapper">
-            <p class="red-icon">Номер кошелька/счета</p>
-            <input type="text" placeholder="Номер кошелька/счета">
-          </div>
-          <div class="input-wrapper">
-            <p class="red-icon">Сумма запроса</p>
-            <input type="text" placeholder="0">
-            <span class="last-text">
-              <i class="icon-warrning-black"></i>
-              Минимальная сумма запроса:&nbsp;<span>500</span>&nbsp;₸
-            </span>
-          </div>
-          <div class="btn-wrapper">
-            <button class="btn">Отправить заявку на вывод</button>
-            <span class="last-text">
-              <i class="icon-warrning-black"></i>
-              Комиссия запроса на вывод:&nbsp;<span>10</span>&nbsp;%
-            </span>
-          </div>
-        </div>
-
-        <div class="hr" style="margin-bottom: 21px;"></div>
-
-        <div class="withdrawal-funds__body">
-          <h3>История запросов на вывод средств</h3>
-          <div class="hr"></div>
-
-          <div class="cabinet-balans-table">
-            <ul class="title">
-              <li>№</li>
-              <li>Дата</li>
-              <li>Номер перевода</li>
-              <li>Сумма</li>
-              <li>Статус</li>
-            </ul>
-            <ul class="item">
-              <li>1</li>
-              <li>2019-05-12 19:14</li>
-              <li>3849583495834</li>
-              <li>150 ₸</li>
-              <li class="color-green">Выполнено</li>
-            </ul>
-            <ul class="item">
-              <li>2</li>
-              <li>2019-05-12 19:14</li>
-              <li>3849583495834</li>
-              <li>150 ₸</li>
-              <li class="">В ожыданнии</li>
-            </ul>
-            <ul class="item">
-              <li>3</li>
-              <li>2019-05-12 19:14</li>
-              <li>3849583495834</li>
-              <li>150 ₸</li>
-              <li class="color-red">Отмененно</li>
-            </ul>             
-          </div>
-
-        </div>
-      </div>
-
-      <div class="history-clean d-none">
-        <p>История платежей пуста</p>
-        <img src="img/history-clear.png" alt="img" width="326"  height="275">
-        <div class="hr"></div>
-        <div class="pre-footer-icons">
-          <ul>
-            <li>
-              <i class="icon-1"></i>
-              <span>
-                Педаль.rz — новый сайт для
-                продажи и покупки машин 
-                в Казахстане
-              </span>
-            </li>
-            <li>
-              <i class="icon-2"></i>
-              <span>
-                Удобный поиск легковых авто, грузового и 
-                коммерческого транспорта, мототехники, 
-                спецтехники и многих других видов транспорта
-              </span>
-            </li>
-            <li>
-              <i class="icon-3"></i>
-              <span>
-                Размещайте объявления о 
-                продаже легковых авто, 
-                спецтехники и запчастей
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   </main>
 

@@ -1365,7 +1365,35 @@
 		witdhwalBody.classList.remove('d-none');
 	};
 
-	balansBtn.addEventListener('click', test);
-	witdhwalBtn.addEventListener('click', test2);
+	if(balansBtn) balansBtn.addEventListener('click', test);
+	if(witdhwalBtn) witdhwalBtn.addEventListener('click', test2);
+
+})();
+
+// кабинет настройки акардион для меню
+(function(){
+	const item = document.querySelectorAll('.str-settings .title');
+
+	function onItemShowClick(e) {
+		let x = this.nextElementSibling;
+		this.classList.add('title--active');
+		x.classList.add('body--active');
+
+		this.removeEventListener('click', onItemShowClick);
+		this.addEventListener('click', onItemHiddenClick);
+	};
+
+	function onItemHiddenClick(e) {
+		let x = this.nextElementSibling;
+		x.classList.remove('body--active');
+		this.classList.remove('title--active');
+
+		this.addEventListener('click', onItemShowClick);
+		this.removeEventListener('click', onItemHiddenClick);
+	};
+
+	item.forEach(function(element) {
+		element.addEventListener('click', onItemShowClick);
+	});
 
 })();
