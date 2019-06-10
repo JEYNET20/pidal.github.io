@@ -202,3 +202,18 @@
 		cursor: pointer;
 	}
 }
+
+.popup-sig-in{
+	button{
+		position: relative;
+		&::after{
+			background-color: #ff4545;
+		}		
+	}
+	a{
+		position: relative;
+		&::after{
+			background-color: #2c2c2c;
+		}
+	}
+}

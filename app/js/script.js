@@ -1379,6 +1379,10 @@
 		this.classList.add('title--active');
 		x.classList.add('body--active');
 
+		if(this.classList.contains('title--large')){
+			x.classList.add('body--active--large');
+		}
+
 		this.removeEventListener('click', onItemShowClick);
 		this.addEventListener('click', onItemHiddenClick);
 	};
@@ -1388,6 +1392,10 @@
 		x.classList.remove('body--active');
 		this.classList.remove('title--active');
 
+		if(this.classList.contains('title--large')){
+			x.classList.remove('body--active--large');
+		}
+
 		this.addEventListener('click', onItemShowClick);
 		this.removeEventListener('click', onItemHiddenClick);
 	};
@@ -1395,5 +1403,38 @@
 	item.forEach(function(element) {
 		element.addEventListener('click', onItemShowClick);
 	});
+
+})();
+
+// кабинет настройки изменения контактных данных кнопка добавить еще / скрыть
+(function(){
+	const btn = document.querySelector('.str-settings .change-soc .btn-wrapper button'),
+				body = document.querySelector('.str-settings .change-soc__body');
+
+	function onBtnShowClick(e){
+		e.preventDefault();
+
+		this.firstElementChild.textContent = 'Свернуть';
+		this.querySelector('.icon-red-arrow').classList.add('icon-active');
+
+		body.classList.remove('d-none');
+
+		this.removeEventListener('click', onBtnShowClick);
+		this.addEventListener('click', onBtnHiddenClick);
+	};
+
+	function onBtnHiddenClick(e){
+		e.preventDefault();
+
+		this.firstElementChild.textContent = 'Добавить ещё';
+		this.querySelector('.icon-red-arrow').classList.remove('icon-active');
+
+		body.classList.add('d-none');
+
+		this.addEventListener('click', onBtnShowClick);
+		this.removeEventListener('click', onBtnHiddenClick);		
+	}
+
+	btn.addEventListener('click', onBtnShowClick);
 
 })();
