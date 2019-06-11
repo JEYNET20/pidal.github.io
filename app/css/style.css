@@ -7235,7 +7235,7 @@ input[type="password"]:focus {
   transition: all 300ms ease; }
 
 .str-settings .content .body--active--large {
-  min-height: 1000px; }
+  max-height: 1400px; }
 
 .str-settings .change-avatar {
   display: flex;
@@ -7343,6 +7343,170 @@ input[type="password"]:focus {
     .str-settings .change-soc li span {
       margin-right: 6px; }
 
+.str-favourite .cabinet-navigation {
+  width: 672px;
+  margin-bottom: 32px; }
+  .str-favourite .cabinet-navigation li {
+    width: 336px; }
+
+.str-favourite .last-block-busines .resviews-profile .right {
+  background-color: #FFf; }
+
+.str-favourite .found .sort-by .form-selected {
+  width: 100%;
+  margin-bottom: 50px; }
+
+.str-favourite .null b {
+  display: block;
+  color: #2c2c2c;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.18px;
+  margin-bottom: 15px;
+  text-align: center; }
+
+.str-favourite .null .null__text {
+  display: block;
+  color: #2c2c2c;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.16px;
+  margin-bottom: 32px;
+  text-align: center; }
+  .str-favourite .null .null__text a {
+    color: #306c78;
+    text-decoration: none; }
+
+.str-favourite .null .img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.str-favourite .featured .sort-by__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; }
+  .str-favourite .featured .sort-by__menu .item {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.16px;
+    margin-right: 23px;
+    cursor: pointer;
+    position: relative; }
+    .str-favourite .featured .sort-by__menu .item::after {
+      opacity: 0;
+      transition: opacity 250ms ease;
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ff4545;
+      border-radius: 6px; }
+  .str-favourite .featured .sort-by__menu .item--active::after {
+    opacity: 1;
+    transition: opacity 250ms ease; }
+
+.str-favourite .featured .list-wrapper .title-wrapper button, .str-favourite .featured .gallery-wrapper .title-wrapper button {
+  padding: 0;
+  text-align: left;
+  width: 210px;
+  height: 24px;
+  color: #2c2c2c;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.16px;
+  display: flex;
+  align-items: center;
+  background-color: unset;
+  outline: none;
+  border: none; }
+  .str-favourite .featured .list-wrapper .title-wrapper button span, .str-favourite .featured .gallery-wrapper .title-wrapper button span {
+    margin-left: 6px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(52, 52, 52, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.str-favourite .featured .item--remove {
+  transition: all 300ms ease;
+  opacity: 0; }
+
+.str-favourite .featured .pagination {
+  height: 44px;
+  margin-top: 48px;
+  margin-bottom: 64px; }
+  .str-favourite .featured .pagination ul li {
+    width: unset;
+    height: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    background-color: unset;
+    margin-bottom: unset;
+    display: flex; }
+  .str-favourite .featured .pagination ul li a {
+    color: #306c78; }
+  .str-favourite .featured .pagination .str-active {
+    color: #2c2c2c; }
+
+.str-favourite .selecteds-search .last-block-busines .resviews-profile .plus {
+  color: #52ac62; }
+
+.str-favourite .selecteds-search .last-block-busines .item .left {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.str-favourite .selecteds-search .last-block-busines .item img {
+  width: unset;
+  height: unset; }
+
+.str-favourite .selecteds-search .last-block-busines .resviews-profile .other-param {
+  position: static;
+  width: unset;
+  margin-top: 19px; }
+  .str-favourite .selecteds-search .last-block-busines .resviews-profile .other-param span {
+    justify-content: flex-end; }
+
+.str-favourite .selecteds-search .filtrs {
+  display: flex;
+  height: auto;
+  margin-top: 50px; }
+  .str-favourite .selecteds-search .filtrs__item {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 11px; }
+    .str-favourite .selecteds-search .filtrs__item b {
+      margin-right: 6px;
+      width: 22px;
+      height: 22px;
+      font-weight: 600;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(52, 52, 52, 0.2); }
+
 .popup-save-settings {
   position: fixed;
   left: 50%;
@@ -7361,6 +7525,31 @@ input[type="password"]:focus {
     margin-right: auto;
     margin-left: auto; }
   .popup-save-settings span {
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.12px; }
+
+.popup-remove-item-favourites {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 228px;
+  height: 128px;
+  box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+  background-color: #ffffff; }
+  .popup-remove-item-favourites .content {
+    text-align: center; }
+  .popup-remove-item-favourites i {
+    margin-top: 36px;
+    margin-bottom: 7px;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto; }
+  .popup-remove-item-favourites span {
     color: #2c2c2c;
     font-family: "Open Sans";
     font-size: 12px;

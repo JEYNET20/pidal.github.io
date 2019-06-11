@@ -995,6 +995,11 @@
 		star.classList.remove('icon-star--red');
 		star.classList.add('icon-star--red-full');
 
+		if(this.classList.contains('featured__add-to-favotite')){
+			this.removeEventListener('click', onBtnAddClick);
+			return false;
+		}
+
 		this.removeEventListener('click', onBtnAddClick);
 		this.addEventListener('click', onBtnRemoveClick);
 	}
@@ -1012,7 +1017,7 @@
 
 	}
 
-	btn.forEach(function(value){
+	if(btn) btn.forEach(function(value){
 		value.addEventListener('click', onBtnAddClick);
 	})
 
@@ -1333,6 +1338,7 @@
 })();
 
 
+// кабинет начало
 
 // кабинет баланс менюшка переключатель
 (function(){
@@ -1403,7 +1409,6 @@
 	item.forEach(function(element) {
 		element.addEventListener('click', onItemShowClick);
 	});
-
 })();
 
 // кабинет настройки изменения контактных данных кнопка добавить еще / скрыть
@@ -1435,6 +1440,54 @@
 		this.removeEventListener('click', onBtnHiddenClick);		
 	}
 
-	btn.addEventListener('click', onBtnShowClick);
+	if(btn) btn.addEventListener('click', onBtnShowClick);
+})();
 
+// кабинет избраные кнопка убрать из избраных 
+(function(){
+	const btn = document.querySelectorAll('.featured__add-to-favotite'),
+				btnGallery = document.querySelectorAll('.featured__add-to-favotite--gallery'),
+				titles = document.querySelectorAll('.count-remove-items span');
+
+	function onBtnClick(e) {
+		e.preventDefault();
+		let x = this;
+
+		this.parentNode.parentNode.classList.add('item--remove');
+
+		setTimeout(function(){
+			x.parentNode.parentNode.classList.add('d-none');
+
+			for(let i = 0; i < titles.length; i++){
+				titles[i].textContent = +titles[i].textContent + 1;
+			}
+
+		}, 320);
+	};
+
+	function onBtnGalleryClick(e) {
+		e.preventDefault();
+		let x = this;
+		
+		this.parentNode.parentNode.classList.add('item--remove');
+
+		setTimeout(function(){
+			x.parentNode.parentNode.classList.add('d-none');
+
+			for(let i = 0; i < titles.length; i++){
+				titles[i].textContent = +titles[i].textContent + 1;
+			}
+
+		}, 320);
+	};
+
+	btn.forEach(function(element) {
+		element.addEventListener('click', onBtnClick);
+	});
+
+	btnGallery.forEach(function(element) {
+		element.addEventListener('click', onBtnGalleryClick);
+	});
+
+// featured__add-to-favotite--gallery
 })();
