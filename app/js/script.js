@@ -1491,3 +1491,20 @@
 
 // featured__add-to-favotite--gallery
 })();
+
+// кабинет уведомления удалить сообщение
+(function(){
+	const btnTrash = document.querySelector('.cabinet .btn-trash'),
+				popupTrash = document.querySelector('.cab-popup-delete-message'),
+				popupBg = document.querySelector('.popup-bg');
+
+
+	function onBtnTrashClick(e){
+		e.preventDefault();
+		console.log(this);
+		popupTrash.classList.remove('d-none');
+		popupBg.classList.remove('d-none');
+	};
+
+	if(btnTrash) btnTrash.addEventListener('click', onBtnTrashClick);
+})();

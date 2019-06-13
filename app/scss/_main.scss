@@ -455,3 +455,22 @@ input[type="password"]:focus{
     opacity: 0;
   }
 }
+
+
+html{
+	::-webkit-scrollbar{ /* 1 - скроллбар */ 
+		
+	}
+
+::-webkit-scrollbar-button       { /* 2 - кнопка */ }
+::-webkit-scrollbar-track        { display: none;/* 3 - трек */ }
+::-webkit-scrollbar-track-piece  { 
+display: none;/* 4 - видимая часть трека */ }
+
+	::-webkit-scrollbar-thumb{ /* 5 - ползунок */
+		background: red;
+	}
+
+::-webkit-scrollbar-corner       { /* 6 - уголок */ }
+::-webkit-resizer                { /* 7 - изменение размеров */ }
+}

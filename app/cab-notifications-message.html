@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PEDALKZ - "О нас"</title>
+  <title>PEDALKZ - "Уведомления"</title>
 
   <!-- стили -->
   <link rel="stylesheet" href="css/style.min.css">
@@ -187,18 +187,17 @@
           </button>
         </nav>
       </div>
-
     </div>
   </header>
   <!-- // Шапка -->
 
-  <main class="cabinet str-settings">
+  <main class="cabinet str-notifications">
     <div class="wrapper">
       <div class="first">
         <p>
-          <b>Настройки</b>
-          <span>Здесь вы можете менять <br>
-          настройки учётной записи</span>
+          <b>Уведомления</b>
+          <span>Взаимодействуйте с форумом, сайтом <br>
+          и получайте уведомления</span>
         </p>
         <div class="your-account">
           1000 ₸
@@ -213,191 +212,108 @@
           </button>
         </div>
       </div>
-
+      
       <ul class="cabinet-navigation">
         <li><a href="#">Объявления</a></li>
-        <li><a href="cab-messages-received.html">Сообщения</a></li>
-        <li><a href="cab-notifications.html">Уведомления</a></li>
-        <li class="active"><a href="cab-settings.html">Настройки</a></li>
+        <li><a href="#">Сообщения</a></li>
+        <li class="active new-red">
+          <i class="icon-red">1</i>
+          <a href="cab-notifications.html">Уведомления</a>
+        </li>
+        <li><a href="cab-settings.html">Настройки</a></li>
         <li><a href="cab-balans.html">История платежей</a></li>
         <li><a href="#">Настройки бизнес-страницы</a></li>
       </ul>
 
-      <div class="content">
-        <ul class="content__menu">
-
-          <li class="item change-date">
-            <div class="title title--large">
-              <p>Изменить контактные данные</p>
-              <i class="icon-arrow-down"></i>
-            </div>
-            <div class="body form-selected">
-
-
-              <div class="change-soc">
-                <ul>
-                  <li>
-                    <img src="img/icon/user_icon.png" alt="user_icon">
-                    <span>anir1987</span>
-                    <i class="icon-red-close"></i>
-                    <i class="border-right"></i>
-                  </li>
-
-                  <li class="btn-wrapper">
-                    <button>
-                      <span>Добавить ещё</span>
-                      <i class="icon-red-arrow"></i>
-                    </button>
-                  </li>
-
-                  <div class="change-soc__body d-none">
-                    <li>
-                      <img src="img/icon/reg-vk.png" alt="vk">
-                      <span>Амир Исламов</span>
-                      <i class="icon-red-close"></i>
-                    </li>
-                    
-                    <li class="null">
-                      <img src="img/icon/reg-vk.png" alt="vk">
-                      <img src="img/icon/reg-ok.png" alt="ok">
-                      <img src="img/icon/reg-fb.png" alt="fb">
-                      <img src="img/icon/reg-gp.png" alt="gp">
-                    </li>
-                    
-                    <li>
-                      <img src="img/icon/reg-ok.png" alt="ok">
-                      <span>Амир Исламов</span>
-                      <i class="icon-red-close"></i>
-                    </li>
-                    
-                    <li>
-                        <img src="img/icon/reg-fb.png" alt="fb">
-                        <span>Амир Исламов</span>
-                        <i class="icon-red-close"></i>
-                    </li>
-                    
-                    <li>
-                      <img src="img/icon/reg-gp.png" alt="gp">
-                      <span>Амир Исламов</span>
-                      <i class="icon-red-close"></i>
-                    </li>
-                  </div>
-
-                </ul>
-              </div>
-              
-              <div class="change-avatar">
-                <div class="hr"></div>
-                <div class="img-wrapper">
-                  <img src="img/icon/user-no-fon-color-black.png" alt="photo">
-                </div>
-                <div class="btn-wrapper">
-                  <button class="">Загрузить аватар</button>
-                  <span>(максимум 2 мб)</span>
-                </div>
-                <div class="hr"></div>
-              </div>
-
-              <span class="text-for-input"><i class="icon-warrning-black"></i>Город</span>
-              <input type="text">
-              <span class="text-for-input"><i class="icon-warrning-black"></i>Ник</span>
-              <input type="text">
-              <span class="text-for-input"><i class="icon-warrning-black"></i>Контактное лицо</span>
-              <input type="text">
-
-              <span class="text-for-input"><i class="icon-warrning-black"></i>Стаж вождения</span>
-
-              <div class="castom-select-wrapper">
-                <i class="d-none"></i>
-                <span>Без опыта вождения</span>
-                <i class="more icon-arrow-down"></i>
-                <div class="list d-none">
-                  <span class="list__item">1</span>
-                  <span class="list__item">2</span>
-                  <span class="list__item">3</span>
-                  <span class="list__item">4</span>
-                  <span class="list__item">5</span>
-                  <span class="list__item">6</span>
-                </div>
-              </div>
-
-              <span class="text-for-input"><i class="icon-warrning-black"></i>День рождения</span>
-              <input type="text" placeholder="00.00.1900">
-
-              <div class="text-wrapper">
-                <textarea>Расскажите о себе</textarea>
-                <span class="count">
-                  <i class="icon-warrning-black"></i>
-                  <span>200</span>&nbsp;знаков осталось
-                </span>                
-              </div>
-
-              <button class="btn btn--save">Сохранить</button>
-            </div>            
-          </li>
-
-          <li class="item change-number">
-            <div class="title">
-              <p>Изменить номер телефона</p>
-              <i class="icon-arrow-down"></i>
-            </div>
-            <div class="body">
-              <span class="text-for-input"><i class="icon-warrning-black"></i>Новый номер телефона</span>
-              <input type="text">
-              <button class="btn btn--save">Сохранить</button>
-            </div>
-          </li>
-
-          <li class="item change-passvord">
-            <div class="title">
-              <p>Поменять пароль</p>
-              <i class="icon-arrow-down"></i>
-            </div>
-            <div class="body">
-              <span class="text-for-input"><i class="icon-warrning-black"></i>Новый пароль</span>
-              <input type="text">
-              <span class="text-for-input"><i class="icon-warrning-black"></i>Потвердить пароль</span>              
-              <input type="text">
-              <button class="btn btn--save">Сохранить</button>
-            </div>
-          </li>
-
-          <li class="item change-mail">
-            <div class="title">
-              <p>Изменить email-адрес</p>
-              <i class="icon-arrow-down"></i>
-            </div>
-            <div class="body">
-              <span class="text-for-input"><i class="icon-warrning-black"></i>Ваш текущий пароль от pedal.kz</span>
-              <input type="text">
-              <span class="text-for-input"><i class="icon-warrning-black"></i>Новый email-адрес</span>              
-              <input type="text">
-              <button class="btn btn--save">Сохранить</button>
-            </div>
-          </li>
-
-          <li class="item change-mail">
-            <div class="title">
-              <p>Уведомления</p>
-              <i class="icon-arrow-down"></i>
-            </div>
-            <div class="body form-selected">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-1">
-                  <label for="checkbox-1">Скидка на товар. Снижение цены на объявление, добавленное в Избранные</label>
-                </p>
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-2">
-                  <label for="checkbox-2">Скидка на товар. Снижение цены на объявление, добавленное в Избранные</label>
-                </p>
-              </div>
-              <button class="btn btn--save">Сохранить</button>
-            </div>
-          </li>          
-        </ul>
+      <div class="form-selected menu">
+        <span>Уведомления хранятся 4 месяца после чего автоматически удаляются.</span>
+        <div class="castom-select-wrapper">
+          <i class="d-none"></i>
+          <span>Все</span>
+          <i class="more icon-arrow-down"></i>
+          <div class="list d-none">
+            <span class="list__item">1</span>
+            <span class="list__item">2</span>
+            <span class="list__item">3</span>
+            <span class="list__item">4</span>
+            <span class="list__item">5</span>
+            <span class="list__item">6</span>
+          </div>
+        </div>
       </div>
 
+      <div class="null d-none">
+        <b>У вас нет уведомлений</b>
+        <div class="img-wrapper">
+          <img src="img/null-notis.png" alt="clear">
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="pre-footer-icons">
+          <ul>
+            <li>
+              <i class="icon-1"></i>
+              <span>
+                Педаль.rz — новый сайт для
+                продажи и покупки машин 
+                в Казахстане
+              </span>
+            </li>
+            <li>
+              <i class="icon-2"></i>
+              <span>
+                Удобный поиск легковых авто, грузового и 
+                коммерческого транспорта, мототехники, 
+                спецтехники и многих других видов транспорта
+              </span>
+            </li>
+            <li>
+              <i class="icon-3"></i>
+              <span>
+                Размещайте объявления о 
+                продаже легковых авто, 
+                спецтехники и запчастей
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="message-content">
+        <p class="located">
+          <i class="icon-left-arrow-blue"></i>
+          <a href="cab-notifications.html">Все уведомления</a>
+        </p>
+        <div class="message-content__block">
+          <h4>Пользователь Амир ответил на ваш комментарий</h4>
+          <div class="name-and-date">
+            <div class="name">
+              <img src="img/ava.png" alt="ava">
+              <span>Амир</span>
+            </div>
+            <span class="date">Сегодня 10:09</span>
+          </div>
+          <p class="body">
+            Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 серподчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW янутые светодиодные фары в BMW 1 серподчеркивают его спортивный
+          </p>
+          <div class="btn-wrapper">
+            <a href="#" class="message-content__btn">
+              <i class="btn-arrow-left-blue"></i>
+              Перейти
+            </a>
+            
+            <a href="#" class="message-content__btn">
+              <i class="icon-cabinet-blue"></i>
+              Ответить
+            </a>
+
+            <button class="btn-trash">
+              <i class="icon-cabinet-trash-grey"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -419,25 +335,13 @@
   <!-- попап окна -->
   <div class="popup-bg d-none"></div>
 
-  <div class="popup-save-settings d-none">
-    <div class="content">
-      <i class="form-succes-blue"></i>
-      <span>Настройки сохранены</span>
-    </div>
-  </div>
-
-  <div class="popup-def popup-sig-in d-none">
+  <div class="popup-def popup-sig-in cab-popup-delete-message d-none">
     <i class="icon-exit-chrest icon-form-exit"></i>
     <h5>
-      Удаления основного<br>
-      аккаунта на pedal.kz
+      Вы хотите удалить уведомления?
     </h5>
-    <p>
-      Вы действительно хотите<br>
-      удалить свой основной аккаунт?
-    </p>
-    <button class="btn">Удалить аккаунт</button>
-    <a href="index.html" class="btn">Отмена</a>
+    <button class="btn">Удалить</button>
+    <a href="cab-notifications-message.html" class="btn">Отмена</a>
     <i class="arrow-down-circle"></i>
   </div>
   <!-- // попап окна -->  
@@ -451,6 +355,12 @@
   <script src="js/script.js"></script>
   <script src="js/swiper.min.js"></script>
   <!-- Initialize Swiper -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/my-scroll.js"></script>
+
   <script>
     var swiper = new Swiper('.swiper-container', {
       pagination: {

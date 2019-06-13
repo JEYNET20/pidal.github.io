@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PEDALKZ - "Уведомления"</title>
+  <title>PEDALKZ - "Сообщения"</title>
 
   <!-- стили -->
   <link rel="stylesheet" href="css/style.min.css">
@@ -191,13 +191,13 @@
   </header>
   <!-- // Шапка -->
 
-  <main class="cabinet str-notifications">
+  <main class="cabinet str-messages">
     <div class="wrapper">
       <div class="first">
         <p>
-          <b>Уведомления</b>
-          <span>Взаимодействуйте с форумом, сайтом <br>
-          и получайте уведомления</span>
+          <b>Сообщения</b>
+          <span>Здесь вы найдёте ответы на свои объявления, <br>
+          а также отосланные вами сообщения</span>
         </p>
         <div class="your-account">
           1000 ₸
@@ -215,8 +215,11 @@
       
       <ul class="cabinet-navigation">
         <li><a href="#">Объявления</a></li>
-        <li><a href="cab-messages-received.html">Сообщения</a></li>
-        <li class="active new-red">
+        <li class="active new-yellow">
+          <i class="icon-yellow">1</i>          
+          <a href="cab-messages-received.html">Сообщения</a>
+        </li>
+        <li class="new-red">
           <i class="icon-red">1</i>
           <a href="cab-notifications.html">Уведомления</a>
         </li>
@@ -225,27 +228,31 @@
         <li><a href="#">Настройки бизнес-страницы</a></li>
       </ul>
 
-      <div class="form-selected menu">
-        <span>Уведомления хранятся 4 месяца после чего автоматически удаляются.</span>
+      <div class="form-selected form-selected menu">
+        <ul>
+          <li class="active"><a href="cab-messages-received.html">Полученные</a></li>
+          <li><a href="#">Отправленные</a></li>
+          <li><a href="#">Архивные</a></li>
+        </ul>
+
         <div class="castom-select-wrapper">
           <i class="d-none"></i>
           <span>Все</span>
           <i class="more icon-arrow-down"></i>
           <div class="list d-none">
-            <span class="list__item">1</span>
-            <span class="list__item">2</span>
-            <span class="list__item">3</span>
-            <span class="list__item">4</span>
-            <span class="list__item">5</span>
-            <span class="list__item">6</span>
+            <span class="list__item">Все</span>
+            <span class="list__item">Непрочитанные</span>
+            <span class="list__item">Отмеченые звездочкой</span>
           </div>
         </div>
+
+        <span>Уведомления хранятся 4 месяца после чего автоматически удаляются.</span>
       </div>
 
       <div class="null d-none">
-        <b>У вас нет уведомлений</b>
+        <b style="margin-bottom: 32px;">У вас нет сообщений</b>
         <div class="img-wrapper">
-          <img src="img/null-notis.png" alt="clear">
+          <img src="img/cab-message-null.png" alt="clear">
         </div>
 
         <div class="hr"></div>
@@ -308,7 +315,7 @@
         </div>
 
         <ul class="body">
-          <li>
+          <li class="yellow-item">
             <div class="start">
               <div class="checkbox-body">
                 <p class="checkbox-wrapper">
@@ -319,10 +326,10 @@
               <i class="icon-cabinet-star-grey"></i>
               <i class="icon-cabinet-trash-grey"></i>
               <i class="icon-cabinet-left-no-direct-grey"></i>
-              <span class="name">Я</span>
+              <span class="name">Я,Amir1989 (3) <i class="icon-yellow">12</i></span>
             </div>
             <div class="center">
-              <b><a href="cab-notifications-message.html">Пользователь Амир ответил на ваш комментарий</a></b>
+              <b><a href="cab-messages-received-message.html">Пользователь Амир ответил на ваш комментарий</a></b>
               <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
             </div>
             <div class="end">
@@ -333,8 +340,8 @@
             <div class="start">
               <div class="checkbox-body">
                 <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-2">
-                  <label for="checkbox-2" style="color: #fff">.</label>
+                  <input type="checkbox" id="checkbox-3">
+                  <label for="checkbox-3" style="color: #fff">.</label>
                 </p>
               </div>
               <i class="icon-cabinet-star-grey icon-star--red-full"></i>
@@ -343,28 +350,7 @@
               <span class="name">Я,Amir1989 (3)</span>
             </div>
             <div class="center">
-              <b><a href="cab-notifications-message.html">Пользователь Амир прокомментировал ваш отзыв</a></b>
-              <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
-            </div>
-            <div class="end">
-              <span class="date">24 дек... 10:09</span>              
-            </div>
-          </li>
-          <li style="background-color: #e7ccca;">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-2">
-                  <label for="checkbox-2" style="color: #e7ccca">.</label>
-                </p>
-              </div>
-              <i class="icon-cabinet-star-grey"></i>
-              <i class="icon-cabinet-trash-grey icon-cabinet-red-grey"></i>
-              <i class="icon-cabinet-left-no-direct-grey"></i>
-              <span class="name">Я</span>
-            </div>
-            <div class="center">
-              <b><a href="cab-notifications-message.html">Pedal.kz поздравляет вас с днем рождения</a></b>
+              <b><a href="cab-messages-received-message.html">Пользователь Амир прокомментировал ваш отзыв</a></b>
               <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
             </div>
             <div class="end">
@@ -375,8 +361,29 @@
             <div class="start">
               <div class="checkbox-body">
                 <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-2">
-                  <label for="checkbox-2" style="color: #fff">.</label>
+                  <input type="checkbox" id="checkbox-4">
+                  <label for="checkbox-4" style="color: #fff">.</label>
+                </p>
+              </div>
+              <i class="icon-cabinet-star-grey"></i>
+              <i class="icon-cabinet-trash-grey icon-cabinet-red-grey"></i>
+              <i class="icon-cabinet-left-no-direct-grey"></i>
+              <span class="name">Я</span>
+            </div>
+            <div class="center">
+              <b><a href="cab-messages-received-message.html">Pedal.kz поздравляет вас с днем рождения</a></b>
+              <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
+            </div>
+            <div class="end">
+              <span class="date">24 дек... 10:09</span>              
+            </div>
+          </li>
+          <li>
+            <div class="start">
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-5">
+                  <label for="checkbox-5" style="color: #fff">.</label>
                 </p>
               </div>
               <i class="icon-cabinet-star-grey"></i>
@@ -385,7 +392,70 @@
               <span class="name">Я,Amir1989 (3)</span>
             </div>
             <div class="center">
-              <b><a href="cab-notifications-message.html">Чат: Amir1989</a></b>
+              <b><a href="cab-messages-received-message.html">Чат: Amir1989</a></b>
+              <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
+            </div>
+            <div class="end">
+              <span class="date">24 дек... 10:09</span>              
+            </div>
+          </li>
+          <li>
+            <div class="start">
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-3">
+                  <label for="checkbox-3" style="color: #fff">.</label>
+                </p>
+              </div>
+              <i class="icon-cabinet-star-grey icon-star--red-full"></i>
+              <i class="icon-cabinet-trash-grey"></i>
+              <i class="icon-cabinet-left-no-direct-grey"></i>
+              <span class="name">Я,Amir1989 (3)</span>
+            </div>
+            <div class="center">
+              <b><a href="cab-messages-received-message.html">Пользователь Амир прокомментировал ваш отзыв</a></b>
+              <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
+            </div>
+            <div class="end">
+              <span class="date">24 дек... 10:09</span>              
+            </div>
+          </li>
+          <li>
+            <div class="start">
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-4">
+                  <label for="checkbox-4" style="color: #fff">.</label>
+                </p>
+              </div>
+              <i class="icon-cabinet-star-grey"></i>
+              <i class="icon-cabinet-trash-grey icon-cabinet-red-grey"></i>
+              <i class="icon-cabinet-left-no-direct-grey"></i>
+              <span class="name">Я</span>
+            </div>
+            <div class="center">
+              <b><a href="cab-messages-received-message.html">Pedal.kz поздравляет вас с днем рождения</a></b>
+              <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
+            </div>
+            <div class="end">
+              <span class="date">24 дек... 10:09</span>              
+            </div>
+          </li>
+          <li>
+            <div class="start">
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-5">
+                  <label for="checkbox-5" style="color: #fff">.</label>
+                </p>
+              </div>
+              <i class="icon-cabinet-star-grey"></i>
+              <i class="icon-cabinet-trash-grey"></i>
+              <i class="icon-cabinet-left-no-direct-grey"></i>
+              <span class="name">Я,Amir1989 (3)</span>
+            </div>
+            <div class="center">
+              <b><a href="cab-messages-received-message.html">Чат: Amir1989</a></b>
               <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
             </div>
             <div class="end">
@@ -417,7 +487,7 @@
   <div class="popup-remove-item-favourites d-none">
     <div class="content">
       <i class="form-succes-blue"></i>
-      <span>Объявления изъяты из<br> избранных</span>
+      <span>Сообщения удалено</span>
     </div>
   </div>
   <!-- // попап окна -->  
