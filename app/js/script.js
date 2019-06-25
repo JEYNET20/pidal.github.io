@@ -1508,3 +1508,61 @@
 
 	if(btnTrash) btnTrash.addEventListener('click', onBtnTrashClick);
 })();
+
+// переключатель в меню кабинет сообщения
+(function(){
+	const btn1 = document.querySelector('.str-messages .form-selected li:nth-child(1)');
+	const btn2 = document.querySelector('.str-messages .form-selected li:nth-child(2)');
+	const btn3 = document.querySelector('.str-messages .form-selected li:nth-child(3)');
+
+	const body = document.querySelectorAll('.str-messages .message-list');
+
+	const body1 = document.querySelector('.str-messages .received');
+	const body2 = document.querySelector('.str-messages .sent');
+	const body3 = document.querySelector('.str-messages .archive');
+
+	btn1.onclick = function(){
+		let x = this.parentNode.querySelectorAll('li');
+		
+		x.forEach(function(element) {
+			element.classList.remove('active');
+		});
+		this.classList.add('active');
+
+		body.forEach(function(element) {
+			element.classList.add('d-none');
+		});
+
+		body1.classList.remove('d-none');
+
+	};
+
+	btn2.onclick = function(){
+		let x = this.parentNode.querySelectorAll('li');
+		x.forEach(function(element) {
+			element.classList.remove('active');
+		});
+		this.classList.add('active');
+
+		body.forEach(function(element) {
+			element.classList.add('d-none');
+		});
+
+		body2.classList.remove('d-none');
+	};
+	
+	btn3.onclick = function(){
+		console.log(this);
+		let x = this.parentNode.querySelectorAll('li');
+		x.forEach(function(element) {
+			element.classList.remove('active');
+		});
+		this.classList.add('active');
+
+		body.forEach(function(element) {
+			element.classList.add('d-none');
+		});
+
+		body3.classList.remove('d-none');
+	};
+})();

@@ -7530,6 +7530,13 @@ html ::-webkit-resizer {
 .cabinet .btn-trash:hover i {
   background-image: url("../img/icon/cabinet/red-trash.png"); }
 
+.cabinet .cabinet-navigation li:hover {
+  background-color: #343434;
+  cursor: pointer; }
+  .cabinet .cabinet-navigation li:hover a {
+    cursor: pointer;
+    color: #fff; }
+
 .str-settings .content__menu {
   width: 100%;
   list-style: none;
@@ -8005,6 +8012,14 @@ html ::-webkit-resizer {
     top: -4px; }
   .str-messages .yellow-item .icon-cabinet-trash-grey {
     background-image: url("../img/icon/cabinet/trash-yellow.png"); }
+
+.str-messages .castom-select-wrapper {
+  width: 227px; }
+
+.str-messages .form-selected .list--mode {
+  height: unset;
+  overflow-y: unset;
+  max-height: 250px; }
 
 .popup-save-settings {
   position: fixed;

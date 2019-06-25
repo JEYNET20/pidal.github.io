@@ -873,6 +873,15 @@
 		}
 	}
 
+	.cabinet-navigation li:hover{
+		background-color: #343434;
+		cursor: pointer;
+		a{
+			cursor: pointer;
+    	color: #fff;
+		}
+	}
+
 }
 	
 .str-settings{
@@ -1411,8 +1420,6 @@
 			padding-left: 11px;
 		}
 	}
-
-
 }
 
 .str-messages{
@@ -1469,7 +1476,6 @@
 		background-color: #343434;
 		color: #fff;
 	}
-
 	.yellow-item{
 		background-color: rgba(255, 231, 0, .2) !important;
 		.name{
@@ -1483,7 +1489,15 @@
 		.icon-cabinet-trash-grey{
 			background-image: url('../img/icon/cabinet/trash-yellow.png');
 		}
+	}
 
+	.castom-select-wrapper{
+		width: 227px;
+	}
+	.form-selected .list--mode{
+		height: unset;
+		overflow-y: unset;
+		max-height: 250px;
 	}
 
 }
