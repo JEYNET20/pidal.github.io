@@ -805,3 +805,35 @@
 	margin-right: 11px;
 	cursor: pointer;
 }
+
+.grey-minus{
+	background-image: url('../img/icon/cabinet/minus.png');
+  background-position: center center;
+	background-size: cover;
+	display: block;	
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+
+.icon-skrepka{
+	opacity: 0.6;
+	background-image: url('../img/icon/cabinet/icon-skrepka.png');
+	width: 21px;
+	height: 24px;
+  background-position: center center;
+	background-size: cover;
+	display: block;	
+	cursor: pointer;
+}
+
+.icon-btn-submit{
+	background-image: url('../img/icon/cabinet/icon-btn-submit.png');
+	width: 23px;
+	height: 24px;
+  background-position: center center;
+	background-size: cover;
+	display: block;	
+	cursor: pointer;
+}
