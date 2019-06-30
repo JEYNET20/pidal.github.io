@@ -1502,6 +1502,29 @@
 
 }
 
+.message-container-wrapper{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 63px;
+	.left{
+		width: 894px;
+		min-height: 798px;
+		background-color: grey;
+		.title{
+			width: 894px;
+			height: 68px;
+			box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+			border-radius: 6px 6px 0 0;
+			background-color: #ffffff;
+		}
+	}
+	.right{
+		width: 282px;
+		min-height: -500px;
+		background-color: grey;
+	}
+}
+
 // попап окна
 .popup-save-settings{
 	position: fixed;
@@ -1564,5 +1587,3 @@
 .cab-popup-delete-message{
 	height: 225px;
 }
-
-// featured__add-to-favotite--gallery
