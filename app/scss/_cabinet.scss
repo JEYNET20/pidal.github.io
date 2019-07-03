@@ -882,6 +882,14 @@
 		}
 	}
 
+	.icon-green{
+		display: block;
+		width: 6px;
+		height: 6px;
+		background-color: #52ac62;
+		border-radius: 50%;
+	}
+
 }
 	
 .str-settings{
@@ -1509,7 +1517,6 @@
 	.left{
 		width: 894px;
 		min-height: 798px;
-		// background-color: grey;
 		.title{
 			width: 894px;
 			height: 68px;
@@ -1620,6 +1627,16 @@
 				}
 			}
 		}
+		.title--online{
+			span{
+				display: flex !important;
+				align-items: center !important;
+			}
+			.icon-green{
+				margin-right: 4px;
+			}
+		}
+
 		.body{
 			width: 100%;
 			height: 630px;
@@ -1698,7 +1715,95 @@
 					color: #2c2c2c;
 				}
 			}
+			.message--delete .body{
+				background-color: rgba(210, 74, 67, .2);
+				position: relative;
+			}
+			.message--delete .body i{
+				position: absolute;
+				top: 12px;
+				right: 12px;
+			}
+			.user_type{
+				display: block;
+				margin-left: 102px;
+				margin-bottom: 11px;
+				margin-top: 22px;
+				opacity: 0.6;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 21px;
+				letter-spacing: 0.14px;
+			}
+			.user_block{
+				display: block;
+				margin-top: 40px;
+				margin-bottom: 40px;
+				margin-left: 102px;
+				opacity: 0.6;
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 21px;
+				letter-spacing: 0.16px;
+			}
+			.message--last{
+				// margin-bottom: 22px;
+			}
 		}
+		.body--unclear{
+
+		}
+		.body--clear{
+			.wrapper{
+				margin-top: 196px;
+				width: 242px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				.number{
+					text-align: center;
+				}
+				img{
+					width: 97px;
+					height: 102px;
+					margin-bottom: 17px;
+				}
+				span{
+					color: #2c2c2c;
+					font-family: "Open Sans";
+					font-size: 16px;
+					font-weight: 400;
+					letter-spacing: 0.16px;
+					width: 100%;
+					margin-bottom: 21px;
+				}
+				button{
+					border: none;
+					width: 193px;
+					height: 44px;
+					box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+					border-radius: 22px;
+					background-color: #ffffff;
+					color: #ff4545;
+					font-family: "Open Sans";
+					font-size: 16px;
+					font-weight: 400;
+					letter-spacing: 0.16px;
+					i{
+						display: inline-block;
+						margin-left: 6px;
+					}
+				}
+				button:focus{
+					outline: none;
+				}
+			}
+		}
+
 		.end{
 			box-sizing: border-box;
 			// padding-top: 24px;
@@ -1745,10 +1850,83 @@
 		}
 	}
 
-	.right{
+	.right .v-1{
 		width: 282px;
 		min-height: -500px;
-		background-color: grey;
+		// background-color: grey;
+		.title{
+			width: 282px;
+			height: 68px;
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			border-radius: 6px;
+			background-color: #ffffff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 24px;
+			span{
+				color: #2c2c2c;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 24px;
+				letter-spacing: 0.16px;
+			}
+		}
+		.body{
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			border-radius: 6px;
+			margin-bottom: 24px;
+		}
+		.end{
+			width: 282px;
+			height: 44px;
+			box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+			border-radius: 6px;
+			background-color: #ffffff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			a{
+				text-decoration: none;
+				color: #306c78;
+				font-family: "Open Sans";
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 16px;
+				letter-spacing: 0.16px;
+				i{
+					margin-left: 6px;
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	.right .v-2{
+		.offers-content__item{
+			margin-left: 24px;
+			height: auto;
+			border-radius: unset;
+			box-shadow: unset;
+			padding-bottom: 35px;
+		}
+		.offers-content__item:nth-child(1){
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			border-radius: 6px 6px 0 0;
+		}
+		.offers-content__item:nth-child(2){
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			border-radius: unset;
+		}
+		.offers-content__item:nth-child(3){
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			border-radius: unset;
+		}
+		.offers-content__item:nth-child(4){
+			box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
+			border-radius: 0 0 6px 6px;
+		}
 	}
 }
 
@@ -1813,4 +1991,20 @@
 
 .cab-popup-delete-message{
 	height: 225px;
+}
+
+.cab-message-chat-unblock,
+.cab-message-chat-block{
+	width: 338px;
+	height: 274px;
+	h5{
+		margin-top: 20px;
+		margin-bottom: 14px;
+	}
+	p{
+		width: 200px;
+		margin: 0 auto;
+		margin-bottom: 32px;
+		text-align: center;
+	}
 }

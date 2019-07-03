@@ -287,7 +287,7 @@
 
       <div class="message-container-wrapper">
         <div class="left">
-          <div class="title">
+          <div class="title title--offline d-none">
             <a href="cab-messages-received.html"><i class="icon-left-arrow-blue"></i>Все сообщения</a>
             <div class="user">
               Амир
@@ -309,7 +309,30 @@
               </div>
             </div>
           </div>
-          <div class="body">
+          <div class="title title--online">
+            <a href="cab-messages-received.html"><i class="icon-left-arrow-blue"></i>Все сообщения</a>
+            <div class="user">
+              Амир
+              <span><i class="icon-green"></i>в сети</span>
+            </div>
+            <div class="menu-btn-wrapper">
+              <div class="wrapperr">
+                <div class="more-points">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+                <img class="avatar" src="img/ava.png" alt="image">
+              </div>
+              <div class="body d-none">
+                <button><i class="grey-minus"></i>Разблокировать </button>
+                <button><i class="icon-cab-reserve"></i>Снять звездочку </button>
+                <button><i class="icon-cabinet-star-grey"></i>Восстановить </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="body body--unclear d-none">
             <div class="wrapper">
               <div class="message">
                 <img src="img/ava.png" alt="ava">
@@ -359,8 +382,37 @@
                 </div>
                 <div class="date">Вчера 10:09</div>
               </div>
+              <div class="message my-message message--delete">
+                <img src="img/ava2.png" alt="ava">
+                <div class="name">Ваше сообщения</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии.
+                  <i class="icon-message-trash"></i>
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <div class="message message--last">
+                <img src="img/ava.png" alt="ava">
+                <div class="name">Амир</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <span class="user_type">Печатает...</span>
+              <span class="user_block">Вы не можете отправить сообщения, этот пользователь заблокировал вас</span>
             </div>
           </div>
+
+          <div class="body body--clear">
+            <div class="wrapper">
+              <img src="img/no-message.png" alt="image">
+              <span>Часто отвечает на сообщения</span>
+              <span class="number d-none">+7 914 111-31-74</span>
+              <button>Показать номер<i class="icon-red-arrow"></i></button>
+            </div>
+          </div>
+
           <div class="end">
             <form action="">
               <button type="button"><i class="icon-skrepka"></i></button>
@@ -369,7 +421,70 @@
             </form>
           </div>
         </div>
-        <div class="right"></div>
+        <div class="right">
+          <div class="v-1">
+            <div class="title">
+              <span>Обьявления N1089678470</span>
+            </div>
+            <div class="body">
+              <ul class="offers-content">
+                <li class="offers-content__item">
+                  <div class="new-auto d-none ONULL">новый</div>
+                  <img src="img/index/car-1.jpg" alt="item">
+                  <div>
+                    <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                    <span class="offers-content__item-age"> 1995 год</span>
+                    <span class="offers-content__item-price">10 000 000 ₸</span>
+                    <i class="icon-star icon-star--red"></i>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="end">
+              <a href="#">Все объявления продавца<i class="icon-left-arrow-blue"></i></a>
+            </div>
+          </div>
+          <div class="v-2 d-none">
+            <ul class="offers-content">
+              <li class="offers-content__item">
+                <div class="new-auto d-none ONULL">новый</div>
+                <div>
+                  <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                  <span class="offers-content__item-age"> 1995 год</span>
+                  <span class="offers-content__item-price">10 000 000 ₸</span>
+                  <i class="icon-star icon-star--red"></i>
+                </div>
+              </li>
+              <li class="offers-content__item">
+                <div class="new-auto d-none ONULL">новый</div>
+                <div>
+                  <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                  <span class="offers-content__item-age"> 1995 год</span>
+                  <span class="offers-content__item-price">10 000 000 ₸</span>
+                  <i class="icon-star icon-star--red"></i>
+                </div>
+              </li>
+              <li class="offers-content__item">
+                <div class="new-auto d-none ONULL">новый</div>
+                <div>
+                  <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                  <span class="offers-content__item-age"> 1995 год</span>
+                  <span class="offers-content__item-price">10 000 000 ₸</span>
+                  <i class="icon-star icon-star--red"></i>
+                </div>
+              </li>
+              <li class="offers-content__item">
+                <div class="new-auto d-none ONULL">новый</div>
+                <div>
+                  <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                  <span class="offers-content__item-age"> 1995 год</span>
+                  <span class="offers-content__item-price">10 000 000 ₸</span>
+                  <i class="icon-star icon-star--red"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -391,64 +506,34 @@
   <!-- // Футер -->
 
   <!-- попап окна -->
-  <div class="popup-remove-item-favourites d-none">
-    <div class="content">
-      <i class="form-succes-blue"></i>
-      <span>Сообщения удалено</span>
-    </div>
-  </div>  
+  <div class="popup-bg d-none"></div>
 
-  <div class="popup-remove-item-favourites d-none">
-    <div class="content">
-    <div class="windows8">
-      <div class="wBall" id="wBall_1">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_2">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_3">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_4">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_5">
-        <div class="wInnerBall"></div>
-      </div>
-    </div>
-      <span>Удаления сообщения</span>
-    </div>
+  <div class="popup-def popup-sig-in cab-message-chat-unblock d-none">
+    <i class="icon-exit-chrest icon-form-exit"></i>
+    <h5>
+      Разблокировка пользоватля
+    </h5>
+    <p>
+      Вы снова сможете получать 
+      сообщения от этого автора.
+    </p>
+    <button class="btn">Разблокировать</button>
+    <a href="index.html" class="btn">Отмена</a>
+    <i class="arrow-down-circle"></i>
   </div>
 
-  <div class="popup-remove-item-favourites d-none">
-    <div class="content">
-    <div class="windows8">
-      <div class="wBall" id="wBall_1">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_2">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_3">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_4">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_5">
-        <div class="wInnerBall"></div>
-      </div>
-    </div>
-      <span>Восстановления сообщения</span>
-    </div>
-  </div>
-
-  <div class="popup-remove-item-favourites d-none">
-    <div class="content">
-      <i class="form-succes-blue"></i>
-      <span>Сообщения востановлено</span>
-    </div>
+  <div class="popup-def popup-sig-in cab-message-chat-block  d-none">
+    <i class="icon-exit-chrest icon-form-exit"></i>
+    <h5>
+      Блокировка пользователя
+    </h5>
+    <p>
+      Вы не сможете получать 
+      сообщения от этого автора.
+    </p>
+    <button class="btn">Заблокировать</button>
+    <a href="index.html" class="btn">Отмена</a>
+    <i class="arrow-down-circle"></i>
   </div>
 
   <!-- // попап окна -->  

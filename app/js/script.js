@@ -1566,3 +1566,27 @@
 		body3.classList.remove('d-none');
 	};
 })();
+
+
+// кабинет показать скрыть номер телефона в сообщения
+(function(){
+	const btn = document.querySelector('.message-container-wrapper .left .body--clear .wrapper button'),
+				number = document.querySelector('.message-container-wrapper .left .body--clear .wrapper .number');
+
+	btn.onclick = function() {
+		this.classList.add('d-none');
+		number.classList.remove('d-none');
+	};
+})();
+
+// кабинет сообщения показать скрыть менюшку в тайтле
+(function(){
+	const btn = document.querySelector('.message-container-wrapper .left .title .menu-btn-wrapper .wrapperr img');
+
+	function test() {
+		console.log('asdfa');
+	};
+
+	btn.addEventListener('click', test);
+
+})();
