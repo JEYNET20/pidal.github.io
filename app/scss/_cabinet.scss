@@ -1930,6 +1930,19 @@
 	}
 }
 
+
+
+
+.message-container-wrapper .left .title .menu-btn-wrapper .wrapperr{
+	cursor: pointer;
+}
+
+.message-container-wrapper .left .title .menu-btn-wrapper .body{
+	overflow: hidden;
+}
+
+
+
 // попап окна
 .popup-save-settings{
 	position: fixed;
@@ -1987,6 +2000,24 @@
 		line-height: 14px;
 		letter-spacing: 0.12px;
 	}
+}
+
+.menu-btn-wrapper-BG--none{
+	display: none !important;
+}
+
+.message-container-wrapper .left .title .menu-btn-wrapper .body{
+	z-index: 11;
+}
+
+.menu-btn-wrapper-BG{
+	// background-color: red;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
 }
 
 .cab-popup-delete-message{

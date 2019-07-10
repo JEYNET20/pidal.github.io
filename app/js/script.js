@@ -1573,20 +1573,45 @@
 	const btn = document.querySelector('.message-container-wrapper .left .body--clear .wrapper button'),
 				number = document.querySelector('.message-container-wrapper .left .body--clear .wrapper .number');
 
-	btn.onclick = function() {
-		this.classList.add('d-none');
-		number.classList.remove('d-none');
-	};
+	if(btn) {
+		btn.onclick = function() {
+			this.classList.add('d-none');
+			number.classList.remove('d-none');
+		};
+	}
+	
 })();
 
 // кабинет сообщения показать скрыть менюшку в тайтле
 (function(){
-	const btn = document.querySelector('.message-container-wrapper .left .title .menu-btn-wrapper .wrapperr img');
+	const btn = document.querySelectorAll('.message-container-wrapper .left .title .menu-btn-wrapper .wrapperr'),
+				body = document.querySelectorAll('.message-container-wrapper .left .title .menu-btn-wrapper .body'),
+				menuWrapper = document.querySelectorAll('.menu-btn-wrapper-BG');
 
 	function test() {
-		console.log('asdfa');
+		body.forEach(function(element) {
+			element.classList.remove('d-none');
+		});
+
+		this.nextElementSibling.classList.remove('d-none');
 	};
 
-	btn.addEventListener('click', test);
+	btn.forEach(function(element){
+		element.addEventListener('click', test);
+	});
+
+	function test2() {
+		this.classList.add('d-none');
+		body.forEach(function(element) {
+			element.classList.add('d-none');
+		});
+	};
+
+	menuWrapper.forEach(function(element){
+		element.addEventListener('click', test2);
+	});
+
+
+
 
 })();
