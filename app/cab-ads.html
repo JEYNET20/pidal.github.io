@@ -191,13 +191,13 @@
   </header>
   <!-- // Шапка -->
 
-  <main class="cabinet str-messages">
+  <main class="cabinet str-messages str-ads">
     <div class="wrapper">
       <div class="first">
         <p>
-          <b>Сообщения</b>
-          <span>Здесь вы найдёте ответы на свои объявления, <br>
-          а также отосланные вами сообщения</span>
+          <b>Объявления</b>
+          <span>Здесь вы найдёте ваши активные<br>
+          и архивные объявления</span>
         </p>
         <div class="your-account">
           1000 ₸
@@ -214,8 +214,8 @@
       </div>
       
       <ul class="cabinet-navigation">
-        <li><a href="#">Объявления</a></li>
-        <li class="active new-yellow">
+        <li class="active"><a href="cab-ads.html">Объявления</a></li>
+        <li class=" new-yellow">
           <i class="icon-yellow">1</i>          
           <a href="cab-messages-received.html">Сообщения</a>
         </li>
@@ -230,9 +230,9 @@
 
       <div class="form-selected form-selected menu">
         <ul>
-          <li class="active"><a href="cab-messages-received.html">Полученные</a></li>
-          <li><a href="#">Отправленные</a></li>
-          <li><a href="#">Архивные</a></li>
+          <li class="active"><a href="#">Активные</a></li>
+          <li><a href="#">Неактивные (4)</a></li>
+          <li><a href="#">Удаленные (2) </a></li>
         </ul>
 
         <div class="castom-select-wrapper">
@@ -246,7 +246,7 @@
           </div>
         </div>
 
-        <span>Уведомления хранятся 4 месяца после чего автоматически удаляются.</span>
+        <!-- <span>Уведомления хранятся 4 месяца после чего автоматически удаляются.</span> -->
       </div>
 
       <div class="null d-none">
@@ -287,7 +287,7 @@
         </div>
       </div>
 
-      <div class="message-list received">
+      <div class="message-list received d-none" style="background: red;">
         <div class="title form-selected">
 
           <div class="checkbox-body">
@@ -465,7 +465,7 @@
         </ul>
       </div>
 
-      <div class="message-list sent d-none">
+      <div class="message-list sent d-none" style="background: yellow;">
         <div class="title form-selected">
 
           <div class="checkbox-body">
@@ -559,7 +559,8 @@
         </ul>
       </div>
 
-      <div class="message-list archive d-none">
+      <div class="message-list archive" style="">
+        <span>Объявления, удаленные модератором:</span>
         <div class="title form-selected">
 
           <div class="checkbox-body">
@@ -569,25 +570,45 @@
             </p>
           </div>
 
-          <span class="user">Пользователь</span>
-          <span class="subject">Тема</span>
+          <span class="date">Дата<i class="icon-arrow-down"></i></span>
+          <span class="subject">Заголовок</span>
 
           <div class="end">
-            <p class="number-str">
-              <span>1</span> – <span>10</span> из <span>38</span>
-            </p>
-            
-            <ul class="navigation">
-              <li class="pre"><i class="icon-arrow-right"></i></li>
-              <li class="next"><i class="icon-arrow-right"></i></li>
-            </ul>
-            
-            <span class="date">Дата<i class="icon-arrow-down"></i></span>
+            <span>Цена</span>
+            <span>Сообщения</span>
           </div>
         </div>
 
         <ul class="body">
-          <li class="">
+
+          <li class="blockk blockk--pink">
+            <span class="text">Обявление помещено в раздел неактивных</span>
+          </li>
+
+          <li class="blockk blockk--pink">
+            <span class="text">
+              <div class="windows8">
+                <div class="wBall" id="wBall_1">
+                  <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_2">
+                  <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_3">
+                  <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_4">
+                  <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_5">
+                  <div class="wInnerBall"></div>
+                </div>
+              </div>
+              <span>Удаляется...</span>
+            </span>
+          </li>
+
+          <li class="blockk">
             <div class="start">
               <div class="checkbox-body">
                 <p class="checkbox-wrapper">
@@ -595,42 +616,25 @@
                   <label for="checkbox-2" style="color: #fff">.</label>
                 </p>
               </div>
-              <i class="icon-cab-reserve"></i>
-              <i class="icon-cabinet-trash-grey"></i>
-              <i class="icon-cabinet-left-no-direct-grey"></i>
-              <span class="name">Я,Amir1989 (3)</span>
+              <span>С: 15 мая.</span>
+              <span>По: 15 марта.</span>
             </div>
             <div class="center">
-              <b><a href="cab-messages-chat.html">Пользователь Амир ответил на ваш комментарий</a></b>
-              <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
+              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
+              <span>ID 572979700</span>
+              <button>Просмотреть</button>
+              <button>Удалить</button>
             </div>
             <div class="end">
-              <span class="date">Сегодня 10:09</span>              
+              <span>10 000 ₸ </span>
+              <button><i class="message-icon"></i></button>
+              <span>0</span>      
             </div>
           </li>
-          <li>
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-3">
-                  <label for="checkbox-3" style="color: #fff">.</label>
-                </p>
-              </div>
-              <i class="icon-cab-reserve icon-cab-reserve--full"></i>
-              <i class="icon-cabinet-trash-grey"></i>
-              <i class="icon-cabinet-left-no-direct-grey"></i>
-              <span class="name">Я,Amir1989 (3)</span>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">Пользователь Амир прокомментировал ваш отзыв</a></b>
-              <p>Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW </p>
-            </div>
-            <div class="end">
-              <span class="date">24 дек... 10:09</span>              
-            </div>
-          </li>
+
         </ul>
       </div>
+
     </div>
   </main>
 
@@ -650,66 +654,17 @@
   <!-- // Футер -->
 
   <!-- попап окна -->
-  <div class="popup-remove-item-favourites d-none">
-    <div class="content">
-      <i class="form-succes-blue"></i>
-      <span>Сообщения удалено</span>
-    </div>
-  </div>  
+  <div class="popup-bg d-none"></div>
 
-  <div class="popup-remove-item-favourites d-none">
-    <div class="content">
-    <div class="windows8">
-      <div class="wBall" id="wBall_1">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_2">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_3">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_4">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_5">
-        <div class="wInnerBall"></div>
-      </div>
-    </div>
-      <span>Удаления сообщения</span>
-    </div>
+  <div class="popup-def popup-sig-in cab-popup-delete-message d-none">
+    <i class="icon-exit-chrest icon-form-exit"></i>
+    <h5>
+      Вы хотите удалить уведомления?
+    </h5>
+    <button class="btn">Удалить</button>
+    <a href="cab-notifications-message.html" class="btn">Отмена</a>
+    <i class="arrow-down-circle"></i>
   </div>
-
-  <div class="popup-remove-item-favourites d-none">
-    <div class="content">
-    <div class="windows8">
-      <div class="wBall" id="wBall_1">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_2">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_3">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_4">
-        <div class="wInnerBall"></div>
-      </div>
-      <div class="wBall" id="wBall_5">
-        <div class="wInnerBall"></div>
-      </div>
-    </div>
-      <span>Восстановления сообщения</span>
-    </div>
-  </div>
-
-  <div class="popup-remove-item-favourites d-none">
-    <div class="content">
-      <i class="form-succes-blue"></i>
-      <span>Сообщения востановлено</span>
-    </div>
-  </div>
-
   <!-- // попап окна -->  
 
   <!-- дополнительные стили -->

@@ -1610,8 +1610,4 @@
 	menuWrapper.forEach(function(element){
 		element.addEventListener('click', test2);
 	});
-
-
-
-
 })();
