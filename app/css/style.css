@@ -1428,6 +1428,24 @@ html ::-webkit-resizer {
   display: block;
   cursor: pointer; }
 
+.icon-iconka {
+  width: 17px;
+  height: 14px;
+  background-image: url("../img/iconka.png");
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  cursor: pointer; }
+
+.icon-red-tresh {
+  width: 14px;
+  height: 16px;
+  background-image: url("../img/red-tresh.png");
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  cursor: pointer; }
+
 .header {
   height: 102px;
   background-color: #2c2c2c; }
@@ -8689,6 +8707,95 @@ html ::-webkit-resizer {
   .message-container-wrapper .right .v-2 .offers-content__item:nth-child(4) {
     box-shadow: 0 0 5px rgba(44, 44, 44, 0.3);
     border-radius: 0 0 6px 6px; }
+
+.str-ads .blockk .start {
+  height: 50px !important; }
+  .str-ads .blockk .start span {
+    width: 100%; }
+
+.str-ads .blockk .center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .str-ads .blockk .center b {
+    width: 100%;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px; }
+  .str-ads .blockk .center .id {
+    opacity: 0.6;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.14px;
+    margin-right: 25px; }
+  .str-ads .blockk .center .btn-review {
+    color: #306c78;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0.14px; }
+  .str-ads .blockk .center .btn-delete {
+    color: #ff4545;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0.14px; }
+  .str-ads .blockk .center button {
+    border: none;
+    outline: none;
+    background-color: unset;
+    display: flex;
+    align-items: center; }
+    .str-ads .blockk .center button i {
+      margin-right: 6px; }
+
+.str-ads .blockk .end {
+  display: flex;
+  flex-wrap: wrap; }
+  .str-ads .blockk .end .price {
+    /* Style for "10 000 ₸" */
+    width: 63px;
+    height: 13px;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.16px;
+    margin-right: 6px; }
+  .str-ads .blockk .end .number {
+    opacity: 0.6;
+    color: #2c2c2c;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px; }
+
+.str-ads .blockk .message-btn {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 4px 20px rgba(44, 44, 44, 0.3);
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .str-ads .blockk .message-btn i {
+    margin: 0; }
+
+.str-ads .blockk .last {
+  width: 100%;
+  background-color: grey;
+  height: 20px; }
 
 .str-ads .blockk--pink {
   background-color: rgba(255, 69, 69, 0.2) !important;
