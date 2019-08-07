@@ -1514,12 +1514,14 @@
 	const btn1 = document.querySelector('.str-messages .form-selected li:nth-child(1)');
 	const btn2 = document.querySelector('.str-messages .form-selected li:nth-child(2)');
 	const btn3 = document.querySelector('.str-messages .form-selected li:nth-child(3)');
-
+	const btn4 = document.querySelector('.str-messages .form-selected li:nth-child(4)');
+	
 	const body = document.querySelectorAll('.str-messages .message-list');
 
 	const body1 = document.querySelector('.str-messages .received');
 	const body2 = document.querySelector('.str-messages .sent');
 	const body3 = document.querySelector('.str-messages .archive');
+	const body4 = document.querySelector('.str-messages .message-list__waiting');
 
 	btn1.onclick = function(){
 		let x = this.parentNode.querySelectorAll('li');
@@ -1534,7 +1536,6 @@
 		});
 
 		body1.classList.remove('d-none');
-
 	};
 
 	btn2.onclick = function(){
@@ -1552,7 +1553,6 @@
 	};
 	
 	btn3.onclick = function(){
-		console.log(this);
 		let x = this.parentNode.querySelectorAll('li');
 		x.forEach(function(element) {
 			element.classList.remove('active');
@@ -1565,6 +1565,22 @@
 
 		body3.classList.remove('d-none');
 	};
+
+	btn4.onclick = function(){
+		let x = this.parentNode.querySelectorAll('li');
+		x.forEach(function(element) {
+			element.classList.remove('active');
+		});
+		this.classList.add('active');
+
+		body.forEach(function(element) {
+			element.classList.add('d-none');
+		});
+
+		body4.classList.remove('d-none');
+	};
+
+
 })();
 
 
@@ -1610,4 +1626,64 @@
 	menuWrapper.forEach(function(element){
 		element.addEventListener('click', test2);
 	});
+})();
+
+
+
+
+// скрипт для выделения всех выбраных чекбоксов кабинет
+(function(){
+	const deletedStrChecbox = document.querySelector('.archive .title input'),
+				noActiveStrChecbox = document.querySelector('.sent .title input'),
+				waitingStrChecbox = document.querySelector('.message-list__waiting .title input'),
+				receivedStrChecbox = document.querySelector('.received .title input');
+
+
+	deletedStrChecbox.addEventListener('click', onAllInput);
+	noActiveStrChecbox.addEventListener('click', onAllInput);
+	waitingStrChecbox.addEventListener('click', onAllInput);
+	receivedStrChecbox.addEventListener('click', onAllInput);
+
+
+	function onAllInput() {
+		let parent = this.parentNode.parentNode.parentNode.parentNode;
+
+		let inputs =  parent.querySelectorAll('input');
+
+		inputs.forEach( function(element, index) {
+			element.checked = 'checked';
+		});
+
+		let x = parent.querySelector('.title__active'),
+				y = parent.querySelector('.title__no-active');
+
+
+		x.classList.add('d-none');
+		y.classList.remove('d-none');
+
+
+		this.removeEventListener('click', onAllInput);
+		this.addEventListener('click', offAllInput);
+	};
+
+	function offAllInput() {
+		let parent = this.parentNode.parentNode.parentNode.parentNode;
+		
+		let inputs =  parent.querySelectorAll('input');
+
+		inputs.forEach( function(element, index) {
+			element.checked = '';
+		});
+
+		let x = parent.querySelector('.title__active'),
+				y = parent.querySelector('.title__no-active');
+
+
+		x.classList.remove('d-none');
+		y.classList.add('d-none');
+
+		this.addEventListener('click', onAllInput);
+		this.removeEventListener('click', offAllInput);
+	}
+
 })();

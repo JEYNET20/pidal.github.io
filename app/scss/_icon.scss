@@ -880,3 +880,50 @@
 	display: block;	
 	cursor: pointer;
 }
+
+
+.icon-redact{
+	width: 15px;
+	height: 15px;
+	background-image: url('../img/redact.png');
+  background-position: center center;
+	background-size: cover;
+	display: block;	
+	cursor: pointer;
+}
+
+
+.icon-red-exit{
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-image: url('../img/icon/exhit-chrest-red.png');
+  background-position: center center;
+	background-size: cover;
+	display: block;	
+	cursor: pointer;
+	margin-right: 6px;
+}
+
+.icon-time{
+	display: block;
+	width: 11px;
+	height: 15px;
+	background-image: url('../img/icon-time.png');
+  background-position: center center;
+	background-size: cover;
+	display: block;	
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.icon-exit-white{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/	icon-exit-white.png');
+  background-position: center center;
+	background-size: cover;
+	display: block;	
+	cursor: pointer;
+}
