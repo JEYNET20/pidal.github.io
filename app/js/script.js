@@ -1687,3 +1687,37 @@
 	}
 
 })();
+
+
+
+
+// кабинет попап большой
+(function(){
+	const activeBtn = document.querySelector('.cabinet .popup-block .menu .active-btn'),
+				archiveBtn = document.querySelector('.cabinet .popup-block .menu .archive-btn'),
+
+				activeBody = document.querySelector('.cabinet .popup-block__body .active-service, .cabinet .popup-block__body .arhive-service'),
+				archiveBody = document.querySelector('.cabinet .popup-block__body .active-service, .cabinet .popup-block__body .arhive-service');
+
+
+	function test1() {
+		console.log(this);
+		activeBtn.classList.add('active-btn');
+		archiveBtn.classList.remove('active-btn');
+		activeBody.classList.remove('d-none');
+		archiveBody.classList.add('d-none');
+	};
+
+	function test2() {
+		console.log(this);
+		activeBtn.classList.remove('active-btn');
+		archiveBtn.classList.add('active-btn');
+		activeBody.classList.add('d-none');
+		archiveBody.classList.remove('d-none');
+	};
+
+
+	activeBtn.addEventListener('click', test1);
+	archiveBtn.addEventListener('click', test2);
+
+})();
