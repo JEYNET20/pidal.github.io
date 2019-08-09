@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>PEDALKZ - "Объявления"</title>
+  <title>PEDALKZ - "Настройки бизнес-страницы"</title>
 
   <!-- стили -->
   <link rel="stylesheet" href="css/style.min.css">
@@ -258,7 +258,7 @@
   </header>
   <!-- // Шапка -->
 
-  <main class="cabinet str-messages str-ads">
+  <main class="cabinet str-messages str-ads str-busines">
     <div class="wrapper">
 
       <div class="popup-block d-none">
@@ -619,9 +619,9 @@
 
       <div class="first">
         <p>
-          <b>Объявления</b>
-          <span>Здесь вы найдёте ваши активные<br>
-          и архивные объявления</span>
+          <b>Настройки бизнес-страницы</b>
+          <span>Здесь вы найдете информацию <br>
+              про купленные пакеты</span>
         </p>
         <div class="your-account">
           1000 ₸
@@ -638,7 +638,7 @@
       </div>
       
       <ul class="cabinet-navigation">
-        <li class="active"><a href="cab-ads.html">Объявления</a></li>
+        <li class="cab-ads.html"><a href="cab-ads.html">Объявления</a></li>
         <li class=" new-yellow">
           <i class="icon-yellow">1</i>          
           <a href="cab-messages-received.html">Сообщения</a>
@@ -649,28 +649,16 @@
         </li>
         <li><a href="cab-settings.html">Настройки</a></li>
         <li><a href="cab-balans.html">История платежей</a></li>
-        <li><a href="cab-busines-pack.html">Настройки бизнес-страницы</a></li>
+        <li class="active"><a href="cab-busines-pack.html">Настройки бизнес-страницы</a></li>
       </ul>
 
       <div class="form-selected form-selected menu">
         <ul>
-          <li class="active"><a href="#">Активные (3)</a></li>
-          <li><a href="#">Неактивные (2)</a></li>
-          <li><a href="#">Удаленные (5) </a></li>
-          <li><a href="#">Ожидающие</a></li>
+          <li class="active"><a href="#">Избранные пакеты</a></li>
+          <li><a href="#">Управления пакетами</a></li>
+          <li><a href="#">Статистика </a></li>
+          <li><a href="#">Настройка бизнес-страницы</a></li>
         </ul>
-
-        <section class="found-filter__body">
-          <form action="/">
-            <div class="block block-1 search-wrapper form-selected">
-              <div class="filter-search">
-                <i class="icon-search"></i>
-                <i class="delete-text icon-exit-chrest"></i>
-                <input type="text" placeholder="Поиск">
-              </div>
-            </div>
-          </form>
-        </section>
 
         <!-- <span>Уведомления хранятся 4 месяца после чего автоматически удаляются.</span> -->
       </div>
@@ -684,7 +672,7 @@
         <button class="btn"><i class="icon-plus"></i>Добавить объявление</button>
       </div>
 
-      <div class="message-list received" style="">
+      <div class="message-list received" style="background-color: red;">
         <div class="title form-selected">
           <span class="text">Активные объявления</span>
           <div class="checkbox-body">
@@ -847,7 +835,7 @@
         </ul>
       </div>
 
-      <div class="message-list sent d-none">
+      <div class="message-list sent d-none" style="background-color: yellow;">
         <div class="title form-selected">
           <span class="text">Неактивные объявления:</span>
           <div class="checkbox-body">
@@ -951,7 +939,7 @@
         </ul>
       </div>
 
-      <div class="message-list archive d-none">
+      <div class="message-list archive d-none" style="background-color: green;">
         <span class="message-list__title">Объявления, удаленные модератором:</span>
         <div class="title form-selected">
 
@@ -1091,7 +1079,7 @@
         </ul>
       </div>
 
-      <div class="message-list message-list__waiting d-none" style="">
+      <div class="message-list message-list__waiting d-none" style="background-color: grey;">
        <!--  <span class="message-list__title">Ожидающие объявления:</span> -->
         <div class="title form-selected">
           <span class="text">Ожидающие объявления:</span>

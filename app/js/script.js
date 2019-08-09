@@ -1696,8 +1696,15 @@
 	const activeBtn = document.querySelector('.cabinet .popup-block .menu .active-btn'),
 				archiveBtn = document.querySelector('.cabinet .popup-block .menu .archive-btn'),
 
-				activeBody = document.querySelector('.cabinet .popup-block__body .active-service, .cabinet .popup-block__body .arhive-service'),
-				archiveBody = document.querySelector('.cabinet .popup-block__body .active-service, .cabinet .popup-block__body .arhive-service');
+				activeBody = document.querySelector('.cabinet .dd-1'),
+				archiveBody = document.querySelector('.cabinet .dd-2');
+
+	const exitBtn = document.querySelector('.cabinet .popup-block .top i');
+
+	exitBtn.onclick = function() {
+		document.querySelector('.cabinet .popup-block').classList.add('d-none');
+		document.querySelector('.popup-bg').classList.add('d-none');
+	}
 
 
 	function test1() {
