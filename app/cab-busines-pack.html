@@ -18,71 +18,71 @@
 </head>
 <body>
 
-<script>
-  window.onload = function () {
+  <script>
+    window.onload = function () {
 
-  var chart = new CanvasJS.Chart("chartContainer", {
-    animationEnabled: true,
-    title: {
-      text: '',
-    },
-    axisX: {
-      viewportMinimum: 1,
-      viewportMaximum: 30
-    },
-    axisY: {
-      // title: "Количество просмотров",
-      //gridColor: "#ff4545",
-      gridDashType: "",
-      viewportMinimum: 0,
-      viewportMaximum: 200
-    },
-    data: [
-      {        
-        color: "#ff4545",
-        type: "area",
-        dataPoints: [
-          { x: 1, y: 0 },
-          { x: 2, y: 20 },
-          { x: 3, y: 0 },
-          { x: 4, y: 0 },
-          { x: 5, y: 100 },
-          { x: 6, y: 89 },
-          { x: 7, y: 0 },
-          { x: 8, y: 0 },
-          { x: 9, y: 0 },
-          { x: 10, y: 123 },
-          { x: 11, y: 0 },
-          { x: 12, y: 0 },
-          { x: 13, y: 0 },
-          { x: 14, y: 0 },
-          { x: 15, y: 0 },
-          { x: 16, y: 0 },
-          { x: 17, y: 122 },
-          { x: 18, y: 50 },
-          { x: 19, y: 0 },
-          { x: 20, y: 0 },
-          { x: 21, y: 39 },
-          { x: 22, y: 0 },
-          { x: 23, y: 0 },
-          { x: 24, y: 0 },
-          { x: 25, y: 89 },
-          { x: 26, y: 0 },
-          { x: 27, y: 0 },
-          { x: 28, y: 0 },
-          { x: 29, y: 0 },
-          { x: 30, y: 0 },
-        ]
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      title: {
+        text: '',
       },
-    ]
+      axisX: {
+        viewportMinimum: 1,
+        viewportMaximum: 30
+      },
+      axisY: {
+        // title: "Количество просмотров",
+        //gridColor: "#ff4545",
+        gridDashType: "",
+        viewportMinimum: 0,
+        viewportMaximum: 200
+      },
+      data: [
+        {        
+          color: "#ff4545",
+          type: "area",
+          dataPoints: [
+            { x: 1, y: 0 },
+            { x: 2, y: 20 },
+            { x: 3, y: 0 },
+            { x: 4, y: 0 },
+            { x: 5, y: 100 },
+            { x: 6, y: 89 },
+            { x: 7, y: 0 },
+            { x: 8, y: 0 },
+            { x: 9, y: 0 },
+            { x: 10, y: 123 },
+            { x: 11, y: 0 },
+            { x: 12, y: 0 },
+            { x: 13, y: 0 },
+            { x: 14, y: 0 },
+            { x: 15, y: 0 },
+            { x: 16, y: 0 },
+            { x: 17, y: 122 },
+            { x: 18, y: 50 },
+            { x: 19, y: 0 },
+            { x: 20, y: 0 },
+            { x: 21, y: 39 },
+            { x: 22, y: 0 },
+            { x: 23, y: 0 },
+            { x: 24, y: 0 },
+            { x: 25, y: 89 },
+            { x: 26, y: 0 },
+            { x: 27, y: 0 },
+            { x: 28, y: 0 },
+            { x: 29, y: 0 },
+            { x: 30, y: 0 },
+          ]
+        },
+      ]
 
-  });
-  chart.render();
+    });
+    chart.render();
 
-  }
-</script>
+    }
+  </script>
 
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
   <!-- Шапка -->
   <header class="header">
@@ -262,274 +262,280 @@
     <div class="wrapper">
 
       <div class="popup-block d-none">
-        <div class="top"><i class="icon-exit-white"></i></div>
+        <div class="before-top">
+          <i class="icon-warning-black"></i>
+          <p>Поменяйте порядок бизнес объявлений на вашей странице при помощи <span>перетаскивания списка</span></p>
+        </div>
+        <div class="top">
+          <span> 10 бизнес объявлений / выбрано 10 </span>
+          <div class="border__"></div>
+          <span>количество всех объявлений 23</span>
+          <i class="icon-exit-white"></i>
+        </div>
         <div class="menu">
-          <ul>
-            <li><button class="active-btn">Активные услуги</button></li>
-            <li><button class="archive-btn">Архив услуг</button></li>
-          </ul>
+
+          <section class="found-filter__body">
+            <form action="/">
+              <div class="block block-1 search-wrapper form-selected">
+                <div class="filter-search">
+                  <i class="icon-search"></i>
+                  <!-- <i class="delete-text icon-exit-chrest"></i> -->
+                  <input type="text" placeholder="Введите названия или номер обьявления">
+                </div>
+              </div>
+            </form>
+          </section>
+
           <div class="checkbox-body">
             <p class="checkbox-wrapper">
               <input type="checkbox" id="checkbox-42111">
-              <label for="checkbox-42111">Топ</label>
+              <label for="checkbox-42111">Новые</label>
             </p>
             <p class="checkbox-wrapper">
               <input type="checkbox" id="checkbox-32111">
-              <label for="checkbox-32111">VIP</label>
-            </p>
-            <p class="checkbox-wrapper">
-              <input type="checkbox" id="checkbox-12111">
-              <label for="checkbox-12111">Обновления</label>
+              <label for="checkbox-32111">БУ</label>
             </p>
           </div>
         </div>
+
         <div class="last-menu">
-          <span>Название услуги</span>
-          <span>Срок действия</span>
+          <span>Названия объявления</span>
+          <span>Категория</span>
+          <span>Номер объявления</span>
+          <span>Цена</span>
+          <span>Бизнес</span>
         </div>
 
         <div class="popup-block__body">
           
           <ul class="active-service dd-1">
             <li>
-              <i class="icon-red-diamant-cab"></i>
-              <span class="active-service__title">VIP продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
+              <span class="number">1</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-01">
+                  <label for="checkbox-01"></label>
+                </p>
+              </div>
             </li>
             <li>
-              <i class="icon-red-arrows-cab"></i>
-              <span class="active-service__title">7 авто обновлений</span>
-              <p>
-               <select name="" id="" style="width: 283px;">
-                 <option value="">Время активации </option>
-                 <option value="">Время активации 2</option>
-                 <option value="">Время активации 3</option>
-                 <option value="">Время активации 4</option>
-               </select>
-              </p> 
+              <span class="number">2</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-02">
+                  <label for="checkbox-02"></label>
+                </p>
+              </div>
             </li>
             <li>
-              <i class="icon-red-fire-cab"></i>
-              <span class="active-service__title">Топ продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
+              <span class="number">3</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-03">
+                  <label for="checkbox-03"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="number">4</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-04">
+                  <label for="checkbox-04"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="number">5</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-05">
+                  <label for="checkbox-05"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="number">6</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-06">
+                  <label for="checkbox-06"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="number">7</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-07">
+                  <label for="checkbox-07"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="number">8</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-08">
+                  <label for="checkbox-08"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="number">9</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-09">
+                  <label for="checkbox-09"></label>
+                </p>
+              </div>
+            </li>
+            <li class="ten-plus">
+              <span class="number">10</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-10">
+                  <label for="checkbox-10"></label>
+                </p>
+              </div>
+            </li>
+            <li class="ten-plus">
+              <span class="number">11</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-11">
+                  <label for="checkbox-11"></label>
+                </p>
+              </div>
+            </li>
+            <li class="ten-plus">
+              <span class="number">12</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-12">
+                  <label for="checkbox-12"></label>
+                </p>
+              </div>
+            </li>
+            <li class="ten-plus">
+              <span class="number">13</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-13">
+                  <label for="checkbox-13"></label>
+                </p>
+              </div>
+            </li>
+            <li class="ten-plus">
+              <span class="number">14</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-14">
+                  <label for="checkbox-14"></label>
+                </p>
+              </div>
+            </li>
+            <li class="ten-plus">
+              <span class="number">15</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-15">
+                  <label for="checkbox-15"></label>
+                </p>
+              </div>
+            </li>
+            <li class="ten-plus">
+              <span class="number">16</span>
+              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
+              <span class="category">Легковые авто</span>
+              <span class="number-ofer">№324534534535</span>
+              <span class="price">10 000 000 ₸ </span>
+
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-16">
+                  <label for="checkbox-16"></label>
+                </p>
+              </div>
             </li>
           </ul>
 
-          <ul class="arhive-service dd-2 d-none">
-            <li>
-              <i class="icon-red-diamant-cab"></i>
-              <span class="active-service__title">VIP продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-arrows-cab"></i>
-              <span class="active-service__title">7 авто обновлений</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-fire-cab"></i>
-              <span class="active-service__title">Топ продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-diamant-cab"></i>
-              <span class="active-service__title">VIP продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-arrows-cab"></i>
-              <span class="active-service__title">7 авто обновлений</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-fire-cab"></i>
-              <span class="active-service__title">Топ продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-diamant-cab"></i>
-              <span class="active-service__title">VIP продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-arrows-cab"></i>
-              <span class="active-service__title">7 авто обновлений</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-fire-cab"></i>
-              <span class="active-service__title">Топ продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-diamant-cab"></i>
-              <span class="active-service__title">VIP продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-arrows-cab"></i>
-              <span class="active-service__title">7 авто обновлений</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-fire-cab"></i>
-              <span class="active-service__title">Топ продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-diamant-cab"></i>
-              <span class="active-service__title">VIP продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-arrows-cab"></i>
-              <span class="active-service__title">7 авто обновлений</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-fire-cab"></i>
-              <span class="active-service__title">Топ продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-diamant-cab"></i>
-              <span class="active-service__title">VIP продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-arrows-cab"></i>
-              <span class="active-service__title">7 авто обновлений</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-fire-cab"></i>
-              <span class="active-service__title">Топ продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-diamant-cab"></i>
-              <span class="active-service__title">VIP продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-arrows-cab"></i>
-              <span class="active-service__title">7 авто обновлений</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-fire-cab"></i>
-              <span class="active-service__title">Топ продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-diamant-cab"></i>
-              <span class="active-service__title">VIP продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-arrows-cab"></i>
-              <span class="active-service__title">7 авто обновлений</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-            <li>
-              <i class="icon-red-fire-cab"></i>
-              <span class="active-service__title">Топ продвижения</span>
-              <p>
-                от <span>18.03.2020</span> <span>12:44</span>
-                до <span>18.04.2020</span> <span>12:44</span>
-              </p> 
-            </li>
-          </ul>
-
-          <div class="null null-active d-none">
-            <div class="null__image-wrapper">
-              <img src="img/null-popup-cabinet.png" alt="image">
-            </div>
-            <span>У вас нет активных услуг</span>
-            <a href="#" class="btn">Рекламировать объявления</a>
-          </div>
-          <div class="null null-archive d-none">
-            <div class="null__image-wrapper">
-              <img src="img/null-popup-cabinet.png" alt="image">
-            </div>
-            <span>История пуста</span>
-            <a href="#" class="btn">Рекламировать объявления</a>
-          </div>
+          <div class="opacity"></div>
         </div>
       </div>
 
@@ -614,7 +620,6 @@
             </li>
           </ul>
         </div>
-
       </div>
 
       <div class="first">
@@ -664,491 +669,378 @@
       </div>
 
       <div class="null d-none">
-        <b style="margin-bottom: 32px;">У вас нет уведомлений</b>
+        <b style="margin-bottom: 32px;">У Вас нет активных пакетов размещений.</b>
+        <span>Используйте больше возможностей при покупке пакетов объявлений на pedal.kz</span>
         <div class="img-wrapper">
-          <img src="img/no-uvedom.png" alt="clear">
+          <img src="img/cab-busines-null.png" alt="clear">
         </div>
 
-        <button class="btn"><i class="icon-plus"></i>Добавить объявление</button>
+        <button class="btn"><i class="icon-plus"></i>Купить пакет</button>
+
+        <div class="hr"></div>
+
+        <div class="pre-footer-icons">
+          <ul>
+            <li>
+              <i class="icon-1"></i>
+              <span>
+                Педаль.rz — новый сайт для
+                продажи и покупки машин 
+                в Казахстане
+              </span>
+            </li>
+            <li>
+              <i class="icon-2"></i>
+              <span>
+                Удобный поиск легковых авто, грузового и 
+                коммерческого транспорта, мототехники, 
+                спецтехники и многих других видов транспорта
+              </span>
+            </li>
+            <li>
+              <i class="icon-3"></i>
+              <span>
+                Размещайте объявления о 
+                продаже легковых авто, 
+                спецтехники и запчастей
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="message-list received" style="background-color: red;">
-        <div class="title form-selected">
-          <span class="text">Активные объявления</span>
-          <div class="checkbox-body">
-            <p class="checkbox-wrapper">
-              <input type="checkbox" id="checkbox-21">
-              <label for="checkbox-21" style="color: #fff">.</label>
+      <div class="message-list received str-busines__packages d-none">
+        <div class="str-busines-package">
+          <div class="top">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-auto-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn">Старт</button>
+        </div>
+        <div class="str-busines-package">
+          <div class="top top--black">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-auto-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn btn--large">Перемиум</button>
+        </div>
+        <div class="str-busines-package">
+          <div class="top">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-moto-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn">Старт</button>
+        </div>
+        <div class="str-busines-package">
+          <div class="top">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-heavy-auto-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn">Старт</button>
+        </div>
+        <div class="str-busines-package">
+          <div class="top">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-settigns-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn">Старт</button>
+        </div>
+      </div>
+
+      <div class="message-list sent str-busines__control d-none">
+        <div class="str-busines-package">
+          <div class="top">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-auto-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn">Старт</button>
+
+          <div class="slider-on-off">
+            <span>Отключить</span>
+            <div class="container">
+              <div class="slider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="str-busines-package">
+          <div class="top top--black">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-auto-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn btn--large">Перемиум</button>
+          <div class="slider-on-off">
+            <span>Отключить</span>
+            <div class="container">
+              <div class="slider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="str-busines-package">
+          <div class="top">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-moto-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn">Старт</button>
+          <div class="slider-on-off">
+            <span>Отключить</span>
+            <div class="container">
+              <div class="slider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="str-busines-package">
+          <div class="top">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-heavy-auto-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn">Старт</button>
+          <div class="slider-on-off">
+            <span>Включить</span>
+            <div class="container">
+              <div class="slider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="str-busines-package">
+          <div class="top">Выбранный пакет</div>
+          <p>
+            до 12.12.2020
+            <span>срок действия</span>
+          </p>
+          <div class="img-wrapper">
+            <img src="img/icon/icon-for-found/icon-settigns-category.png" alt="image">
+          </div>
+          <p class="zx">Легковые авто</p>
+          <button class="btn">Старт</button>
+          <div class="slider-on-off">
+            <span>Отключить</span>
+            <div class="container">
+              <div class="slider"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-list archive str-busines__stat">
+
+      </div>
+
+      <div class="message-list message-list__waiting found-filter__body str-busines__settings d-none">
+
+        <form action="/">
+
+          <div class="block block-1 form-selected">
+            <div class="items title">
+              <p>Основные настройки</p>
+              <input type="text" placeholder="Заголовок" class="title-input">
+              <p class="carent-char-wrapper">
+                <i class="icon-warrning-black"></i>
+                <span>10000</span>&nbsp;знаков осталось
+              </p>
+            </div>
+
+            <div class="items category">
+              <p><i class="icon">*</i>Рубрика</p>
+              <div class="castom-select-wrapper">
+                <i class="icon found-icon-fourth-cube"></i>
+                <span>Все рубрики</span>
+                <i class="more icon-arrow-down"></i>
+                <div class="list d-none">
+                  <span class="list__item">
+                    <i class="found-icon-fourth-cube"></i>
+                    Все рубрики
+                  </span>
+                  <span class="list__item">
+                    <i class="found-icon-auto"></i>
+                    Легковые
+                    <b class="count">83 237</b>
+                  </span>
+                  <span class="list__item">
+                    <i class="found-icon-moto"></i>
+                    Мото
+                    <b class="count">13 237</b>                  
+                  </span>
+                  <span class="list__item">
+                    <i class="found-icon-heavy-auto"></i>
+                    Спецтехника
+                    <b class="count">132</b>                  
+                  </span>
+                  <span class="list__item">
+                    <i class="found-icon-settings"></i>
+                    Запчасти
+                    <b class="count">13 237</b>                  
+                  </span>
+                  <span class="list__item">
+                    <i class="found-icon-service"></i>
+                    Автосервесы
+                    <b class="count">83</b>                  
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block block-3 contact-date">
+            <h2>Ваши контактные данные</h2>          
+            <div class="items">
+              <p><i class="icon">*</i>Местоположение</p>
+              <input type="text" placeholder="Город продажи">
+              <input type="text" placeholder="Улица">
+            </div>
+            <div class="items">
+              <p><i class="icon">*</i>Телефон</p>
+              <input type="text" placeholder="Введите телефон">
+            </div>     
+            <div class="items" style="margin-bottom: 0;">
+              <p><i class="icon">*</i>Контактное лицо</p>
+              <input type="text" placeholder="Введите ваше имя">
+            </div>
+    
+            <p class="small-text">
+              <i class="icon-warrning-black"></i>
+              <span>Ваши контактные данные были сохранены, что бы из изменить их войдите в <a href="#">настройки</a></span>
             </p>
           </div>
 
-          <div class="title__active">
-            <!-- <span class="user">Пользователь</span> -->
-            <span class="date">Дата<i class="icon-arrow-down"></i></span>
-            <span class="subject">Заголовок</span>
-            
-            <div class="end">
-            
-              <span class="end__price">Цена</span>
-              <span class="end__message">Сообщения</span>
-              <p class="number-str">
-                <span>1</span> – <span>10</span> из <span>38</span>
+          <div class="hr" style="margin-bottom: 64px;"></div>
+        
+          <div class="btn-next-wrapper">
+            <button class="previews">Предпросмотр</button>
+            <button class="btn">Дальше</button>
+          </div>
+        </form>
+
+        <section class="form-property">
+          <div class="block block--1 review">
+            <form action="/" method="post" class="strange-form">
+              <h2>Основные настройки</h2>
+
+              <input type="text" placeholder="Заголовок" class="title-input">
+
+              <p class="carent-char-wrapper">
+                <i class="icon-warrning-black"></i>
+                <span>10000</span> знаков осталось
               </p>
               
-              <ul class="navigation">
-                <li class="pre"><i class="icon-arrow-right"></i></li>
-                <li class="next"><i class="icon-arrow-right"></i></li>
-              </ul>
-              <!-- <span class="date">Дата<i class="icon-arrow-down"></i></span> -->
-            </div>
-          </div>
-          <div class="title__no-active d-none">
-            <a href="#">Удалить выбранные</a>
-          </div>
-        </div>
-
-        <ul class="body">
-
-          <li class="blockk">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-221">
-                  <label for="checkbox-221" style="color: #fff">.</label>
+              <div class="input-wrapper text-input-wrapper">
+                <textarea placeholder="Текст отзыва" class="text-input"></textarea>
+                <i class="exit"></i>
+                <p class="carent-char-wrapper">
+                  <i class="icon-warrning-black"></i>
+                  <span class="item">10000</span> знаков осталось
+                  <span class="status">Сохранено</span>
                 </p>
               </div>
-              <div class="start__text">С: 15 мая.<br>
-                По: 15 марта.</div>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
-              <!-- <span class="id">ID 572979700</span> -->
-              <button class="btn-review"><i class="icon-iconka"></i>Просмотреть</button>
-              <button class="btn-review"><i class="icon-redact"></i>Редактировать</button>
-              <button class="btn-delete"><i class="icon-red-tresh"></i>Удалить</button>
-            </div>
-            <div class="end">
-              <span class="price">10 000 ₸ </span>
 
-              <div class="content">
-                <div class="message-btn--wrapper">
-                  <button class="message-btn"><i class="message-icon"></i></button>
-                  <span class="number">13</span>
-                </div>
-                <div class="btn-wrapper">
-                  <button class="btn btn--recl">Рекламировать</button>
-                  <button class="btn btn--increase">Поднять за 40 ₸</button>
-                  <button class="btn btn__little"><i class="icon-time"></i>Услуги</button>
-                </div>
-              </div>
-            </div>
-            <div class="last">
-              <a href="#">Статистика</a>
-              <div class="last__item"><i class="icon-views"></i>Просмотры: <span class="num">1789</span></div>
-              <div class="last__item"><i class="icon-phone"></i>Тел.: <span class="num">456</span></div>
-              <div class="last__item"><i class="icon-cabinet-star-grey"></i>В Избранном: <span class="num">45</span></div>
-            </div>
-          </li>
-
-          <li class="blockk">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-221">
-                  <label for="checkbox-221" style="color: #fff">.</label>
+              <div class="input-wrapper title-input-wrapper d-none">
+                <input type="text" placeholder="Подзаголовок" class="pod-title-input">
+                <i class="exit"></i>
+                <p class="carent-char-wrapper">
+                  <i class="icon-warrning-black"></i>
+                  <span>10000</span> знаков осталось
                 </p>
               </div>
-              <div class="start__text">С: 15 мая.<br>
-                По: 15 марта.</div>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
-              <!-- <span class="id">ID 572979700</span> -->
-              <button class="btn-review"><i class="icon-iconka"></i>Просмотреть</button>
-              <button class="btn-review"><i class="icon-redact"></i>Редактировать</button>
-              <button class="btn-delete"><i class="icon-red-tresh"></i>Удалить</button>
-            </div>
-            <div class="end">
-              <span class="price">10 000 ₸ </span>
 
-              <div class="content">
-                <div class="message-btn--wrapper">
-                  <button class="message-btn"><i class="message-icon"></i></button>
-                  <span class="number">13</span>
-                </div>
-                <div class="btn-wrapper">
-                  <button class="btn btn--recl">Рекламировать</button>
-                  <button class="btn btn--increase">Поднять за 40 ₸</button>
-                  <button class="btn btn__little"><i class="icon-time"></i>Услуги</button>
-                </div>
+              <div class="input-wrapper file-input-wrapper d-none">
+                <i class="add"></i>
+                <i class="delete"></i>
+                  <!-- Swiper -->
+                  <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/other-image.jpg" alt="image">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/other-image.jpg" alt="image">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/other-image.jpg" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/other-image.jpg" alt="image">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/other-image.jpg" alt="image">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/other-image.jpg" alt="image">
+                      </div>                  
+                    </div>
+                  </div>
               </div>
-            </div>
-            <div class="last">
-              <a href="#">Статистика</a>
-              <div class="last__item"><i class="icon-views"></i>Просмотры: <span class="num">1789</span></div>
-              <div class="last__item"><i class="icon-phone"></i>Тел.: <span class="num">456</span></div>
-              <div class="last__item"><i class="icon-cabinet-star-grey"></i>В Избранном: <span class="num">45</span></div>
-            </div>
-          </li>
 
-          <li class="blockk">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-221">
-                  <label for="checkbox-221" style="color: #fff">.</label>
-                </p>
-              </div>
-              <div class="start__text">С: 15 мая.<br>
-                По: 15 марта.</div>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
-              <!-- <span class="id">ID 572979700</span> -->
-              <button class="btn-review"><i class="icon-iconka"></i>Просмотреть</button>
-              <button class="btn-review"><i class="icon-redact"></i>Редактировать</button>
-              <button class="btn-delete"><i class="icon-red-tresh"></i>Удалить</button>
-            </div>
-            <div class="end">
-              <span class="price">10 000 ₸ </span>
-
-              <div class="content">
-                <div class="message-btn--wrapper">
-                  <button class="message-btn"><i class="message-icon"></i></button>
-                  <span class="number">13</span>
+              <div class="input-wrapper video-input-wrapper d-none">
+                <div class="video-wrapper d-none">
+                  <i class="exit"></i>
+                  <iframe src="https://www.youtube.com/embed/gAAmliyDoUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="btn-wrapper">
-                  <button class="btn btn--recl">Рекламировать</button>
-                  <button class="btn btn--increase">Поднять за 40 ₸</button>
-                  <button class="btn btn__little"><i class="icon-time"></i>Услуги</button>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Ссылка на YouTube" class="youtube-input">
+                  <button type="button" class="add">Добавить</button>
                 </div>
               </div>
-            </div>
-            <div class="last">
-              <a href="#">Статистика</a>
-              <div class="last__item"><i class="icon-views"></i>Просмотры: <span class="num">1789</span></div>
-              <div class="last__item"><i class="icon-phone"></i>Тел.: <span class="num">456</span></div>
-              <div class="last__item"><i class="icon-cabinet-star-grey"></i>В Избранном: <span class="num">45</span></div>
-            </div>
-          </li>
 
-        </ul>
-      </div>
-
-      <div class="message-list sent d-none" style="background-color: yellow;">
-        <div class="title form-selected">
-          <span class="text">Неактивные объявления:</span>
-          <div class="checkbox-body">
-            <p class="checkbox-wrapper">
-              <input type="checkbox" id="checkbox-2111">
-              <label for="checkbox-2111" style="color: #fff">.</label>
-            </p>
-          </div>
-
-          <div class="title__active">
-            <!-- <span class="user">Пользователь</span> -->
-            <span class="date">Дата<i class="icon-arrow-down"></i></span>
-            <span class="subject">Заголовок</span>
-            
-            <div class="end">
-            
-              <span class="end__price">Цена</span>
-              <span class="end__message">Сообщения</span>
-              <p class="number-str">
-                <span>1</span> – <span>10</span> из <span>38</span>
-              </p>
-              
-              <ul class="navigation">
-                <li class="pre"><i class="icon-arrow-right"></i></li>
-                <li class="next"><i class="icon-arrow-right"></i></li>
-              </ul>
-              <!-- <span class="date">Дата<i class="icon-arrow-down"></i></span> -->
-            </div>
-          </div>
-          <div class="title__no-active d-none">
-            <a href="#">Аивировать выбранные</a>
-            <a href="#">Удалить выбранные</a>
-          </div>
-        </div>
-
-        <ul class="body">
-
-          <li class="blockk">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-22">
-                  <label for="checkbox-22" style="color: #fff">.</label>
-                </p>
+              <div class="add-atribute">
+                <button type="button" class="text"></button>
+                <button type="button" class="title"></button>
+                <button type="button" class="img">
+                  <input type="file" multiple>
+                </button>
+                <button type="button" class="video"></button>
               </div>
-              <div class="start__text">С: 15 мая.<br>
-                По: 15 марта.</div>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
-              <!-- <span class="id">ID 572979700</span> -->
-              <button class="btn-review"><i class="icon-iconka"></i>Просмотреть</button>
-              <button class="btn-review"><i class="icon-redact"></i>Редактировать</button>
-              <button class="btn-delete"><i class="icon-red-tresh"></i>Удалить</button>
-            </div>
-            <div class="end">
-              <span class="price">10 000 ₸ </span>
-              <button class="message-btn"><i class="message-icon"></i></button>
-              <span class="number">0</span>
-              <button class="btn">Активировать</button>  
-            </div>
-            <div class="last">
-              <a href="#">Статистика</a>
-              <div class="last__item"><i class="icon-views"></i>Просмотры: <span class="num">1789</span></div>
-              <div class="last__item"><i class="icon-phone"></i>Тел.: <span class="num">456</span></div>
-              <div class="last__item"><i class="icon-cabinet-star-grey"></i>В Избранном: <span class="num">45</span></div>
-            </div>
-          </li>
-
-          <li class="blockk">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-32">
-                  <label for="checkbox-32" style="color: #fff">.</label>
-                </p>
-              </div>
-              <div class="start__text">С: 15 мая.<br>
-                По: 15 марта.</div>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
-              <!-- <span class="id">ID 572979700</span> -->
-              <button class="btn-review"><i class="icon-iconka"></i>Просмотреть</button>
-              <button class="btn-review"><i class="icon-redact"></i>Редактировать</button>
-              <button class="btn-delete"><i class="icon-red-tresh"></i>Удалить</button>
-            </div>
-            <div class="end">
-              <span class="price">10 000 ₸ </span>
-              <button class="message-btn"><i class="message-icon"></i></button>
-              <span class="number">0</span>
-              <button class="btn">Активировать</button>  
-            </div>
-            <div class="last">
-              <a href="#">Статистика</a>
-              <div class="last__item"><i class="icon-views"></i>Просмотры: <span class="num">1789</span></div>
-              <div class="last__item"><i class="icon-phone"></i>Тел.: <span class="num">456</span></div>
-              <div class="last__item"><i class="icon-cabinet-star-grey"></i>В Избранном: <span class="num">45</span></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="message-list archive d-none" style="background-color: green;">
-        <span class="message-list__title">Объявления, удаленные модератором:</span>
-        <div class="title form-selected">
-
-          <div class="checkbox-body">
-            <p class="checkbox-wrapper">
-              <input type="checkbox" id="checkbox-11">
-              <label for="checkbox-11" style="color: #fff">.</label>
-            </p>
+            </form>
           </div>
+        </section>
 
-          <div class="title__active">
-            <span class="date">Дата<i class="icon-arrow-down"></i></span>
-            <span class="subject">Заголовок</span>
-            
-            <div class="end">
-              <span>Цена</span>
-              <span>Сообщения</span>
-            </div>
-          </div>
-          <div class="title__no-active d-none">
-            <a href="#">Удалить выбранные</a>
-          </div>
-        </div>
-
-        <ul class="body">
-
-          <li class="blockk">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-222">
-                  <label for="checkbox-222" style="color: #fff">.</label>
-                </p>
-              </div>
-              <div>С: 15 мая.<br>
-                По: 15 марта.</div>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
-              <span class="id">ID 572979700</span>
-              <button class="btn-review"><i class="icon-iconka"></i>Просмотреть</button>
-              <button class="btn-delete"><i class="icon-red-tresh"></i>Удалить</button>
-            </div>
-            <div class="end">
-              <span class="price">10 000 ₸ </span>
-              <button class="message-btn"><i class="message-icon"></i></button>
-              <span class="number">0</span>      
-            </div>
-            <div class="last">
-              <span><i class="icon-worning-red"></i>Объявление удалено модератором</span>
-              <a href="#">Узнать подробнее<i class="icon-left-arrow-blue"></i></a>
-            </div>
-          </li>
-
-          <li class="blockk blockk--pink">
-            <span class="text">Обявление помещено в раздел неактивных</span>
-          </li>
-
-          <li class="blockk">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-33">
-                  <label for="checkbox-33" style="color: #fff">.</label>
-                </p>
-              </div>
-              <div>С: 15 мая.<br>
-                По: 15 марта.</div>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
-              <span class="id">ID 572979700</span>
-              <button class="btn-review"><i class="icon-iconka"></i>Просмотреть</button>
-              <button class="btn-delete"><i class="icon-red-tresh"></i>Удалить</button>
-            </div>
-            <div class="end">
-              <span class="price">10 000 ₸ </span>
-              <button class="message-btn"><i class="message-icon"></i></button>
-              <span class="number">0</span>      
-            </div>
-            <div class="last">
-              <span><i class="icon-worning-red"></i>Объявление удалено модератором</span>
-              <a href="#">Узнать подробнее<i class="icon-left-arrow-blue"></i></a>
-            </div>
-          </li>
-
-          <li class="blockk blockk--pink">
-            <span class="text">
-              <div class="windows8">
-                <div class="wBall" id="wBall_1">
-                  <div class="wInnerBall"></div>
-                </div>
-                <div class="wBall" id="wBall_2">
-                  <div class="wInnerBall"></div>
-                </div>
-                <div class="wBall" id="wBall_3">
-                  <div class="wInnerBall"></div>
-                </div>
-                <div class="wBall" id="wBall_4">
-                  <div class="wInnerBall"></div>
-                </div>
-                <div class="wBall" id="wBall_5">
-                  <div class="wInnerBall"></div>
-                </div>
-              </div>
-              <span>Удаляется...</span>
-            </span>
-          </li>
-
-          <li class="blockk">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-44">
-                  <label for="checkbox-44" style="color: #fff">.</label>
-                </p>
-              </div>
-              <div>С: 15 мая.<br>
-                По: 15 марта.</div>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
-              <span class="id">ID 572979700</span>
-              <button class="btn-review"><i class="icon-iconka"></i>Просмотреть</button>
-              <button class="btn-delete"><i class="icon-red-tresh"></i>Удалить</button>
-            </div>
-            <div class="end">
-              <span class="price">10 000 ₸ </span>
-              <button class="message-btn"><i class="message-icon"></i></button>
-              <span class="number">0</span>      
-            </div>
-            <div class="last">
-              <span><i class="icon-worning-red"></i>Объявление удалено модератором</span>
-              <a href="#">Узнать подробнее<i class="icon-left-arrow-blue"></i></a>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="message-list message-list__waiting d-none" style="background-color: grey;">
-       <!--  <span class="message-list__title">Ожидающие объявления:</span> -->
-        <div class="title form-selected">
-          <span class="text">Ожидающие объявления:</span>
-          <div class="checkbox-body">
-            <p class="checkbox-wrapper">
-              <input type="checkbox" id="checkbox-2212">
-              <label for="checkbox-2212" style="color: #fff">.</label>
-            </p>
-          </div>
-
-          <div class="title__active">
-            <!-- <span class="user">Пользователь</span> -->
-            <span class="date">Дата<i class="icon-arrow-down"></i></span>
-            <span class="subject">Заголовок</span>
-            
-            <div class="end">
-            
-              <span class="end__price">Цена</span>
-              <span class="end__message">Сообщения</span>
-              <p class="number-str">
-                <span>1</span> – <span>10</span> из <span>38</span>
-              </p>
-              
-              <ul class="navigation">
-                <li class="pre"><i class="icon-arrow-right"></i></li>
-                <li class="next"><i class="icon-arrow-right"></i></li>
-              </ul>
-              <!-- <span class="date">Дата<i class="icon-arrow-down"></i></span> -->
-            </div>
-          </div>
-          <div class="title__no-active d-none">
-            <a href="#">Отменить публикацию</a>
-          </div>
-        </div>
-
-        <ul class="body">
-          <li class="blockk">
-            <div class="start">
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-222">
-                  <label for="checkbox-222" style="color: #fff">.</label>
-                </p>
-              </div>
-              <div class="start__text">С: 15 мая.<br>
-                По: 15 марта.</div>
-            </div>
-            <div class="center">
-              <b><a href="cab-messages-chat.html">language selection - BMW4333454654645werwerwerwer6456...</a></b>
-              <!-- <span class="id">ID 572979700</span> -->
-              <button class="btn-review"><i class="icon-iconka"></i>Просмотреть</button>
-              <button class="btn-review"><i class="icon-redact"></i>Редактировать</button>
-            </div>
-            <div class="end">
-              <span class="price">10 000 ₸ </span>
-              <button class="message-btn"><i class="message-icon"></i></button>
-              <span class="number">0</span>
-              <span class="text">
-                Объявление скоро 
-                появится на сайте
-              </span>    
-            </div>
-
-            <div class="last">
-              <!-- <span><i class="icon-worning-red"></i>Объявление удалено модератором</span> -->
-              <a href="#"><i class="icon-red-exit"></i>Отменить публикацию</a>
-            </div>
-          </li>
-        </ul>
       </div>
     </div>
   </main>
@@ -1171,22 +1063,35 @@
   <!-- попап окна -->
   <div class="popup-bg d-none"></div>
 
-  <div class="popup-wrapper-str-ads d-none">
-    <div class="popup-def popup-sig-in cab-popup-delete-message str-add-popup">
+  <div class="popup-wrapper-str-ads">
+    <div class="popup-def popup-sig-in cab-popup-delete-message str-busines-popup d-none">
       <i class="icon-exit-chrest icon-form-exit"></i>
       <div class="image-wrapper">
-        <img src="img/icon/correct-blue.png" alt="image">
+        <img src="img/icon/icon-for-found/icon-heavy-auto-category.png" alt="image">
       </div>
       <h5>
-        Ваше объявления прийнято
+        Вы приобрели стартовый пакет
       </h5>
       <p>
-        Ожидайте, скоро ваше объявление 
-        будет опубликовано на сайте
+        Для использования пакета для начала 
+        необходимо настроить бизнес страницу
       </p>
-      <a href="#" class="btn">Перейти в кабинет</a>
+      <a href="#" class="btn">Настройки бизнес страницы</a>
       <!-- <a href="cab-notifications-message.html" class="btn">Отмена</a> -->
-      <i class="arrow-down-circle"></i>
+      <!-- <i class="arrow-down-circle"></i> -->
+    </div>
+    <div class="popup-def popup-sig-in cab-popup-delete-message str-busines-popup str-busines-popup--little d-none">
+      <i class="icon-exit-chrest icon-form-exit"></i>
+      <h5>
+        Бизнес пакет недоступен
+      </h5>
+      <p>
+        Для доступа к бизнес пакету 
+        настройте бизнес страницу
+      </p>
+      <a href="#" class="btn">Настройки бизнес страницы</a>
+      <!-- <a href="cab-notifications-message.html" class="btn">Отмена</a> -->
+      <!-- <i class="arrow-down-circle"></i> -->
     </div>
   </div>
   <!-- // попап окна -->  
@@ -1205,6 +1110,7 @@
   crossorigin="anonymous"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/my-scroll.js"></script>
+  <!-- <script src="js/acardion-publication.js"></script> -->
 
   <script>
     var swiper = new Swiper('.swiper-container', {

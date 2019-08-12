@@ -1523,7 +1523,7 @@
 	const body3 = document.querySelector('.str-messages .archive');
 	const body4 = document.querySelector('.str-messages .message-list__waiting');
 
-	btn1.onclick = function(){
+	if(btn1) btn1.onclick = function(){
 		let x = this.parentNode.querySelectorAll('li');
 		
 		x.forEach(function(element) {
@@ -1538,7 +1538,7 @@
 		body1.classList.remove('d-none');
 	};
 
-	btn2.onclick = function(){
+	if(btn2) btn2.onclick = function(){
 		let x = this.parentNode.querySelectorAll('li');
 		x.forEach(function(element) {
 			element.classList.remove('active');
@@ -1552,7 +1552,7 @@
 		body2.classList.remove('d-none');
 	};
 	
-	btn3.onclick = function(){
+	if(btn3) btn3.onclick = function(){
 		let x = this.parentNode.querySelectorAll('li');
 		x.forEach(function(element) {
 			element.classList.remove('active');
@@ -1566,7 +1566,7 @@
 		body3.classList.remove('d-none');
 	};
 
-	btn4.onclick = function(){
+	if(btn4) btn4.onclick = function(){
 		let x = this.parentNode.querySelectorAll('li');
 		x.forEach(function(element) {
 			element.classList.remove('active');
@@ -1639,10 +1639,10 @@
 				receivedStrChecbox = document.querySelector('.received .title input');
 
 
-	deletedStrChecbox.addEventListener('click', onAllInput);
-	noActiveStrChecbox.addEventListener('click', onAllInput);
-	waitingStrChecbox.addEventListener('click', onAllInput);
-	receivedStrChecbox.addEventListener('click', onAllInput);
+	if(deletedStrChecbox)deletedStrChecbox.addEventListener('click', onAllInput);
+	if(noActiveStrChecbox)noActiveStrChecbox.addEventListener('click', onAllInput);
+	if(waitingStrChecbox)waitingStrChecbox.addEventListener('click', onAllInput);
+	if(receivedStrChecbox)receivedStrChecbox.addEventListener('click', onAllInput);
 
 
 	function onAllInput() {
@@ -1701,7 +1701,7 @@
 
 	const exitBtn = document.querySelector('.cabinet .popup-block .top i');
 
-	exitBtn.onclick = function() {
+	if(exitBtn) exitBtn.onclick = function() {
 		document.querySelector('.cabinet .popup-block').classList.add('d-none');
 		document.querySelector('.popup-bg').classList.add('d-none');
 	}
@@ -1724,7 +1724,117 @@
 	};
 
 
-	activeBtn.addEventListener('click', test1);
-	archiveBtn.addEventListener('click', test2);
+	if(activeBtn) activeBtn.addEventListener('click', test1);
+	if(archiveBtn) archiveBtn.addEventListener('click', test2);
 
+})();
+
+
+// кабинет оплата активация вебмани
+(function(){
+	const btn = document.querySelectorAll('main.str-busines-4 .wrapper .container .element');
+
+	function active() {
+		btn.forEach(function(element) {
+			element.classList.remove('element--active');
+		});
+		this.classList.add('element--active');
+	}
+
+	btn.forEach(function(element) {
+		element.addEventListener('click', active);
+	});
+
+
+})();
+
+// кабинет закрыть попапы пакетов блок 1 / блок 2
+(function(){
+	const btn = document.querySelector('.popup-str-busines-package--prem .arrow-left'),
+				block1 = document.querySelector('.popup-str-busines-package--prem .block-1'),
+				block2 = document.querySelector('.popup-str-busines-package--prem .block-2');
+
+	const exit = document.querySelector('.popup-str-busines-package--prem .exit');
+	const exitStar = document.querySelector('.popup-str-busines-package .exit');
+
+	if(exit) exit.onclick = function() {
+		document.querySelector('.popup-str-busines-package--prem').classList.add('d-none');
+		document.querySelector('.popup-bg').classList.add('d-none');
+	}
+
+	if(exitStar) exitStar.onclick = function() {
+		document.querySelector('.popup-str-busines-package--start').classList.add('d-none');
+		document.querySelector('.popup-bg').classList.add('d-none');
+	}
+
+
+	function func() {
+		console.log(this);
+		setTimeout(function(){
+			block1.classList.add('d-none');
+			block2.classList.remove('d-none');
+		}, 400);
+		
+
+		block1.classList.add('ONULL');
+		block2.classList.remove('ONULL');
+
+		this.removeEventListener('click', func);
+		this.addEventListener('click', func2);
+	}
+
+	function func2() {
+		setTimeout(function(){
+			block2.classList.add('d-none');
+			block1.classList.remove('d-none');
+		}, 400);
+
+		block2.classList.add('ONULL');
+		block1.classList.remove('ONULL');
+		
+		this.addEventListener('click', func);
+		this.removeEventListener('click', func2);
+	}
+
+	if(btn) btn.addEventListener('click', func);
+})();
+
+
+// кабинет cab-ads закрыть граф
+(function(){
+	const btn = document.querySelector('.cabinet .popup-graph .top i');
+
+	btn.onclick = function() {
+		document.querySelector('.str-ads-graph').classList.add('d-none');
+		document.querySelector('.popup-bg').classList.add('d-none');
+	};
+
+})();
+
+// кабинет управление пакетами включить отключить пакет
+(function(){
+	const btn = document.querySelectorAll('.str-busines__control .slider-on-off .container');
+	const body = document.querySelectorAll('.str-busines__control .str-busines-package');
+
+	function disabled() {
+		this.parentNode.classList.add('slider-on-off--off');
+		this.parentNode.parentNode.classList.add('str-busines-package--disable');
+		this.previousElementSibling.textContent = 'Включить';
+
+		this.removeEventListener('click', disabled);
+		this.addEventListener('click', active);
+	};
+
+	function active() {
+		this.parentNode.classList.remove('slider-on-off--off');
+		this.parentNode.parentNode.classList.remove('str-busines-package--disable');
+		this.previousElementSibling.textContent = 'Отключить';
+
+		this.addEventListener('click', disabled);
+		this.removeEventListener('click', active);
+	}
+
+	if(btn) btn.forEach(function(element){
+		element.addEventListener('click', disabled);
+	});
 })();
