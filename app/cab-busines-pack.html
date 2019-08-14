@@ -18,74 +18,8 @@
 </head>
 <body>
 
-  <script>
-    window.onload = function () {
-
-    var chart = new CanvasJS.Chart("chartContainer", {
-      animationEnabled: true,
-      title: {
-        text: '',
-      },
-      axisX: {
-        viewportMinimum: 1,
-        viewportMaximum: 30
-      },
-      axisY: {
-        // title: "Количество просмотров",
-        //gridColor: "#ff4545",
-        gridDashType: "",
-        viewportMinimum: 0,
-        viewportMaximum: 200
-      },
-      data: [
-        {        
-          color: "#ff4545",
-          type: "area",
-          dataPoints: [
-            { x: 1, y: 0 },
-            { x: 2, y: 20 },
-            { x: 3, y: 0 },
-            { x: 4, y: 0 },
-            { x: 5, y: 100 },
-            { x: 6, y: 89 },
-            { x: 7, y: 0 },
-            { x: 8, y: 0 },
-            { x: 9, y: 0 },
-            { x: 10, y: 123 },
-            { x: 11, y: 0 },
-            { x: 12, y: 0 },
-            { x: 13, y: 0 },
-            { x: 14, y: 0 },
-            { x: 15, y: 0 },
-            { x: 16, y: 0 },
-            { x: 17, y: 122 },
-            { x: 18, y: 50 },
-            { x: 19, y: 0 },
-            { x: 20, y: 0 },
-            { x: 21, y: 39 },
-            { x: 22, y: 0 },
-            { x: 23, y: 0 },
-            { x: 24, y: 0 },
-            { x: 25, y: 89 },
-            { x: 26, y: 0 },
-            { x: 27, y: 0 },
-            { x: 28, y: 0 },
-            { x: 29, y: 0 },
-            { x: 30, y: 0 },
-          ]
-        },
-      ]
-
-    });
-    chart.render();
-
-    }
-  </script>
-
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
   <!-- Шапка -->
-  <header class="header">
+  <header class="header header--cab-busines">
     <div class="wrapper">
       <button class="btn-bar"></button>
 
@@ -261,367 +195,6 @@
   <main class="cabinet str-messages str-ads str-busines">
     <div class="wrapper">
 
-      <div class="popup-block d-none">
-        <div class="before-top">
-          <i class="icon-warning-black"></i>
-          <p>Поменяйте порядок бизнес объявлений на вашей странице при помощи <span>перетаскивания списка</span></p>
-        </div>
-        <div class="top">
-          <span> 10 бизнес объявлений / выбрано 10 </span>
-          <div class="border__"></div>
-          <span>количество всех объявлений 23</span>
-          <i class="icon-exit-white"></i>
-        </div>
-        <div class="menu">
-
-          <section class="found-filter__body">
-            <form action="/">
-              <div class="block block-1 search-wrapper form-selected">
-                <div class="filter-search">
-                  <i class="icon-search"></i>
-                  <!-- <i class="delete-text icon-exit-chrest"></i> -->
-                  <input type="text" placeholder="Введите названия или номер обьявления">
-                </div>
-              </div>
-            </form>
-          </section>
-
-          <div class="checkbox-body">
-            <p class="checkbox-wrapper">
-              <input type="checkbox" id="checkbox-42111">
-              <label for="checkbox-42111">Новые</label>
-            </p>
-            <p class="checkbox-wrapper">
-              <input type="checkbox" id="checkbox-32111">
-              <label for="checkbox-32111">БУ</label>
-            </p>
-          </div>
-        </div>
-
-        <div class="last-menu">
-          <span>Названия объявления</span>
-          <span>Категория</span>
-          <span>Номер объявления</span>
-          <span>Цена</span>
-          <span>Бизнес</span>
-        </div>
-
-        <div class="popup-block__body">
-          
-          <ul class="active-service dd-1">
-            <li>
-              <span class="number">1</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-01">
-                  <label for="checkbox-01"></label>
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="number">2</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-02">
-                  <label for="checkbox-02"></label>
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="number">3</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-03">
-                  <label for="checkbox-03"></label>
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="number">4</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-04">
-                  <label for="checkbox-04"></label>
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="number">5</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-05">
-                  <label for="checkbox-05"></label>
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="number">6</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-06">
-                  <label for="checkbox-06"></label>
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="number">7</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-07">
-                  <label for="checkbox-07"></label>
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="number">8</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-08">
-                  <label for="checkbox-08"></label>
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="number">9</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-09">
-                  <label for="checkbox-09"></label>
-                </p>
-              </div>
-            </li>
-            <li class="ten-plus">
-              <span class="number">10</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-10">
-                  <label for="checkbox-10"></label>
-                </p>
-              </div>
-            </li>
-            <li class="ten-plus">
-              <span class="number">11</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-11">
-                  <label for="checkbox-11"></label>
-                </p>
-              </div>
-            </li>
-            <li class="ten-plus">
-              <span class="number">12</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-12">
-                  <label for="checkbox-12"></label>
-                </p>
-              </div>
-            </li>
-            <li class="ten-plus">
-              <span class="number">13</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-13">
-                  <label for="checkbox-13"></label>
-                </p>
-              </div>
-            </li>
-            <li class="ten-plus">
-              <span class="number">14</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-14">
-                  <label for="checkbox-14"></label>
-                </p>
-              </div>
-            </li>
-            <li class="ten-plus">
-              <span class="number">15</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-15">
-                  <label for="checkbox-15"></label>
-                </p>
-              </div>
-            </li>
-            <li class="ten-plus">
-              <span class="number">16</span>
-              <a href="#" class="name"> Лада 4x4 2121 Нива... </a>
-              <span class="category">Легковые авто</span>
-              <span class="number-ofer">№324534534535</span>
-              <span class="price">10 000 000 ₸ </span>
-
-              <div class="checkbox-body">
-                <p class="checkbox-wrapper">
-                  <input type="checkbox" id="checkbox-16">
-                  <label for="checkbox-16"></label>
-                </p>
-              </div>
-            </li>
-          </ul>
-
-          <div class="opacity"></div>
-        </div>
-      </div>
-
-      <div class="popup-graph str-ads-graph d-none">
-        <div class="top"><i class="icon-exit-white"></i></div>
-        <div class="menu">
-          <div class="form-selected form-selected">
-            <div class="castom-select-wrapper form-selected__all">
-              <i class="d-none"></i>
-              <span class="text">Просмотр объявлений</span>
-              <i class="more icon-arrow-down"></i>
-              <div class="list list--mode d-none">
-                <span class="list__item">1</span>
-                <span class="list__item">2</span>
-                <span class="list__item">3</span>
-              </div>
-            </div>
-
-            <div class="castom-select-wrapper form-selected__stats">
-              <i class="d-none"></i>
-              <span class="text">Статистика за 30 дней</span>
-              <i class="more icon-arrow-down"></i>
-              <div class="list list--mode d-none">
-                <span class="list__item">1</span>
-                <span class="list__item">2</span>
-                <span class="list__item">3</span>
-              </div>
-            </div>
-
-            <span class="text-menu">
-              Поднятие в 
-              верх списка
-            </span>
-
-            <button>
-              <img src="img/icon/graph/image-arrows-graph.png" alt="image">
-            </button>
-
-          </div>
-        </div>
-
-        <div class="left">
-          <div id="chartContainer" style="height: 370px; width: 771px; margin-left: 55px;">
-          </div>
-
-          <div class="month-wrapper">
-            <p>Март</p>
-            <p>Август</p>
-          </div>
-            <div class="border__"></div>
-        </div>
-        
-        <div class="right">
-          <div class="content">
-            <p>Если вы хотите, чтобы больше людей увидели ваше объявление, просто поднимите его вверх списка. При этом дата объявления обновится на текущую. Таким образом, ваше предложение сможет получить больше откликов от покупателей.</p>
-          </div>  
-          <button class="btn">Поднять вверх списка</button>
-        </div>
-
-        <div class="number-wrapper"></div>
-
-        <div class="number-views">Количество просмотров</div>
-  
-        <div class="block__paket">
-          <ul>
-            <li>
-              <i class="icon-red-diamant-cab"></i>
-              <div class="line">
-                <div class="green-block"></div>
-              </div>
-            </li>
-            <li>
-              <i class="icon-red-fire-cab"></i>
-              <div class="line">
-                <div class="red-block"></div>
-              </div>
-            </li>
-            <li>
-              <i class="icon-red-arrows-cab"></i>
-              <div class="point point--start"></div>
-              <div class="point"></div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
       <div class="first">
         <p>
           <b>Настройки бизнес-страницы</b>
@@ -636,8 +209,8 @@
         <div class="btn-wrapper">
           <button class="btn green">Пополнить счет</button>
           <button class="add-offer">
-            <i class="icon-plus"></i>
-            Добавить объявление
+            <i class="icon-white-arrow-left"></i>
+            Купить пакет
           </button>
         </div>
       </div>
@@ -709,7 +282,7 @@
         </div>
       </div>
 
-      <div class="message-list received str-busines__packages d-none">
+      <div class="message-list received str-busines__packages">
         <div class="str-busines-package">
           <div class="top">Выбранный пакет</div>
           <p>
@@ -866,181 +439,203 @@
         </div>
       </div>
 
-      <div class="message-list archive str-busines__stat">
+      <div class="message-list archive str-busines__stat d-none">
+        
+        <div class="form-selected menu" style="height: 0px; margin: 0;">
+          <div class="castom-select-wrapper">
+            <i class="d-none"></i>
+            <span>Статистика за 30 дней</span>
+            <i class="more icon-arrow-down"></i>
+            <div class="list list--mode d-none">
+              <span class="list__item" id="stats-for-30-day">Статистика за 30 дней</span>
+              <span class="list__item" id="stats-for-60-day">Статистика за 60 дней</span>
+            </div>
+          </div>
+        </div>
 
+        <div class="left">
+          <p class="num"><span>1</span> / <span>2</span></p>
+          <div class="str-busines-package str-busines-package--1">
+            <div class="top">Активный пакетф</div>
+            <p>
+              до 12.12.2020
+              <span>срок действия</span>
+            </p>
+            <div class="img-wrapper">
+              <img src="img/icon/icon-for-found/icon-auto-category.png" alt="image">
+            </div>
+            <p class="zx">Легковые авто</p>
+            <button class="btn btn--large">Премиум</button>
+          </div>
+          <div class="str-busines-package d-none str-busines-package--2">
+            <div class="top">Активный пакетф</div>
+            <p>
+              до 12.12.2020
+              <span>срок действия</span>
+            </p>
+            <div class="img-wrapper">
+              <img src="img/icon/icon-for-found/icon-moto-category.png" alt="image">
+            </div>
+            <p class="zx">Мото</p>
+            <button class="btn btn--large">Премиум</button>
+          </div>
+          <div class="btn-wrapper">
+            <button class="arrow-down-red-while-wrapper"></button>
+            <button class="arrow-down-red-while-wrapper"></button>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="form-selected menu" style="justify-content: unset;">
+            <div class="castom-select-wrapper">
+              <i class="d-none"></i>
+              <span>Просмотры объявлений</span>
+              <i class="more icon-arrow-down"></i>
+              <div class="list list--mode d-none"
+                style="
+                  max-height: unset;
+                  box-shadow: 0 0 1px #2c2c2c; 
+                  top: 103%; 
+                ">
+                <!-- <span class="list__item">Просмотры объявлений</span> -->
+                <span class="list__item" id="list__item-30Day-1">Просмотры ссылки на сайт</span>
+                <span class="list__item" id="list__item-30Day-2">Просмотры номера телефона</span>
+                <span class="list__item" id="list__item-30Day-3">Рекомендованные объявления</span>
+                <span class="list__item" id="list__item-30Day-4">Просмотры ссылки на сайт</span>
+
+                <span class="list__item d-none" id="list__item-60Day-1">Просмотры ссылки на сайт</span>
+                <span class="list__item d-none" id="list__item-60Day-2">Просмотры номера телефона</span>
+                <span class="list__item d-none" id="list__item-60Day-3">Рекомендованные объявления</span>
+                <span class="list__item d-none" id="list__item-60Day-4">Просмотры ссылки на сайт</span>
+              </div>
+            </div>
+            <ul class="radio-wrapper">
+              <li class="radio-wrapper__item-wrapper">
+                <div class="item">
+                  <div class="active"></div>
+                </div>
+                <span>Все</span>
+              </li>
+              <li class="radio-wrapper__item-wrapper">
+                <div class="item">
+                  <div class=""></div>
+                </div>
+                <span>Топ</span>
+              </li>
+              <li class="radio-wrapper__item-wrapper">
+                <div class="item">
+                  <div class=""></div>
+                </div>
+                <span>VIP</span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="chartContainer" style="width: 746px;">
+          </div>
+
+          <div class="month-wrapper">
+            <p>Март</p>
+            <p>Август</p>
+          </div>
+          <div class="border__"></div>
+          <div class="number-wrapper"></div>
+          <div class="number-views">Количество просмотров</div>
+        </div>
       </div>
 
-      <div class="message-list message-list__waiting found-filter__body str-busines__settings d-none">
-
-        <form action="/">
-
-          <div class="block block-1 form-selected">
-            <div class="items title">
-              <p>Основные настройки</p>
-              <input type="text" placeholder="Заголовок" class="title-input">
-              <p class="carent-char-wrapper">
-                <i class="icon-warrning-black"></i>
-                <span>10000</span>&nbsp;знаков осталось
-              </p>
-            </div>
-
-            <div class="items category">
-              <p><i class="icon">*</i>Рубрика</p>
-              <div class="castom-select-wrapper">
-                <i class="icon found-icon-fourth-cube"></i>
-                <span>Все рубрики</span>
-                <i class="more icon-arrow-down"></i>
-                <div class="list d-none">
-                  <span class="list__item">
-                    <i class="found-icon-fourth-cube"></i>
-                    Все рубрики
-                  </span>
-                  <span class="list__item">
-                    <i class="found-icon-auto"></i>
-                    Легковые
-                    <b class="count">83 237</b>
-                  </span>
-                  <span class="list__item">
-                    <i class="found-icon-moto"></i>
-                    Мото
-                    <b class="count">13 237</b>                  
-                  </span>
-                  <span class="list__item">
-                    <i class="found-icon-heavy-auto"></i>
-                    Спецтехника
-                    <b class="count">132</b>                  
-                  </span>
-                  <span class="list__item">
-                    <i class="found-icon-settings"></i>
-                    Запчасти
-                    <b class="count">13 237</b>                  
-                  </span>
-                  <span class="list__item">
-                    <i class="found-icon-service"></i>
-                    Автосервесы
-                    <b class="count">83</b>                  
-                  </span>
-                </div>
+      <div class="message-list message-list__waiting str-busines__settings d-none">
+        <div class="others-parameters main-property">
+          <p class="counter-completed">
+            <span>0</span>%
+          </p>
+          <h2>Основные настройки</h2>
+          <div class="left">
+            <div class="item-input">
+              <h3><i class="red-star"></i>Названия</h3>
+              <div class="input-wrapper">
+                <input class="item-input__in" type="text" placeholder="Названия компании">
+                <!-- <div class="validation-ok"></div> -->
+              </div>
+              <div class="num-wrapper">
+                <i class="icon-warning-black"></i>
+                <span class="num"><span>60</span> знаков осталось</span>
               </div>
             </div>
-          </div>
-
-          <div class="block block-3 contact-date">
-            <h2>Ваши контактные данные</h2>          
-            <div class="items">
-              <p><i class="icon">*</i>Местоположение</p>
-              <input type="text" placeholder="Город продажи">
-              <input type="text" placeholder="Улица">
+            <div class="item-input">
+              <h3><i class="red-star"></i>Описания</h3>
+              <textarea class="item-input__in" type="text" placeholder="Названия компании" style="height: 189px;"></textarea>
+              <div class="num-wrapper">
+                <i class="icon-warning-black"></i>
+                <span class="num"><span>5000</span> знаков осталось</span>
+              </div>
             </div>
-            <div class="items">
-              <p><i class="icon">*</i>Телефон</p>
-              <input type="text" placeholder="Введите телефон">
-            </div>     
-            <div class="items" style="margin-bottom: 0;">
-              <p><i class="icon">*</i>Контактное лицо</p>
-              <input type="text" placeholder="Введите ваше имя">
+            <div class="item-input item-input--adres">
+              <h3><i class="red-star"></i>Адрес</h3>
+              <input class="item-input__in" type="text" placeholder="Улица">
+              <input class="item-input__in" type="text" placeholder="Номер дома">
+              <input class="item-input__in" type="text" placeholder="Город">
+              <input class="item-input__in" type="text" placeholder="Индекс">
             </div>
-    
-            <p class="small-text">
-              <i class="icon-warrning-black"></i>
-              <span>Ваши контактные данные были сохранены, что бы из изменить их войдите в <a href="#">настройки</a></span>
-            </p>
           </div>
-
-          <div class="hr" style="margin-bottom: 64px;"></div>
-        
-          <div class="btn-next-wrapper">
-            <button class="previews">Предпросмотр</button>
-            <button class="btn">Дальше</button>
+          <div class="right">
+            <div class="item-input item-input--download-image">
+              <h3><i class="red-star"></i>Логотип</h3>
+              <button class="btn">Загрузить </button>
+              <div class="num-wrapper">
+                <i class="icon-warning-black"></i>
+                <span class="num">Рекомендовано ш168 в102px</span>
+              </div>
+            </div>
+            <div class="item-input item-input--download-baner">
+              <h3><i class="red-star"></i>Логотип</h3>
+              <button class="btn">Баннер</button>
+              <div class="num-wrapper">
+                <i class="icon-warning-black"></i>
+                <span class="num">Рекомендовано ш1200 в200px</span>
+              </div>
+            </div>
+            <div class="item-input item-input--tel">
+              <h3><i class="red-star"></i>Адрес</h3>
+              <div class="input-wrapper">
+                <input class="item-input__in" type="text" placeholder="Номер телефона">
+                <div class="validation-ok"></div>
+              </div>
+              <input class="item-input__in" type="text" placeholder="Доп номер телефона">
+              <input class="item-input__in" type="text" placeholder="Доп номер телефона">
+            </div>
           </div>
-        </form>
-
-        <section class="form-property">
-          <div class="block block--1 review">
-            <form action="/" method="post" class="strange-form">
-              <h2>Основные настройки</h2>
-
-              <input type="text" placeholder="Заголовок" class="title-input">
-
-              <p class="carent-char-wrapper">
-                <i class="icon-warrning-black"></i>
-                <span>10000</span> знаков осталось
-              </p>
-              
-              <div class="input-wrapper text-input-wrapper">
-                <textarea placeholder="Текст отзыва" class="text-input"></textarea>
-                <i class="exit"></i>
-                <p class="carent-char-wrapper">
-                  <i class="icon-warrning-black"></i>
-                  <span class="item">10000</span> знаков осталось
-                  <span class="status">Сохранено</span>
-                </p>
-              </div>
-
-              <div class="input-wrapper title-input-wrapper d-none">
-                <input type="text" placeholder="Подзаголовок" class="pod-title-input">
-                <i class="exit"></i>
-                <p class="carent-char-wrapper">
-                  <i class="icon-warrning-black"></i>
-                  <span>10000</span> знаков осталось
-                </p>
-              </div>
-
-              <div class="input-wrapper file-input-wrapper d-none">
-                <i class="add"></i>
-                <i class="delete"></i>
-                  <!-- Swiper -->
-                  <div class="swiper-container gallery-top">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="img/other-image.jpg" alt="image">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="img/other-image.jpg" alt="image">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="img/other-image.jpg" alt="image">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-container gallery-thumbs">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="img/other-image.jpg" alt="image">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="img/other-image.jpg" alt="image">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="img/other-image.jpg" alt="image">
-                      </div>                  
-                    </div>
-                  </div>
-              </div>
-
-              <div class="input-wrapper video-input-wrapper d-none">
-                <div class="video-wrapper d-none">
-                  <i class="exit"></i>
-                  <iframe src="https://www.youtube.com/embed/gAAmliyDoUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="input-wrapper">
-                  <input type="text" placeholder="Ссылка на YouTube" class="youtube-input">
-                  <button type="button" class="add">Добавить</button>
-                </div>
-              </div>
-
-              <div class="add-atribute">
-                <button type="button" class="text"></button>
-                <button type="button" class="title"></button>
-                <button type="button" class="img">
-                  <input type="file" multiple>
-                </button>
-                <button type="button" class="video"></button>
-              </div>
-            </form>
+          <div class="main-property__last">
+            <button class="btn">Сохранить</button>
+            <a href="#">Правила публикации</a>
           </div>
-        </section>
+        </div>
 
+        <div class="others-parameters other-property">
+          <h2>Дополнительный настройки</h2>
+          <p class="counter-completed">
+            <span>0</span>%
+          </p>
+          <div class="left">
+            <div class="item-input">
+              <h3>Ваш сайт</h3>
+              <div class="input-wrapper">
+                <input class="item-input__in" type="text" placeholder="Ссылка на ваш сайт">
+                <!-- <div class="validation-ok"></div> -->
+              </div>
+              <button class="btn">Сохранить</button>
+            </div>
+          </div>
+          <div class="right">
+            <h3>Страница</h3>
+            <div class="input-wrapper">
+              <input class="item-input__in" type="text" placeholder="Названия страницы">
+              <!-- <div class="validation-ok"></div> -->
+              <span>.pedal.kz</span>
+            </div>
+            <a href="#">Правила публикации</a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -1101,8 +696,8 @@
   <!-- // дополнительные стили -->
 
   <!-- скрипты -->
-  <script src="js/anime.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/anime.js"></script>
   <script src="js/swiper.min.js"></script>
   <!-- Initialize Swiper -->
 
@@ -1110,8 +705,13 @@
   crossorigin="anonymous"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/my-scroll.js"></script>
-  <!-- <script src="js/acardion-publication.js"></script> -->
 
+
+  <!-- // график -->
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="js/my-graph.js"></script>
+
+  <!-- // скрипты -->
   <script>
     var swiper = new Swiper('.swiper-container', {
       pagination: {
@@ -1119,6 +719,6 @@
       },
     });
   </script>  
-  <!-- // скрипты -->
+
 </body>
 </html>

@@ -1006,3 +1006,21 @@
 	display: block;	
 	margin-right: 6px;
 }
+
+.red-star{
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-image: url('../img/red-star.png');
+  background-position: center center;
+	background-size: cover;
+}
+
+.validation-ok{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/icon/validation-okey.png');
+  background-position: center center;
+	background-size: cover;
+}

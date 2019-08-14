@@ -1804,7 +1804,7 @@
 (function(){
 	const btn = document.querySelector('.cabinet .popup-graph .top i');
 
-	btn.onclick = function() {
+	if(btn) btn.onclick = function() {
 		document.querySelector('.str-ads-graph').classList.add('d-none');
 		document.querySelector('.popup-bg').classList.add('d-none');
 	};
@@ -1837,4 +1837,134 @@
 	if(btn) btn.forEach(function(element){
 		element.addEventListener('click', disabled);
 	});
+})();
+
+// переключатель пакетив в кабинети статистика
+(function(){
+	const btnLeft = document.querySelector('.str-busines__stat .left .btn-wrapper button:nth-child(1)');
+	const btnRight = document.querySelector('.str-busines__stat .left .btn-wrapper button:nth-child(2)');
+
+	const navigationNumber = document.querySelector('.str-busines__stat .left .num span:first-child');
+
+	const block1 = document.querySelector('.str-busines__stat .str-busines-package--1'),
+				block2 = document.querySelector('.str-busines__stat .str-busines-package--2');
+
+	btnRight.onclick = function() { 
+		navigationNumber.textContent = '2';
+
+
+		setTimeout(function(){
+			block1.classList.add('d-none');
+			block2.classList.remove('d-none');
+			block2.classList.add('ONULL');
+			anime({
+	      targets: block2,
+	      opacity: '1' ,
+	      easing: 'easeInCirc',
+	      duration: 200
+			});
+		}, 300);
+
+		anime({
+      targets: block1,
+      opacity: '0' ,
+      easing: 'easeOutCirc',
+      duration: 200
+		});
+
+	}
+
+	btnLeft.onclick = function() { 
+		navigationNumber.textContent = '1';
+
+		setTimeout(function(){
+			block2.classList.add('d-none');
+			block1.classList.remove('d-none');
+			block1.classList.add('ONULL');
+			anime({
+	      targets: block1,
+	      opacity: '1' ,
+	      easing: 'easeInCirc',
+	      duration: 200
+			});
+		}, 300);
+
+		anime({
+      targets: block2,
+      opacity: '0' ,
+      easing: 'easeOutCirc',
+      duration: 200
+		});
+
+
+	}
+})();
+
+(function(){
+	const btn = document.querySelectorAll('.radio-wrapper__item-wrapper');
+
+	function active() {
+		btn.forEach(function(element){
+			element.childNodes[1].childNodes[1].classList.remove('active');
+		});
+		this.childNodes[1].childNodes[1].classList.add('active');
+	}
+
+	btn.forEach(function(element){
+		element.addEventListener('click', active);
+	})
+
+})();
+
+
+// счетчики для бизнес настройки кабинет
+(function(){
+	const otherCounter = document.querySelector('.other-property .counter-completed'),
+				mainCounter = document.querySelector('.main-property .counter-completed');
+
+	const otherInput = document.querySelectorAll('.other-property .item-input__in'),
+				mainInput = document.querySelectorAll('.main-property .item-input__in');
+
+	// let num = parseInt(otherCounter.childNodes[1].textContent);
+	
+	function add50() {
+		let num = parseInt(otherCounter.childNodes[1].textContent);
+		otherCounter.childNodes[1].textContent = num + 50;
+		this.removeEventListener('input', add50);
+	}
+
+	function checkInput50() {
+		let num = parseInt(otherCounter.childNodes[1].textContent);
+		if(this.value == ''){
+			// console.log('hello');
+			otherCounter.childNodes[1].textContent = num - 50;
+			this.addEventListener('input', add50);
+		}
+	}
+
+	function add10() {
+		let num = parseInt(mainCounter.childNodes[1].textContent);
+		mainCounter.childNodes[1].textContent = num + 10;
+		this.removeEventListener('input', add10);
+	}
+
+	function checkInput10() {
+		let num = parseInt(mainCounter.childNodes[1].textContent);
+		if(this.value == ''){
+			// console.log('hello');
+			mainCounter.childNodes[1].textContent = num - 10;
+			this.addEventListener('input', add10);
+		}
+	}
+
+	otherInput.forEach(function(element){
+		element.addEventListener('input', add50);
+		element.addEventListener('input', checkInput50);
+	})
+
+	mainInput.forEach(function(element){
+		element.addEventListener('input', add10);
+		element.addEventListener('input', checkInput10);
+	})
+
 })();
