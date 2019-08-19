@@ -152,7 +152,7 @@
 	let onChangeCountBtnClick = function(e){
 		e.preventDefault();
 		let mapBlockLvl1 = document.querySelector('.map-block__other-city--level-1');
-		mapBlockLvl1.classList.remove('d-none');
+		if(mapBlockLvl1) mapBlockLvl1.classList.remove('d-none');
 		anime({
       targets: mapBlockLvl1,
       opacity: '1',
@@ -214,7 +214,7 @@
       duration: 400
 		});
 
-		mapBlockLvl1.classList.remove('d-none');
+		if(mapBlockLvl1) mapBlockLvl1.classList.remove('d-none');
 		anime({
       targets: mapBlockLvl1,
       opacity: '1',
@@ -262,7 +262,6 @@
 	let otherMark = document.querySelectorAll('.other-mark a');
 
 	if(btnNew) btnNew.onclick = function(e){
-		e.preventDefault();
 
 		mark.forEach(function(value){
 			value.classList.remove('d-none');
@@ -306,7 +305,6 @@
 	};
 
 	let onOtherMarkClick = function(e){
-		e.preventDefault();
 		let span = this.childNodes[1];
 		otherMark.forEach(function(value){
 			value.childNodes[1].style.opacity = '0';
@@ -323,6 +321,7 @@
 	otherMark.forEach(function(value){
 		if(value) value.addEventListener('click', onOtherMarkClick);
 	});
+
 })();
 
 // регистрация / авторизация функционал 
@@ -1755,7 +1754,7 @@
 				block2 = document.querySelector('.popup-str-busines-package--prem .block-2');
 
 	const exit = document.querySelector('.popup-str-busines-package--prem .exit');
-	const exitStar = document.querySelector('.popup-str-busines-package .exit');
+	const exitStar = document.querySelector('.popup-str-busines-package--start .exit');
 
 	if(exit) exit.onclick = function() {
 		document.querySelector('.popup-str-busines-package--prem').classList.add('d-none');
@@ -1849,7 +1848,7 @@
 	const block1 = document.querySelector('.str-busines__stat .str-busines-package--1'),
 				block2 = document.querySelector('.str-busines__stat .str-busines-package--2');
 
-	btnRight.onclick = function() { 
+	if(btnRight) btnRight.onclick = function() { 
 		navigationNumber.textContent = '2';
 
 
@@ -1871,10 +1870,9 @@
       easing: 'easeOutCirc',
       duration: 200
 		});
-
 	}
 
-	btnLeft.onclick = function() { 
+	if(btnLeft) btnLeft.onclick = function() { 
 		navigationNumber.textContent = '1';
 
 		setTimeout(function(){
@@ -1895,8 +1893,6 @@
       easing: 'easeOutCirc',
       duration: 200
 		});
-
-
 	}
 })();
 
@@ -1966,5 +1962,194 @@
 		element.addEventListener('input', add10);
 		element.addEventListener('input', checkInput10);
 	})
+
+})();
+
+
+
+// публикация оплата выбрать пакет
+(function(){
+	const btn = document.querySelectorAll('.publication-pay__category li .btn'),
+				body = document.querySelectorAll('.publication-pay__category li'),
+				title = document.querySelectorAll('.publication-pay__category .h2--mode');
+
+	function active() {
+		let parent = this.parentNode;
+
+		body.forEach(function(element) {
+			element.classList.remove('publication-pay__category--active');
+		});
+		parent.classList.add('publication-pay__category--active');
+
+
+		btn.forEach(function(element) {
+			element.classList.remove('btn--active');
+			element.textContent = 'Выбрать пакет';
+		});
+
+		title.forEach(function(element) {
+			element.classList.remove('h2--active');
+			element.childNodes[1].childNodes[1].classList.remove('icon-warning-white');
+			element.childNodes[1].childNodes[1].classList.add('icon-warning-grey');
+		});
+		let titleLocal = this.parentNode.childNodes[1];
+		let iconLocal = titleLocal.childNodes[1].childNodes[1];
+		titleLocal.classList.add('h2--active');
+		iconLocal.classList.remove("icon-warning-grey");
+		iconLocal.classList.add("icon-warning-white");
+
+		this.classList.add('btn--active');
+		this.innerHTML = 'Выбрано<i class="icon-pack-okey"></i>';
+
+
+	};
+
+	if(btn) btn.forEach(function(element) {
+		element.addEventListener('click', active);
+	});
+
+})();
+
+
+// Отзывы поиск
+(function(){
+	const moreItemsList = document.querySelector('.reviews-found .list-wrapper .more-offers'),
+				itemsBodyList = document.querySelectorAll('.reviews-found .list-wrapper .item--more');
+
+	if(moreItemsList) moreItemsList.onclick = function() {
+		itemsBodyList.forEach(function(element) {
+			element.classList.remove('d-none');
+		});
+		document.querySelector('.item--more--first').style.marginBottom = '12px';
+	};
+
+	const moreItemGallery = document.querySelector('.reviews-found .gallery-wrapper .more-offers'),
+				itemsBodyGallery = document.querySelectorAll('.reviews-found .gallery-wrapper .item--more');
+
+	if(moreItemGallery) moreItemGallery.onclick = function() {
+		itemsBodyGallery.forEach(function(element) {
+			element.classList.remove('d-none');
+		});
+		// document.querySelector('.item--more--first').style.marginBottom = '12px';
+	};
+
+})();
+
+// Отзывы поиск слайдера
+(function(){
+	const nextVip = document.querySelector('.pagination--wrapper .next--vip'),
+				preVip = document.querySelector('.pagination--wrapper .pre--vip'),
+				bodyVip = document.querySelector('.pagination--wrapper .offers-content--vip');
+
+	const nextTwo = document.querySelector('.pagination--wrapper .next--two'),
+				preTwo = document.querySelector('.pagination--wrapper .pre--two'),
+				bodyTwo = document.querySelector('.pagination--wrapper .offers-content--two');
+
+	if(nextVip) nextVip.onclick = function() {
+		let start = parseInt(bodyVip.style.left);
+		let point = -100;
+
+		if(bodyVip.style.left === '-300%'){
+			return false;
+		}
+
+		bodyVip.style.left = (start + point) + '%';
+	};
+
+	if(preVip) preVip.onclick = function() {
+		let start = parseInt(bodyVip.style.left);
+		let point = 100;
+
+		if(bodyVip.style.left === '0%'){
+			return false;
+		}
+
+		bodyVip.style.left = (start + point) + '%';
+	};
+
+	if(preTwo) nextTwo.onclick = function() {
+		let start = parseInt(bodyTwo.style.left);
+		let point = -100;
+
+		if(bodyTwo.style.left === '-300%'){
+			return false;
+		}
+
+		bodyTwo.style.left = (start + point) + '%';
+	};
+
+	if(preTwo) preTwo.onclick = function() {
+		let start = parseInt(bodyTwo.style.left);
+		let point = 100;
+
+		if(bodyTwo.style.left === '0%'){
+			return false;
+		}
+
+		bodyTwo.style.left = (start + point) + '%';
+	};
+
+})();
+
+// поставить оценку на странице card-auto-fixed
+(function(){
+	const btn = document.querySelector('.fix-d__block-coments .btn'),
+				body = document.querySelector('.my-assessment');
+
+	if(btn) btn.onclick = function() {	
+		let mthis = this;
+		anime({
+      targets: this,
+      opacity: '0' ,
+      easing: 'easeOutQuad',
+      duration: 300
+		});
+
+		setTimeout(function(){
+			mthis.classList.add('d-none');
+			anime({
+	      targets: body,
+	      opacity: '1' ,
+	      easing: 'easeInQuad',
+	      duration: 300
+			});
+
+			body.classList.remove('d-none');
+			body.classList.remove('ONULL');
+		}, 300);
+
+	};
+})();
+
+
+// поставить оценку на странице (попап) card-auto-fixed
+(function(){
+	const exitBtn = document.querySelector('.my-assesment-popup i');
+
+	if(exitBtn) exitBtn.onclick = function() {
+		document.querySelector('.popup-bg').classList.add('d-none');
+		document.querySelector('.my-assesment-popup').classList.add('d-none');
+	};
+})();
+
+// ответить на комент card-auto-fixed
+(function(){
+	const btn = document.querySelectorAll('.reply-coments'),
+				body = document.querySelectorAll('.fix-d__block-coments .coment--two');
+
+
+	function openComents(e) {
+		e.preventDefault();
+		let localBody = this.parentNode.nextElementSibling;
+		body.forEach(function(element) {
+			element.classList.add('d-none');
+		});
+		localBody.classList.remove('d-none');
+
+	}
+
+	if(btn) btn.forEach(function(element) {
+		element.addEventListener('click', openComents);
+	});
 
 })();

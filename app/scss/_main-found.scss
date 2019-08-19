@@ -128,7 +128,7 @@
 		}
 
 		.block-3{
-			.castom-select-wrapper:nth-child(4){
+			.castom-select-wrapper:nth-child(3){
 				margin-right: 0;
 			}
 		}
@@ -626,6 +626,9 @@
 	.list__item:hover{
 		background-color: #343434;
 		color: #fff;
+		i{
+			
+		}
 	}
 	.sort-by-type__body{
  		.line{

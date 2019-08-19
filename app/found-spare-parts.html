@@ -358,39 +358,39 @@
 
       <section class="found-filter__body">
 
-        <form action="/">
+        <form action="/" class="fix-d">
           <div class="block block-1 form-selected">
 
-            <div class="castom-select-wrapper">
+            <div class="castom-select-wrapper fix-d__castom-select-wrapper">
               <i class="icon found-icon-settings"></i>
               <span>Запчасти</span>
               <i class="more icon-arrow-down"></i>
               <div class="list d-none">
-                <span class="list__item">
+                <span class="list__item list__item--category">
                   <i class="found-icon-fourth-cube"></i>
                   Все рубрики
                 </span>
-                <span class="list__item">
+                <span class="list__item list__item--auto">
                   <i class="found-icon-auto"></i>
                   Легковые
                   <b class="count">83 237</b>
                 </span>
-                <span class="list__item">
+                <span class="list__item list__item--moto">
                   <i class="found-icon-moto"></i>
                   Мото
                   <b class="count">13 237</b>                  
                 </span>
-                <span class="list__item">
+                <span class="list__item list__item--heavy-auto">
                   <i class="found-icon-heavy-auto"></i>
                   Спецтехника
                   <b class="count">132</b>                  
                 </span>
-                <span class="list__item">
+                <span class="list__item list__item--settings">
                   <i class="found-icon-settings"></i>
                   Запчасти
                   <b class="count">13 237</b>                  
                 </span>
-                <span class="list__item">
+                <span class="list__item list__item--service">
                   <i class="found-icon-service"></i>
                   Автосервесы
                   <b class="count">83</b>                  
@@ -400,64 +400,57 @@
 
             <div class="castom-select-wrapper">
               <i class="d-none fixed"></i>
-              <span>Марка</span>
+              <span>Запчасть</span>
               <i class="more icon-arrow-down"></i>
               <div class="list d-none">
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>
-                <span class="list__item">
-                  Toyota
-                  <b class="count">83 237</b>
-                </span>                
+                <span class="list__item">Запчасть</span>              
+                <span class="list__item">Запчасть</span>       
+                <span class="list__item">Запчасть</span>       
+                <span class="list__item">Запчасть</span>       
+                <span class="list__item">Запчасть</span>       
+                <span class="list__item">Запчасть</span>       
+                <span class="list__item">Запчасть</span>       
+              </div>
+            </div>
+  
+            <div class="fix-d__border"></div>
+
+            <div class="castom-select-wrapper castom-select-wrapper--fix-d">
+              <i class="d-none fixed"></i>
+              <span>Категория</span>
+              <i class="more icon-arrow-down"></i>
+              <div class="list d-none">
+                <span class="list__item">Категория</span>              
+                <span class="list__item">Категория</span>       
+                <span class="list__item">Категория</span>       
+                <span class="list__item">Категория</span>       
+                <span class="list__item">Категория</span>       
+                <span class="list__item">Категория</span>       
+                <span class="list__item">Категория</span>       
               </div>
             </div>
 
-            <div class="filter-search">
+            <div class="fix-d__border fix-d__border--two"></div>
+
+            <div class="castom-select-wrapper castom-select-wrapper--fix-d">
+              <i class="d-none fixed"></i>
+              <span>Подкатегория</span>
+              <i class="more icon-arrow-down"></i>
+              <div class="list d-none">
+                <span class="list__item">Подкатегория</span>              
+                <span class="list__item">Подкатегория</span>       
+                <span class="list__item">Подкатегория</span>       
+                <span class="list__item">Подкатегория</span>       
+                <span class="list__item">Подкатегория</span>       
+                <span class="list__item">Подкатегория</span>       
+                <span class="list__item">Подкатегория</span>       
+              </div>
+            </div>
+
+<!--             <div class="filter-search">
               <i class="icon-search"></i>
               <input type="text" placeholder="Введите ключевой запрос">
-            </div>
+            </div> -->
           </div>
 
           <div class="block block-3 block-2 form-selected">
@@ -1563,12 +1556,17 @@
 
   <!-- дополнительные стили -->
   <link rel="stylesheet" href="css/swiper.min.css">
+
   <!-- // дополнительные стили -->
 
   <!-- скрипты -->
   <script src="js/anime.js"></script>
   <script src="js/script.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/my-scroll.js"></script>
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper('.swiper-container', {
