@@ -796,6 +796,7 @@
 (function(){
 
 	const mainBtn = document.querySelectorAll('.castom-select-wrapper');
+				// list = document.querySelectorAll('.castom-select-wrapper .list');
 
 	function onMainBtnShowClick(e){
 		e.preventDefault();
@@ -808,6 +809,11 @@
 
 		this.removeEventListener('click', onMainBtnShowClick);
 		this.addEventListener('click', onMainBtnHiddenClick);
+
+		this.style.borderRadius = '6px 6px 0 0';
+		let x = this.querySelector('.list');
+		x.style.borderRadius = '0 0 6px 6px';
+
 	};
 
 	function onMainBtnHiddenClick(e){
@@ -818,6 +824,10 @@
 
 		const list = this.querySelector('.list');
 		list.classList.add('d-none');
+
+		this.style.borderRadius = '6px';
+		let x = this.querySelector('.list');
+		x.style.borderRadius = '0 0 6px 6px';
 
 		this.removeEventListener('click', onMainBtnHiddenClick);
 		this.addEventListener('click', onMainBtnShowClick);
@@ -1383,6 +1393,7 @@
 		let x = this.nextElementSibling;
 		this.classList.add('title--active');
 		x.classList.add('body--active');
+		this.style.boxShadow = '0 4px 30px rgba(44, 44, 44, 0.2)';
 
 		if(this.classList.contains('title--large')){
 			x.classList.add('body--active--large');
@@ -1400,6 +1411,8 @@
 		if(this.classList.contains('title--large')){
 			x.classList.remove('body--active--large');
 		}
+
+		this.style.boxShadow = '0 0 5px rgba(44,44,44,.3)';
 
 		this.addEventListener('click', onItemShowClick);
 		this.removeEventListener('click', onItemHiddenClick);
@@ -2089,6 +2102,58 @@
 		bodyTwo.style.left = (start + point) + '%';
 	};
 
+	const nextVip2 = document.querySelector('.pagination--wrapper .offers--last .next--vip'),
+				preVip2 = document.querySelector('.pagination--wrapper .offers--last .pre--vip'),
+				bodyVip2 = document.querySelector('.pagination--wrapper .offers--last .offers-content--vip');
+
+	const nextTwo2 = document.querySelector('.pagination--wrapper .offers--last .next--two'),
+				preTwo2 = document.querySelector('.pagination--wrapper .offers--last .pre--two'),
+				bodyTwo2 = document.querySelector('.pagination--wrapper .offers--last .offers-content--two');
+
+	if(nextVip2) nextVip2.onclick = function() {
+		let start = parseInt(bodyVip2.style.left);
+		let point = -100;
+
+		if(bodyVip2.style.left === '-300%'){
+			return false;
+		}
+
+		bodyVip2.style.left = (start + point) + '%';
+	};
+
+	if(preVip2) preVip2.onclick = function() {
+		let start = parseInt(bodyVip2.style.left);
+		let point = 100;
+
+		if(bodyVip2.style.left === '0%'){
+			return false;
+		}
+
+		bodyVip2.style.left = (start + point) + '%';
+	};
+
+	if(preTwo2) nextTwo2.onclick = function() {
+		let start = parseInt(bodyTwo2.style.left);
+		let point = -100;
+
+		if(bodyTwo2.style.left === '-300%'){
+			return false;
+		}
+
+		bodyTwo2.style.left = (start + point) + '%';
+	};
+
+	if(preTwo2) preTwo2.onclick = function() {
+		let start = parseInt(bodyTwo2.style.left);
+		let point = 100;
+
+		if(bodyTwo2.style.left === '0%'){
+			return false;
+		}
+
+		bodyTwo2.style.left = (start + point) + '%';
+	};
+
 })();
 
 // поставить оценку на странице card-auto-fixed
@@ -2096,7 +2161,10 @@
 	const btn = document.querySelector('.fix-d__block-coments .btn'),
 				body = document.querySelector('.my-assessment');
 
-	if(btn) btn.onclick = function() {	
+	if(btn) btn.onclick = function() {
+		if(btn.classList.contains('btn-pot')){
+			return false;
+		}
 		let mthis = this;
 		anime({
       targets: this,
@@ -2142,7 +2210,12 @@
 		e.preventDefault();
 		let localBody = this.parentNode.nextElementSibling;
 		body.forEach(function(element) {
+			if(element.classList.contains('coment--two-no-hidden')){
+				console.log('hi');
+				return false;
+			}
 			element.classList.add('d-none');
+
 		});
 		localBody.classList.remove('d-none');
 
@@ -2151,5 +2224,83 @@
 	if(btn) btn.forEach(function(element) {
 		element.addEventListener('click', openComents);
 	});
+
+})();
+
+// scroll-block отзывы карточка
+(function(){
+	// like
+	const btnLike = document.querySelector('.scroll-block .like'),
+				btnDizLike = document.querySelector('.scroll-block .diz-like');
+				
+	function likeActive() {
+		this.classList.add('like--active');
+		btnDizLike.classList.remove('diz-like--active');
+	};
+
+	function dizLikeActive() {
+		this.classList.add('diz-like--active');
+		btnLike.classList.remove('like--active');	
+	}
+
+	if(btnLike) btnLike.addEventListener('click', likeActive);
+	if(btnDizLike) btnDizLike.addEventListener('click', dizLikeActive);
+
+	// soc more
+	const socMoreBtn = document.querySelector('.reviews-card .scroll-block .more');
+
+	function socShow() {
+		let x = this.nextElementSibling;
+		x.classList.remove('d-none');
+		let y = this.parentElement;
+		y.style.borderRadius = '0 0 0 6px';
+
+		this.removeEventListener('click', socShow);
+		this.addEventListener('click', socHidden);
+	};
+
+	function socHidden() {
+		let x = this.nextElementSibling;
+		x.classList.add('d-none');
+		let y = this.parentElement;
+		y.style.borderRadius = '0 0 6px 6px';
+
+		this.addEventListener('click', socShow);
+		this.removeEventListener('click', socHidden);
+	};
+
+	if(socMoreBtn) socMoreBtn.addEventListener('click', socShow);
+
+
+	// hiden / show
+	const scrollBlock = document.querySelector('.scroll-block');
+	if(scrollBlock) $(window.document).scroll(function(){
+	  var mScroll = $(window.document).scrollTop();
+	  if(mScroll <= 1000){
+	  	scrollBlock.classList.add('scroll-block--hidden');
+	  }else if(mScroll >= 1000){
+	  	scrollBlock.classList.remove('scroll-block--hidden');
+	  }else{
+      return false;
+	  };
+	});
+
+})();
+
+
+
+
+// публикация textarea
+(function(){
+	const area = document.querySelector('.publication-str .items textarea');
+	if(area) area.oninput = function() {
+		let x = this.value;
+		console.log(x.length);
+		if(x.length >= 1000){
+			this.style.height = '750px';
+		} else{
+			this.style.height = '189px';
+		}
+	};
 
 })();

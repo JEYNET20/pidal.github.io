@@ -23,7 +23,7 @@
       <div class="nav-bar-wrapper">
 
         <a href="index.html">
-          <img src="img/icon/LOGO.svg" alt="logo" class="logo">
+          <img src="img/icon/logo.png" alt="logo" class="logo">
         </a>
         <nav class="nav nav--bar d-none ONULL">
           <ul class="main-menu">
@@ -517,8 +517,8 @@
           <div class="other-parameters">
             <div class="title">
               <h2>Дополнительные параметры</h2>
-              <button type="button">
-                Раскрыть все <i class="icon icon-white-arrow"></i>
+              <button type="button" class="btn">
+                <span>Раскрыть все</span> <i class="icon icon-white-arrow"></i>
               </button>
               <p class="counter-completed">
                 <span>0</span>%
@@ -693,7 +693,7 @@
                 </div> 
               </div>
             </div>
-            <div class="acardion acardion--security">
+            <div class="acardion acardion--security acardion--border-bottom acardion--border-bottom--active">
               <div class="items title">
                 <p class="start">Безопасность
                   <i class="icon-okey d-none"></i>
@@ -773,7 +773,7 @@
                 </div>
               </div>
             </div>
-            <div class="acardion acardion--reviews">
+            <div class="acardion acardion--reviews acardion--start-hidden d-none">
               <div class="items title">
                 <p class="start">Обзор
                   <i class="icon-okey d-none"></i>
@@ -869,7 +869,7 @@
                 </div>                
               </div>
             </div>
-            <div class="acardion acardion--exterior">
+            <div class="acardion acardion--exterior acardion--start-hidden d-none">
               <div class="items title">
                 <p class="start">Элементы экстерьера
                   <!-- <i class="icon-okey"></i> -->
@@ -909,7 +909,7 @@
                 </div>
               </div>
             </div>
-            <div class="acardion acardion--protection">
+            <div class="acardion acardion--protection acardion--start-hidden d-none">
               <div class="items title">
                 <p class="start">Защита от угона
                   <!-- <i class="icon-okey"></i> -->
@@ -949,7 +949,7 @@
                 </div>
               </div>
             </div>
-            <div class="acardion acardion--salon">
+            <div class="acardion acardion--salon acardion--start-hidden d-none">
               <div class="items title">
                 <p class="start">Салон
                   <i class="icon-okey d-none"></i>
@@ -1204,6 +1204,20 @@
               </ul>
             </div>
           </div>
+
+          <div class="items castom--items">
+            <p>Видео</p>
+            <input type="text">
+            <div class="castom--items__content">
+              <img src="img/castom-items-publication.png" alt="img">
+              <div>
+                <h4> ОБЗОР Geely Atlas </h4>
+                <span>https://www.youtube.com/watch?v=EFRlQrAkf5Y</span>
+                <button class="del"> Удалить</button>
+              </div>
+
+            </div>
+          </div>
         </div>
 
         <div class="block block-3 contact-date">
@@ -1264,6 +1278,8 @@
   <!-- // дополнительные стили -->
 
   <!-- скрипты -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   <script src="js/anime.js"></script>
   <script src="js/script.js"></script>
   <script src="js/swiper.min.js"></script>
@@ -1296,8 +1312,6 @@
       }
     });
   </script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/my-scroll.js"></script>
   <!-- // скрипты -->

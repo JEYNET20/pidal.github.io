@@ -1055,7 +1055,7 @@
 
 .icon-crown{
 	display: block;
-	width: 26px;
+	width: 30px;
 	height: 25px;
 	background-image: url('../img/reviews-profile/king.png');
   background-position: center center;
@@ -1087,4 +1087,91 @@
   background-position: center center;
 	background-size: cover;
 	background-image: url('../img/222.png');
+}
+
+.icon-card-wiews{
+	display: block;
+	width: 16px;
+	height: 12px;
+  background-position: center center;
+	background-size: cover;
+	background-image: url('../img/card-icon-1234.png');
+}
+
+.icon-like{
+	display: block;
+	width: 17px;
+	height: 16px;
+  background-position: center center;
+	background-size: cover;
+	background-image: url('../img/red-like.png');
+}
+
+.icon-diz-like{
+	display: block;
+	width: 17px;
+	height: 16px;
+  background-position: center center;
+	background-size: cover;
+	background-image: url('../img/diz-like.png');
+}
+
+
+.icon-reviews-plus{
+	display: block;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	background-color: #2c2c2c;
+	opacity: 0.6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	span{	
+		position: absolute;
+		display: block;
+		width: 16px;
+		height: 1px;
+		background-color: #fff;
+	}
+	span:nth-child(2){
+		transform: rotate(90deg);
+	}
+}
+
+.icon-reviews-minus{
+	display: block;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	background-color: #d24a43;
+	opacity: 0.6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	span{	
+		position: absolute;
+		display: block;
+		width: 16px;
+		height: 1px;
+		background-color: #fff;
+	}
+	span:nth-child(2){
+		transform: rotate(90deg);
+	}
+}
+
+.icon-reviews--active{
+	opacity: 1;
+}
+
+.icon-soc-more{
+	display: block;
+	width: 15px;
+	height: 16px;
+  background-position: center center;
+	background-size: cover;
+	background-image: url('../img/icon/soc-more.png');
 }

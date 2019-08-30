@@ -68,7 +68,9 @@
 
 // Дополнительные параметры кнопка роскрыть/закрыть все
 (function(){
-	const btn = document.querySelector('.other-parameters .title button')
+	const btn = document.querySelector('.other-parameters .title button'),
+				hiddenItems = document.querySelectorAll('.acardion--start-hidden'),
+				lastBorder = document.querySelector('.acardion--border-bottom');
 
 	function onBtnOpenClick(e){
 		e.preventDefault();
@@ -76,17 +78,14 @@
 		let arrow = this.querySelector('.icon-white-arrow');
 		arrow.classList.add('icon--active');
 
-		let arrows = this.parentNode.parentNode.querySelectorAll('.icon-arrow-down');
-		arrows.forEach(function(v){
-			v.classList.add('icon-arrow-down--active');		
+
+		hiddenItems.forEach(function(element) {
+			element.classList.remove('d-none');
 		});
 
-		let parent = this.parentNode.parentNode;
-		let items = parent.querySelectorAll('.acardion .body');
+		lastBorder.classList.remove('acardion--border-bottom--active');
 
-		items.forEach(function(v){
-			v.classList.add('body--active');
-		});
+		this.firstElementChild.textContent = 'Свернуть';
 
 		this.removeEventListener('click', onBtnOpenClick);
 		this.addEventListener('click', onBtnCloseClick);
@@ -98,17 +97,13 @@
 		let arrow = this.querySelector('.icon-white-arrow');
 		arrow.classList.remove('icon--active');
 
-		let arrows = this.parentNode.parentNode.querySelectorAll('.icon-arrow-down');
-		arrows.forEach(function(v){
-			v.classList.remove('icon-arrow-down--active');		
+		this.firstElementChild.textContent = 'Раскрыть все';
+
+		hiddenItems.forEach(function(element) {
+			element.classList.add('d-none');
 		});
 
-		let parent = this.parentNode.parentNode;
-		let items = parent.querySelectorAll('.acardion .body');
-
-		items.forEach(function(v){
-			v.classList.remove('body--active');
-		});
+		lastBorder.classList.add('acardion--border-bottom--active');
 
 		this.addEventListener('click', onBtnOpenClick);
 		this.removeEventListener('click', onBtnCloseClick);		
