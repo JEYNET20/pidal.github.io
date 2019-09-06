@@ -905,33 +905,46 @@
 		let itemBottomRight = itemWrapper.childNodes[7];
 
 
-		if(e.offsetX >= 0 && e.offsetX <= 40){
-			place.textContent = '1';
-			itemTopLeft.classList.add('number-count--active');
-			itemTopLeft.classList.remove('number-count--hidden');
+		if(e.offsetX >= 0 && e.offsetX <= 33){
+			place.textContent = '0';
+			itemTopLeft.classList.add('number-count--hidden');
 			itemTopRight.classList.add('number-count--hidden');
 			itemBottomLeft.classList.add('number-count--hidden');
 			itemBottomRight.classList.add('number-count--hidden');
-		}else if(e.offsetX >= 40 && e.offsetX <= 80){
+		}else if(e.offsetX >= 33 && e.offsetX <= 66){
+			place.textContent = '1';
+			itemTopLeft.classList.add('number-count--active');
+			itemTopLeft.classList.remove('number-count--hidden');
+
+			itemTopRight.classList.add('number-count--hidden');
+			itemBottomLeft.classList.add('number-count--hidden');
+			itemBottomRight.classList.add('number-count--hidden');
+		}else if(e.offsetX >= 66 && e.offsetX <= 99){
 			place.textContent = '2';
 			itemTopLeft.classList.add('number-count--active');
 			itemTopLeft.classList.remove('number-count--hidden');
 			itemTopRight.classList.add('number-count--active');
 			itemTopRight.classList.remove('number-count--hidden');
+
+			itemBottomLeft.classList.remove('number-count--active');
 			itemBottomLeft.classList.add('number-count--hidden');
 			itemBottomRight.classList.add('number-count--hidden');
-		}else if(e.offsetX >= 80 && e.offsetX <= 120){
+			itemBottomRight.classList.remove('number-count--active');
+		}else if(e.offsetX >= 99 && e.offsetX <= 132){
 			place.textContent = '3';
+		}else if(e.offsetX >= 132 && e.offsetX <= 165){
+			place.textContent = '4';
 			itemTopLeft.classList.add('number-count--active');
 			itemTopLeft.classList.remove('number-count--hidden');
 			itemTopRight.classList.add('number-count--active');
 			itemTopRight.classList.remove('number-count--hidden');
-			itemBottomLeft.classList.add('number-count--hidden');
-			itemBottomRight.classList.remove('number-count--hidden');
-			itemBottomRight.classList.add('number-count--active');
-		}else if(e.offsetX >= 120 && e.offsetX <= 160){
-			place.textContent = '4';		
-		}else if(e.offsetX >= 160 && e.offsetX <= 200){
+			itemBottomLeft.classList.remove('number-count--hidden');
+			itemBottomLeft.classList.add('number-count--active');
+				
+			itemBottomRight.classList.add('number-count--hidden');
+			itemBottomRight.classList.remove('number-count--active');			
+		}
+		else if(e.offsetX >= 165 && e.offsetX <= 200){
 			place.textContent = '5';
 			itemTopLeft.classList.add('number-count--active');
 			itemTopLeft.classList.remove('number-count--hidden');
@@ -942,6 +955,7 @@
 			itemBottomRight.classList.remove('number-count--hidden');
 			itemBottomRight.classList.add('number-count--active');			
 		}
+
 	
 	};
 
@@ -1768,6 +1782,7 @@
 
 	const exit = document.querySelector('.popup-str-busines-package--prem .exit');
 	const exitStar = document.querySelector('.popup-str-busines-package--start .exit');
+	const exitNew = document.querySelector('.popup-str-busines-package--prem-2 .exit');
 
 	if(exit) exit.onclick = function() {
 		document.querySelector('.popup-str-busines-package--prem').classList.add('d-none');
@@ -1776,6 +1791,11 @@
 
 	if(exitStar) exitStar.onclick = function() {
 		document.querySelector('.popup-str-busines-package--start').classList.add('d-none');
+		document.querySelector('.popup-bg').classList.add('d-none');
+	}
+
+	if(exitNew) exitNew.onclick = function() {
+		document.querySelector('.popup-str-busines-package--prem-2').classList.add('d-none');
 		document.querySelector('.popup-bg').classList.add('d-none');
 	}
 
@@ -2302,5 +2322,75 @@
 			this.style.height = '189px';
 		}
 	};
+
+})();
+
+// открыть попапы cab-busines-3
+(function(){
+	const busines1Btn = document.querySelector('#busines-str-btn-popup-1'),
+				busines2Btn = document.querySelector('#busines-str-btn-popup-2'),
+				busines3Btn = document.querySelector('#busines-str-btn-popup-3'),
+				popupBg = document.querySelector('.popup-bg');
+
+	const popup1Body = document.querySelector('.popup-str-busines-package--start'),
+				popup2Body = document.querySelector('.popup-str-busines-package--prem'),
+				popup3Body = document.querySelector('.popup-str-busines-package--prem-2');
+
+	if(busines1Btn) busines1Btn.onclick = function() {
+		popup1Body.classList.remove('d-none');
+		popupBg.classList.remove('d-none');
+	};
+
+
+	if(busines2Btn) busines2Btn.onclick = function() {
+		popup2Body.classList.remove('d-none');
+		popupBg.classList.remove('d-none');
+	};
+
+	if(busines3Btn) busines3Btn.onclick = function() {
+		popup3Body.classList.remove('d-none');
+		popupBg.classList.remove('d-none');
+	};
+
+
+
+
+})();
+
+
+// кабинет cab-busines-pack открыть таблицу
+(function(){
+	const btn1 = document.querySelector('.str-busines__packages .str-busines-package:nth-child(1) .btn'),
+				btn2 = document.querySelector('.str-busines__packages .str-busines-package:nth-child(2) .btn'),
+				btn3 = document.querySelector('.str-busines__packages .str-busines-package:nth-child(3) .btn'),
+				btn4 = document.querySelector('.str-busines__packages .str-busines-package:nth-child(4) .btn');
+
+	const body = document.querySelector('.popup-block--mod'),
+				popupBg = document.querySelector('.popup-bg');
+
+
+	if(btn1) btn1.onclick = function() {
+		console.log(this);
+		body.classList.remove('d-none');
+		popupBg.classList.remove('d-none');
+	}
+
+	if(btn2) btn2.onclick = function() {
+		console.log(this);
+		body.classList.remove('d-none');
+		popupBg.classList.remove('d-none');
+	}
+
+	if(btn3) btn3.onclick = function() {
+		console.log(this);
+		body.classList.remove('d-none');
+		popupBg.classList.remove('d-none');
+	}
+
+	if(btn4) btn4.onclick = function() {
+		console.log(this);
+		body.classList.remove('d-none');
+		popupBg.classList.remove('d-none');
+	}
 
 })();

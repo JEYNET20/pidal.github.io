@@ -12,6 +12,8 @@
 	$(".found-filter__body .castom-select-wrapper .list").niceScroll();
 	$(".form-selected .list").niceScroll();
 	$('.publication-str .items textarea').niceScroll();
+
+	$('.cabinet .popup-block__body .active-service, .cabinet .popup-block__body .arhive-service').niceScroll();
 	
 
 })();

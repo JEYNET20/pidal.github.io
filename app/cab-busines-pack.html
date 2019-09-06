@@ -7,9 +7,13 @@
 
   <title>PEDALKZ - "Настройки бизнес-страницы"</title>
 
+
   <!-- стили -->
   <link rel="stylesheet" href="css/style.min.css">
-<!--   <link rel="stylesheet" href="css/animate.css"> -->
+
+  <!-- // график -->
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="js/my-graph.js"></script>
 
   <!-- шрифты -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
@@ -191,8 +195,338 @@
   </header>
   <!-- // Шапка -->
 
+
   <main class="cabinet str-messages str-ads str-busines">
     <div class="wrapper">
+
+      <div class="popup-block popup-block--mod d-none">
+        <div class="pre-top">
+          <i class="icon-warning-black"></i>
+          <p>Поменяйте порядок бизнес объявлений на вашей странице <span>при помощи перетаскивания списка</span></p>
+        </div>
+        <div class="top">
+          <span> 10 бизнес объявлений / выбрано 10 </span>
+          <span class="border"></span>
+          <span>количество всех объявлений 23</span>
+          <i class="icon-exit-white"></i>
+        </div>
+        <div class="menu">
+          <section class="found-filter__body">
+            <form action="/">
+              <div class="block block-1 search-wrapper form-selected">
+                <div class="filter-search">
+                  <i class="icon-search"></i>
+                  <i class="delete-text icon-exit-chrest"></i>
+                  <input type="text" placeholder="Поиск">
+                </div>
+              </div>
+            </form>
+          </section>
+          <div class="checkbox-body">
+            <p class="checkbox-wrapper">
+              <input type="checkbox" id="checkbox-42111">
+              <label for="checkbox-42111">Новые</label>
+            </p>
+            <p class="checkbox-wrapper">
+              <input type="checkbox" id="checkbox-32111">
+              <label for="checkbox-32111">БУ</label>
+            </p>
+          </div>
+        </div>
+        <div class="last-menu">
+          <span>Названия объявления</span>
+          <span>Категория</span>
+          <span>Номер объявления</span>
+          <span>Цена</span>
+          <span>Бизнес</span>
+        </div>
+
+        <div class="popup-block__body">
+          
+          <ul class="active-service dd-1">
+            <li>
+              <span>1</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-11">
+                  <label for="checkbox-11"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-12">
+                  <label for="checkbox-12"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-13">
+                  <label for="checkbox-13"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>4</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-14">
+                  <label for="checkbox-14"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>5</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-15">
+                  <label for="checkbox-15"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>6</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-16">
+                  <label for="checkbox-16"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>7</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-17">
+                  <label for="checkbox-17"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>8</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-18">
+                  <label for="checkbox-18"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>9</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-19">
+                  <label for="checkbox-19"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>10</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-110">
+                  <label for="checkbox-110"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>11</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-111">
+                  <label for="checkbox-111"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>12</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-112">
+                  <label for="checkbox-112"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>13</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-113">
+                  <label for="checkbox-113"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>14</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-114">
+                  <label for="checkbox-114"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>15</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-115">
+                  <label for="checkbox-115"></label>
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span>16</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-116">
+                  <label for="checkbox-116"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>17</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-117">
+                  <label for="checkbox-117"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>18</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-118">
+                  <label for="checkbox-118"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>19</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-119">
+                  <label for="checkbox-119"></label>
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>20</span>
+              <a href="#">Лада 4x4 2121 Нива...</a>
+              <span>Легковые авто</span>
+              <span>№324534534535</span>
+              <span>10 000 000 ₸ </span>
+              <div class="checkbox-body">
+                <p class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox-120">
+                  <label for="checkbox-120"></label>
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="blur">
+            
+          </div>
+
+          <div class="null null-active d-none">
+            <div class="null__image-wrapper">
+              <img src="img/null-popup-cabinet.png" alt="image">
+            </div>
+            <span>У вас нет активных услуг</span>
+            <a href="#" class="btn">Рекламировать объявления</a>
+          </div>
+          <div class="null null-archive d-none">
+            <div class="null__image-wrapper">
+              <img src="img/null-popup-cabinet.png" alt="image">
+            </div>
+            <span>История пуста</span>
+            <a href="#" class="btn">Рекламировать объявления</a>
+          </div>
+        </div>
+      </div>
 
       <div class="first">
         <p>
@@ -231,9 +565,9 @@
 
       <div class="form-selected form-selected menu">
         <ul>
-          <li class="active"><a href="#">Избранные пакеты</a></li>
+          <li><a href="#">Избранные пакеты</a></li>
           <li><a href="#">Управления пакетами</a></li>
-          <li><a href="#">Статистика </a></li>
+          <li class="active"><a href="#">Статистика </a></li>
           <li><a href="#">Настройка бизнес-страницы</a></li>
         </ul>
 
@@ -281,7 +615,7 @@
         </div>
       </div>
 
-      <div class="message-list received str-busines__packages">
+      <div class="message-list received str-busines__packages d-none">
         <div class="str-busines-package">
           <div class="top">Выбранный пакет</div>
           <p>
@@ -438,7 +772,7 @@
         </div>
       </div>
 
-      <div class="message-list archive str-busines__stat d-none">
+      <div class="message-list archive str-busines__stat">
         
         <div class="form-selected menu" style="height: 0px; margin: 0;">
           <div class="castom-select-wrapper">
@@ -705,10 +1039,6 @@
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/my-scroll.js"></script>
 
-
-  <!-- // график -->
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  <script src="js/my-graph.js"></script>
 
   <!-- // скрипты -->
   <script>

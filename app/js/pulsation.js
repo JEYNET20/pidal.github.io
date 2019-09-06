@@ -7,12 +7,6 @@
 		let item1 = items[0];
 		let item2 = items[1];
 
-		// this.removeEventListener('click', startPuls);
-
-		// setTimeout(function() {
-		// 	this.addEventListener('click', startPuls);
-		// }, 700);
-		
 		anime({
       targets: item1,
       borderColor: 'rgba(255, 69, 69, 1)',
@@ -36,7 +30,7 @@
 	}; 
 
 	item1.forEach(function(v){
-		v.addEventListener('click', startPuls);
+		v.addEventListener('mouseenter', startPuls);
 	});
 
 })();
