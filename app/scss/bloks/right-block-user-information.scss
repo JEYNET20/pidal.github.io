@@ -118,7 +118,7 @@
 				margin-bottom: 14px;
 			}
 			button{
-				color: #d24a43;
+				color: #ff4545;
 				font-size: 16px;
 				letter-spacing: 0.16px;
 				background-color: unset;
@@ -130,11 +130,11 @@
 			width: 258px;
 			height: 44px;
 			border-radius: 22px;
-			background-color: #d24a43;
+			background-color: #ff4545;
 			margin-bottom: 12px;
 			position: relative;
 			&::after{
-				background-color: #d24a43;
+				background-color: #ff4545;
 			}
 		}
 		.blue{
@@ -153,7 +153,7 @@
 			cursor: pointer;
 		}
 		.show-maps:hover{
-			color: #d24a43;
+			color: #ff4545;
 		}
 	}
 

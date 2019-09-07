@@ -81,6 +81,12 @@
 
 		hiddenItems.forEach(function(element) {
 			element.classList.remove('d-none');
+			anime({
+	      targets: element,
+	      opacity: '1' ,
+	      easing: 'easeInQuad',
+	      duration: 800
+			});
 		});
 
 		lastBorder.classList.remove('acardion--border-bottom--active');
@@ -100,16 +106,24 @@
 		this.firstElementChild.textContent = 'Раскрыть все';
 
 		hiddenItems.forEach(function(element) {
-			element.classList.add('d-none');
+			setTimeout(function() {
+				element.classList.add('d-none');
+				lastBorder.classList.add('acardion--border-bottom--active');
+			}, 400);
+			anime({
+	      targets: element,
+	      opacity: '0' ,
+	      easing: 'easeOutQuad',
+	      duration: 300
+			});
 		});
 
-		lastBorder.classList.add('acardion--border-bottom--active');
 
 		this.addEventListener('click', onBtnOpenClick);
 		this.removeEventListener('click', onBtnCloseClick);		
 	}
 
-	btn.addEventListener('click', onBtnOpenClick);
+	if(btn) btn.addEventListener('click', onBtnOpenClick);
 })();
 
 // коунтер ( проценты для блока Основные параметры авто inputs )

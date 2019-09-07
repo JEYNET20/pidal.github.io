@@ -15,5 +15,7 @@
 
 	$('.cabinet .popup-block__body .active-service, .cabinet .popup-block__body .arhive-service').niceScroll();
 	
-
+	$('.fix-d__block-coments .input').niceScroll();
+	$('.cabinet .message-content__block .body').niceScroll();
+	$('.popup-message-form textarea').niceScroll();
 })();

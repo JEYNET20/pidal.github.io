@@ -101,7 +101,7 @@
 				width: 131px;
 				height: 44px;
 				border-radius: 6px;
-				background-color: #d24a43;
+				background-color: #ff4545;
 				display: flex;
 				align-items: center;
 				i{
@@ -110,12 +110,12 @@
 				}
 				&::after{
 					width: 85%;
-					background-color: #d24a43;
+					background-color: #ff4545;
 				}
 			}
 			.btn:hover{
 				background-color: #ffffff;
-				color: #d24a43;
+				color: #ff4545;
 				i{
 					transform: rotate(0deg);
 					background-image: url('../img/icon/arro-down-red.png');
@@ -277,7 +277,7 @@
 					text-decoration: none;
 				}
 				a:hover{
-					color: #d24a43;
+					color: #ff4545;
 				}
 				span{
 					color: #2c2c2c;
@@ -378,12 +378,12 @@
 				width: 152px;
 				height: 24px;
 				border-radius: 6px;
-				background-color: #d24a43;
+				background-color: #ff4545;
 				position: relative;
 				margin-left: auto;
 				i{margin-left: 12px;}
 				&::after{
-					background-color: #d24a43;
+					background-color: #ff4545;
 					width: 85%;
 					height: 2px;
 					bottom: 0;
@@ -571,7 +571,11 @@
 				background-color: #ff4545;
 			}
 			.diz-like--active{
-				background-image: url('../img/icon/red-diz-like.png');
+				// background-image: url('../img/icon/red-diz-like.png');
+				background-image: url('../img/icon/white-like-ok.png');
+				border-color: #ff4545;
+				background-color: #ff4545;
+				transform: rotate(180deg);
 			}
 		}
 		.comends{
@@ -660,4 +664,16 @@
 		border-radius: 22px;
 		background-color: #ff4545;
 	}
+}
+
+.reviews-card .content__author .center .like-block .like--active{
+	border-radius: 6px;
+}
+
+.reviews-card .content__author .center .like-block .icon-like{
+	background-image: url(../img/icon/like-no-active.png);
+}
+
+.fix-d__block-coments .input{
+	// height: 500px;
 }

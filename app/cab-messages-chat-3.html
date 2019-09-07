@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PEDALKZ - "Уведомления"</title>
+  <title>PEDALKZ - "Сообщения"</title>
 
   <!-- стили -->
   <link rel="stylesheet" href="css/style.min.css">
@@ -191,13 +191,13 @@
   </header>
   <!-- // Шапка -->
 
-  <main class="cabinet str-notifications">
+  <main class="cabinet str-messages">
     <div class="wrapper">
       <div class="first">
         <p>
-          <b>Уведомления</b>
-          <span style="display: block; width: 209px; height: 30px; line-height: unset;">Взаимодействуйте с форумом, сайтом
-          и получайте уведомления</span>
+          <b>Сообщения</b>
+          <span>Здесь вы найдёте ответы на свои объявления, <br>
+          а также отосланные вами сообщения</span>
         </p>
         <div class="your-account">
           1000 ₸
@@ -215,8 +215,11 @@
       
       <ul class="cabinet-navigation">
         <li><a href="#">Объявления</a></li>
-        <li><a href="#">Сообщения</a></li>
-        <li class="active new-red">
+        <li class="active new-yellow">
+          <i class="icon-yellow">1</i>          
+          <a href="cab-messages-received.html">Сообщения</a>
+        </li>
+        <li class="new-red">
           <i class="icon-red">1</i>
           <a href="cab-notifications.html">Уведомления</a>
         </li>
@@ -225,27 +228,29 @@
         <li><a href="#">Настройки бизнес-страницы</a></li>
       </ul>
 
-      <div class="form-selected menu">
-        <span>Уведомления хранятся 4 месяца после чего автоматически удаляются.</span>
+      <div class="form-selected form-selected menu">
+        <ul>
+          <li><a href="cab-messages-chat.html">Полученные</a></li>
+          <li><a href="cab-messages-chat-2.html">Отправленные</a></li>
+          <li class="active"><a href="cab-messages-chat-3.html">Архивные</a></li>
+        </ul>
+
         <div class="castom-select-wrapper">
           <i class="d-none"></i>
           <span>Все</span>
           <i class="more icon-arrow-down"></i>
-          <div class="list d-none">
-            <span class="list__item">1</span>
-            <span class="list__item">2</span>
-            <span class="list__item">3</span>
-            <span class="list__item">4</span>
-            <span class="list__item">5</span>
-            <span class="list__item">6</span>
+          <div class="list list--mode d-none">
+            <span class="list__item">Все</span>
+            <span class="list__item">Непрочитанные</span>
+            <span class="list__item">Отмеченые звездочкой</span>
           </div>
         </div>
       </div>
 
       <div class="null d-none">
-        <b>У вас нет уведомлений</b>
+        <b style="margin-bottom: 32px;">У вас нет сообщений</b>
         <div class="img-wrapper">
-          <img src="img/null-notis.png" alt="clear">
+          <img src="img/cab-message-null.png" alt="clear">
         </div>
 
         <div class="hr"></div>
@@ -280,40 +285,210 @@
         </div>
       </div>
 
-      <div class="message-content">
-        <p class="located">
-          <i class="icon-left-arrow-blue"></i>
-          <a href="cab-notifications.html">Все уведомления</a>
-        </p>
-        <div class="message-content__block">
-          <h4>Пользователь Амир ответил на ваш комментарий</h4>
-          <div class="name-and-date">
-            <div class="name">
-              <img src="img/ava.png" alt="ava">
-              <span>Амир</span>
+      <div class="message-container-wrapper">
+        <div class="left">
+          <div class="title title--offline d-none">
+            <a href="cab-messages-received.html"><i class="icon-left-arrow-blue"></i>Все сообщения</a>
+            <div class="user">
+              Амир
+              <span>Был(а) в 15:40</span>
             </div>
-            <span class="date">Сегодня 10:09</span>
+            <div class="menu-btn-wrapper">
+              <div class="wrapperr">
+                <div class="more-points">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+                <img class="avatar" src="img/ava.png" alt="image">
+              </div>
+              <div class="menu-btn-wrapper-BG d-none"></div>
+              <div class="body d-none">
+                <button><i class="grey-minus"></i>Разблокировать </button>
+                <button><i class="icon-cab-reserve"></i>Снять звездочку </button>
+                <button><i class="icon-cabinet-star-grey"></i>Восстановить </button>
+              </div>
+            </div>
           </div>
-          <p class="body">
-            Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 серподчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW янутые светодиодные фары в BMW 1 серподчеркивают его спортивный
-          </p>
-          <div class="btn-wrapper">
-            <a href="#" class="message-content__btn">
-              <i class="btn-arrow-left-blue"></i>
-              Перейти
-            </a>
-            
-            <a href="#" class="message-content__btn">
-              <i class="icon-cabinet-blue"></i>
-              Ответить
-            </a>
+          <div class="title title--online">
+            <a href="cab-messages-received.html"><i class="icon-left-arrow-blue"></i>Все сообщения</a>
+            <div class="user">
+              Амир
+              <span><i class="icon-green"></i>в сети</span>
+            </div>
+            <div class="menu-btn-wrapper">
+              <div class="wrapperr">
+                <div class="more-points">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+                <img class="avatar" src="img/ava.png" alt="image">
+              </div>
+              <div class="menu-btn-wrapper-BG d-none"></div>
+              <div class="body d-none">
+                <button><i class="grey-minus"></i>Разблокировать </button>
+                <button><i class="icon-cab-reserve"></i>Снять звездочку </button>
+                <button><i class="icon-cabinet-star-grey"></i>Восстановить </button>
+              </div>
+            </div>
+          </div>
 
-            <button class="btn-trash">
-              <i class="icon-cabinet-trash-grey"></i>
-            </button>
+          <div class="body body--unclear">
+            <div class="wrapper">
+              <div class="message">
+                <img src="img/ava.png" alt="ava">
+                <div class="name">Амир</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные фары в BMW 1 сер... подчеркивают его спортивный характер. Эргономичный салон со множеством мест для хранения довольно просторен. Удовольствия добавляют резвые и столь же экономичные двигатели BMW TwinPower Turbo. Это истинное удовольствие – это BMW 
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <div class="message my-message">
+                <img src="img/ava2.png" alt="ava">
+                <div class="name">Ваше сообщения</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн.
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <div class="message">
+                <img src="img/ava.png" alt="ava">
+                <div class="name">Амир</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <div class="message">
+                <img src="img/ava.png" alt="ava">
+                <div class="name">Амир</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <div class="message">
+                <img src="img/ava.png" alt="ava">
+                <div class="name">Амир</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <div class="message my-message">
+                <img src="img/ava2.png" alt="ava">
+                <div class="name">Ваше сообщения</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн.
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <div class="message my-message message--delete">
+                <img src="img/ava2.png" alt="ava">
+                <div class="name">Ваше сообщения</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии.
+                  <i class="icon-message-trash"></i>
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <div class="message message--last">
+                <img src="img/ava.png" alt="ava">
+                <div class="name">Амир</div>
+                <div class="body">
+                  Живите по-настоящему каждый день: с 5-дверным BMW 1 серии. Маневренность и компактность на дороге, спортивный и современный дизайн. Длинный капот с характерной решеткой радиатора и вытянутые светодиодные
+                </div>
+                <div class="date">Вчера 10:09</div>
+              </div>
+              <!-- <span class="user_type">Печатает...</span> -->
+              <span class="user_block">Вы не можете отправить сообщения, этот пользователь заблокировал вас</span>
+            </div>
+          </div>
+
+          <div class="body body--clear d-none">
+            <div class="wrapper">
+              <img src="img/no-message.png" alt="image">
+              <span>Часто отвечает на сообщения</span>
+              <span class="number d-none">+7 914 111-31-74</span>
+              <button>Показать номер<i class="icon-red-arrow"></i></button>
+            </div>
+          </div>
+
+          <div class="end d-none">
+            <form action="">
+              <button type="button"><i class="icon-skrepka"></i></button>
+              <input type="text" placeholder="Текст сообщения">
+              <button type="submit" class="submit-btn"><i class="icon-btn-submit"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="right">
+          <div class="v-1">
+            <div class="title">
+              <span>Обьявления N1089678470</span>
+            </div>
+            <div class="body">
+              <ul class="offers-content">
+                <li class="offers-content__item">
+                  <div class="new-auto d-none ONULL">новый</div>
+                  <img src="img/index/car-1.jpg" alt="item">
+                  <div>
+                    <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                    <span class="offers-content__item-age"> 1995 год</span>
+                    <span class="offers-content__item-price">10 000 000 ₸</span>
+                    <i class="icon-star icon-star--red"></i>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="end">
+              <a href="#">Все объявления продавца<i class="icon-left-arrow-blue"></i></a>
+            </div>
+          </div>
+          <div class="v-2 d-none">
+            <ul class="offers-content">
+              <li class="offers-content__item">
+                <div class="new-auto d-none ONULL">новый</div>
+                <div>
+                  <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                  <span class="offers-content__item-age"> 1995 год</span>
+                  <span class="offers-content__item-price">10 000 000 ₸</span>
+                  <i class="icon-star icon-star--red"></i>
+                </div>
+              </li>
+              <li class="offers-content__item">
+                <div class="new-auto d-none ONULL">новый</div>
+                <div>
+                  <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                  <span class="offers-content__item-age"> 1995 год</span>
+                  <span class="offers-content__item-price">10 000 000 ₸</span>
+                  <i class="icon-star icon-star--red"></i>
+                </div>
+              </li>
+              <li class="offers-content__item">
+                <div class="new-auto d-none ONULL">новый</div>
+                <div>
+                  <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                  <span class="offers-content__item-age"> 1995 год</span>
+                  <span class="offers-content__item-price">10 000 000 ₸</span>
+                  <i class="icon-star icon-star--red"></i>
+                </div>
+              </li>
+              <li class="offers-content__item">
+                <div class="new-auto d-none ONULL">новый</div>
+                <div>
+                  <span class="offers-content__item-name">Лада 4x4 2121 Нива</span>
+                  <span class="offers-content__item-age"> 1995 год</span>
+                  <span class="offers-content__item-price">10 000 000 ₸</span>
+                  <i class="icon-star icon-star--red"></i>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+
     </div>
   </main>
 
@@ -335,15 +510,34 @@
   <!-- попап окна -->
   <div class="popup-bg d-none"></div>
 
-  <div class="popup-def popup-sig-in cab-popup-delete-message d-none">
+  <div class="popup-def popup-sig-in cab-message-chat-unblock d-none">
     <i class="icon-exit-chrest icon-form-exit"></i>
     <h5>
-      Вы хотите удалить уведомления?
+      Разблокировка пользоватля
     </h5>
-    <button class="btn">Удалить</button>
-    <a href="cab-notifications-message.html" class="btn">Отмена</a>
+    <p>
+      Вы снова сможете получать 
+      сообщения от этого автора.
+    </p>
+    <button class="btn">Разблокировать</button>
+    <a href="index.html" class="btn">Отмена</a>
     <i class="arrow-down-circle"></i>
   </div>
+
+  <div class="popup-def popup-sig-in cab-message-chat-block  d-none">
+    <i class="icon-exit-chrest icon-form-exit"></i>
+    <h5>
+      Блокировка пользователя
+    </h5>
+    <p>
+      Вы не сможете получать 
+      сообщения от этого автора.
+    </p>
+    <button class="btn">Заблокировать</button>
+    <a href="index.html" class="btn">Отмена</a>
+    <i class="arrow-down-circle"></i>
+  </div>
+
   <!-- // попап окна -->  
 
   <!-- дополнительные стили -->

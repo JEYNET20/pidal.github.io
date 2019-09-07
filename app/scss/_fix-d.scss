@@ -2,12 +2,37 @@
 	i{ background-image: url('../img/fix/white-category.png'); }
 }
 
+.found-icon-moto{
+	width: 18px !important;
+	height: 13px !important;
+	background-size: cover;
+}
+
+.found-icon-auto{
+	width: 16px !important;
+	height: 14px !important;
+}
+
+.found-icon-heavy-auto{
+	width: 15px !important;
+	height: 16px !important;
+	background-size: contain;
+}
+
+.found-icon-service{
+	width: 18px !important;
+	height: 17px !important;
+}
+
 .castom-select-wrapper .list__item--auto:hover{
 	i{ background-image: url('../img/fix/white-auto.png'); }
 }
 
 .castom-select-wrapper .list__item--moto:hover{
-	i{ background-image: url('../img/icon/icon-for-found/moto.png'); }
+	i{ 
+		background-image: url('../img/moto-new.svg');
+		background-position: unset;
+	}
 }
 
 .castom-select-wrapper .list__item--heavy-auto:hover{
@@ -20,6 +45,10 @@
 
 .castom-select-wrapper .list__item--service:hover{
 	i{ background-image: url('../img/fix/white-servece.png'); }
+}
+
+.found-icon-fourth-cube{
+	background-size: auto;
 }
 
 .header .nav-bar-wrapper{
@@ -284,7 +313,7 @@
 		width: 85%;
 		bottom: -1px;
 		height: 2px;
-		background-color: #d24a43;
+		background-color: #ff4545;
 	}
 }
 
@@ -329,7 +358,7 @@
 		margin-bottom: 5px;
 	}
 	.del{
-		color: #d24a43;
+		color: #ff4545;
 		font-family: "Open Sans";
 		font-size: 14px;
 		font-weight: 400;
@@ -853,4 +882,215 @@ input:checked + label::after{
 
 .cabinet .first .green::after{
 	width: 90%;
+}
+
+.cabinet .popup-graph .block__paket li .point--start{
+	margin-left: 55px;
+	margin-right: 74px;
+	// box-sizing: border-box;
+}
+
+.cabinet .popup-graph{
+	box-sizing: border-box;
+	padding-bottom: 15px;
+	height: auto;
+	position: fixed;
+}
+
+.cabinet .popup-graph .number-wrapper{
+	bottom: 118px;
+}
+
+.cabinet .message-list .body .center b a:hover{
+	color: #2c2c2c;
+}
+
+.str-ads .blockk .center .btn-review{
+	padding-left: 0;
+}
+
+.str-ads .blockk .center .btn-delete:hover{
+	i{
+		background-image: url(../img/icon/cabinet/red-trash.png);
+	}
+}
+
+.cabinet .popup-graph .menu .form-selected__stats{
+  box-shadow: 0 0 3px #2c2c2c;
+}
+
+.found-filter__body .castom-select-wrapper .list::after{
+	display: none;
+}
+
+.fix-d__block-coments .input{
+	resize: none;
+	margin-left: 55px;
+	padding-top: 9px;
+}
+
+.mod-diz-like-active{
+	i{
+		background-image: url('../img/icon/red-diz-like.png');
+	}
+}
+
+.mod-like-active{
+	i{
+		background-image: url('../img/red-like.png') !important;
+	}
+}
+
+.publication-pay__category li .h2--mode i{
+	cursor: pointer;
+}
+
+.publication-str .image-body li{
+	cursor: pointer;
+}
+
+.publication-str .image-body li:hover{
+	opacity: .8;
+}
+
+.acardion--start-hidden{
+	opacity: 0;
+}
+
+.message-container-wrapper .left .end button:nth-child(1):hover{
+	i{ opacity: 1; }
+}
+
+.message-container-wrapper .left .end .submit-btn:hover{
+	opacity: .8;
+}
+
+.message-container-wrapper .left .body .message .body{
+	padding-left: 11px;
+}
+
+
+.resviews-profile ul li{
+	transition: all 250ms ease;
+}
+.resviews-profile ul li:hover{
+	box-shadow: 0 4px 30px 0 rgba(44,44,44,.2);
+  transition: all 250ms ease;
+}
+
+
+.cabinet .message-list .body li{
+	transition: all 250ms ease;
+}
+
+.cabinet .message-list .body li:hover{
+	box-shadow: 0 4px 30px 0 rgba(44,44,44,.2);
+  transition: all 250ms ease;
+}
+
+.found .sort-by .form-selected{
+	margin-bottom: 30px;
+}
+
+.found .sort-by .chance-views .active{
+	border-radius: 6px;
+}
+
+.found-users-businesses .user-information .title li{
+	border-radius: 6px;
+}
+
+.other-param--mode{
+	width: 200px !important;
+}
+
+.new-block-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	.online-and-offline{
+		display: flex;
+		align-items: center;
+	}
+	.icon-place-mark{
+		margin-right: 6px;
+		width: 12px;
+		height: 15px;
+		opacity: .6;
+		background-size: contain;
+	}
+	.city{
+		margin-right: 11px;
+	}
+	.ind{
+		display: block;
+		border-radius: 50%;
+		margin-right: 5px;
+		width: 6px;
+		height: 6px;
+		background-color: #52ac62;
+	}
+	.offline{
+		background-color: #ff4545;
+	}
+}
+
+.last-block-busines .resviews-profile .other-param span{
+	width: auto;
+}
+
+.last-block-busines .resviews-profile .other-param span i{
+	margin-right: 6px;
+	width: 18px;
+	height: 18px;
+	margin-left: -3px;
+}
+
+.cabinet .cabinet-navigation{
+	border-bottom: 1px solid rgba(44,44,44,.2);
+	box-shadow: 0 0 5px rgba(44,44,44,.3);
+}
+
+.icon-cabinet-trash-grey:hover{
+	background-image: url(../img/icon/cabinet/red-trash.png) !important;
+}
+
+.icon-cabinet-star-grey:hover{
+	background-image: url(../img/icon/star-red-full.png) !important;
+}
+
+.icon-cab-reserve:hover{
+	background-image: url(../img/icon/cabinet/icon-reserve-red.png) !important;
+}
+
+
+.cabinet .popup-graph{
+	border-radius: 6px;
+}
+
+.title--active--fix-f{
+	display: flex;
+	.checkbox-body{
+		margin-right: 23px !important;
+	}
+	a{
+		color: #2c2c2c;
+		font-family: "Open Sans";
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0.16px;
+		text-decoration: none;
+		margin-right: 22px;
+	}
+	a:hover{
+		color: #ff4545;
+	}
+}
+
+.str-ads .title__no-active a{
+	color: #2c2c2c;
+}
+
+.str-ads .title__no-active a:hover{
+	color: #ff4545;
 }

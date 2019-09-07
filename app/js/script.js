@@ -835,6 +835,7 @@
 
 	mainBtn.forEach(function(element){
 		element.addEventListener('click', onMainBtnShowClick);
+		element.addEventListener('mouseleave', onMainBtnHiddenClick);
 	});
 
 	const itemBtn = document.querySelectorAll('.castom-select-wrapper .list__item');
@@ -1665,10 +1666,10 @@
 				receivedStrChecbox = document.querySelector('.received .title input');
 
 
-	if(deletedStrChecbox)deletedStrChecbox.addEventListener('click', onAllInput);
-	if(noActiveStrChecbox)noActiveStrChecbox.addEventListener('click', onAllInput);
-	if(waitingStrChecbox)waitingStrChecbox.addEventListener('click', onAllInput);
-	if(receivedStrChecbox)receivedStrChecbox.addEventListener('click', onAllInput);
+	if(deletedStrChecbox) deletedStrChecbox.addEventListener('click', onAllInput);
+	if(noActiveStrChecbox) noActiveStrChecbox.addEventListener('click', onAllInput);
+	if(waitingStrChecbox) waitingStrChecbox.addEventListener('click', onAllInput);
+	if(receivedStrChecbox) receivedStrChecbox.addEventListener('click', onAllInput);
 
 
 	function onAllInput() {
@@ -1711,6 +1712,15 @@
 		this.addEventListener('click', onAllInput);
 		this.removeEventListener('click', offAllInput);
 	}
+
+	let x = document.querySelector('#main-2');
+	if(x) x.removeEventListener('click', onAllInput);
+
+	let y = document.querySelector('#main-3');
+	if(y) y.removeEventListener('click', onAllInput);
+
+	let z = document.querySelector('#main-4');
+	if(z) z.removeEventListener('click', onAllInput);
 
 })();
 
@@ -2252,19 +2262,41 @@
 	// like
 	const btnLike = document.querySelector('.scroll-block .like'),
 				btnDizLike = document.querySelector('.scroll-block .diz-like');
+	
+	let xbool = false;
+	let xbool2 = false;
 				
 	function likeActive() {
-		this.classList.add('like--active');
-		btnDizLike.classList.remove('diz-like--active');
+		if(xbool) {
+			this.classList.remove('like--active');
+			xbool = false;
+			// xbool2 = true;
+		} else{
+			this.classList.add('like--active');
+			btnDizLike.classList.remove('diz-like--active');
+			xbool = true;
+			xbool2 = false;
+		}
+
 	};
 
 	function dizLikeActive() {
-		this.classList.add('diz-like--active');
-		btnLike.classList.remove('like--active');	
+		if(xbool2) {
+			this.classList.remove('diz-like--active');
+			xbool2 = false;
+			// xbool = true;
+		} else{
+			this.classList.add('diz-like--active');
+			btnLike.classList.remove('like--active');	
+			xbool2 = true;
+			xbool = false;
+		}
+
 	}
 
 	if(btnLike) btnLike.addEventListener('click', likeActive);
 	if(btnDizLike) btnDizLike.addEventListener('click', dizLikeActive);
+
 
 	// soc more
 	const socMoreBtn = document.querySelector('.reviews-card .scroll-block .more');
@@ -2307,7 +2339,45 @@
 
 })();
 
+// like block 
+(function() {
+	const like = document.querySelector
+					('.reviews-card .content__author .center .like-block .like'),
+				dizLike = document.querySelector
+					('.reviews-card .content__author .center .like-block .diz-like');
 
+	let xbool = false;
+	let xbool2 = false;
+
+	if(like) like.onclick = function() {
+		if(xbool){
+			this.classList.remove('like--active');
+			xbool = false;
+		} else{
+			this.classList.add('like--active');
+			this.classList.add('mod-like-active');
+			dizLike.classList.remove('like--active');
+			dizLike.classList.remove('mod-diz-like-active');
+			xbool = true;
+			xbool2 = false;
+		}
+	};
+
+	if(dizLike) dizLike.onclick = function() {
+		if(xbool2){
+			this.classList.remove('like--active');
+			xbool2 = false;
+		} else{
+			this.classList.add('like--active');
+			this.classList.add('mod-diz-like-active');
+			like.classList.remove('like--active');
+			like.classList.remove('mod-like-active');
+			xbool2 = true;
+			xbool = false;
+		}
+	};
+
+})();
 
 
 // публикация textarea
@@ -2393,4 +2463,242 @@
 		popupBg.classList.remove('d-none');
 	}
 
+})();
+
+// стр. обявления cab-ads
+(function() {
+	const btn = document.querySelectorAll('.str-ads .btn-wrapper .btn__little'),
+				body = document.querySelector('.cabinet .popup-block'),
+				popupBg = document.querySelector('.popup-bg');
+	
+	function test() {
+		body.classList.remove('d-none');
+		popupBg.classList.remove('d-none');
+	};
+
+	btn.forEach(function(element) {
+		element.addEventListener('click', test);
+	});
+
+})();
+
+// reviews-card textarea
+(function(){
+	const area = document.querySelectorAll('.fix-d__block-coments .input');
+	function test() {
+		let x = this.value;
+		if(x.length >= 100){
+			this.style.height = '450px';
+		} else{
+			this.style.height = '45px;';
+		}
+	};
+
+	if(area) area.forEach(function(element) {
+		element.addEventListener('input', test);
+	});
+
+})();
+
+
+// publication-pay открыть попапы
+(function() {
+	const btn = document.querySelectorAll('.publication-pay__category li .h2--mode i'),
+				body = document.querySelector('.popup-str-busines-package--prem');
+				popupBg = document.querySelector('.popup-bg');
+
+	if(btn) btn.forEach(function(element) {
+		element.onclick = function() {
+			body.classList.remove('d-none');
+			popupBg.classList.remove('d-none');
+		};
+	});
+
+
+})();
+
+// фикс удаление добавления
+(function() {
+	const btn = document.querySelectorAll('.found-filter__nav-wrapper .right .icon-star--red');
+
+	function fOn() {
+		console.log(this);
+		this.previousElementSibling.textContent = 'Удалить результат поиска';
+
+		this.removeEventListener('click', fOn);
+		this.addEventListener('click', fOff);
+	};
+
+	function fOff() {
+		console.log(this);
+		this.previousElementSibling.textContent = 'Сохранить результат поиска';
+
+		this.addEventListener('click', fOn);
+		this.removeEventListener('click', fOff);
+	};
+
+
+
+	if(btn) btn.forEach(function(element) {
+		element.addEventListener('click', fOn);
+	});
+
+})();
+
+
+// фикс удаляение добавления стр publication-previews.html
+(function() {
+	const btn = document.querySelector('.card__wrapper .first .param-wrapper .icon-star--red');
+
+	function fOn() {
+		console.log(this);
+		this.previousElementSibling.textContent = 'Удалить избранное';
+
+		this.removeEventListener('click', fOn);
+		this.addEventListener('click', fOff);
+	};
+
+	function fOff() {
+		console.log(this);
+		this.previousElementSibling.textContent = 'В избранное';
+
+		this.addEventListener('click', fOn);
+		this.removeEventListener('click', fOff);
+	};
+
+	if(btn) btn.addEventListener('click', fOn);
+
+})();
+
+
+// скрол для форм
+(function() {
+	const btn = document.querySelectorAll('.found-filter__body .castom-select-wrapper'),
+				list = document.querySelectorAll('.found-filter__body .castom-select-wrapper .list');
+
+	function updateScroll() {
+		let localList = this.querySelector('.list');
+		let countItems = localList.childElementCount;
+
+		if(countItems > 8){
+			$(localList).niceScroll();
+			localList.style.height = '328px';
+		}
+	};
+
+	if(btn) btn.forEach(function(element) {
+		element.addEventListener('click', updateScroll);
+	});
+
+})();
+
+// скрол для форм reviews-form.html
+(function() {
+	const btn = document.querySelectorAll('.form-selected .castom-select-wrapper'),
+				list = document.querySelectorAll('.form-selected .castom-select-wrapper .list');
+
+	function updateScroll() {
+		let localList = this.querySelector('.list');
+		let countItems = localList.childElementCount;
+
+		if(countItems > 8){
+			$(localList).niceScroll();
+			localList.style.height = '328px';
+		}
+	};
+
+	if(btn) btn.forEach(function(element) {
+		element.addEventListener('click', updateScroll);
+	});
+
+})();
+
+// фикс cab-notification выбрать все чекбоксы
+(function() {
+	const btn = document.querySelector('#main-n1');
+
+	function addItems() {
+
+		let itemsParent = this.parentNode.parentNode.parentNode.parentNode;
+		let items = itemsParent.querySelectorAll('.body input');
+		console.log(items);
+
+		items.forEach(function(element) {
+			element.checked = 'checked';
+		});
+
+		this.removeEventListener('click', addItems);
+		this.addEventListener('click', removeItems);
+	}
+
+	function removeItems() {
+
+		let itemsParent = this.parentNode.parentNode.parentNode.parentNode;
+		let items = itemsParent.querySelectorAll('.body input');
+		console.log(items);
+
+		items.forEach(function(element) {
+			element.checked = '';
+		});
+
+		this.addEventListener('click', addItems);
+		this.removeEventListener('click', removeItems);
+	}
+
+
+
+	if(btn) btn.addEventListener('click', addItems);
+})();
+
+// сообщения cab-messages-received выбрать все чекбоксы блок
+(function() {
+	const btn = document.querySelectorAll('.message-list .checkbox-body .main-input');
+
+	function inputOn() {
+		let mainInput = this.parentNode.parentNode.parentNode.parentNode;
+		let inputItems = mainInput.querySelectorAll('input');
+
+		inputItems.forEach(function(element) {
+			element.checked = 'checked';
+		});
+
+		let activeLink = mainInput.querySelectorAll('.title--active--fix-f a');
+		activeLink.forEach(function(element) {
+			element.classList.remove('d-none');
+		});
+		
+		mainInput.querySelector('.title--no-active--fix-f').classList.add('d-none');
+		
+		let checboxWrapper = this.parentNode.parentNode;
+		checboxWrapper.style.marginRight = '23px';
+
+		this.removeEventListener('click', inputOn);
+		this.addEventListener('click', inputOff);
+	};
+
+	function inputOff() {
+		let mainInput = this.parentNode.parentNode.parentNode.parentNode;
+		let inputItems = mainInput.querySelectorAll('input');
+
+		inputItems.forEach(function(element) {
+			element.checked = '';
+		});
+
+		let activeLink = mainInput.querySelectorAll('.title--active--fix-f a');
+		activeLink.forEach(function(element) {
+			element.classList.add('d-none');
+		});
+
+		mainInput.querySelector('.title--no-active--fix-f').classList.remove('d-none');
+
+		let checboxWrapper = this.parentNode.parentNode;
+		checboxWrapper.style.marginRight = '100px';
+
+		this.addEventListener('click', inputOn);
+		this.removeEventListener('click', inputOff);
+	};
+
+	if(btn) btn.forEach(function(element) {
+		element.addEventListener('click', inputOn);
+	});
 })();

@@ -321,10 +321,10 @@
 		width: 167px;
 		height: 44px;
 		border-radius: 22px;
-		background-color: #d24a43;
+		background-color: #ff4545;
 		position: relative;
 		&::after{
-			background-color: #d24a43;
+			background-color: #ff4545;
 			width: 100px;
 		}
 	}
@@ -412,7 +412,7 @@
 				width: 144px;
 				height: 24px;
 				border-radius: 6px;
-				background-color: #d24a43;
+				background-color: #ff4545;
 				color: #ffffff;
 				font-family: "Open Sans";
 				font-size: 16px;
@@ -440,7 +440,7 @@
 		}
 		.title:hover{
 			.start{
-				color: #d24a43;
+				color: #ff4545;
 			}
 			.end{
 				i{
