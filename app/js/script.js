@@ -2702,3 +2702,69 @@
 		element.addEventListener('click', inputOn);
 	});
 })();
+
+
+// переключатели fix_d-new-btn
+(function() {
+	const btn1 = document.querySelector('.list-wrapper .fix_d-new-btn--1'),
+				btn2 = document.querySelector('.list-wrapper .fix_d-new-btn--2'),
+				btn3 = document.querySelector('.list-wrapper .fix_d-new-btn--3');
+
+	const body1 = document.querySelector('.list-wrapper .fix_d-offers-content--1'),
+				body2 = document.querySelector('.list-wrapper .fix_d-offers-content--2'),
+				body3 = document.querySelector('.list-wrapper .fix_d-offers-content--3');
+
+	if(btn1) btn1.onclick = function() {
+		body1.classList.remove('d-none');
+		body2.classList.add('d-none');
+		this.classList.add('fix_d-new-btn--active');
+		btn2.classList.remove('fix_d-new-btn--active');
+
+		if(body3){
+			body3.classList.add('d-none');
+			btn3.classList.remove('fix_d-new-btn--active');
+		}
+	};
+
+	if(btn2) btn2.onclick = function() {
+		body2.classList.remove('d-none');
+		body1.classList.add('d-none');
+		this.classList.add('fix_d-new-btn--active');
+		btn1.classList.remove('fix_d-new-btn--active');
+		
+		if(body3){
+			body3.classList.add('d-none');
+			btn3.classList.remove('fix_d-new-btn--active');
+		}
+	};
+
+	if(btn3) btn3.onclick = function() {
+		body3.classList.remove('d-none');
+		body2.classList.add('d-none');
+		body1.classList.add('d-none');
+		this.classList.add('fix_d-new-btn--active');
+		btn1.classList.remove('fix_d-new-btn--active');
+		btn2.classList.remove('fix_d-new-btn--active');
+	};
+
+	const btnG1 = document.querySelector('.gallery-wrapper-end .fix_d-new-btn--1'),
+				btnG2 = document.querySelector('.gallery-wrapper-end .fix_d-new-btn--2');
+
+	const bodyG1 = document.querySelector('.gallery-wrapper-end .fix_d-offers-content--1'),
+				bodyG2 = document.querySelector('.gallery-wrapper-end .fix_d-offers-content--2');
+
+	if(btnG1) btnG1.onclick = function() {
+		bodyG1.classList.remove('d-none');
+		bodyG2.classList.add('d-none');
+		this.classList.add('fix_d-new-btn--active');
+		btnG2.classList.remove('fix_d-new-btn--active');
+	};
+
+	if(btnG2) btnG2.onclick = function() {
+		bodyG2.classList.remove('d-none');
+		bodyG1.classList.add('d-none');
+		this.classList.add('fix_d-new-btn--active');
+		btnG1.classList.remove('fix_d-new-btn--active');
+	};
+
+})();

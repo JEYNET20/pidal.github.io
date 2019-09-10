@@ -12818,6 +12818,46 @@ input:checked + label::after {
 .str-ads .title__no-active a:hover {
   color: #ff4545; }
 
+.fix_d-new-btn {
+  margin-right: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: #2c2c2c;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .16px;
+  border: none;
+  background-color: unset;
+  transition: all 300ms ease;
+  margin: 0 !important; }
+
+.fix_d-new-btn--active {
+  background-color: #ffdada;
+  transition: all 300ms ease; }
+
+.found .gallery-wrapper .gallery-wrapper-end .title-wrapper .start {
+  width: auto; }
+
+.pagination .button-prev {
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 2px 16px rgba(44, 44, 44, 0.2);
+  border: 1px solid #306c78;
+  background-color: #ffffff;
+  opacity: 0.2;
+  cursor: auto; }
+
+.pagination .button-next {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(44, 44, 44, 0.2);
+  background-color: #ffffff; }
+
 .reviews-card {
   display: flex;
   flex-wrap: wrap; }
