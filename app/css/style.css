@@ -12858,6 +12858,9 @@ input:checked + label::after {
   border: 1px solid rgba(44, 44, 44, 0.2);
   background-color: #ffffff; }
 
+.str-ads .blockk .message-btn:hover i {
+  background-image: url("../img/fix/hover-message.png"); }
+
 .reviews-card {
   display: flex;
   flex-wrap: wrap; }
