@@ -847,7 +847,7 @@
 
 	mainBtn.forEach(function(element){
 		element.addEventListener('click', onMainBtnShowClick);
-		element.addEventListener('mouseleave', onMainBtnHiddenClick);
+		// element.addEventListener('mouseleave', onMainBtnHiddenClick);
 	});
 
 	const itemBtn = document.querySelectorAll('.castom-select-wrapper .list__item');

@@ -12926,6 +12926,9 @@ label:hover {
 .found-filter__body .castom-select-wrapper .list {
   top: 102%; }
 
+.form-selected .list {
+  top: 102%; }
+
 .reviews-card {
   display: flex;
   flex-wrap: wrap; }
