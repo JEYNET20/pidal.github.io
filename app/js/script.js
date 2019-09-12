@@ -814,6 +814,10 @@
 		let x = this.querySelector('.list');
 		x.style.borderRadius = '0 0 6px 6px';
 
+		// правка тени
+		this.style.boxShadow = '0 4px 30px rgba(44,44,44,.2)';
+		list.style.boxShadow = '0 4px 30px rgba(44,44,44,.2)';
+
 	};
 
 	function onMainBtnHiddenClick(e){
@@ -829,8 +833,13 @@
 		let x = this.querySelector('.list');
 		x.style.borderRadius = '0 0 6px 6px';
 
+		// правка тени
+		this.style.boxShadow = '0 0 3px #2c2c2c';
+		list.style.boxShadow = '0 0 3px #2c2c2c';
+
 		this.removeEventListener('click', onMainBtnHiddenClick);
 		this.addEventListener('click', onMainBtnShowClick);
+
 	};
 
 	mainBtn.forEach(function(element){

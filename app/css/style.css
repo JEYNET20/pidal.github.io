@@ -12861,6 +12861,52 @@ input:checked + label::after {
 .str-ads .blockk .message-btn:hover i {
   background-image: url("../img/fix/hover-message.png"); }
 
+.help-str--include .state .btn i {
+  background-image: url("../img/new-arow-red.png"); }
+
+.icon-diz-like, .icon-like {
+  background-size: contain; }
+
+.border__like {
+  height: 100%;
+  width: 1px;
+  background-color: rgba(44, 44, 44, 0.2); }
+
+label:hover {
+  cursor: pointer; }
+
+.others-parameters .other-parameters .title button i {
+  transition: all 500ms ease !important; }
+
+.others-parameters .other-parameters .title button span {
+  width: 106px; }
+
+.last-block-busines .resviews-profile .other-param span i {
+  margin-right: 3px; }
+
+.cabinet .your-account span {
+  margin-top: 0; }
+
+.cabinet .your-account {
+  margin-top: 5px; }
+
+.list {
+  transition: all 150ms ease; }
+
+.str-busines__stat .right .form-selected .castom-select-wrapper {
+  box-shadow: 0 0 3px #2c2c2c; }
+
+.reviews-profile--my-joined .right .btn {
+  transition: box-shadow .3s ease;
+  box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2); }
+
+.reviews-profile--my-joined .right .btn:hover {
+  transition: box-shadow .3s ease;
+  box-shadow: 0 4px 30px rgba(44, 44, 44, 0.1); }
+
+.message-container-wrapper .right .v-1 .body {
+  box-shadow: unset; }
+
 .reviews-card {
   display: flex;
   flex-wrap: wrap; }
