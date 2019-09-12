@@ -1270,7 +1270,7 @@ label:hover{
 }
 
 .form-selected .list{
-	top: 102%;
+	top: 104%;
 }
 
 // .castom-select-wrapper::after{
@@ -1282,3 +1282,7 @@ label:hover{
 // 	background-color: #fff;
 // 	position: absolute;
 // }
+
+main.str-busines-3 .wrapper .container .element .body .top .castom-select-wrapper{
+	box-shadow: rgb(44, 44, 44) 0px 0px 3px;
+}

@@ -12927,7 +12927,10 @@ label:hover {
   top: 102%; }
 
 .form-selected .list {
-  top: 102%; }
+  top: 104%; }
+
+main.str-busines-3 .wrapper .container .element .body .top .castom-select-wrapper {
+  box-shadow: #2c2c2c 0px 0px 3px; }
 
 .reviews-card {
   display: flex;
