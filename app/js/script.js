@@ -807,16 +807,19 @@
 		const list = this.querySelector('.list');
 		list.classList.remove('d-none');
 
-		this.removeEventListener('click', onMainBtnShowClick);
-		this.addEventListener('click', onMainBtnHiddenClick);
-
 		this.style.borderRadius = '6px 6px 0 0';
 		let x = this.querySelector('.list');
 		x.style.borderRadius = '0 0 6px 6px';
 
 		// правка тени
+		this.style.borderBottom = ' 1px solid rgba(44, 44, 44, .2)';
 		this.style.boxShadow = '0 4px 30px rgba(44,44,44,.2)';
-		list.style.boxShadow = '0 4px 30px rgba(44,44,44,.2)';
+		list.style.boxShadow = '0 19px 30px rgba(44,44,44,.2)';
+ 
+
+
+		this.removeEventListener('click', onMainBtnShowClick);
+		this.addEventListener('click', onMainBtnHiddenClick);
 
 	};
 
@@ -2361,6 +2364,7 @@
 	if(like) like.onclick = function() {
 		if(xbool){
 			this.classList.remove('like--active');
+			this.classList.remove('mod-like-active');
 			xbool = false;
 		} else{
 			this.classList.add('like--active');
@@ -2375,6 +2379,7 @@
 	if(dizLike) dizLike.onclick = function() {
 		if(xbool2){
 			this.classList.remove('like--active');
+			this.classList.remove('mod-diz-like-active');
 			xbool2 = false;
 		} else{
 			this.classList.add('like--active');

@@ -12907,6 +12907,25 @@ label:hover {
 .message-container-wrapper .right .v-1 .body {
   box-shadow: unset; }
 
+.found .sort-by .chance-views button {
+  margin-right: 0; }
+
+.found-users-businesses .user-information .title li {
+  margin-right: 0; }
+
+.help-str .main .ac-title:hover {
+  transition: all .3s ease;
+  box-shadow: 0 4px 30px rgba(44, 44, 44, 0.2);
+  border: 1px solid #fff; }
+  .help-str .main .ac-title:hover i {
+    background-image: url(../img/icon/icon-for-help/down-red.png); }
+
+.help-str .main .ac-wrapper .ac-title {
+  opacity: 1; }
+
+.found-filter__body .castom-select-wrapper .list {
+  top: 102%; }
+
 .reviews-card {
   display: flex;
   flex-wrap: wrap; }

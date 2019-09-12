@@ -1210,3 +1210,71 @@ label:hover{
 .message-container-wrapper .right .v-1 .body{
 	box-shadow: unset;
 }
+
+.found .sort-by .chance-views button{
+	margin-right: 0;
+}
+
+.found-users-businesses .user-information .title li{
+	margin-right: 0;
+}
+
+.help-str .main .ac-title:hover{
+	transition: all .3s ease;
+	box-shadow: 0 4px 30px rgba(44,44,44,.2);
+	border: 1px solid #fff;
+	i{
+		background-image: url(../img/icon/icon-for-help/down-red.png);
+	}
+}
+
+.help-str .main .ac-wrapper .ac-title{
+	opacity: 1;
+}
+
+.form-selected .list{
+	// box-shadow: unset;
+	// border-radius: unset;
+	// position: relative;
+	// width: 282px;
+}
+
+.found-filter__body .castom-select-wrapper .list{
+	// top: 21px;
+	// left: -12px;
+}
+
+.form-selected .castom-select-wrapper{
+	// margin-bottom: 0;
+	// padding-bottom: 24px;
+	// height: auto;
+	// box-shadow: unset;
+	// border-radius: unset;
+	// padding-left: 0;
+	// flex-wrap: wrap;
+}
+
+.custom-select-title{
+	// width: 100%;
+	// height: 44px;
+	// box-shadow: 0 0 3px #2c2c2c;
+	// border-radius: 6px;
+	// box-sizing: border-box;
+	// padding-left: 12px;
+	// display: flex;
+	// align-items: center;
+}
+
+.found-filter__body .castom-select-wrapper .list{
+	top: 102%;
+}
+
+// .castom-select-wrapper::after{
+// 	content: '';
+// 	bottom: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 5px;
+// 	background-color: #fff;
+// 	position: absolute;
+// }
